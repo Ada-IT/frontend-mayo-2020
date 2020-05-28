@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Mi Formulario de Login</title>                       
+    </head>
+    <body>
+        <main>
+            <header>
+                <nav>
+                </nav>
+            </header>                        
+            <article>
+                <section id="formulario-preguntas">                
+                    <h1>Multiple Choice</h1>
+                    <div>
+                        <!-- Formulario de Preguntas -->
+                        <form id="preguntas" action="formulario-mchoice.html" method="POST">
+                            <h3>Sexo:</h3>
+                            <br>
+                            <input 
+                                name="sexo" 
+                                type="radio" 
+                                value="mujer"
+                            >
+                            <label>Mujer</label>
+                            <br>                           
+                            <input name="sexo" type="radio" value="hombre">
+                            <label>Hombre</label>
+                            <br>    
+                            <h3>Educacion:</h3>                       
+                            <label for="educacion">Seleccione su educación:</label>
+                            <select name="educacion" id="educacion">
+                              <option value="1">Primaria</option>
+                              <option value="secundaria">Secundaria</option>
+                              <option value="3">Universitaria</option>
+                            </select>
+                            <br>
+                            <h3>Comentarios:</h3>                     
+                            <textarea 
+                                name="comentarios" 
+                                value="" 
+                                placeholder="Escriba su comentario"
+                                rows="6" 
+                                cols="80"
+                            >
+                            </textarea>
+                            <hr>                                                        
+                            <input type="submit" value="Enviar">
+                        </form>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>               
