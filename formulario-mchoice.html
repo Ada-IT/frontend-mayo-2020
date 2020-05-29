@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Mi Formulario de Login</title>                       
+        <title>Mi Formulario de Login</title>
+    <style>
+        h3 {
+            color:black;
+            font-size:16px;
+            font-weight: 700;
+        }
+    </style>                           
     </head>
     <body>
         <main>
@@ -10,23 +17,34 @@
                 </nav>
             </header>                        
             <article>
-                <section id="formulario-preguntas">                
-                    <h1>Multiple Choice</h1>
-                    <div>
+                <section style="background-color: lightblue;" id="formulario-preguntas">                
+                    <h1 style="color:black;
+                    font-family: Verdana;
+                    background-color: lightblue;
+                    width: fit-content;">
+                    Multiple Choice</h1>
+                    <div >
+                        
                         <!-- Formulario de Preguntas -->
-                        <form id="preguntas" action="formulario-mchoice.html" method="POST">
-                            <h3>Sexo:</h3>
-                            <br>
-                            <input 
-                                name="sexo" 
-                                type="radio" 
-                                value="mujer"
-                            >
-                            <label>Mujer</label>
-                            <br>                           
-                            <input name="sexo" type="radio" value="hombre">
-                            <label>Hombre</label>
+                        <form id="preguntas" 
+                              action="formulario-gracias.html" 
+                              method="POST"
+                        >
+                            <div style="background-color: rgb(64, 155, 224); border-radius: 6px; padding:5px;">
+                                <h3>Genero:</h3>
+                                <br>
+                                <input 
+                                    name="genero" 
+                                    type="radio" 
+                                    value="femenino"
+                                >
+                                <label>Femenino</label>
+                                <br>                           
+                                <input name="genero" type="radio" value="masculino">
+                                <label>Masculino</label>                                
+                            </div>
                             <br>    
+                            <div style="background-color: rgb(64, 155, 224); border-radius: 6px; padding:5px;">
                             <h3>Educacion:</h3>                       
                             <label for="educacion">Seleccione su educación:</label>
                             <select name="educacion" id="educacion">
@@ -34,7 +52,9 @@
                               <option value="secundaria">Secundaria</option>
                               <option value="3">Universitaria</option>
                             </select>
+                            </div>
                             <br>
+                            <div style="background-color: rgb(64, 155, 224); border-radius: 6px; padding:5px;">
                             <h3>Comentarios:</h3>                     
                             <textarea 
                                 name="comentarios" 
@@ -44,6 +64,7 @@
                                 cols="80"
                             >
                             </textarea>
+                            </div>
                             <hr>                                                        
                             <input type="submit" value="Enviar">
                         </form>
