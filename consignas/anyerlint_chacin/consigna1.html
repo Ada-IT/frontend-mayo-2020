@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Consigna</title>
+    </head>
+    <body>
+        <main>
+            <header>
+                <nav>
+                </nav>
+            </header>
+            <article>
+                <section id="formulario">
+                    <h1>Formulario</h1>
+                    <div>
+                        <form action="consigna1.html" method="post">
+                            <labe for="nombre">Nombre:</labe>
+                            <input
+                                id="nombre"
+                                type="text"
+                                minlength="5"
+                                maxlength="15"
+                                name="name"
+                            >
+                            <br>
+                            <labe for="apellido">Apellido:</labe>
+                            <input
+                                id="Apellido"
+                                type="text"
+                                minlength="5"
+                                maxlength="15"
+                                name="apellido"
+                            >
+                            <br>
+                            <labe for="dirección">Direccion:</labe>
+                            <input
+                                id="dirección"
+                                type="text"
+                                minlength="5"
+                                maxlength="20"
+                                name="direccion"
+                            >
+                            <br>
+                            <labe for="telefono">Telefono:</labe>
+                            <input
+                                id="telefono"
+                                type="number"
+                                minlength="9"
+                                maxlength="20"
+                                name="telefono"
+                            >
+                        </form>
+                    </div>
+                    <br>
+                    <div>
+                        <!--Formulario Login-->
+                        <style>
+                            input:valid{
+                                background-color: red;
+                            }
+                        </style>
+                        <from id="Login" action="consigna1.html" method="post">
+                            <label for="usuario">Email:</label>
+                            <input
+                            id="email"
+                            type="email"
+                            name="email">
+                            <br>
+                            <h3>Genero</h3>
+                            
+                            <label>femenino</label>
+                            <input
+                                name="genero"
+                                type="radio"
+                                value="f">
+                            <br>
+                            <label>Masculino</label>
+                            <input
+                                name="genero"
+                                type="radio"
+                                value="m">
+                            <br>
+                            <label>Otro</label>
+                            <input
+                                name="genero"
+                                type="radio"
+                                value="o">
+                        </div>
+                        <br>
+                        <div>
+                            <h3>Educacion</h3>
+                            <label for="educacion">Seleccione su educacion:</label>
+                            <select name="educacion" id="educacion">
+                                <option value="p">Primaria</option>
+                                <option value="s">Secundaria</option>
+                                <option value="u">Universitaria</option>
+                            </select>   
+                            <h3>Trabaja</h3>                         
+                            <label>si</label>
+                            <input
+                                name="genero"
+                                type="radio"
+                                value="s">
+                            <br>
+                            <label>No</label>
+                            <input
+                                name="genero"
+                                type="radio"
+                                value="n">
+                            <br>
+                        </div>
+                        
+                        
+
+
+
+
+                            <input type="submit" value="Guardar">
+                        </from>
+                    </div>
+                </section>
+
+            </article>
+            <section>
+            </section>
+            <footer>
+            </footer>
+        </main>
+    </body>
+</html>
