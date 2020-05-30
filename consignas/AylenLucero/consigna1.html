@@ -2,7 +2,14 @@
 <html lang="es">
     <head>
         <title>consigna1</title>
-        
+        <style>
+            #email:valid{
+                background-color: rgb(255, 209, 255);
+            } 
+            #email:invalid {
+                background-color: rgb(255, 143, 236);
+            }
+        </style>        
     </head>
     <body>
         <main>
@@ -12,7 +19,8 @@
             </header>
             <article>
                 <section>
-                    <div>                        
+                    <div>  
+                        <div>                                                  
                     <form action="consigna1.html" method="POST">
                         <label for="name">Nombre:</label>
                         <input id="name" type="text" name="name" min="2" max="15">
