@@ -41,12 +41,20 @@
                             id="telefono" 
                             type="number"  
                             name="telefono">
-                            <br>                        
-                            <label for="email">Email:</label>
+                            <br>  
+                            <div>
+                                <style>
+                                    input:valid {
+                            background-color: #62eb62;}
+                                    input:invalid {
+                            background-color: red;}
+                                </style>
+                                <label for="email">Email:</label>
                             <input 
                                 id="email" 
                                 type="email" 
                                 name="email">
+                            </div>             
                             <br>
                             <h3>Genero</h3>
                             <input 
