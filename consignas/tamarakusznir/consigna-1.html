@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Formulario consigna 1</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav>
+        </nav>
+      </header>
+      <article>
+        <section id="formulario consigna1">
+          <div>
+            <form action="consigna1" method="POST">
+              <label for="nombre">Nombre:</label>
+              <input
+              id="nombre"
+              maxlength="15">
+              <br>
+              <label for="apellido">Apellido:</label>
+              <input
+              id="nombre"
+              maxlength="15">
+              <br>
+              <label for="direccion">Dirección:</label>
+              <input
+              id="direccion"
+              maxlength="20">
+              <br>
+              <label for="telefono">Telefono:</label>
+              <input
+              id="telefono"
+              type="number">
+              <div>
+              <label for="email">Email:</label>
+              <input
+              id="email">
+              <style>
+                input:valid {
+                background-color: green;
+                }
+                input:invalid {
+                background-color: red; 
+                }
+              </style>
+              </div>
+              <br>
+              <h4>Genero:</h4>
+              <input
+              name="genero"
+              type="radio"
+              value="m">
+              <label>Masculino</label>
+              <input
+              name="genero"
+              type="radio"
+              value="f"
+              >
+              <label>Femenino</label>
+              <input
+              name="genero"
+              type="radio"
+              value="o">
+              <label>Otro</label>
+              <br>
+              <h4>Educacion:</h4>
+              <input
+              name="educacion"
+              type="radio"
+              value="p">
+              <label>Primaria</label>
+              <input
+              name="educacion"
+              type="radio"
+              value="s">
+              <label>Secundaria</label>
+              <input
+              name="educacion"
+              type="radio"
+              value="u">
+              <label>Universitaria</label>
+            </form>
+          </div>
+        </section>
+      </article>
+      <footer></footer>
+    </main>
+  </body>
+</html>
