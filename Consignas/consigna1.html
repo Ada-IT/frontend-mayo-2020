@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+
+    <div style="font-size: 150%; text-align: center ;font-family: Georgia, 'Times New Roman', Times, serif; padding: 1rem; border-radius: 5px;" >
+<u>Consigna I: Crear un Formulario.</u>
+
+</div>
+</head><br>
+
+<body>
+    
+
+    <section id="field">
+
+    <fieldset id="Formulario" action="consigna1.html" method="POST">
+        
+<legend style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; color:teal;"><b>Datos Personales</b></legend> <br>
+
+        <style>
+            
+            label {font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;padding: 5px; font-size: 15.5px;}
+
+            p {font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;padding: 5px; font-size: 15.5px;}
+
+            #field {width: 40rem;background-color: rgba(227, 248, 229, 0.884);}
+
+            input:invalid {background-color: red;}
+            input:valid {border: 2px solid black;}
+        </style>
+        
+
+
+
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" type="text" minlength="2" maxlength="15" placeholder="Escriba aqui."></input><br><br>
+
+    <label for="apellido">Apellido:</label>
+    <input id="apellido" name="text" minlength="2" maxlength="15"placeholder="Escriba aqui."></input><br><br>
+
+
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" minlength="5" maxlength="20"placeholder="Escriba aqui."  ></input><br><br>
+
+    <label for="telefono">Telefono:</label>
+    <input type="tel" id="telefono"placeholder="Escriba aqui." ></input><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Escriba aqui.">
+
+    <p>Indique su Género:
+        <input type="radio" name="1" value="F"> <i>Femenino</i> 
+        <input type="radio" name="2" value="M"> <i>Masculino</i> 
+        <input type="radio" name="3" value="O"> <i>Otro</i> 
+      </p>
+
+    <p>Nivel de Educación:
+
+        <select name="Genero"> 
+        <option value="P">Primario</option>
+        <option value="S">Secundario</option> 
+        <option value="U">Universitario</option></select>
+    </p>
+
+  
+    <p>Trabaja Actualmente:
+
+        <select name="trabajo"> 
+        <option value="S">Si</option>
+        <option value="N">No</option></select>
+    </p>
+    <br>
+      
+            <input type="submit" value="Guardar" style="background-color: rgba(6, 95, 95, 0.767); height: 2rem; font-family: Verdana, Geneva, Tahoma, sans-serif; border-radius: 5px; color: azure;">        
+          
+          
+
+<footer style="text-align: right; padding: 5px;font-size: 12px;" ><i> &copy; Ivana Yegros kubicka </i></footer>
+
+ </fieldset>
+
+
+ </section>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
