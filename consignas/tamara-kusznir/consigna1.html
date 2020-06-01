@@ -13,7 +13,15 @@
         <section id="formulario consigna1">
           <h1>ADA Formulario consigna 1</h1>
           <div>
-            <form action="consigna1" method="POST">
+              <style>
+              input:valid {
+              background-color: grey;
+              }
+              input:invalid {
+              background-color: red; 
+              }
+              </style>  
+            <form id="consigna1" action="consigna1.html" method="POST">
               <label for="nombre">Nombre:</label>
               <input
               id="nombre"
@@ -21,7 +29,7 @@
               <br>
               <label for="apellido">Apellido:</label>
               <input
-              id="nombre"
+              id="apellido
               maxlength="15">
               <br>
               <label for="direccion">Dirección:</label>
@@ -29,25 +37,17 @@
               id="direccion"
               maxlength="20">
               <br>
-              <label for="telefono">Telefono:</label>
+              <label for="telefono">Teléfono:</label>
               <input
               id="telefono"
               type="number">
               <div>
               <label for="email">Email:</label>
-              <input
-              id="email">
-              <style>
-                input:valid {
-                background-color: green;
-                }
-                input:invalid {
-                background-color: red; 
-                }
-              </style>
+              <input id="email"
+              type="email">
               </div>
               <br>
-              <h4>Genero:</h4>
+              <h4>Género:</h4>
               <input
               name="genero"
               type="radio"
@@ -65,7 +65,7 @@
               value="o">
               <label>Otro</label>
               <br>
-              <h4>Educacion:</h4>
+              <h4>Educación:</h4>
               <input
               name="educacion"
               type="radio"
