@@ -6,8 +6,9 @@
                 .miheader {
                     color: black;
                     font-family: 'Trebuchet MS';
-                    text-align: center;
+                    text-align: left;
                     font-size: 30px;
+                    margin-left: 50px;
                     }
                 body{
                     background-color: whitesmoke;
@@ -20,6 +21,10 @@
                         border-radius: 15px;
                         padding-left: 12px;
                     }
+                    input:invalid{
+                       background-color:silver;
+                   }
+                    
                 </style>
         </head>
         <body>
@@ -29,17 +34,15 @@
                 </header>
                 <article>
                     <section>
-                        <div>
+                        <div style="margin: 5px;padding:20px;border:2px dashed blue;width: 800px;margin-top: 30px;">
                             <h3>Ingrese los datos solicitados</h3>
                                 <form   id="preuntas"     
-                                        class="preguntas" 
                                         method= post 
                                         action="">
-                            <div style="border-radius: 6px; background-color: wheat;" >
                                 <label class="milabel" for="Nombre">Nombre:</label>
                                     <input 
                                         id="Nombre"
-                                        type="Nombre"
+                                        type="text"
                                         maxlength="15"
                                         name="nombre">
                                     <br>
@@ -47,7 +50,7 @@
                                 <label class="milabel" for="Apellido">Apellido:</label>
                                     <input 
                                         id="apellido"
-                                        type="apellido"
+                                        type="text"
                                         maxlength="15"
                                         name="apellido">
                                     <br>
@@ -55,7 +58,7 @@
                                 <label class="milabel" for="Direccion">Direccion:</label>
                                     <input 
                                         id="direccion"
-                                        type="Direccion"
+                                        type="text"
                                         maxlength="20"
                                         name="direccion">
                                     <br>
@@ -63,16 +66,15 @@
                                 <label class="milabel" for="telefono">Telefono:</label>
                                     <input 
                                         id= "telefono"
-                                        type="number"
-                                        name="telefono">
+                                        type="tel"
+                                        name="telefono personal">
                                         <br>
                                         <br>
                                 <label class="milabel" for="email">Mail:</label>
                                     <input 
                                         id="email" 
                                         type="email" 
-                                        name="email">
-                            </div>
+                                        name="direccion de correo electronico">
                                         <br>
                                     <h3>Genero:</h3>                       
                                  <label for="genero">Seleccione su Genero:</label>
@@ -90,14 +92,14 @@
                                         <option value="u">Universitaria</option>
                                      </select>
                                          <br>
-                                     <h3>Trabajo</h3>
+                                     <h3>Trabaja</h3>
                                          <input  name="trabajo" 
-                                                type="radio" 
+                                                type="checkbox" 
                                                  value="S">
                                             <label>SI</label>        
                                         <br>                           
                                         <input  name="trabajo" 
-                                                type="radio" 
+                                                type="checkbox" 
                                                 value="N">
                                             <label>NO</label>
                                     </select>
