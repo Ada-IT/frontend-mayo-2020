@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Datos personales</title>
+    <style>
+        h2 {
+            color: firebrick;
+            font-size: 16px;
+            font-weight: 100;
+            font-stretch: wider;
+            font-weight: 800;
+        }
+        .Email input:invalid {
+  border: 2px solid red;
+}
+.Email input:valid  {
+  content: '✓';
+  color: green;
+}
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <nav>
+            </nav>
+        </header>
+        <article>
+            <section id="formulario">
+                <h1 style="color:black; font-family: Verdana; width:unset; text-align: center;">Complete el siguiente
+                    formulario:</h1>
+                    <hr>
+                <div>
+                    <!-- Formulario de Preguntas -->
+                    <form id="preguntas" action="formulario-gracias.html" method="post">
+                        <div style="background-color:lavender;border-radius: 15px;padding: 10px;">
+
+                            <label for="Nombre">
+                                <h2>*Nombre:</h2>
+                            </label>
+                            <input type="text" maxlength="15">
+                            <br>
+
+                            <label for="Apellido">
+                                <h2>*Apellido:</h2>
+                            </label>
+                            <input type="text" maxlength="15">
+                            <br>
+
+                            <label for="Dirección">
+                                <h2>*Dirección:</h2>
+                            </label>
+                            <input type="text" maxlength="20">
+                            <br>
+
+                                    <label for="Teléfono"></label>
+                                    <h2>*Teléfono:</h2>
+                                    <input type="tel" id="phone" name="phone"
+                                    pattern="[0-9]{10}">
+                        <br>
+                            <label for="Email">
+                                <h2>*Email:</h2>
+                            </label>
+                            <input class="Email" type="email" maxlength="20" name="Email">
+                            <br>
+
+                            <h2>*Género:</h2>
+                            <input name="genero" type="radio" value="F">
+                            <label>Femenino</label>
+                            <input name="genero" type="radio" value="M">
+                            <label>Masculino</label>
+                            <input name="genero" type="radio" value="O">
+                            <label>Otros</label>
+                            <br>
+                            <br>
+
+                            <div>
+                                <h2>*Educacion:</h2>
+                                <label for="eduacion">Seleccione su educacion:</label>
+                                <select name="educacion" id="educacion">
+                                    <option value="P">Primaria</option>
+                                    <option value="S">Secundaria</option>
+                                    <option value="U">Universitaria</option>
+                                </select>
+                            </div>
+                            <br>
+
+                            <h2>*Trabajo:</h2>
+                            <input name="trabajo" type="radio" value="S">
+                            <label>Sí</label>
+                            <br>
+                            <input name="trabajo" type="radio" value="N">
+                            <label>No</label>
+                        </div>
+                        <br>
+                </div>
+                <hr>
+                <input type="submit" value="Guardar" style="text-align: center;">
+                </form>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>
