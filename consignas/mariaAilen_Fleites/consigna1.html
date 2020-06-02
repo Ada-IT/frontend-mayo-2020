@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Formulario de Contacto</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 19px;
+            font-weight: bold;
+            color: teal;
+            background-color: lightsalmon;
+        }
+
+        h1 {
+            color: rgb(253, 244, 121);
+        }
+
+        h3 {
+            font-size: 24px;
+            color: teal;
+        }
+
+        #email input:valid {
+            background-color: #cccccc;
+        }
+
+        input:invalid {
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Formulario de Datos Personales</h1>
+        </header>
+        <section>
+            <h3><i>Por favor complete los siguietes datos:</i></h3>
+            <hr>
+            <div>
+
+                <form id="datos" action="consigna1.html" method="POST">
+                    <div>
+                        <label for="nombre"> Nombre:</label>
+                        <input name="nombre" type="text" maxlength="15">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="apellido"> Apellido:</label>
+                        <input name="apellido" type="text" maxlength="15">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="direccion">Dirección:</label>
+                        <input name="direccion" type="text" maxlength="20">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="numeroTelefono">Número de Teléfono:</label>
+                        <input type="number">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input id="email" type="email" class="email">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="genero">Género:</label>
+                        <select name="genero" id="genero">
+                            <option value="F">Femenino</option>
+                            <option value="M">Masculino</option>
+                            <option value="O">Otro</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="educacion">Educación:</label>
+                        <select name="educacion" id="educacion">
+                            <option value="P">Primaria</option>
+                            <option value="S">Secundaria</option>
+                            <option value="U">Universitaria</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="trabajo">Trabajo:</label>
+                        <select name="trabajo" id="trabajo">
+                            <option value="S">Sí</option>
+                            <option value="N">No</option>
+                        </select>
+                    </div>
+                    <hr>
+                    <input type="submit" value="Guardar">
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
