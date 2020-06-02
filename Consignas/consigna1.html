@@ -2,21 +2,20 @@
 <html>
     
 <head>
-
-    <div style="font-size: 150%; text-align: center ;font-family: Georgia, 'Times New Roman', Times, serif; padding: 1rem; border-radius: 5px;" >
-<u>Consigna I: Crear un Formulario.</u>
-
-</div>
-</head><br>
-
+    <!--nombre de tab-->
+   <title>Mi formulario</title>
+</head>
 <body>
-    
+
+    <!--titulo-->
+    <h1 style="font-family: sans-serif; font-size: 1.5em; padding-bottom: 6px; text-align: center;"><u> Consigna I: Crear un Formulario</u></h1>
 
     <section id="field">
 
-    <fieldset id="Formulario" action="consigna1.html" method="POST">
-        
-<legend style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; color:teal;"><b>Datos Personales</b></legend> <br>
+     <fieldset>
+
+ <!--info que va dentro de los limites del recuadro-->
+    <legend style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; color:teal;padding-bottom: 7px;"><b>Datos Personales</b></legend> 
 
         <style>
             
@@ -30,9 +29,7 @@
             input:valid {border: 2px solid black;}
         </style>
         
-
-
-
+<!--Datos del formulario-->
     <label for="nombre">Nombre:</label>
     <input id="nombre" type="text" minlength="2" maxlength="15" placeholder="Escriba aqui."></input><br><br>
 
@@ -41,7 +38,7 @@
 
 
     <label for="direccion">Dirección:</label>
-    <input type="text" id="direccion" minlength="5" maxlength="20"placeholder="Escriba aqui."  ></input><br><br>
+    <input type="text" id="direccion" minlength="5" maxlength="20"placeholder="Escriba aqui."></input><br><br>
 
     <label for="telefono">Telefono:</label>
     <input type="tel" id="telefono"placeholder="Escriba aqui." ></input><br><br>
@@ -63,7 +60,6 @@
         <option value="U">Universitario</option></select>
     </p>
 
-  
     <p>Trabaja Actualmente:
 
         <select name="trabajo"> 
@@ -71,37 +67,14 @@
         <option value="N">No</option></select>
     </p>
     <br>
-      
-            <input type="submit" value="Guardar" style="background-color: rgba(6, 95, 95, 0.767); height: 2rem; font-family: Verdana, Geneva, Tahoma, sans-serif; border-radius: 5px; color: azure;">        
-          
-          
+    <!--Boton guardar-->
 
-<footer style="text-align: right; padding: 5px;font-size: 12px;" ><i> &copy; Ivana Yegros kubicka </i></footer>
+    <button type="button" style="background-color:teal;height:2rem;font-family: Verdana, Geneva, Tahoma, sans-serif;border-radius:5px;color:azure;" onclick="alert('Gracias!')">Guardar</button>
+            
+    <!--firma del final-->      
+    <footer style="text-align: right; padding: 5px;font-size: 12px;"><i> &copy; Ivana Yegros kubicka </i></footer>
 
- </fieldset>
-
-
- </section>
-
-</body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </fieldset>
+    </section>
+    </body>
 </html>
