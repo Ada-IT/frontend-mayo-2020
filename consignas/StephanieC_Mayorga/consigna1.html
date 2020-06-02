@@ -5,15 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primera Tarea</title>
-    </head>
+</head>
+
+<style type="">
+    form {
+background-color: #E1EEEC;
+ color: #555656;
+border-top-right-radius: 50px;
+border-bottom-right-radius: 50px;
+text-align: justify;
+padding: 10px 0px;
+}
+fieldset {
+max-width: 50%;
+color: blue;
+}
+label {
+padding: 10px;
+}
+input {
+margin: 5px;
+}
+input:valid {
+background-color: rgb(207, 203, 198);
+}
+input:invalid {
+background-color: crimson;
+}
+select {
+margin: 5px;
+}
+.boton {
+margin-top: 10px;
+text-align: center;
+background-color: ;
+}
+
+</style>
 
 <body>
-    <h1> TP1: Formulario</h1>
-
     <fieldset>
         <legend> <b>Datos personales</b> </legend>
 
         <form action="">
+
             <label for="nombre">Nombre:</label>
             <input id="nombre" type="text" maxlength="15" placeholder="Escribe tu nombre" name="nombree"><br>
 
@@ -50,7 +85,6 @@
 
             <input class="boton" type="button" value="Guardar">
         </form>
-
     </fieldset>
 
 </body>
