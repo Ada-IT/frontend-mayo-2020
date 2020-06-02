@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+      <head>
+        <title>Consigna</title>
+      </head> 
+    <body>
+         <main>
+            <article>
+                <section>
+                    <h1 style="background-color: rosybrown;
+                     font-family: Verdana;
+                     color: black;
+                     width: fit-content;">Formulario</h1>
+                    <div>
+                      <form  id="preguntas" action="consigna1.html" method="POST">
+                          <label for="nombre">Nombre:</label>
+                          <input id="nombre" type="text" minlength="3" maxlength="15">
+                          <br>
+                          <br>
+                          <label for="apellido">Apellido:</label>
+                          <input id="nombre" type="text" minlength="3" maxlength="15">
+                          <br>
+                          <br>
+                          <label for="direccion">Dirección:</label>
+                          <input id="direccion" type="text" minlength="3" maxlength="20">
+                          <br>
+                          <br>
+                          <label for="telefono">Teléfono:</label>
+                          <input id="telefono" type="number" minlength="10" maxlength="15">
+                          <br>
+                          <br>
+                          <label for="email">E-mail:</label>
+                          <input id="email" type="email" name="email">
+                          <br>
+                          <br>
+                          <label for="genero">Seleccione su género:</label>
+                          <select name="genero" id="genero">
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                            <option value="O">Otro</option>
+                          </select>
+                          <br>
+                          <br>
+                          <label for="educacion">Seleccione su nivel de educación:</label>
+                          <select name="educacion" id="educacion">
+                            <option value="P">Primaria</option>
+                            <option value="S">Secundaria</option>
+                            <option value="U">Universitaria</option>
+                          </select>
+                          <h5>¿Usted trabaja?</h5> 
+                          <label>Si</label> 
+                            <input name="trabajo" type="radio" value="S">
+                           <label>No</label>
+                            <input name="trabajo" type="radio" value="N">
+                            <hr>
+                          <input type="submit" value="Guardar">  
+                      </form>
+                    </div>
+                </section>
+            </article>
+          </main>
+    </body>
+</html>
