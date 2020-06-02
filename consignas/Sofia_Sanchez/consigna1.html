@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+  <html lang=es>
+    <head> 
+        <title>Informacion Personal</title>
+    </head>
+   <body>
+    <main>
+        <header>
+            <article>
+                <section id=Informacion>
+                    <h1>Informacion Personal</h1>
+                    <div>
+                        <form action="consigna1.html" method="POST">
+                            <label for="nombre">Nombre:</label>
+                            <input 
+                                id="nombre" 
+                                type="text" maxlength="15" name="nombre">
+                            <br>
+                            <br>
+                            <label for="apellido">Apellido:</label>
+                            <input
+                                id="apellido"
+                                type="text" maxlength="15" name="apellido">
+                            <br>    
+                            <br>
+                            <label for="direccion">Direccion:</label>
+                            <input
+                                id="direccion"
+                                type="text" maxlength="20" name="direccion">
+                            <br>
+                            <br>
+                            <label for="telefono">Telefono:</label>
+                            <input
+                                id="telefono"
+                                type="number" name="telefono">
+                            <br>
+                            <br>
+                    
+                        <div><style>
+                            input:valid {
+                               background-color: #cccccc;
+                            }
+                            #email:invalid {
+                               background-color: red;
+                               }   
+                           </style>
+                           <label for="email">Email:</label>
+                           <input
+                                id="email"
+                                type="email" name="email">
+                           <br>
+                           <br>
+                            </div>
+                        </div>
+                           <hr>
+                        <div>
+                            <h3>Genero</h3>
+                            <input 
+                                name="genero" type="radio" value="femenino">
+                           <label>Femenino</label>
+                           <br>                           
+                          <input 
+                                name="genero" type="radio" value="masculino">
+                          <label>Masculino</label>
+                           <br> 
+                          <input
+                                name="genero" type="radio" value="otro">
+                          <label>Otro:</label>                             
+                    </div>
+                    <hr>
+                    <div>
+                        <h3>Educacion:</h3>                       
+                        <label for="educacion">Nivel Educativo:</label>
+                        <select name="educacion" id="educacion">
+                          <option value="1">Primaria</option>
+                          <option value="2">Secundaria</option>
+                          <option value="3">Universitaria</option>
+                        </select>
+                    </div>
+                          <br> 
+                          <br>
+                          <hr>
+                     <div>
+                          <h3>Trabajo:</h3>
+                          <label for="trabajo">Trabajo:</label>
+                          <select name="trabajo" id="trabajo">
+                              <option value="1">Si</option>
+                              <option value="2">No</option>
+                    </div>     
+                       </select>       
+                          </select>
+                          <br>
+                          <br>   
+                          <input type="submit" value="Guardar">
+                        </form>
+                    
+                </section>
+            </article>
+        </header>
+    </main>            
+   </body> 
+
+
+</html>
