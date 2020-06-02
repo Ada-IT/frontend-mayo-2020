@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">         
+        <head>
+            <title>Primer Formulario</title>
+    </head>
+     <body>
+        <main>
+        <header>
+            <nav>
+            </nav>
+        </header>
+        <article>
+            <section id="">
+                <h1>Formulario</h1> 
+                <div>
+                    <form action="formularios.html" method="POST">
+                        <label for="nombre">Nombre:</label>
+                        <input id="nombre" type="text" minlength="2" maxlength="15" name="nombre">
+                        <br>
+                        <label for="apellido">Apellido:</label>
+                        <input id="apellido" type="text" minlength="4" maxlength="15" name="apellido">
+                        <br>
+                        <label for="direccion">Direccion:</label>
+                        <input id="direccion" type="text" minlength="5" maxlength="100" name="direccion">
+                        <br>
+                        <label for="telefono">Telegono</label>
+                        <input id="=telefono" type="number" minlength="8" maxlength="20" name="telefono">
+                        <br>
+                        <label for="email">Email:</label>
+                        <input id="email" type="text" minlength="10" maxlength="50" name="email">
+                        <br>
+                        <h4>Genero:</h4>
+                        <label>Mujer</label>
+                        <input name="sexo" type="radio" value="mujer">
+                        <label>Hombre</label>
+                        <input name="sexo" type="radio" value="hombre">
+                        <label>Otros</label>
+                        <input name="sexo" type="radio" value="otros">
+                        <br>
+                        <h4>Educacion</h4>
+                        <label for="educacion">Seleccione su educacion:</label>
+                        <select name="educacion" id="educacion">
+                            <option value="primaria">Primaria</option>
+                            <option value="secundaria">Secundaria</option>
+                            <option value="universitaria">Universitaria</option>
+                        </select>
+                        <br>    
+                        <h4>Trabajo:</h4>
+                        <label>Si</label>
+                        <input name="trabajo" type="radio" value="si">
+                        <label>No</label>
+                        <input name="trabajo" type="radio" value="no">
+                        <br>
+                        <input type="submit" value="Enviar">
+
+                        
+                    </form>
+                </div>
+             </section>
+        </article>
+        <footer>
+        </footer>
+    </main>
+    </body>
+    
+</html>
