@@ -1,130 +1,153 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>Consigna</title>
-    </head>
-    <body>
-        <main>
-            <header>
-                <nav>
-                </nav>
-            </header>
-            <article>
-                <section id="formulario">
-                    <h1>Formulario</h1>
-                    <div>
-                        <form action="consigna1.html" method="post">
-                            <labe for="nombre">Nombre:</labe>
-                            <input
-                                id="nombre"
-                                type="text"
-                                minlength="5"
-                                maxlength="15"
-                                name="name"
-                            >
-                            <br>
-                            <labe for="apellido">Apellido:</labe>
-                            <input
-                                id="Apellido"
-                                type="text"
-                                minlength="5"
-                                maxlength="15"
-                                name="apellido"
-                            >
-                            <br>
-                            <labe for="dirección">Direccion:</labe>
-                            <input
-                                id="dirección"
-                                type="text"
-                                minlength="5"
-                                maxlength="20"
-                                name="direccion"
-                            >
-                            <br>
-                            <labe for="telefono">Telefono:</labe>
-                            <input
-                                id="telefono"
-                                type="number"
-                                minlength="9"
-                                maxlength="20"
-                                name="telefono"
-                            >
-                        </form>
-                    </div>
-                    <br>
-                    <div>
-                        <!--Formulario Login-->
-                        <style>
-                            input:valid{
-                                background-color: red;
-                            }
-                        </style>
-                        <from id="Login" action="consigna1.html" method="post">
-                            <label for="usuario">Email:</label>
-                            <input
-                            id="email"
-                            type="email"
-                            name="email">
-                            <br>
-                            <h3>Genero</h3>
-                            
-                            <label>femenino</label>
-                            <input
-                                name="genero"
-                                type="radio"
-                                value="f">
-                            <br>
-                            <label>Masculino</label>
-                            <input
-                                name="genero"
-                                type="radio"
-                                value="m">
-                            <br>
-                            <label>Otro</label>
-                            <input
-                                name="genero"
-                                type="radio"
-                                value="o">
-                        </div>
+
+<head>
+    <title>Formulario</title>
+    <style>
+        h1 {
+            font-size: 20px;
+            font-family: helvetica;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 10px;
+            background: skyblue;
+            text-align: center;
+            color:white;
+        }
+
+        h3 {
+            font-size: 16px;
+            padding: 5px;
+            color:white !important;
+            font-weight: lighter;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .miemail:valid {
+            background-color: white;
+        }
+
+        .miemail:invalid {
+            background-color: red;
+        }
+        article {
+            -webkit-box-shadow: 8px 9px 6px -5px rgba(0,0,0,0.32);
+            -moz-box-shadow: 8px 9px 6px -5px rgba(0,0,0,0.32);
+            box-shadow: 8px 9px 6px -5px rgba(0,0,0,0.32);
+            border-radius: 10px;
+                margin: 0 auto;
+                padding: 20px 30px;
+                background: lightgoldenrodyellow;
+                width: 600px;}
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <nav>
+            </nav>
+        </header>
+        <article>
+            <section id="formulario">
+                <div style="
+                    width: 600px;
+                    font-family: helvetica;
+                    border-radius: 18px;
+                    ">
+                    <form action="consigna1.html" method="post">
+                        <h1>Formulario</h1>
+                        <h3 style="
+                    background-color:sandybrown;
+                    font-family:helvetica;
+                    width: 600px;
+                    color:black;
+                    ">Datos Personales</h3>
+                        <labe for="nombre">Nombre:</labe>
+                        <input id="nombre" type="text" minlength="3" maxlength="15" name="name">
                         <br>
-                        <div>
-                            <h3>Educacion</h3>
-                            <label for="educacion">Seleccione su educacion:</label>
-                            <select name="educacion" id="educacion">
-                                <option value="p">Primaria</option>
-                                <option value="s">Secundaria</option>
-                                <option value="u">Universitaria</option>
-                            </select>   
-                            <h3>Trabaja</h3>                         
-                            <label>si</label>
-                            <input
-                                name="genero"
-                                type="radio"
-                                value="s">
+                        <br>
+                        <label for="apellido">Apellido:</labe>
+                            <input id="Apellido" type="text" minlength="3" maxlength="15" name="apellido">
                             <br>
-                            <label>No</label>
-                            <input
-                                name="genero"
-                                type="radio"
-                                value="n">
                             <br>
-                        </div>
-                        
-                        
+                            <label for="dirección">Direccion:</labe>
+                                <input id="dirección" type="text" minlength="5" maxlength="20" name="direccion">
+                                <br>
+                                <br>
+                                <label for="telefono">Telefono:</label>
+                                <input id="telefono" type="number" minlength="5" maxlength="20" name="telefono">
+                                <br>
+                                <br>
+                                <!--Formulario Login-->
+                                <br>
+                                <br>
 
+                                <label for="email">Email:</label>
+                                <input class="miemail" id="email" type="email" name="email">
+                                <h3 style="
+                            background-color:sandybrown;
+                            font-family:helvetica;
+                            width: 600px;
+                            color:black;
+                            ">Genero</h3>
 
-
-
-                            <input type="submit" value="Guardar">
-                        </from>
-                    </div>
-                </section>
-
-            </article>
-            <section>
+                                <label>Femenino</label>
+                                <input name="genero" type="radio" value="f">
+                                <br>
+                                <br>
+                                <label>Masculino</label>
+                                <input name="genero" type="radio" value="m">
+                                <br>
+                                <br>
+                                <label>Otro</label>
+                                <input name="genero" type="radio" value="o">
+                                <br>
+                                <br>
+                                <h3 style="background-color: sandybrown;
+                            font-family:helvetica;
+                            width: 600px;
+                            color:black;
+                            ">Educacion</h3>
+                                <label for="educacion">Seleccione su educacion:</label>
+                                <select name="educacion" id="educacion">
+                                    <option value="p">Primaria</option>
+                                    <option value="s">Secundaria</option>
+                                    <option value="u">Universitaria</option>
+                                </select>
+                                <h3 style="
+                            background-color: sandybrown;
+                            font-family:helvetica;
+                            width: 600px;
+                            color:black;
+                            ">Trabaja</h3>
+                                <label>Si</label>
+                                <input name="genero" type="radio" value="s">
+                                <label>No</label>
+                                <input name="genero" type="radio" value="n">
+                                <br>
+                                <br>
+                                    <input style=" 
+                                    background-color:rgb(237, 171, 30);
+                                    font-family:helvetica;
+                                    font-weight: bold;
+                                    color:white;
+                                    width:100%;
+                                    border-radius: 10px;
+                                    border:none;
+                                    padding: 10px 0px;"
+                                    type="submit" 
+                                    value="Guardar">
+                    </from>
+                </div>
             </section>
-            <footer>
-            </footer>
-        </main>
-    </body>
+        </article>
+        <section>
+        </section>
+        <footer>
+        </footer>
+    </main>
+</body>
+
 </html>
