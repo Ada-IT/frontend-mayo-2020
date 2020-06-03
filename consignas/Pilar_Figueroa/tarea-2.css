@@ -2,8 +2,156 @@
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 body {
     background-color: #f2f2f2;
+}
+
+.contenedor {
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* --- MENU DE NAVEGACION --- */
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    background-color: #c4126b;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 5px solid #c4126b;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.menu a:hover {
+    border-bottom: 5px solid #ff9012;
+}
+
+/* --- MAIN --- */
+.noticia {
+    margin-top: 40px;
+    width: 700px;
+    max-width: 100%;
+}
+
+.noticia .titulo {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.noticia .subtitulo {
+    font-size: 1em;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+.noticia .foto {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.noticia .foto img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.noticia p {
+    font-size: 1.2em;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.important {
+    font-weight: 700;
+    background-color: #ff9012;
+    border-radius: 3px;
+}
+
+blockquote {
+    font-weight: 300;
+    font-size: 1em;
+    margin: 0 30px;
+    text-align: justify;
+}
+
+.multimedia h2 {
+    margin: 20px 0;
+}
+
+.multimedia iframe {
+    width: 100%;
+}
+
+/* --- SIDEBAR --- */
+
+.sidebar {
+    margin: 40px 20px;
+    background-color: #ffa742;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.sidebar h4 {
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 20px;
+    border-bottom: 1px solid #000;
+}
+
+.sidebar .links {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.sidebar .links a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+.sidebar .links a:hover {
+    color: #c4126b;
+    font-weight: 400;
+}
+
+.sidebar .widget {
+    background-color: #c77312;
+    height: 200px;
+    margin: 20px;
+}
+
+/* --- FOOTER --- */
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 20px 0;
+    color: gray;
 }
