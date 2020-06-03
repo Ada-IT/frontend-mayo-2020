@@ -1,59 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">         
         <head>
-            <title>Primer Formulario</title>
-    </head>
-     <body>
+            <title>Formulario</title>
+            <style>
+                h1 {
+                    font-size: 24px;
+                    color:rgb(53, 51, 51);
+                    font-weight: 900;
+                    padding: 05px;
+                    background-color: rgba(255, 230, 149, 0.699);
+                    width: fit-content;
+                }   
+                label {
+                    border: 1px solid rgb(216, 196, 130);
+                    padding: 5px;
+                    border-radius: 10px;
+                    font-size: 18px;
+                    color: rgb(32, 32, 32);
+                    font-family: Georgina;
+                }
+            </style>
+    </head> 
+     <body style="background-color: #f8e5ca44;">
         <main>
         <header>
             <nav>
             </nav>
         </header>
         <article>
-            <section id="">
-                <h1>Formulario</h1> 
+            <section id="consigna.1">
+                <h1>Completar Formulario</h1> 
                 <div>
                     <form action="formularios.html" method="POST">
                         <label for="nombre">Nombre:</label>
                         <input id="nombre" type="text" minlength="2" maxlength="15" name="nombre">
                         <br>
+                        <br>
                         <label for="apellido">Apellido:</label>
                         <input id="apellido" type="text" minlength="4" maxlength="15" name="apellido">
+                        <br>
                         <br>
                         <label for="direccion">Direccion:</label>
                         <input id="direccion" type="text" minlength="5" maxlength="100" name="direccion">
                         <br>
-                        <label for="telefono">Telegono</label>
+                        <br>
+                        <label for="telefono">Telefono</label>
                         <input id="=telefono" type="number" minlength="8" maxlength="20" name="telefono">
                         <br>
+                        <br>
+                        <!--intente que chequee solo email, pero aplica en todos los label -->                        
+                        <div>
+                            <style>
+                                input:valid {
+                            background-color: #cccccc;
+                        }
+                        input:invalid {
+                            background-color:red;
+                        }
+                            </style>
                         <label for="email">Email:</label>
-                        <input id="email" type="text" minlength="10" maxlength="50" name="email">
+                        <input id="email" required type="email" type="email" minlength="10" maxlength="50" name="email">
+                        </div>
                         <br>
-                        <h4>Genero:</h4>
-                        <label>Mujer</label>
-                        <input name="sexo" type="radio" value="mujer">
-                        <label>Hombre</label>
-                        <input name="sexo" type="radio" value="hombre">
-                        <label>Otros</label>
-                        <input name="sexo" type="radio" value="otros">
                         <br>
-                        <h4>Educacion</h4>
-                        <label for="educacion">Seleccione su educacion:</label>
+                        <label for="genero">Seleccione Genero :</label>
+                        <select name="genero" id="genero">
+                            <option value="mujer">Mujer</option>
+                            <option value="hombre">Hombre</option>
+                            <option value="otro">Otro</option>
+                        </select> 
+                        <br>
+                        <br>
+                        <label for="educacion">Seleccione Educacion:</label>
                         <select name="educacion" id="educacion">
                             <option value="primaria">Primaria</option>
                             <option value="secundaria">Secundaria</option>
                             <option value="universitaria">Universitaria</option>
-                        </select>
-                        <br>    
-                        <h4>Trabajo:</h4>
-                        <label>Si</label>
-                        <input name="trabajo" type="radio" value="si">
-                        <label>No</label>
-                        <input name="trabajo" type="radio" value="no">
+                        </select>   
+                        <br>
+                        <br>  
+                        <label for="trabajo">Trabaja:</label>
+                            <select name="trabaja" id="trabaja">
+                                <option value="si">Si</option>
+                                <option value="no">NO</option>
+                            </select>
+                        <br>
+                        <br>
                         <br>
                         <input type="submit" value="Enviar">
-
-                        
                     </form>
                 </div>
              </section>
@@ -62,5 +96,4 @@
         </footer>
     </main>
     </body>
-    
-</html>
+    </html>
