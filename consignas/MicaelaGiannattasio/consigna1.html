@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
       <head>
-        <title>Consigna</title>
+        <title>Formulario de contacto</title>
+        <style>
+           body {
+             font-family: Arial;
+             }
+           h1 {
+             font-size: 20px;
+             color: slateblue;
+             font-weight: 700;
+             }  
+           .miheader {
+             font-size: 24px;
+             color: grey;
+             font-weight: 500;
+           }  
+           label {
+             font-size: 16px;
+             color: black;
+             font-weight: 500;
+           }
+
+        </style>
+      
       </head> 
     <body>
          <main>
+           <header class="miheader">Formulario de contacto</header>
             <article>
                 <section>
                     <h1 style="background-color: rosybrown;
-                     font-family: Verdana;
-                     color: black;
-                     width: fit-content;">Formulario</h1>
-                    <div>
-                      <form  id="preguntas" action="consigna1.html" method="POST">
+                     width: fit-content;
+                     border-radius: 4px;
+                     padding: 4px;">Formulario:</h1>
+                    <div style="width: fit-content; background-color: rosybrown; border-radius: 6px; padding: 5px;">
+                      <form  id="preguntas" class="preguntas" action="consigna1.html" method="POST" >
                           <label for="nombre">Nombre:</label>
-                          <input id="nombre" type="text" minlength="3" maxlength="15">
+                          <input id="nombre" type="text" minlength="3" maxlength="15" name="nombre" placeholder="Ingrese su nombre">
                           <br>
                           <br>
                           <label for="apellido">Apellido:</label>
-                          <input id="nombre" type="text" minlength="3" maxlength="15">
+                          <input id="nombre" type="text" minlength="3" maxlength="15" name="apellido" placeholder="Ingrese su apellido">
                           <br>
                           <br>
                           <label for="direccion">Dirección:</label>
-                          <input id="direccion" type="text" minlength="3" maxlength="20">
+                          <input id="direccion" type="text" minlength="3" maxlength="20" name="direccion" placeholder="Ingrese su dirección">
                           <br>
                           <br>
                           <label for="telefono">Teléfono:</label>
-                          <input id="telefono" type="number" minlength="10" maxlength="15">
+                          <input id="telefono" type="number" minlength="10" maxlength="15" name="telefono" placeholder="Ingrese número de teléfono">
                           <br>
                           <br>
                           <label for="email">E-mail:</label>
-                          <input id="email" type="email" name="email">
+                          <input id="email" type="email" name="email" placeholder="Ingrese su e-mail">
                           <br>
                           <br>
                           <label for="genero">Seleccione su género:</label>
