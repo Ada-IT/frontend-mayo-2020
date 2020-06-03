@@ -11,13 +11,15 @@
             font-stretch: wider;
             font-weight: 800;
         }
-        .Email input:invalid {
-  border: 2px solid red;
-}
-.Email input:valid  {
-  content: '✓';
-  color: green;
-}
+        
+        #email 
+        input:invalid {
+            border: 2px solid red;
+            }
+        input:valid  {
+            content: '✓';
+            color: green;
+            }
 
     </style>
 </head>
@@ -41,30 +43,36 @@
                             <label for="Nombre">
                                 <h2>*Nombre:</h2>
                             </label>
-                            <input type="text" maxlength="15">
+                            <input name="Nombre" type="text" placeholder="Escriba aqui su nombre" placeholder size="50" 
+                            maxlength="15">
                             <br>
-
                             <label for="Apellido">
                                 <h2>*Apellido:</h2>
                             </label>
-                            <input type="text" maxlength="15">
+                            <input name="Apellido" type="text" placeholder="Escriba aquí su apellido" placeholder size="50" 
+                            maxlength="15">
                             <br>
-
                             <label for="Dirección">
                                 <h2>*Dirección:</h2>
                             </label>
-                            <input type="text" maxlength="20">
+                            <input name="Dirección" type="text" placeholder="Escriba aquí su dirección" placeholder size="50" 
+                            maxlength="20">
                             <br>
-
                                     <label for="Teléfono"></label>
                                     <h2>*Teléfono:</h2>
-                                    <input type="tel" id="phone" name="phone"
+                                    <input name="Teléfono" type="number" 
+                                    placeholder="Ej: 11 12345678" 
+                                    placeholder size="65" id="phone" 
                                     pattern="[0-9]{10}">
                         <br>
-                            <label for="Email">
+                        
+                        <div id="Email">
+                        <label for="Email">
                                 <h2>*Email:</h2>
                             </label>
-                            <input class="Email" type="email" maxlength="20" name="Email">
+                            <input id="Email" type="email" placeholder="Escriba aqui su email" placeholder size="50" 
+                            maxlength="20" name="Email">
+                        </div>
                             <br>
 
                             <h2>*Género:</h2>
@@ -98,7 +106,7 @@
                         <br>
                 </div>
                 <hr>
-                <input type="submit" value="Guardar" style="text-align: center;">
+                <input name="Guardar" type="submit" value="Guardar" style="text-align: center;">
                 </form>
             </section>
         </article>
