@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Mi Formulario de Login</title>                       
+        <title>Mi Formulario de Login</title>    
+        <link rel="stylesheet" type="text/css" href="css/formulario.css">
     </head>
     <body>
         <main>
@@ -14,20 +15,12 @@
                     <h1>Login</h1>
                     <div>
                         <!-- Formulario de Login -->
-                        <style>
-                         input:valid {
-                            background-color: #cccccc;
-                         }
-                         input:invalid {
-                            background-color: red;
-                            }   
-                        </style>
-                        <form id="login" action="formulario-login.html" method="POST">
+                        <form class="login-validation" id="login" action="formulario-login.html" method="POST">
                             <label for="usuario">Usuario:</label>
                             <input 
                                 id="usuario" 
                                 type="email" 
-                                name="usuario"
+                                name="usuario"                                
                             >
                             <br>
                             <label for="password">Password:</label>
