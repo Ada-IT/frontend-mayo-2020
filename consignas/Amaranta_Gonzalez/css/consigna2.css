@@ -1,0 +1,30 @@
+img {
+    display: block;
+    margin: auto;
+}
+iframe{
+    display: block;
+    margin: auto;
+}
+h1{
+    font-size: 40px;
+    font-weight: 700;
+    width: 50%;
+    color: crimson;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.descripcion{
+    font-style: italic;
+    font-size: 28px;
+    width: 50%;
+}
+body{
+    background-color: ivory;
+}
+p{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+blockquote{
+    font-size: 25px;
+}
