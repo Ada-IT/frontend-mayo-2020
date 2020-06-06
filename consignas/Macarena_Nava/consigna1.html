@@ -21,6 +21,7 @@
                              maxlelength="15" 
                              name="nombre"> 
                             <br>
+                            <br>
                             <label for="apellido">Apellido:</label>
                             <input
                              id="apellido"
@@ -29,7 +30,8 @@
                              maxlelength="15" 
                              name="apellido"> 
                             <br>
-                            <label for="direccion">Direccion:</label>
+                            <br>
+                            <label for="direccion">Dirección:</label>
                             <input 
                              id="direccion"
                              type="text" 
@@ -37,13 +39,15 @@
                              maxlelength="20" 
                              name="direccion"> 
                             <br>
-                            <label for="telefono">Telefono:</label>
+                            <br>
+                            <label for="telefono">Teléfono:</label>
                             <input
                              id="telefono"
                              type="number" 
                              min="8" 
                              max="" 
                              name="telefono">
+                            <br>
                             <br>
                             <label for="direccionemail">E-mail:</label>
                             <input id="direccionemail" type="email" name="direccionemail">
@@ -54,6 +58,16 @@
                             input[type="email" i]:invalid 
                             { background-color: red!important;} 
                             </style>
+                            <br>
+                            <br>
+                         <div>
+                            <label for="genero">Seleccione su género:</label>
+                            <select name="genero" id="genero">
+                                <option value="F">Femenino</option>
+                                <option value="M">Masculino</option>
+                                <option value="O">Otro</option>
+                            </select>
+                        </div>
                     
                         </form>
                     </div>
