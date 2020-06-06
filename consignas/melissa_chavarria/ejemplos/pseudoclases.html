@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Mi formulario Login</title>
+    <style>
+  .menu{
+    background-color: powderblue;
+     }
+  .menu:hover {
+    background-color: gold;
+    font-size: larger;
+  }
+  .menu:focus {
+    background-color: blue;
+  }
+  input {
+    background-color:blueviolet;
+  }
+  input:focus {
+    background-color: #ffffff;
+  }
+ 
+  .login-validation {
+    background-color:cadetblue;
+  }
+
+  .botonazo {
+      background-color: cornsilk;
+  }
+  .botonazo:hover {
+      background-color:mediumturquoise;
+  }
+
+    </style>
+  </head>
+  <body>
+      <main>
+        <header>
+            <nav>
+                <a class="menu" href="">Menu 1</a>
+                <a class="menu" href="">Menu 2</a>
+            </nav>
+        </header>
+        <article>
+            
+             <section id="formulario-login">
+                <h1>Login</h1>
+                <div>
+                 <!-- Formulario de Login -->
+                  <form class="login-validation" id="login" action="formulario-login.html" method="POST"></form>
+                    <label for="usuario">Usuario</label>
+                        <input
+                            id="usuario"
+                            type="email"
+                            name="usuario"
+                            >
+                            <br>
+                
+                            <label for="password">Password</label>
+                            <input
+                                id="password"
+                                type="email"
+                                name="usuario"
+                                >
+                                <br>
+                            <input class="botonazo" type="submit" value="Ingresar">
+                            </form>
+
+                </div>
+            </section>
+        </article>
+    </main>
+  </body>
+</html>
