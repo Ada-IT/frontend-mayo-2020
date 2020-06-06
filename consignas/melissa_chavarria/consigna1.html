@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <meta charset="utf-8">
         <title>Formulario de Datos Generales</title>
     </head>
     <body>
         <main>
             <header>
-                <h1 style="color: royalblue; font-family: Verdana; background-color: sandybrown;
+                <h1 style="color: royalblue; font-family: Verdana; 
                        width: fit-content;">
                         Formulario de Datos Personales</h1>
             </header>
             <article>
                 <section>
-                    <h2 style="color: royalblue; font-family: Verdana; background-color: sandybrown;
+                    <h2 style="color: royalblue; font-family: Verdana;
                        width: fit-content;">
                         Por favor completa la siguiente info:</h2>
-                    <div>
+                    <div style="padding: 25px">
                         <style>
                             input:valid {
                                 background-color: aquamarine;
@@ -30,13 +31,11 @@
                             <h3>Apellido:</h3>
                             <input id="apellido" name="apellido" type="text" maxlength="15">
                             <h3>Dirección:</h3>
-                            <textarea id="direccion" name="direccion" value="" 
-                             placeholder="Escriba su dirección" rows="6"cols="60">
-                            </textarea>
+                            <textarea id="direccion" name="direccion" value="" placeholder="Escriba su dirección" rows="6"cols="60"></textarea>
                             <h3>Teléfono:</h3>
                             <input id="tel" name="tel" type="number" style="width:10rem;">
                             <h3>Email:</h3>
-                            <input id="email" name="email" type="email">
+                            <input id="email" name="email" type="email" style="width:10rem;">
                             <h3>Sexo:</h3>
                             <input name="sexo" type="radio" value="f">
                             <label>Femenino</label>
