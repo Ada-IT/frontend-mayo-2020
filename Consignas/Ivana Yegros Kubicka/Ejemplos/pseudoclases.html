@@ -4,9 +4,10 @@
         <title>Mi Formulario de Login</title> 
         <style> 
         .menu {color: blueviolet; font-size: 1.5rem;}
-        .menu:hover {background-color: aquamarine; border: 3px;} 
-        .login-validation {background-color: aqua;} 
-
+        .menu:hover {background-color: aquamarine; border-radius: 40%; font-style: italic;} 
+        #usuario:focus {background-color: lightpink;}
+        #password:focus{background-color: crimson;} 
+        .ingresar:hover{color: blue; font-family: fantasy;}   
     </style>  
     </head>
     <body>
@@ -24,7 +25,7 @@
                         <!-- Formulario de Login -->
                         <style>
                          input:valid {
-                            background-color: #cccccc;
+                            background-color: rgb(235, 234, 231);
                          }
                          input:invalid {
                             background-color: red;
@@ -47,7 +48,7 @@
                                 name="password"
                             >
                             <br>
-                            <input type="submit" value="Ingresar">
+                            <input type="submit" value="Ingresar" class="ingresar">
                         </form>
                     </div>
                 </section>
