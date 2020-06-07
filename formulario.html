@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Mi Formulario  web</title>                       
+    </head>
+    <body>
+        <main>
+            <header>
+                <nav>
+                </nav>
+            </header>                        
+            <article>
+                <section id="formulario">                
+                    <h1>Mi Formulario</h1>
+                    <div>
+                        <!-- comentario -->
+                        <form action="formulario.html" method="POST">
+                            <label for="nombre">Nombre:</label>
+                            <input 
+                                id="nombre" 
+                                type="text" 
+                                minlength="3" 
+                                maxlength="15" 
+                                name="nombre"
+                            >
+                            <br>
+                            <!-- Input tipo number o numerico -->
+                            <label for="edad">Edad:</label>
+                            <input id="edad" type="number" min="1" max="40" name="edad">
+                            <br>
+                            <!-- Input tipo date o fecha -->
+                            <label for="fechanacimiento">Fecha de Nacimiento:</label>
+                            <input id="fechanacimiento" type="date" name="fechanacimiento">
+                            <br> 
+                            <!-- Input  -->
+                             <label for="foto">Fotografía:</label>
+                             <input id="foto" type="file" name="foto" accept="image/png, image/jpeg">
+                            <br>
+                            <label for="check">
+                            <input type="checkbox" id="check" value="test">
+                            Aceptar checkbox
+                            </label>
+                            <br>
+                            <label for="check2"></label>
+                            <input checked type="checkbox" id="check" value="test">
+                            <br>
+                            <input id="iduser" name="iduser" type="hidden" value="123">
+                            <br>
+                            <input type="submit" value="Guardar">
+                        </form>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>                
