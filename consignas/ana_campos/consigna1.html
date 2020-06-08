@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>consigna1</title>  
+        <style>
+           
+            h4 {
+                color: darkcyan; font-family: sans-serif; background-color:darkmagenta width fit-content
+            }
+            label {
+            color: brown; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+        </style>                   
+    </head>
+<body>
+    <center><big><big><h4> CUESTIONARIO </h4> </big></big></center>
+   
+        <form action="consigna1.html" method="POST">
+
+         <br>  
+
+        <label>Nombre:</label>
+
+        <input type="nombre"  maxlength="15" placeholder="escriba aqui su nombre"></input>
+
+        <label>Apellido:</label>
+
+        <input type="apellido" maxlength="15" placeholder="escriba aqui su apellido"></input>
+
+        <label>Direccion:<label>
+
+        <input type="direccion"  maxlength="20" placeholder="escriba aqui su direccion"></input>
+
+        <div style= border-radius:6px; padding:5px;>
+
+        <label>Genero:</label>
+            
+        <input  name="genero"  type="radio"  value="femenino">
+
+        <label>Femenino</label>
+
+        <br>  
+
+        <input name="genero" type="radio" value="masculino">
+
+         <label>Masculino</label>  
+
+         <br>
+
+         <label>Telefono:</label>
+        
+        <input type="number" name="numeros" pattern="{0-9}" placeholder="escriba aqui su telefono"></input>
+
+        <br>
+
+        <label>email</label>
+
+        <br>
+
+        <input type="email" name="email" value="" placeholder="escriba aqui su email"></input>
+         
+         <h3>Educacion:</h3>
+             <select name="educacion" id="educacion">
+             <option value="Primaria">Primaria</option>
+             <option value="secundaria">Secundaria</option>
+             <option value="Universitaria">Universitaria</option>
+        </select>
+
+        <label>Trabajo:</label>>
+        
+        <input  name="Trabajo"  type="radio"  value="no">
+
+         <label>no</label>
+
+        <br>                 
+
+        <input name="Trabajo" type="radio" value="si">
+
+         <label>si</label>                            
+                
+        <br>
+        <hr>
+        <input type="submit" value="Enviar">
+        </div>
+    </form>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera Tarea</title>
+</head>
+
+<style type="">
+form {
+background-color: #E1EEEC;
+ color: #555656;
+border-top-right-radius: 50px;
+border-bottom-right-radius: 50px;
+text-align: justify;
+padding: 10px 0px;
+}
+fieldset {
+max-width: 50%;
+color: blue;
+}
+label {
+padding: 10px;
+}
+input {
+margin: 5px;
+}
+input:valid {
+background-color: rgb(207, 203, 198);
+}
+input:invalid {
+background-color: crimson;
+}
+select {
+margin: 5px;
+}
+.boton {
+margin-top: 10px;
+text-align: center;
+background-color: ;
+}
+
+</style>
+
+<body>
+    <fieldset>
+        <legend> <b>Datos personales</b> </legend>
+
+        <form action="">
+
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" type="text" maxlength="15" placeholder="Escribe tu nombre" name="nombree"><br>
+
+            <label for="apellido">Apellidos:</label>
+            <input type="text" id="apellido" maxlength="20" placeholder="Escribe tu apellido" name="apellido"><br>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" placeholder="Escribe tu edad" max="100"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="direccionemail" placeholder="Escribe tu email" id="email"> <br>
+
+            <label for="direccion">Direccion:</label>
+            <input type="text" name="direccion" placeholder="Escribe tu direccion" id="direccion"><br>
+
+
+            <label for="genero">Selecciona tu genero:</label>
+            <select name="genero" id="genero">
+                <option value="f">Femenino</option>
+                <option value="m">Maculino</option>
+                <option value="O">Otro</option>
+            </select> <br>
+
+            <label for="eduacion">Selecciona tu nivel de educacion:</label>
+            <select name="genero" id="genero">
+                <option value="p">Primaria</option>
+                <option value="s">Segundaria</option>
+                <option value="u">Universitaria</option>
+            </select> <br>
+
+            <label for="trabajo">Usted trabaja?</label>
+            <input type="radio" name="empleo" value="s">Si
+            <input type="radio" name="empleo" value="n">No <br>
+
+            <input class="boton" type="button" value="Guardar">
+        </form>
+    </fieldset>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+Pasos para realizar un Pull Request:
+1. Escribe tu código en la carpeta consignas/tu_usuario/ con el nombre de archivo consigna-1.html 
+2. Realizar los pasos de git add, git commit que consideres necesario.
+3. Para subir las cosas a tu  repo debes ejecutar git push.
+4. En tu pagína de GitHub selecciona la Branch / Rama “Desarrollo” del repositorio front-end-mayo-2020 en tu cuenta.
+5. Una vez realizado esto en tu pagina de GitHub veras un botón que dice Pull Request. Presionalo  agrega el comentario y presiona el botón Create Pull Request.
+6. Listo!
+7. Te pueden llegar comentarios de la revisión de código , estate atenta para realizar más cambios.!

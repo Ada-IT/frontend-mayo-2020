@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+ <html lang="eng">
+     <head>
+         <title>Paso 1: Inscripción</title>
+         <meta author="Clara Cortes" charset="utf-8"git>
+         <style>
+
+             body {background-color:lavenderblush; font-family: Verdana, Geneva, Tahoma, sans-serif; color:midnightblue;}
+
+
+             .afirmacion {font-style:italic}
+
+             .questions {background-color: mediumturquoise; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; padding: 60px;border-radius: 10px;}
+            
+            .h3 {font-weight: 200;}
+
+            .h4 {font-weight:bolder}
+         </style>
+    </head>
+    <body>
+        <main>
+            <article>
+                <section> <h1>Haz aquí tu Inscripción</h1>
+                <p> <i>¡Queremos saber más de ti!</i></p>
+                <form id="questions" class="questions" method="post">
+                    <legend><h2>Datos Personales</h2></legend>
+                    <label for="name"><h3>Tu nombre:</h3></label>
+                      <input id="name" 
+                      type="text" 
+                      max-lenght="15" 
+                      autocomplete="name"
+                      name="name">
+                      <br>
+                    </label>
+                    <label for="family-name"><h3>Tu apellido:</h3></label>
+                    <input id="family-name"
+                    type="text"
+                    max-lenght="15"
+                    autocomplete="family-name"
+                    name="family-name" required>
+                    <br>
+                    <label for="address"><h3>Tu dirección:</h3></label>
+                      <input id="address" 
+                      type="text" 
+                      max-lenght="20" 
+                      autocomplete="street-address"
+                      name="address" required
+                      size= 50px>
+                      <br>
+                      <label for="directphone"><h3>Tu teléfono de contacto:</h3></label>
+                      <input id="directphone"
+                      type="tel"
+                      input:invalid {
+                        border-color: #C00000;
+                      }required
+                      name= "directphone">
+                    <br>
+                    <br>
+                    <label for="email"><h3>Tu e-mail:</h3></label>
+                      <input id="email"
+                      type="email"
+                      input:invalid {
+                        border-color: #C00000;
+                      }>
+                      <br>
+                      <h3>Género a cual se identifica:</h3>
+                      <label for="gender">Selecione:</label>
+                      <select id="gender" name="gender">
+                          <option value="m"> Masculino </option>
+                          <option value="f"> Femenino </option>
+                          <option value="o"> Otro </option>
+                      </select>
+                      <br>
+                      <fieldset>
+                        <legend><h3>Tu grado de educación:</h3></legend>
+                    
+                        <input type="radio" id="p" name="educacion" value="p"
+                        checked>
+                        <label for="p">Primaria</label><br/>
+                    
+                        <input type="radio" id="s" name="educacion" value="s"
+                        >
+                        <label for="s">Secundária</label><br/>
+                    
+                        <input type="radio" id="u" name="educacion" value="u">
+                        <label for="u">Universidad</label>
+                      </fieldset>
+                      <br>
+                      <label for="sitrabajo">
+                      <input type="checkbox" name="sitrabajo" id="check" value="true"> <h3 class="afirmacion">Yo trabajo actualmente </h3></label>  
+                      <br>
+                    <button style="backgorund-color:orchid"><h4>Guardar</h4></button>
+                  </form> 
+                </section>
+            </article>
+        </main>
+    </body>
+ 
+ 
+ </html>
