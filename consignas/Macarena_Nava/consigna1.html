@@ -10,9 +10,12 @@
             </header>
             <article>
                 <section id=formulario>
-                    <h1>Ingresa tus datos</h1>
-                    <div>
+                    <h1 style= background-color:lightblue;padding-left:2%;width:fit-content;padding-right:8%>Ingresa tus datos</h1>
+                    <div style= background-color:lightblue;width:fit-content;padding-left:2%;padding-right:2%>
+                        <!-- Formulario para recoleccion de informacion -->
                         <form action=consigna1.html method=POST>
+                              <!-- Input tipo texto, identidad -->
+                            <br>
                             <label for="nombre">Nombre:</label>
                             <input
                              id="nombre"
@@ -31,6 +34,7 @@
                              name="apellido"> 
                             <br>
                             <br>
+                              <!-- Input tipo texto ,residencia-->
                             <label for="direccion">Dirección:</label>
                             <input 
                              id="direccion"
@@ -40,27 +44,28 @@
                              name="direccion"> 
                             <br>
                             <br>
+                              <!-- Input tipo numerico,contacto -->
                             <label for="telefono">Teléfono:</label>
                             <input
                              id="telefono"
                              type="number" 
-                             min="8" 
-                             max="" 
                              name="telefono">
                             <br>
                             <br>
+                              <!-- Input tipo texto, contacto -->
                             <label for="direccionemail">E-mail:</label>
                             <input id="direccionemail" type="email" name="direccionemail">
                             <style>
                             input[type="email" i]:valid 
                             {background-color: green!important;}
-                            i
+                            
                             input[type="email" i]:invalid 
                             { background-color: red!important;} 
                             </style>
                             <br>
                             <br>
                          <div>
+                               <!-- Input tipo texto,genero -->
                             <label for="genero">Seleccione su género:</label>
                             <select name="genero" id="genero">
                                 <option value="F">Femenino</option>
@@ -71,14 +76,32 @@
                         <br>
                         <br>
                         <div>
-                            <label for="educacion">Nivel de educacion:</label>
+                              <!-- Input tipo texto, ocupacion/nivel de educacion -->
+                            <label for="educacion">Nivel de educación:</label>
                             <select name="educacion" id="educacion">
-                                <option value="P">Femenino</option>
-                                <option value="S">Masculino</option>
-                                <option value="U">Otro</option>
+                                <option value="P">Primaria</option>
+                                <option value="S">Secundaria</option>
+                                <option value="U">Universidad</option>
                             </select>
                         </div>
-                    
+                        <div>
+                            <h3>Trabajo</h3>
+                            <input 
+                                name="trabajo" 
+                                type="radio" 
+                                value="si"
+                            >
+                            <label>Si</label>
+                            <br>                           
+                            <input 
+                               name="trabajo" 
+                               type="radio" 
+                               value="no"
+                            >
+                            <label>No</label>                           
+                        </div>
+                        <hr>
+                        <input type="submit" value="guardar">
                         </form>
                     </div>
 
