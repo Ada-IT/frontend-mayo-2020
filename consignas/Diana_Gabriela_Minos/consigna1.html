@@ -2,28 +2,23 @@
 <html lang="es">
 
 <head>
+    <meta charset="utf-8"/>
     <title>Datos Personales</title>
     <style>
         h2 {
             color: firebrick;
             font-size: 16px;
             font-weight: 100;
-            font-stretch: wider;
-            font-weight: 800;
         }
+        label {
+  cursor: default;
+}
         
-        #email 
-        input:invalid {
-            border: 2px solid red;
-            }
-        input:valid  {
-            content: '✓';
-            color: green;
-            }
-
+        .invalid-feedback{
+            color: red;
+        }
     </style>
 </head>
-
 <body>
     <main>
         <header>
@@ -40,55 +35,64 @@
                     <form id="preguntas" action="formulario-gracias.html" method="post">
                         <div style="background-color:lavender;border-radius: 15px;padding: 10px;">
 
-                            <label for="Nombre">
-                                <h2>*Nombre:</h2>
-                            </label>
-                            <input name="Nombre" type="text" placeholder="Escriba aqui su nombre" placeholder size="50" 
+                            <h2>Nombre:</h2>
+                            <label for="Nombre"></label>
+                            <input name="Nombre" 
+                            type="text" 
+                            placeholder="Escriba aqui su nombre" 
+                            placeholder size="50" 
                             maxlength="15">
                             <br>
-                            <label for="Apellido">
-                                <h2>*Apellido:</h2>
-                            </label>
-                            <input name="Apellido" type="text" placeholder="Escriba aquí su apellido" placeholder size="50" 
+                            
+                            <h2>Apellido:</h2>
+                            <label for="Apellido"></label>
+                            <input name="Apellido"
+                             type="text" 
+                             placeholder="Escriba aquí su apellido" 
+                             placeholder size="50" 
                             maxlength="15">
                             <br>
-                            <label for="Dirección">
-                                <h2>*Dirección:</h2>
-                            </label>
-                            <input name="Dirección" type="text" placeholder="Escriba aquí su dirección" placeholder size="50" 
+                            
+                            <h2>Dirección:</h2>
+                            <label for="Dirección"></label>
+                            <input name="Dirección" 
+                            type="text" 
+                            placeholder="Escriba aquí su dirección" 
+                            placeholder size="50" 
                             maxlength="20">
                             <br>
-                                    <label for="Teléfono"></label>
-                                    <h2>*Teléfono:</h2>
+                                    
+                            <h2>Teléfono:</h2>
+                            <label for="Teléfono"></label>
                                     <input name="Teléfono" type="number" 
                                     placeholder="Ej: 11 12345678" 
-                                    placeholder size="65" id="phone" 
-                                    pattern="[0-9]{10}">
+                                    placeholder size="65" id="phone">
                         <br>
                         
-                        <div id="Email">
-                        <label for="Email">
-                                <h2>*Email:</h2>
-                            </label>
-                            <input id="Email" type="email" placeholder="Escriba aqui su email" placeholder size="50" 
-                            maxlength="20" name="Email">
+                        <h2>Email:</h2>
+                        <label for="Email"></label>
+                            <input id="Email" 
+                            type="email" class="form-control"
+                             placeholder="Ej: su nombre@gmail.com" 
+                             size="50" 
+                            maxlength="20" 
+                            name="Email">
+                            <div class="invalid-feedback"
+                        Por favor, ingrese un email válido.>
                         </div>
                             <br>
 
-                            <h2>*Género:</h2>
-                            <input name="genero" type="radio" value="F">
-                            <label>Femenino</label>
-                            <input name="genero" type="radio" value="M">
-                            <label>Masculino</label>
-                            <input name="genero" type="radio" value="O">
-                            <label>Otros</label>
+                            <h2>Género:</h2>
+                            <label><input type="radio" name="gender" value="F">Femenino</label>
+                            <label><input type="radio" name="gender" value="M">Masculino</label>
+                            <label><input type="radio" name="gender" value="O">Otros</label>
+                            
                             <br>
                             <br>
-
                             <div>
-                                <h2>*Educacion:</h2>
-                                <label for="eduacion">Seleccione su educacion:</label>
-                                <select name="educacion" id="educacion">
+                                <h2>Educación:</h2>
+                                <label class="eduación">Seleccione su educacion:</label>
+                                <select name="educación" id="educación">
                                     <option value="P">Primaria</option>
                                     <option value="S">Secundaria</option>
                                     <option value="U">Universitaria</option>
@@ -96,7 +100,7 @@
                             </div>
                             <br>
 
-                            <h2>*Trabajo:</h2>
+                            <h2>Trabajo:</h2>
                             <input name="trabajo" type="radio" value="S">
                             <label>Sí</label>
                             <br>
