@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <!--nombre de tab-->
+   <title>Mi formulario</title>
+</head>
+<body>
+    <form action="consigna1.html" id="form" method="POST">
+    <!--titulo-->
+    <h1 style="font-family: sans-serif; font-size: 1.5em; padding-bottom: 6px; text-align: center;"><u> Consigna I: Crear un Formulario</u></h1>
+
+    <section id="field">
+
+     <fieldset>
+
+ <!--info que va dentro de los limites del recuadro-->
+    <legend style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; color:teal;padding-bottom: 7px;"><b>Datos Personales</b></legend> 
+
+        <style>
+            
+            label {font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;padding: 5px; font-size: 15.5px;}
+
+            p {font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;padding: 5px; font-size: 15.5px;}
+
+            #field {width: 40rem;background-color: rgba(227, 248, 229, 0.884);}
+
+            input:invalid {background-color: red;}
+            input:valid {border: 2px solid black;}
+        </style>
+        
+<!--Datos del formulario-->
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" type="text" minlength="2" maxlength="15" placeholder="Escriba aqui."></input><br><br>
+
+    <label for="apellido">Apellido:</label>
+    <input id="apellido" name="text" minlength="2" maxlength="15"placeholder="Escriba aqui."></input><br><br>
+
+
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" minlength="5" maxlength="20"placeholder="Escriba aqui."></input><br><br>
+
+    <label for="telefono">Telefono:</label>
+    <input type="number" id="telefono"placeholder="Escriba aqui." ></input><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Escriba aqui.">
+
+    <p>Indique su Género:
+        <input type="radio" name="1" value="F"> <i>Femenino</i> 
+        <input type="radio" name="2" value="M"> <i>Masculino</i> 
+        <input type="radio" name="3" value="O"> <i>Otro</i> 
+      </p>
+
+    <p>Nivel de Educación:
+
+        <select name="Genero"> 
+        <option value="P">Primario</option>
+        <option value="S">Secundario</option> 
+        <option value="U">Universitario</option></select>
+    </p>
+
+    <p>Trabaja Actualmente:
+
+        <select name="trabajo"> 
+        <option value="S">Si</option>
+        <option value="N">No</option></select>
+    </p>
+    <br>
+   
+    <!--Boton guardar-->
+    <form action="consigna1.html">
+    <input type="submit" value="ingresar" style="background-color:teal;height:2rem;font-family: Verdana, Geneva, Tahoma, sans-serif;border-radius:5px;color:azure;"></input>
+    </form>
+    <!--firma del final-->      
+    <footer style="text-align: right; padding: 5px;font-size: 12px;"><i> &copy; Ivana Yegros kubicka </i></footer>
+
+                </fieldset>
+                </form>
+            </section>       
+    </body>
+</html>
