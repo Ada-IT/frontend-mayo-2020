@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Mi Formulario de Login</title>
+        <style>
+            /* En este ejercicio deberan agregar el código que crean util revisando la doc de pseudoclases. */
+            /* Aqui tienen unos ejemplos de clases vacias de referencia.*/
+            /* Deben crear el archivo en su carpeta de /consignas/su_nombre/ejercicios/pseudoclases.html .*/
+            /* pueden copiar este archivo para trabajar solo en lo requerido*/
+            .menu {
+             font-size: large;
+             background-color: #22BF4A;
+             color: #000000;
+             text-decoration: none;
+             border-radius: 40px;
+             padding: 5px;
+             margin: 2px;
+            }
+            .menu:hover {
+                font-size: medium;
+                border-radius: 0;
+                background-color:black;
+                color:rgb(233, 38, 71);
+                
+            }
+
+            input {
+                color: rgb(24, 61, 47);
+                border:none;
+                border: 1px solid #22BF4A;
+                margin: 2px;
+                
+            }
+
+            input:focus {
+                background-color: rgb(233, 38, 71);
+                background-color: black;
+
+            }
+            #login{
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 5px;
+                width: 50%;
+            }
+            .login-validation input[type="email"]:focus{
+                color: white;
+                background-color: teal;
+                
+            } 
+        </style>    
+    </head>
+    <body>
+        <main>
+            <header>
+                <nav>
+                    <a class="menu" href="">Menu 1</a>
+                    <a class="menu" href="">Menu 2</a>
+                </nav>
+            </header>                        
+            <article>
+                <section id="formulario-login">                
+                    <h1>Login</h1>
+                    <div>
+                        <!-- Formulario de Login -->
+                        <form class="login-validation" id="login" action="formulario-login.html" method="POST">
+                            <label for="usuario">Usuario:</label>
+                            <input 
+                                id="usuario" 
+                                type="email" 
+                                name="usuario"                                
+                            >
+                            <br>
+                            <label for="password">Password:</label>
+                            <input 
+                                id="password" 
+                                type="password" 
+                                minlength="4" 
+                                maxlength="10" 
+                                name="password"
+                            >
+                            <br>
+                            <input type="submit" value="Ingresar">
+                        </form>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>
