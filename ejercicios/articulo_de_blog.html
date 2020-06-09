@@ -2,20 +2,53 @@
     <head>
         <title>Mi Articulo de Blog</title>
         <style>
-            /* En este ejercicio deberan agregar el código que crean util para lograr un articulo colorido.
+            /* 
+            Crear nueva rama articulo_de_blog.
+            Copiar archivo a su carpeta de ejercicios.
+            Nombre de archivo articulo_de_blog.html.
+            En este ejercicio deberan agregar el código que crean util para lograr un articulo colorido.
             Cada elemento h1 a h6 debe tener una clase css con al menos 2 propiedades y 1 propiedad que las diferencie.
             Para los elementos section y article, cada uno debe contener 2 propiedades que separen el contenido 
             a una distancia clara de de entre 20 y 40 px. 
             Cada elemento que tenga contenido en parrafos debe contener almenos 2 propiedades de css*/
-            /* Aqui tienen unos ejemplos de clases vacias de referencia.*/
-            .footer{
-                
+            /*corregir tamaño de imagen a un maximo de 250px de alto. remarcar el contenedor con un border de 1px   de color gris- */
+            /* Agregar color de fondo por seccion y de documento*/
+            /* Aqui tienen unos ejemplos de otras clases  de referencia.*/
+            /* Estructura */
+            article {
+                float: left;
+                width: 70%;
             }
+            aside {
+                float: right;
+                width: 30%;
+            }
+            /* ----fin Estructura  --- */
+
+            /* contenidoy tipografias */
+            h1 {
+
+            }
+
+            p { 
+
+            }
+            /* ----fin contenidoy tipografias --- */
+
+            /* pie de pagina - footer */
+            .footer {
+                display: inline-flex;
+                width: 100%;
+                }
             .footer .links {
+                font-weight: bold;
             }
-            .footer .container{
+
+            .footer  .container {
                 width: 33.3%;
             }
+            /* ----fin pie de pagina --- */
+
         </style>
     </head>
     <body>
@@ -36,24 +69,29 @@
             <aside>
                 <h3> Granny Smith </h3>
                 <figure style="float: right">
-                    <img src="">
-                    <figcaption></figcaption>        
+                    <img src="img/file_example_JPG_100kB.jpg">
+                    <figcaption>Esta imagen...</figcaption>        
                   </figure>                    
             </aside>  
             <footer class="footer">
                 <div class="container">
+                    <h4>Mapa del sitio</h4>
                     <ul>
                         <li><a href="">Link 1</a></li>
                         <li><a href="">Link 2</a></li>
                         <li><a href="">Link 3</a></li>
+                        <li><a href="">Link 2</a></li>
+                        <li><a href="">Link 3</a></li>                        
                     </ul>
                 </div>                
                 <div class="container">
-                    <ul>
-                        <li><a href="">Link 1</a></li>
-                        <li><a href="">Link 2</a></li>
-                        <li><a href="">Link 3</a></li>
-                    </ul>                    
+                    <h4>
+                        Nuestra Misión
+                    </h4>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>          
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>                    
                 </div>
                 <div class="container">
                     <h4>Visitanos</h4>
