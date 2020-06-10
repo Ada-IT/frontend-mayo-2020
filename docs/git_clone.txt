@@ -1,0 +1,21 @@
+¿Como hago un Fork de un repositorio a mi Cuenta de Github?
+-Accede a https://github.com/Ada-IT/frontend-mayo-2020 
+-Busca el boton fork a la derecha, arriba.
+-forkea el repo.
+
+Si ya existe en tu cuenta uno con el mismo nombre, Ve a tu repositorio en tu cuenta y ve a la pestaña "settings" al lado de la pestaña "Insights" del repositorio
+Renombra tu repositorio y vuelve a intentar hacer el fork de la manera que explique arriba.
+
+Luego....
+¿Como se hace git clone?
+Desde tu terminal/powershell/simbolo de sistemas :
+Ejecuta el comando : git clone https://github.com/mi-usuario/frontend-mayo-2020.git
+Donde el link es el de tu repositorio.
+De donde obtengo este link?
+De tu cuenta de github de tu repositorio front-end-mayo-2020. 
+Busca el boton verde que que dice "clone or download."
+
+
+
+
+
