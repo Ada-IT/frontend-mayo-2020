@@ -22,46 +22,67 @@
 
             /* contenidoy tipografias */
             h1 {
-              text-shadow: 1rem 1rem 1rem rgb(25, 25, 255);
-              color: rgb(112, 161, 250);
-              text-align: center;
-              text-transform: uppercase;
-              }
-
-            h2,h3,h4,h5,h6 {  
-              font-style: oblique;
-              text-decoration:cadetblue; 
-              font-weight: bold;
-              background-color: rgb(210, 222, 235);
-              border-radius: 2rem;
-              border-style: outset;
+                text-shadow: 1rem 1rem 1rem rgb(25, 25, 255);
+                color: rgb(112, 161, 250);
+                text-align: center;
+                text-transform: uppercase;
             }
 
-            p { 
+            h2,h3,h5,h6 {  
+                font-style: oblique;
+                text-decoration:cadetblue; 
+                font-weight: bold;
+                background-color: rgb(210, 222, 235);
+                border-radius: 2rem;
+                border-style: outset;
+            }
+
+            h4 {   
+                font-style: oblique;
+                text-decoration:cadetblue; 
+                font-weight: bold;
+                background-color: rgb(210, 222, 235);
+                border-radius: 2rem;
+                border-style: outset;
+                text-align: center;
+            }
+
+            p   { 
                 line-height: 1.5rem;
                 font-family: sans-serif;
-                color: rgb(243, 26, 26);
-              }
+                color: rgb(40, 26, 243);
+            }
 
-              img {
+            img {
                 display: block;
                 margin: auto;
-                font-weight: 300;    
-              }
+                font-weight: 300;  
+            }
             /* ----fin contenidoy tipografias --- */
 
             /* pie de pagina - footer */
             .footer {
                 display: inline-flex;
                 width: 100%;
-                }
-            .footer .links {
-                font-weight: bold;
             }
 
             .footer  .container {
                 width: 33.3%;
+                display: block;
             }
+
+            footer a:hover {
+                color: rgb(126, 126, 126);
+                border-radius: 2rem;
+                background-color: rgb(209, 231, 209);
+            }
+            
+            footer iframe {
+                float:right;
+                margin: 1.5rem 3.7rem;
+                border-radius: unset;
+            }
+        
             /* ----fin pie de pagina --- */
 
         </style>
