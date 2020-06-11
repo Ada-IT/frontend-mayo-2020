@@ -1,0 +1,304 @@
+<html>
+    <head>
+        <title>Mi Articulo de Blog</title>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            /* 
+            Crear nueva rama articulo_de_blog.
+            Copiar archivo a su carpeta de ejercicios.
+            Nombre de archivo articulo_de_blog.html.
+            En este ejercicio deberan agregar el código que crean util para lograr un articulo colorido.
+            Cada elemento h1 a h6 debe tener una clase css con al menos 2 propiedades y 1 propiedad que las diferencie.
+            Para los elementos section y article, cada uno debe contener 2 propiedades que separen el contenido 
+            a una distancia clara de de entre 20 y 40 px. 
+            Cada elemento que tenga contenido en parrafos debe contener almenos 2 propiedades de css*/
+            /*corregir tamaño de imagen a un maximo de 250px de alto. remarcar el contenedor con un border de 1px   de color gris- */
+            /* Agregar color de fondo por seccion y de documento*/
+            /* Aqui tienen unos ejemplos de otras clases  de referencia.*/
+            /* Estructura */
+            
+            body {
+                background-color: #f4f6f7;
+                
+            }
+
+            article {
+                float: left;
+                width: 60%;
+                line-height: 2em;
+                margin: 20px;
+            
+            }
+                
+                
+                
+            aside {
+                float: right;
+                width: 30%;
+                
+            }
+            /* ----fin Estructura  --- */
+
+            /* contenidoy tipografias */
+            
+            .date {
+                font-family:'Roboto', sans-serif;
+                color: #85929e;
+                font-size: 1.2rem;
+                text-transform: uppercase; 
+
+            }
+            
+            h1 {
+                font-family: 'Playfair Display', serif;
+                font-size: 64px;
+                font-weight: 700;
+                display: block;
+                color: black;
+                letter-spacing: -0.06rem;
+                margin-top:0rem;
+                margin-bottom: 0.05rem;
+                
+
+            }
+
+            h2 {
+                color: #fdf2e9;
+                font-family: 'Playfair Display', serif;
+                font-weight: bold;
+                text-decoration-line: underline;
+            }
+
+            h3 {
+                color: #fdf2e9;
+                background-color: #a93226;
+                font-family: 'Playfair Display', serif;
+                font-weight: bold;
+                text-decoration-line: underline;
+                text-align: center;
+
+            }
+
+            h4 {
+                color: #fdf2e9;
+                font-family: 'Playfair Display', serif;
+                font-weight: normal;
+                text-decoration-line: underline;
+                
+            }
+
+            h6 {
+                font-family: 'Playfair Display', serif;
+                font-size: 1.3rem;
+                font-weight: lighter;
+                margin-top: 0rem;
+                margin-bottom: 0.8rem;
+                letter-spacing: -0.04rem;
+                vertical-align: baseline;
+                
+            }
+                
+
+            h5 {
+                font-family: 'Merriweather', serif;
+                color: #a93226; 
+                text-transform: uppercase;
+            }
+
+            .acciones {
+                font-family: "Roboto", sans-serif;
+                padding: 0.5em;
+                margin: 1.5em 0em;
+                border-top: #d5d7d8 1px solid;
+                border-bottom: #d5d7d8 1px solid;
+                display: block;
+            }
+
+            .acciones li {
+                vertical-align: middle;
+                border-left: #d5d7d8 1px solid;
+                display: inline-block;
+                padding: 0.2em 1.5em;
+                line-height: 1.2em;
+                text-align: center !important;
+            }
+
+            article .contenido {
+                margin: 0rem;
+                padding-top: 1rem;
+                padding-left: 2rem;
+                padding-bottom: 1rem;
+                padding-right: 2rem;
+                border: 0;
+                font-size: 100%;
+                background: #a93226;
+                line-height: 2.5rem;
+                max-width: 90%;
+                
+            
+            }
+            
+            p {
+                font-family: 'Merriweather', serif;
+                font-size: 1rem;
+                color: #0d0d0e;
+                font-style: normal;
+                text-align: justify;
+
+            }
+
+            .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            height: 20rem;
+            }
+  
+
+            img {
+                width: 22rem;
+                border-radius: 0.1rem;
+            }
+
+
+
+
+
+
+           
+
+
+
+            /* ----fin contenidoy tipografias --- */
+
+            /* pie de pagina - footer */
+            .footer {
+                display: inline-flex;
+                width: 100%;
+                background-color: #5d6d7e;
+                margin: 1rem;
+                padding: 1.5rem;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+            }
+            .footer .links {
+                font-weight: bold;
+            }
+
+            .footer  .container {
+                width: 33.3%;
+                background-color: #0d0d0e;
+                border-radius: 1rem;
+                margin: 0.7rem;
+                padding: 1rem;
+                
+                justify-content: center;
+                
+                
+
+            }
+
+            .footer .container p {
+                font-family: 'Merriweather', serif;
+                font-size: 0.9rem;
+                line-height: 1.3rem;
+                color: #f4f6f7;
+                font-style: normal;
+                text-align: justify;
+                
+            }
+
+            .footer .container iframe{
+                border-radius: 1rem;
+            }
+            /* ----fin pie de pagina --- */
+
+        </style>
+    </head>
+    <body>
+        <main>
+            
+            <div class="date">11 Junio 2020</div>
+            <hr>
+            <hr>
+                
+            <h1>Un artículo con Secciones</h1>
+            <h6>by Claudia Rocha</h6>
+            <h5>Revista Seamana</h5>
+
+            <div class="acciones">
+                <ul>
+                    <li><a href="https://www.facebook.com/ClauMRochaH">Share</a></li>
+                    <li><a href="https://twitter.com/explore">Comment</a></li>
+                    <li><a href="">Print</a></li>
+                    <li><a href="">Save</a></li>
+                    <li><a href="">BookMark</a></li>
+                </ul>
+
+            </div>
+
+
+
+            
+            <article>
+                <div class="contenido">
+                    <h2> Las variedades de manzanas</h2>
+                    <p> La manzana es la fruta de la semilla de la manzana del árbol … </p>
+                    <section>
+                    <h2> Red Delicious </h2>
+                    <p> Estas manzanas rojas brillantes son los más comunes se encuentran en muchos supermercados … </p>
+                    </section>
+                    <section>
+                    <h2> Granny Smith </h2>
+                    <p> Estos, manzanas verdes jugosas hacen un gran relleno para tartas de manzana … </p>
+                    </section> 
+                </div>             
+            </article >
+            <aside>
+                <div class="card">
+                    <div class="cardcontenido">
+                        <h3> Granny Smith </h3>
+                        <figure style="float: right">
+                            <img src="img/file_example_JPG_100kB.jpg">
+                            <figcaption>Esta imagen...</figcaption>        
+                        </figure>
+                    </div>
+                </div>                    
+            </aside>  
+            <footer class="footer">
+                <div class="container">
+                    <h4>Mapa del sitio</h4>
+                    <ul>
+                        <li><a href="">Link 1</a></li>
+                        <li><a href="">Link 2</a></li>
+                        <li><a href="">Link 3</a></li>
+                        <li><a href="">Link 2</a></li>
+                        <li><a href="">Link 3</a></li>                        
+                    </ul>
+                </div>                
+                <div class="container">
+                    <h4>
+                        Nuestra Misión
+                    </h4>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>          
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>                    
+                </div>
+                <div class="container">
+                    <h4>Visitanos</h4>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1673.5604294085454!2d-60.647548641807454!3d-32.97421304522823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7aba497cefcb3%3A0x2360fada20f0529c!2sFruter%C3%ADa%20y%20Verduler%C3%ADa%20Miguel!5e0!3m2!1ses-419!2sar!4v1591577767984!5m2!1ses-419!2sar"
+                        width="300" 
+                        height="300" 
+                        frameborder="0" 
+                        style="border:1rem;" 
+                        allowfullscreen="" 
+                        aria-hidden="false" 
+                        tabindex="0">
+                    </iframe>    
+                </div>
+            </footer>            
+        </main>
+    </body>
+</html>
