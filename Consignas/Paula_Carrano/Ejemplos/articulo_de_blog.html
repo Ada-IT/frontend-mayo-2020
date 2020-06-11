@@ -10,6 +10,9 @@
             /* Aqui tienen unos ejemplos de otras clases  de referencia.*/
             /* Estructura */
 
+            body {
+                background-color: rgb(199, 250, 235);
+            }    
             article {
                 float: left;
                 width: 70%;
@@ -30,7 +33,7 @@
 
             h2,h3,h5,h6 {  
                 font-style: oblique;
-                text-decoration:cadetblue; 
+                text-decoration:rgb(130, 228, 231); 
                 font-weight: bold;
                 background-color: rgb(210, 222, 235);
                 border-radius: 2rem;
@@ -39,7 +42,7 @@
 
             h4 {   
                 font-style: oblique;
-                text-decoration:cadetblue; 
+                text-decoration:rgb(44, 85, 87); 
                 font-weight: bold;
                 background-color: rgb(210, 222, 235);
                 border-radius: 2rem;
@@ -51,12 +54,22 @@
                 line-height: 1.5rem;
                 font-family: sans-serif;
                 color: rgb(40, 26, 243);
+                background-color: rgb(183, 240, 210);
             }
 
             img {
                 display: block;
-                margin: auto;
-                font-weight: 300;  
+                float: right;
+                margin-left: 1rem;
+                height: 15rem;  
+                width: 20rem;
+                border: 1px rgb(128, 128, 128);
+                border-style: solid;
+            }
+
+            figcaption {
+                font-family: cursive;
+                text-align: center;
             }
             /* ----fin contenidoy tipografias --- */
 
@@ -69,18 +82,19 @@
             .footer  .container {
                 width: 33.3%;
                 display: block;
+                background-color: rgb(183, 240, 210);
             }
 
             footer a:hover {
-                color: rgb(126, 126, 126);
+                color: rgb(238, 84, 84);
                 border-radius: 2rem;
-                background-color: rgb(209, 231, 209);
+                border-style: solid;
+                border-color: rgb(167, 120, 243);
             }
             
             footer iframe {
                 float:right;
-                margin: 1.5rem 3.7rem;
-                border-radius: unset;
+                margin: 1.5rem 3.7rem;   
             }
         
             /* ----fin pie de pagina --- */
@@ -105,7 +119,7 @@
             <aside>
                 <h3> Granny Smith </h3>
                 <figure style="float: right">
-                    <img src="img/file_example_JPG_100kB.jpeg">
+                    <img src="img/file_example_JPG_100kB.jpg">
                     <figcaption> Esta imagen...</figcaption>        
                   </figure>                    
             </aside>  
