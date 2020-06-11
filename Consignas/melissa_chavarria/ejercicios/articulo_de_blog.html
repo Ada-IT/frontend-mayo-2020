@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Mi Articulo de Blog</title>
+        <style>
+            /* --- Estructura  --- */
+            article {
+                float: left;
+                width: 60%;
+                padding: 20px;
+                margin: 20px;
+                background-color: #fbedc9;
+            }
+            section {
+                padding: 30px;
+                margin: 20px;
+            }
+            aside {
+                float: right;
+                width: 23%;
+                padding: 20px;
+                background-color: #ffecb3;
+                margin: 20px;
+
+            }
+
+            body {
+                background-color: #f7ab7c;
+            }
+
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+            }
+
+            /* --- Fin Estructura  --- */
+
+            /* --- Contenido y tipografias --- */
+            h1 {
+               font-family: Verdana, Geneva, Tahoma, sans-serif;
+               color:#795548; 
+               text-align: center;
+               background-color: #f4ddd8;
+             }
+            h2 {
+                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                 color: #3f704d;
+                 outline-style: dotted;
+                 outline-color: #97ac9d;
+             }
+             .subtitulo{
+                color: #343534;
+             }
+             h3 {
+                 font-family:sans-serif;
+                 color: #5f5426;
+                 text-align:left;
+             }
+             h4 {
+                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                 color: #603614;
+                 text-decoration: underline;
+             }
+             h5 {
+                 font-family: monospace;
+                 color: #a07748;
+                 font-style: italic;
+             }
+             h6 {
+                 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                 color: #603614;
+                 text-align: center;
+                 opacity: 0.5;
+             }
+            p {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color:#221f1d;
+                word-spacing:normal;
+                text-align: justify;
+                text-indent: 5px;
+            }
+            /* ---- Fin contenido y tipografias --- */
+
+            /* --- Pie de pagina - Footer --- */
+            .footer {
+                display: inline-flex;
+                width: 100%;
+                background-color: #c7c5bd;
+                }
+            .footer .links {
+                font-weight: bold;
+            }
+
+            .footer .container {
+                width: 33.3%; 
+                padding: 20px;   
+            }
+            /* --- Fin pie de pagina --- */
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Las manzanas más deliciosas</h1>
+            <article>
+                <h2 class="subtitulo"> Las variedades de manzanas</h2>
+                <p> La manzana es la fruta de la semilla de la manzana del árbol … </p>
+                <section>
+                    <h2> Red Delicious </h2>
+                    <p> Estas manzanas rojas brillantes son los más comunes se encuentran en muchos supermercados … </p>
+                </section>
+                <section>
+                    <h2> Granny Smith </h2>
+                    <p> Estos, manzanas verdes jugosas hacen un gran relleno para tartas de manzana … </p>
+                </section>              
+            </article >
+            <aside>
+                <h3> Granny Smith </h3>
+                <figure style="float: right">
+                    <img src="imagenes/apples-food-fresh-fruits-290312.jpg">
+                    <figcaption>Cosecha de manzanas verdes</figcaption>        
+                  </figure>                    
+            </aside>  
+            <footer class="footer">
+                <div class="container">
+                    <h4>Mapa del sitio</h4>
+                    <ul>
+                        <li><a href="">Link 1</a></li>
+                        <li><a href="">Link 2</a></li>
+                        <li><a href="">Link 3</a></li>
+                        <li><a href="">Link 2</a></li>
+                        <li><a href="">Link 3</a></li>                        
+                    </ul>
+                </div>                
+                <div class="container">
+                    <h4>
+                        Nuestra Misión
+                    </h4>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>          
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>                    
+                </div>
+                <div class="container">
+                    <h4>Visítanos</h4>
+                    <h5>Nos encantaría tu visita</h5>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1673.5604294085454!2d-60.647548641807454!3d-32.97421304522823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7aba497cefcb3%3A0x2360fada20f0529c!2sFruter%C3%ADa%20y%20Verduler%C3%ADa%20Miguel!5e0!3m2!1ses-419!2sar!4v1591577767984!5m2!1ses-419!2sar"
+                        width="300" 
+                        height="300" 
+                        frameborder="0" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        aria-hidden="false" 
+                        tabindex="0">
+                    </iframe>    
+                </div>
+            </footer>  
+            <div>
+                <h6>2020 Todos los derechos reservados</h6>
+            </div>          
+        </main>
+    </body>
+</html>
