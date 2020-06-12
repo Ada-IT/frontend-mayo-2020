@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Consigna 1</title>
+        <style>
+        h1 h2 h3 { 
+            background-color: blue;
+            font-style: normal;
+            font-family: Tahoma;
+        }
+
+        h1 {
+
+            font-size: 20px;
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+
+        h3 {
+            width: fit-content;
+            font-size: 16px;
+            font-weight: 100;
+        }
+
+        .miheader {
+            font-family: 'Lucida Sans';
+            font-size: 20px;
+        
+        label {
+            font-size: 16px;
+            color:black;
+            font-family: sans-serif;
+        }
+        </style>
+    </head>
+    <body>
+        <main>
+            <header class="miheader">
+                <nav>
+                </nav>
+            </header>
+            <article>
+                <section id="Formulario de Incripción">
+                    <h1>   
+                    <div 
+                        style="color:rgb(252, 252, 252); 
+                        font-family: Verdana;
+                        background-color: rgb(55, 34, 116);width:fit-content;  
+                        border-radius:10px; 
+                        padding: 30px;
+                        border: 0.5rem outset rgb(86, 57, 192);
+                        outline: 0.5rem solid rgb(164, 197, 219);
+                        box-shadow: 0 0 0 2rem rgb(2, 81, 112);
+                        border-radius: 12px;
+                        font: bold 1rem sans-serif;
+                        margin: 2rem;
+                        padding: 1rem;
+                        outline-offset: 0.5rem;"> 
+                        <br>
+                        <font style="vertical-align:inherit">FORMULARIO DE INSCRIPCION ON-LINE</font>
+                    </h1>
+                    <br>
+                    <div>
+                        <!-- Formulario de Inscripción On-Line -->
+                        <form id="preguntas" method="POST">
+                        <div style="background-color:olivedrab;
+                        border-radius:10px; 
+                        padding: 30px;
+                        color:rgb(252, 252, 252); 
+                        font-family: Verdana;
+                        background-color: rgb(55, 34, 116);width:fit-content;  
+                        border: radius 15px; 
+                        padding: 0.5px;
+                        outline: 0.3rem solid rgb(164, 197, 219);
+                        border: 0.3rem outset rgb(2, 81, 112);
+                        box-shadow: 0 0 0 2rem rgb(86, 57, 192);
+                        border-radius: 12px;
+                        font: bold 1rem sans-serif;
+                        margin: 1rem;
+                        padding: 1rem;
+                        outline-offset: 0.5rem;"> 
+                        <br>
+                            <label>DATOS PERSONALES:</label>
+                            <br>
+                            <br>
+                            <label>Complete sus datos</label>
+                            <br>
+                            <br>
+                            <label>Nombre (*):</label>
+                            <input name="nombre" type="text" value="">
+                            <br>
+                            <br> 
+                            <label>Apellido (*):</label>
+                            <input name="nombre" type="text" value="">
+                            <br>
+                            <br>
+                            <label>Dirección (*):</label>
+                            <input name="nombre" type="text" value="direccion" >
+                            <br>
+                            <br>
+                            <label>Teléfono (*):</label>
+                            <input type="tel" minlength="8" maxlength="10" placeholder="ingrese 0 + cod de area">
+                            <br>
+                            <br>
+                            <div class="casillademail">
+                                <div class="form-group col-md-20">
+                                    <label for="email">
+                                        Correo Electrónico:
+                                     <span class="text-muted"> (*Requerido)</span>         
+                                    </label>
+                                    <br>
+                                  <input 
+                                        id="direccionemail" 
+                                        type="email" 
+                                        size="64" maxlength="64" 
+                                        requerired placeholder="usuario@suemail.com" 
+                                        pattern=".+suemail.com" 
+                                        class="email"> 
+                                    <div class="invalid-feedback">
+                                        <font style="vertical-align:inherit">
+                                            <font style="vertical-align:inherit"> Por favor, ingrese una direccion de Correo Electrónico válida</font>
+                                        </font>
+                                    </div>    
+                                </div>
+                              <br>
+                            <h3><strong>EDUCACIÓN</strong></h3>
+                            <label for="educación">Seleccione su Nivel Educativo</label>
+                            <select name="educacion" id="educación" >
+                                <option value="P">Primaria</option>
+                                <option value="S">Secundaria</option>
+                                <option value="U">Universitaria</option>
+                            </select>
+                            <h3>Comentarios:</h3>
+                            <textarea 
+                                name="comentarios" 
+                                value="" 
+                                placeholder="Escriba su comentario" 
+                                rows="6" 
+                                cols="80"
+                            >
+                            </textarea>
+                        </div>
+                            <br>
+                            <br>
+                            <hr>
+                            <input type="submit" value="Enviar">
+                        </form>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>
