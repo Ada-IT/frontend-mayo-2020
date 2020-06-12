@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+        <head>
+            <title>Formulario Web</title>
+                <style>
+                .miheader {
+                    color: black;
+                    font-family: 'Trebuchet MS';
+                    text-align: left;
+                    font-size: 30px;
+                    margin-left: 50px;
+                    }
+                body{
+                    background-color: whitesmoke;
+                    }
+                    h3 {
+                        color: blue;
+                    }
+                    .milabel{
+                        background-color: turquoise;
+                        border-radius: 15px;
+                        padding-left: 12px;
+                    }
+                    input:invalid{
+                       background-color:silver;
+                   }
+                    
+                </style>
+        </head>
+        <body>
+            <main>
+                <header class="miheader">
+                    <strong><u> Formulario de Preguntas</u></strong>
+                </header>
+                <article>
+                    <section>
+                        <div style="margin: 5px;padding:20px;border:2px dashed blue;width: 800px;margin-top: 30px;">
+                            <h3>Ingrese los datos solicitados</h3>
+                                <form   id="preuntas"     
+                                        method= post 
+                                        action="">
+                                <label class="milabel" for="Nombre">Nombre:</label>
+                                    <input 
+                                        id="Nombre"
+                                        type="text"
+                                        maxlength="15"
+                                        name="nombre">
+                                    <br>
+                                    <br>
+                                <label class="milabel" for="Apellido">Apellido:</label>
+                                    <input 
+                                        id="apellido"
+                                        type="text"
+                                        maxlength="15"
+                                        name="apellido">
+                                    <br>
+                                    <br>
+                                <label class="milabel" for="Direccion">Direccion:</label>
+                                    <input 
+                                        id="direccion"
+                                        type="text"
+                                        maxlength="20"
+                                        name="direccion">
+                                    <br>
+                                    <br>
+                                <label class="milabel" for="telefono">Telefono:</label>
+                                    <input 
+                                        id= "telefono"
+                                        type="tel"
+                                        name="telefono personal">
+                                        <br>
+                                        <br>
+                                <label class="milabel" for="email">Mail:</label>
+                                    <input 
+                                        id="email" 
+                                        type="email" 
+                                        name="direccion de correo electronico">
+                                        <br>
+                                    <h3>Genero:</h3>                       
+                                 <label for="genero">Seleccione su Genero:</label>
+                                    <select name="genero" id="genero">
+                                        <option value="M">Masculino</option>
+                                        <option value="F">Femenino</option>
+                                        <option value="O">Otro</option>
+                                     </select>
+                                         <br>
+                                    <h3>Educacion:</h3>                       
+                                <label for="educacion">Seleccione su educación:</label>
+                                    <select name="educacion" id="educacion">
+                                        <option value="p">Primaria</option>
+                                        <option value="s">Secundaria</option>
+                                        <option value="u">Universitaria</option>
+                                     </select>
+                                         <br>
+                                     <h3>Trabaja</h3>
+                                         <input  name="trabajo" 
+                                                type="radio" 
+                                                 value="S">
+                                            <label>SI</label>        
+                                        <br>                           
+                                        <input  name="trabajo" 
+                                                type="radio" 
+                                                value="N">
+                                            <label>NO</label>
+                                    </select>
+                                        <br>
+                                        <br>
+                                        <input type="submit" value="Enviar">
+                                 </form>
+                         </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>

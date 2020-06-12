@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Formulario personal</title>
+        <style>
+            h1 {
+                color: rgba(47, 47, 158, 0.76);
+                font-size: 24px;
+            }
+            #consigna1 {
+                background-color: lightblue;
+            
+            }
+            label {
+                color: blue;
+                font-weight: bolder;
+                font-size: 20px;
+            }
+            .header {
+                color: red;
+                font-size: 24px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 700;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <main>
+            <header class="header"> Formulario personal
+            </header>
+            <article>
+                <section id="consigna1">
+                    <h1><u>Completar con sus datos personales:</u></h1>
+                    <div>
+                        <form id="preguntas" class="preguntas"
+                              action="consigna1.html"
+                              method="POST">
+                        <div style="background-color: rgb(94, 202, 221);">
+                            <label for="name">Nombre</label>
+                            <input id="name"
+                                   type="name"
+                                   minlength="5"
+                                   maxlength="15"
+                                   name="name"
+                            >
+                        <br>
+                        <br>
+                        <label for="lastname">Apellido</label>
+                        <input id="lastname"
+                               type="lastname"
+                               minlength="5"
+                               maxlength="15"
+                               name="lastname"
+                        >
+                        <br>
+                        <br>
+                        <label for="adress">Direccion</label>
+                        <input id="adress"
+                               type="adress"
+                               minlength="5"
+                               maxlength="20"
+                               name="adress"
+                        >
+                        <br>
+                        </div>
+                        <hr>
+                        <h1><u>Informacion de contacto:</u></h1>
+                        <div style="background-color: rgb(94, 202, 221);">
+                        <label for="phonenumber">Telefono</label>
+                        <input id="phonenumber"
+                               type="tel"
+                               minlength="6"
+                               maxlength="30"
+                               name="phonenumber"
+                        >
+                        <br>
+                        <br>
+                        <label for="email">Email</label>
+                        <input id="email"
+                               type="email"
+                               minlength="5"
+                               maxlength=""
+                               name="email"
+                        >
+                        <span class="error" aria-live="polite"></span>
+                        <br>
+                        </div>
+                        <hr>
+                        <h1><u>Genero:</u></h1>
+                        <div style="background-color: rgb(94, 202, 221);">
+                        <label>Femenino</label>
+                        <input name="genero"
+                               type="radio"
+                               value="femenino"
+                        >
+                        <br>
+                        <label>Masculino</label>
+                        <input name="genero"
+                               type="radio"
+                               value="masculino"
+                        >
+                        <br>
+                        <label>Otro</label>
+                        <input name="genero"
+                               type="radio"
+                               value="otro"
+                        >
+                        <br>
+                        </div>
+                        <hr>
+                        <h1><u>Educacion:</u></h1>
+                        <div style="background-color: rgb(94, 202, 221);">
+                        <label for="educacion">Indique su educacion</label>
+                        <select name="educacion" id="educacion">
+                        <option value="primaria">Primaria</option>
+                        <option value="secundaria">Secundaria</option>
+                        <option value="universitaria">Universitaria</option>
+                        </select>
+                        <br>
+                        </div>
+                        <hr>
+                        <h1><u>Situacion laboral:</u></h1>
+                        <div style="background-color: rgb(94, 202, 221);">
+                        <label for="trabajo">Trabajo</label>
+                        <label for="si">Si</label>
+                        <input name="trabajo"
+                               type="radio"
+                               value="si"
+                        >
+                        <label for="no">No</label>
+                        <input name="trabajo"
+                               type="radio"
+                               value="no"
+                        >
+                        <br>
+                        </div>
+                        <br>
+                        <input type="submit" value="Guardar">
+
+
+                        </form>
+                    </div>
+
+                </section>
+            </article>
+        </main>
+    </body>
+</html>

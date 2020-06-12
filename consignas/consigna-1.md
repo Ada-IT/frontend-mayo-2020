@@ -11,7 +11,9 @@ Trabajo(Si,No) (S,N)
 Boton "Guardar"
 
 La pagina debe tener la estructura actual de html5 que hemos practicado.
-Debe tener un titulo que represente al formulario
+La cabecera debe tener un titulo que represente al formulario.
+
+El formulario debe tener un titulo.
 Los campos deben ser identificados con sus labels.
 
 Los colores son libres.

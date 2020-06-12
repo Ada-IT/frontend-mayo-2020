@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Formulario consigna 1</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav>
+        </nav>
+      </header>
+      <article>
+        <section id="formulario consigna1">
+          <h1>ADA Formulario consigna 1</h1>
+          <div>
+              <style>
+              input:valid {
+              background-color: grey;
+              }
+              input:invalid {
+              background-color: red; 
+              }
+              </style>  
+            <form id="consigna1" action="consigna1.html" method="POST">
+              <label for="nombre">Nombre:</label>
+              <input
+              id="nombre"
+              maxlength="15"
+              name="nombre">
+              <br>
+              <label for="apellido">Apellido:</label>
+              <input
+              id="apellido
+              maxlength="15"
+              name="apellido">
+              <br>
+              <label for="direccion">Dirección:</label>
+              <input
+              id="direccion"
+              maxlength="20"
+              name="direccion">
+              <br>
+              <label for="telefono">Teléfono:</label>
+              <input
+              id="telefono"
+              type="number"
+              name="telefono">
+              <div>
+              <label for="email">Email:</label>
+              <input 
+              id="email"
+              type="email"
+              name="email">
+              </div>
+              <br>
+              <h4>Género:</h4>
+              <input
+              id="genero"
+              type="radio"
+              value="m"
+              name="genero">
+              <label>Masculino</label>
+              <input
+              id="genero"
+              type="radio"
+              value="f"
+              name="genero"
+              >
+              <label>Femenino</label>
+              <input
+              id="genero"
+              type="radio"
+              value="o" 
+              name="genero">
+              <label>Otro</label>
+              <br>
+              <h4>Educación:</h4>
+              <input
+             id="educacion"
+              type="radio"
+              value="p" 
+              name="educacion">
+              <label>Primaria</label>
+              <input
+              id="educacion"
+              type="radio"
+              value="s" 
+              name="educacion">
+              <label>Secundaria</label>
+              <input
+              id="educacion"
+              type="radio"
+              value="u"
+              name="educacion">
+              <label>Universitaria</label>
+              <br>
+              <h4>Trabajo</h4>
+              <input
+              id="trabajo"
+              type="radio"
+              value="s"
+              name="trabajo"
+              >
+              <label>Si</label>
+              <input
+              id="trabajo"
+              type="radio"
+              value="n"
+              name="trabajo"
+              >
+              <label>No</label>
+              <br>
+              <br>
+              <input type="submit" value="Guardar">
+            </form>
+          </div>
+        </section>
+      </article>
+      <footer></footer>
+    </main>
+  </body>
+</html>

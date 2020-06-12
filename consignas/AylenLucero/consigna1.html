@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>consigna1</title>
+        <style>
+            #email:valid{
+                background-color: rgb(255, 209, 255);
+            } 
+            #email:invalid {
+                background-color: rgb(255, 143, 236);
+            }
+        </style>        
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>Mi formulario</h1>
+                <nav></nav>
+            </header>
+            <article>
+                <section>
+                    <div>  
+                        <div>                                                  
+                    <form action="consigna1.html" method="POST">
+                        <label for="name">Nombre:</label>
+                        <input id="name" type="text" name="name" min="2" max="15">
+                        <br>
+                        <label for="apellido">Apellido:</label>
+                        <input id="apellido" type="text" name="apellido" min="2" max="15">
+                        <br>
+                        <label for="direccion">Direccion:</label>
+                        <input id="direccion" type="text" name="direccion" min="2" max="20">
+                        <br>
+                        <label for="tel">Telefono:</label>
+                        <input id="tel" type="number" name="tel"> 
+                        <br>
+                        <label for="email">Email:</label>
+                        <input id="email" type="email" name="email"> 
+                        <br>
+                        <h4>Genero:</h4>
+                        <input name="genero" type="radio" value="f">
+                        <label>Femenino</label>
+                        <br>                           
+                        <input name="genero" type="radio" value="m">
+                        <label>Masculino</label>
+                        <br>
+                        <input name="genero" type="radio" value="o">
+                        <label>Otro</label>
+                        <br>
+                        <h4>Educacion:</h4>
+                        <label for="educacion">Seleccione su educacion</label>
+                        <select name="educacion" id="educacion">
+                            <option value="pa">Primaria</option>
+                            <option value="s">Secundaria</option>
+                            <option value="u">Universidad</option>
+                        </select>
+                        <br>
+                        <h4>Trabajo:</h4>
+                        <input name="trabajo" type="radio" value="s">
+                        <label>Si</label>
+                        <br>
+                        <input name="trabajo" type="radio" value="n">
+                        <label>No</label>
+                        <br>
+                        <input type="submit" value="guardar">
+                    </form>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>

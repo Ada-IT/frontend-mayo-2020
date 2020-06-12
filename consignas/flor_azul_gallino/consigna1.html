@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>
+            Formulario de contacto
+        </title>
+        <style>
+            body {
+                font-family: Arial;
+            }
+            header {
+                background-color: #480057;
+                color:white;
+                text-align: center;
+                border-radius: 6px; 
+                padding: 1px;
+            }
+            article {
+                font-size: 20px;
+                color: #480057;
+            }
+            div {
+                background-color: rgb(241, 173, 255);
+                border-radius: 6px; 
+                padding: 1px;
+            }
+            input {
+                border-radius: 6px; 
+                padding:5px;
+            }
+            input:valid {
+                border-color: #02a81d;
+            }
+            input:invalid {
+                background-color:rgb(192, 43, 17);
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1 >Formulario de contacto</h1>
+            </header>
+            <br>
+            <article>
+                <section id="formulario">
+                  <div>
+                    <form action="consigna1.html" method="POST">
+                        <div id="nombre">
+                            <label for="nombre"><strong>Nombre</strong></label>
+                            <br>
+                            <input id="nombre" type="text" maxlength="15" minlength="3" name="nombre" placeholder="Introduzca su nombre">
+                        </div>
+                            <br>
+                        <div>
+                            <label for="apellido"><strong>Apellido</strong></label>
+                            <br>
+                            <input id="apellido" type="text" maxlength="15" minlength="3" name="apellido" placeholder="Introduzca su apellido">
+                        </div>
+                            <br>
+                        <div>
+                            <label for="direccion"><strong>Dirección</strong></label>
+                            <br>
+                            <input id="direccion" type="text" minlength="4" maxlength="20" name="direccion" placeholder="Introduzca su dirección">
+                        </div>
+                            <br>
+                        <div>
+                            <label for="telefono"><strong>Telefono</strong></label>
+                            <br>
+                            <input id="telefono" type="number" placeholder="Introduzca su telefono">
+                        </div>
+                        <br>
+                        <div id="email">
+                            <label for="email"><strong>Email</strong></label>
+                            <br>
+                            <input id="email" type="email" name="email" placeholder="Introduzca su email">
+                        </div>
+                        <br>
+                        <div id="genero">
+                            <label for="genero"><strong>Genero</strong></label>
+                            <br>
+                            <input name="genero" type="radio" value="F">
+                            <label>Femenino</label>
+                            <br>
+                            <input name="genero" type="radio" value="M">
+                            <label>Masculino</label>
+                            <br>
+                            <input name="genero" type="radio" value="O">
+                            <label>Otro</label>
+                        </div>
+                        <br>
+                        <div id="educacion">
+                            <label for="educacion"><strong>Educación</strong></label>
+                            <br>
+                            <label for="educacion">Seleccione su educación:</label>
+                            <select id="educacion" name="educacion">
+                                <option value="P">Primaria</option>
+                                <option value="S">Secundaria</option>
+                                <option value="U">Universitaria</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div id="trabajo">
+                            <label for="trabajo"><strong>Trabajo</strong></label>
+                            <br>
+                            <input name="trabajo" type="radio" value="S">
+                            <label>Si</label>
+                            <br>
+                            <input name="trabajo" type="radio" value="N">
+                            <label>No</label>
+                        </div>
+
+                        <hr>
+                        <div id="guardar">
+                            <input type="submit" value="Guardar">
+                        </div>
+                    </form>
+                  </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>
