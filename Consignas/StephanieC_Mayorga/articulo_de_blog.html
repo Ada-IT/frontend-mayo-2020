@@ -1,0 +1,279 @@
+<html>
+
+<head>
+    <title>Mi Articulo de Blog</title>
+    <style>
+        /* 
+            Crear nueva rama articulo_de_blog.
+            Copiar archivo a su carpeta de ejercicios.
+            Nombre de archivo articulo_de_blog.html.
+            En este ejercicio deberan agregar el código que crean util para lograr un articulo colorido.
+            
+            Cada elemento h1 a h6 debe tener una clase css con al menos 2 propiedades y 1 propiedad que las diferencie.
+            
+            Para los elementos section y article, cada uno debe contener 2 propiedades que separen el contenido 
+            a una distancia clara de de entre 20 y 40 px. 
+
+            Cada elemento que tenga contenido en parrafos debe contener almenos 2 propiedades de css*/
+
+        /*corregir tamaño de imagen a un maximo de 250px de alto. remarcar el contenedor con un border de 1px   de color gris- */
+        /* Agregar color de fondo por seccion y de documento*/
+        /* Aqui tienen unos ejemplos de otras clases  de referencia.*/
+        /* Estructura */
+
+        body
+
+        /* marco de dos colores diferentes*/
+            {
+            border-color: red green;
+            border-width: 9px;
+            border-style: solid;
+        }
+
+        article
+        /*color de fondo y forma*/
+         {
+            width: 80%;
+            border-radius: 50px 0px;
+            margin: 20px;
+            background-color: rgba(248, 34, 70, 1)
+        }
+        
+        .subtitulo
+
+        /* .subtitulo para diferenciarlo de los demas h2 */
+            {
+            margin-left: 30%;
+        }
+
+        aside 
+        /*borde y color de fondo*/
+        {   margin: -200px;
+            border: 1px dashed black;
+            border-radius: 20px;
+            margin-right: 30px;
+            background-color: rgba(248, 34, 70, 1);
+            float: right; /*AP*/
+            width: 30%;/*AP*/
+        }
+        img {
+           
+            width: 200px;
+        }
+
+        /* ----fin Estructura  --- */
+
+        /* contenidoy tipografias */
+        h1 
+         /* Agregue una imagen, posicione texto e imagen y le di color al texto etc*/
+        {   
+            font-size: 50px;
+            font-style: italic;
+            color: #cf1818;
+            margin: 50px;
+            padding: 35px;
+            background-image: url("manzana.jpg");            
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: 90px;
+            text-align: center bottom;
+            border: 3px dashed black;
+
+        }
+
+        h2 {
+            
+            font-size: 30px;
+        }
+
+        hr {
+            margin-left: 20%;
+            margin-top: -20;
+            height: 2px;
+            width: 35%;
+            background-color: green;
+        }
+
+        h3 {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        h4 {
+            font-size: 25px;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 20px;
+            margin: 10px;
+
+        }
+
+        section 
+        /* bordes verdes y separados entre si*/
+        {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            background-color: #aae470;
+            padding: 3px 5px;
+            border: green 5px double;
+            border-top-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            margin-left: 18px;
+            border-radius: 5px red solid;
+            float: left; /*AP*/
+            width: 55%; /*AP*/
+        }
+
+        /* ----fin contenidoy tipografias --- */
+
+        /* pie de pagina - footer */
+        .footer
+        {
+            display: inline-flex; /*AP*/
+            width: 100%; /*AP*/
+        }
+
+        .footer .links 
+        {
+            font-weight: bold; /*AP*/
+        }
+
+
+        .footer .container 
+        {
+            width: 33.3%; /*AP*/
+        }
+
+        .info 
+        /*estilo para los containers del footer*/
+        {
+            padding: 4px;
+            margin-left: 50px;
+            margin-top: 10px;
+            display: inline-block;
+            background-color: green;
+        }
+
+        .info:hover 
+        {
+            background-color: rgba(248, 34, 70, 1);
+        }
+
+        .container 
+        {
+            max-height: 10%;
+            border: 2px solid green;
+            margin: 5px;
+            background-color: #aae470;
+        }
+
+        .container p 
+        {
+            margin-left: 10px;
+        }
+
+        li 
+        {
+            font-size: 20px;
+            list-style-type: none;
+            margin: 10px;
+            border: 1px solid black;
+            width: 50%;
+        }
+
+        a
+        {
+            text-decoration: none;
+        }
+
+        li:hover 
+        {
+            background-color: rgba(248, 34, 70, 1);
+            text-align: end;
+        }
+
+        a:link 
+        {
+            color: rgba(248, 34, 70, 1)
+        }
+
+        a:visited 
+        {
+            color: green;
+        }
+
+        .mapa 
+        {
+            margin-left: 5%;
+            width: 250px;
+        }
+
+        /* ----fin pie de pagina --- */
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Un artículo con secciones</h1>
+        <article>
+            <h2 class="subtitulo"> Las variedades de manzanas</h2>
+            <hr>
+            <p> La manzana es la fruta de la semilla de la manzana del árbol … </p>
+
+            <section>
+                <h2> Red Delicious </h2>
+
+                <p> Estas manzanas rojas brillantes son los más comunes se encuentran en muchos supermercados … </p>
+            </section>
+
+            <section>
+                <h2> Granny Smith </h2>
+
+                <p> Estos, manzanas verdes jugosas hacen un gran relleno para tartas de manzana … </p>
+            </section>
+        </article>
+        <aside>
+            <h3> Granny Smith </h3>
+            <figure style="float: right">
+                <img src="../StephanieC_Mayorga/file_example_JPG_100kB.jpg">
+                <figcaption>Esta imagen...</figcaption>
+            </figure>
+        </aside>
+        <footer class="footer">
+            <div class="container">
+                <h4 class="info">Mapa del sitio</h4>
+                <ul>
+                    <li><a href="">Link 1</a></li>
+                    <li><a href="">Link 2</a></li>
+                    <li><a href="">Link 3</a></li>
+                    <li><a href="">Link 2</a></li>
+                    <li><a href="">Link 3</a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <h4 class="info"> Nuestra Misión </h4>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a type specimen book. It has survived not
+                    only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                    Ipsum.
+                </p>
+            </div>
+            <div class="container">
+                <h4 class="info">Visitanos</h4> <br>
+                <iframe class="mapa"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1673.5604294085454!2d-60.647548641807454!3d-32.97421304522823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7aba497cefcb3%3A0x2360fada20f0529c!2sFruter%C3%ADa%20y%20Verduler%C3%ADa%20Miguel!5e0!3m2!1ses-419!2sar!4v1591577767984!5m2!1ses-419!2sar"
+                    width="300" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0">
+                </iframe>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
