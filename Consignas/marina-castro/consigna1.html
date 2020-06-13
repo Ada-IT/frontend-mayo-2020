@@ -66,12 +66,11 @@
                     <div>
                         <!-- Formulario de Inscripción On-Line -->
                         <form id="preguntas" method="POST">
-                        <div style="background-color:olivedrab;
-                        border-radius:10px; 
+                        <div style="border-radius:10px; 
                         padding: 30px;
                         color:rgb(252, 252, 252); 
                         font-family: Verdana;
-                        background-color: rgb(55, 34, 116);width:fit-content;  
+                        background-color: rgb(167, 150, 216);width:fit-content;  
                         border: radius 15px; 
                         padding: 0.5px;
                         outline: 0.3rem solid rgb(164, 197, 219);
@@ -82,41 +81,55 @@
                         margin: 1rem;
                         padding: 1rem;
                         outline-offset: 0.5rem;"> 
-                        <br>
-                            <label>DATOS PERSONALES:</label>
+                            <br>
+                                <label>DATOS PERSONALES:</label>
+                                <br>
+                                <br>
+                                <label>Complete sus datos</label>    
                             <br>
                             <br>
-                            <label>Complete sus datos</label>
-                            <br>
-                            <br>
-                            <label>Nombre completo(*):</label>
-                            <input name="nombre" type="text" value="">
-                            <br>
-                            <br> 
-                            <label>Apellido/s(*):</label>
-                            <input name="nombre" type="text" placeholder="Ingrese su apellido">
-                            <br>
+                            <form>
+                                <div class="form-row align-items-center">
+                                    <div class="col-auto">
+                                        <label>Nombre completo(*):</label>
+                                        <input type="text" class="form-control" placeholder="Ingrese su nombre completo"
+                                            size="55" maxlength="15" multiple>
+                                    </div>
+                                </div> 
+                                    <br>
+                                <div class="form-row align-items-center">
+                                    <div class="col-auto">           
+                                        <label>Apellido/s(*):</label><br>
+                                        <input type="text" class="form-control" placeholder="Ingrese su apellido"
+                                            size="64" maxlength="15" multiple>
+                                    </div>
+                                </div>
+                            </form>    
                             <br>
                             <label>Dirección(*):</label>
-                            <input name="nombre" type="text" placeholder="Ingrese el domicilio y altura" >
+                            <input name="direccion" type="text" placeholder="Ingrese el domicilio y altura" 
+                                   size="64" maxlength="20" multiple>
                             <br>
                             <br>
                             <label>Localidad(*):</label>
-                            <input name="nombre" type="text" placeholder="Elija su Localidad">
-                                <select name="localidad" id="localidad" >
-                                    <option value="MAR">Martinez</option>
-                                    <option value="OLI">Olivos</option>
-                                    <option value="MUN">Munro</option>
-                                    <option value="BAL">Villa Ballester</option>
-                                    <option value="FLO">Florida</option>
-                                    <option value="VLO">Vicente Lopez</option>
-                                    <option value="SFE">San Fernando</option>
-                                    <option value="CF">Capital Federal </option>
-                                    <option value="MDQ">Mar del Plata</option>
+                            <input name="defoultlocalidad" type="text" placeholder="Elija su Localidad"
+                                    list="defoultlocalidad" size="64" maxlength="256" multiple>
+                                <datalist id="defoultlocalidad"> 
+                                    <option value="Martinez">
+                                    <option value="Olivos">
+                                    <option value="Munro">
+                                    <option value="Villa Ballester">
+                                    <option value="Florida">
+                                    <option value="Vicente López">
+                                    <option value="San Fernando">
+                                    <option value="Capital Federal">
+                                    <option value="Mar del Plata">
+                                </datalist>
                             <br>
                             <br>
                             <label>Teléfono (*):</label>
-                            <input type="tel" minlength="8" maxlength="10" placeholder="ingrese 0 + cod de area">
+                            <input type="tel" minlength="8" maxlength="10" placeholder="ingrese 0 + cod de area"
+                                   size="64" multiple number>
                             <br>
                             <br>
                             <div class="casillademail">
@@ -140,7 +153,14 @@
                                         <br>
                                         <br>
                                     <span class="text-muted"> (*) Campos obligatorios</span>     
-                                    </div>    
+                                    </div> 
+                                    <h3><strong>EDUCACIÓN</strong></h3>
+                                    <label for="educación">Seleccione su Nivel Educativo</label>
+                                    <select name="educacion" id="educación" >
+                                        <option value="P">Primaria</option>
+                                        <option value="S">Secundaria</option>
+                                        <option value="U">Universitaria</option>
+                                    </select>   
                                 </div>
                               <br>
                               <br>
