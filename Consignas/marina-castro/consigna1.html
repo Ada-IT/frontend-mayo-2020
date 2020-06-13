@@ -3,17 +3,23 @@
     <head>
         <title>Consigna 1</title>
         <style>
-        h1 h2 { 
-            background-color: rgb(242, 242, 248);
+        h1 { 
+
             font-style: normal;
-            font-family: Tahoma;
+            font-family: Cambria;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-left: 30px;
+            font-weight: 100
+
         }
 
-        h1 {
+        h2 {
 
             font-size: 20px;
             margin-top: 10px;
             margin-left: 30px;
+
         }
 
         h3 {
@@ -46,7 +52,7 @@
                 <section id="Formulario de Incripción">
                     <h1>   
                     <div 
-                        style="color:rgb(252, 252, 252); 
+                        style="color:rgb(7, 1, 1); 
                         font-family: Verdana;
                         background-color: rgb(55, 34, 116);width:fit-content;  
                         border-radius:10px; 
@@ -82,51 +88,65 @@
                         padding: 1rem;
                         outline-offset: 0.5rem;"> 
                         <br>
-                            <label>DATOS PERSONALES:</label>
+                            <h2><label>DATOS PERSONALES:</label></h2>
                             <br>
                             <br>
                             <label>Complete sus datos</label>    
                             <br>
                             <br>
                             <form>
-                                <div class="form-row align-items-center">
-                                    <div class="col-auto">
-                                        <label>Nombre completo(*):</label>
-                                        <input type="text" class="form-control" placeholder="Ingrese su nombre completo"
-                                            size="55" maxlength="15">
-                                    </div> 
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Nombre completo(*):</label><br>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" placeholder="Ingrese su nombre/s"
+                                           size="70" maxlength="15">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-group row">
+                                    <label class="col-sm-5 col-form-label">Apellido/s(*):</label><br>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" placeholder="Ingrese su apellido/s"
+                                           size="70" maxlength="15">
+                                    </div>
+                                </div>       
                                     <br>
-                                    <div class="form-row align-items-center">
-                                    <div class="col-auto">           
-                                        <label>Apellido/s(*):</label><br>
-                                        <input type="text" class="form-control" placeholder="Ingrese su apellido"
-                                            size="64" maxlength="15" multiple>
-                                    </div>   
-                                    <br>
-                                    <label>Dirección(*):</label>
-                                    <input name="direccion" type="text" placeholder="Ingrese el domicilio y altura" 
-                                        size="64" maxlength="20" multiple>
-                                    <br>
-                                    <br>
-                                    <label>Localidad(*):</label>
-                                    <input name="defoultlocalidad" type="text" placeholder="Elija su Localidad"
-                                            list="defoultlocalidad" size="64" maxlength="256" multiple>
-                                        <datalist id="defoultlocalidad"> 
-                                            <option value="Martinez">
-                                            <option value="Olivos">
-                                            <option value="Munro">
-                                            <option value="Villa Ballester">
-                                            <option value="Florida">
-                                            <option value="Vicente López">
-                                            <option value="San Fernando">
-                                            <option value="Capital Federal">
-                                            <option value="Mar del Plata">
-                                        </datalist>
+                                <div class="form-group row"> 
+                                    <label class="col-sm-5 col-form-label">Domicilio(*):</label><br>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" placeholder="Ingrese el domicilio y altura" 
+                                           size="70" maxlength="20">
+                                    </div>  
+                                </div>         
                                     <br>
                                     <br>
-                                <label>Teléfono (*):</label>
-                                <input type="tel" minlength="8" maxlength="10" placeholder="ingrese 0 + cod de area"
-                                    size="64" multiple number>
+                                <div class="form-group row">    
+                                    <label class="col-sm-5 col-form-label">Localidad(*):</label><br>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" placeholder="Elija su Localidad"
+                                            list="defoultlocalidad" size="70" maxlength="20">
+                                            <datalist id="defoultlocalidad"> 
+                                                <option value="Martinez">
+                                                <option value="Olivos">
+                                                <option value="Munro">
+                                                <option value="Villa Ballester">
+                                                <option value="Florida">
+                                                <option value="Vicente López">
+                                                <option value="San Fernando">
+                                                <option value="Capital Federal">
+                                                <option value="Mar del Plata">
+                                            </datalist>
+                                    </div>        
+                                </div>        
+                                    <br>
+                                    <br>
+                                    <div class="form-group row"> 
+                                        <label class="col-sm-5 col-form-label">Teléfono(*):</label><br>
+                                        <div class="col-sm-10">
+                                            <input type="tel" class="form-control" placeholder="Ingresar cod. area + número" 
+                                               size="70" maxlength="20">
+                                        </div>
+                                    </div>                          
                                 <br>
                                 <br>
                                 <div class="casillademail">
