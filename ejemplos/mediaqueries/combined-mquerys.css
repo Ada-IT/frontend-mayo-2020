@@ -1,0 +1,12 @@
+@import "laptops/laptops.css";
+@import "phones/galaxy.css";
+@import "phones/googlepixel.css";
+@import "phones/iphone.css";
+@import "phones/htc.css";
+@import "phones/windowsphone.css";
+@import "tablets/ipads.css";
+@import "tablets/tablet_galaxy.css";
+@import "tablets/tablet_kindlefire.css";
+@import "tablets/table_nexus.css";
+@import "wereables/applewatch.css";
+@import "wereables/moto360.css";
