@@ -61,7 +61,17 @@
       }
       /* Responsive layout - */
       /* Cuando la pantalla sea menor a 800px de ancho, haremos que el sidebar se mueva a abajo y ocupe el total del ancho.*/
-      @media screen and (max-width: 800px) {
+      @media screen and (min-width: 600px) and (max-width: 800px) {
+        .leftcolumn,
+        .rightcolumn {
+          width: 100%;
+          padding: 0;
+        }
+        .row {
+          display: block;
+        }
+      }
+      @media screen and (max-width: 599px) {
         .leftcolumn,
         .rightcolumn {
           width: 100%;
