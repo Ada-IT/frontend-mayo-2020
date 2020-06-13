@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        h1 {
+            font-weight: 700;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-decoration: underline;
+            color: rgb(68, 66, 63);
+            margin-left: 20rem;
+            
+        }
+        h3 {
+            text-align: center;
+        }
+        p {
+            text-indent: 2rem;
+        }
+        caption {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color:rgb(46, 42, 39);
+            padding-bottom: 1rem;
+        }
+        .ciudades {
+                display: inline-flex;
+                width: 80%;
+        }
+        .ciudades  .descripcion {
+                width: 33.3%;
+                padding: 1rem;
+                background-color: rgb(252, 252, 252, 0.7);
+                margin: 1rem;
+        }
+        body {
+            background-image: url("imagenes/ciudad.jpg");
+            background-size: 2000px 1000px;  
+            background-repeat: no-repeat;
+            background-position: bottom;
+        }
+        .tabla {
+            background-color: rgb(252, 252, 252, 0.5);
+        
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+            margin-left: 9rem;
+         }
+        .tabla td, .tabla th {
+             border: 1px solid #ddd;
+             padding: 8px;
+        }
+        .tabla tr:hover {
+            background-color: #ddd;
+        }
+        .tabla th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: rgb(143, 131, 118);
+            color: white;
+        }
+        .destino {
+           /*background-color: rgb(245, 225, 203);*/
+            font-weight: bold;
+        }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>DESTINOS CERCANOS</h1>
+    </header>
+    <section>
+      <table class="tabla">
+        <caption>
+          Conozca el tiempo necesario para viajar desde Philadelphia
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">
+                <i class="fa fa-map-marker" aria-hidden="true">
+                </i>
+                Destino
+            </th>
+            <th scope="col"> 
+                <i class="fa fa-car" aria-hidden="true">
+                </i>
+                &nbsp; En auto
+            </th>
+            <th scope="col">
+                <i class="fa fa-train" aria-hidden="true">
+                </i>
+                &nbsp; En tren
+            </th>
+            <th scope="col">
+                <i class="fa fa-bicycle" aria-hidden="true">
+                </i>
+                &nbsp; En bicicleta
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="destino">Nueva York</td>
+            <td><time>1:51</time>min</td>
+            <td><time>1:22</time>min</td>
+            <td><time>8:53</time>min</td>
+          </tr>
+          <tr>
+            <td class="destino">Washington</td>
+            <td><time>2:25</time>min</td>
+            <td><time>2:51</time>min</td>
+            <td><time>12:46</time>min</td>
+          </tr>
+          <tr>
+            <td class="destino">Nueva Jersey</td>
+            <td><time>1:20</time>min</td>
+            <td><time>1:05</time>min</td>
+            <td><time>3:56</time>min</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Promedio</th>
+            <td><time>1:45</time>min</td>
+            <td><time>1:55</time>min</td>
+            <td><time>8:36</time>min</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+    <br />
+    <section class="ciudades">
+      <div class="descripcion">
+        <h3>Nueva York</h3>
+        <p>
+          Situado sobre la costa este de Estados Unidos de América, encontramos
+          a la ciudad de Nueva York. Esta, además esta bañada por el océano
+          Atlántico y en el que desemboca el río Hudson, el cual atraviesa todo
+          el estado.
+        </p>
+        <p>
+          Esta ciudad se caracteriza por ser la más poblada del estado de Nueva
+          York y del país. Tan diversa como versátil, es llamada la ciudad que
+          nunca duerme.
+        </p>
+      </div>
+      <div class="descripcion">
+        <h3>Washington D.C.</h3>
+        <p>
+          Es una ciudad de categoría mundial con estatuas y monumentos
+          conmemorativos icónicos, museos increíbles (y gratuitos), pasión por
+          la política, embajadas extranjeras, barrios históricos y veneradas
+          universidades y escuelas universitarias.
+        </p>
+        <p>
+          Con conexiones de vuelo directo a más de 30 destinos internacionales,
+          Washington, DC es un destino imprescindible en EE. UU. para viajeros
+          de todo el mundo.
+        </p>
+      </div>
+      <div class="descripcion">
+        <h3>New Jersey</h3>
+        <p>
+          Situado en el noreste de Estados Unidos, Nueva Jersey es uno de los
+          estados más pequeños del país. Sin embargo, su naturaleza es sumamente
+          diversa: pintorescas montañas en el norte, el océano Atlántico en las
+          costas del este y el sur, y una mezcla de colinas, granjas y una
+          inmensa reserva interior cubierta de pinos en el oeste.
+        </p>
+        <p>
+          A lo largo de toda la costa, verás paseos marítimos atractivos y
+          coloridos. Más hacia el interior, los bosques y senderos de río te
+          mostrarán los secretos de las montañas, como miradores, cascadas y
+          aves exóticas. Aquí, encontrarás interesantes museos, instituciones
+          culturales e históricas, y vistas panorámicas de íconos
+          estadounidenses, como la Statue of Liberty (Estatua de la Libertad).
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
