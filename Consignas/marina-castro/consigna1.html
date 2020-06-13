@@ -3,8 +3,8 @@
     <head>
         <title>Consigna 1</title>
         <style>
-        h1 h2 h3 { 
-            background-color: blue;
+        h1 h2 { 
+            background-color: rgb(242, 242, 248);
             font-style: normal;
             font-family: Tahoma;
         }
@@ -17,20 +17,23 @@
         }
 
         h3 {
+            color:black;
             width: fit-content;
             font-size: 16px;
             font-weight: 100;
         }
-
+        
         .miheader {
             font-family: 'Lucida Sans';
             font-size: 20px;
-        
+        }
+
         label {
             font-size: 16px;
             color:black;
             font-family: sans-serif;
         }
+
         </style>
     </head>
     <body>
@@ -86,16 +89,30 @@
                             <label>Complete sus datos</label>
                             <br>
                             <br>
-                            <label>Nombre (*):</label>
+                            <label>Nombre completo(*):</label>
                             <input name="nombre" type="text" value="">
                             <br>
                             <br> 
-                            <label>Apellido (*):</label>
-                            <input name="nombre" type="text" value="">
+                            <label>Apellido/s(*):</label>
+                            <input name="nombre" type="text" placeholder="Ingrese su apellido">
                             <br>
                             <br>
-                            <label>Dirección (*):</label>
-                            <input name="nombre" type="text" value="direccion" >
+                            <label>Dirección(*):</label>
+                            <input name="nombre" type="text" placeholder="Ingrese el domicilio y altura" >
+                            <br>
+                            <br>
+                            <label>Localidad(*):</label>
+                            <input name="nombre" type="text" placeholder="Elija su Localidad">
+                                <select name="localidad" id="localidad" >
+                                    <option value="MAR">Martinez</option>
+                                    <option value="OLI">Olivos</option>
+                                    <option value="MUN">Munro</option>
+                                    <option value="BAL">Villa Ballester</option>
+                                    <option value="FLO">Florida</option>
+                                    <option value="VLO">Vicente Lopez</option>
+                                    <option value="SFE">San Fernando</option>
+                                    <option value="CF">Capital Federal </option>
+                                    <option value="MDQ">Mar del Plata</option>
                             <br>
                             <br>
                             <label>Teléfono (*):</label>
@@ -105,23 +122,27 @@
                             <div class="casillademail">
                                 <div class="form-group col-md-20">
                                     <label for="email">
-                                        Correo Electrónico:
-                                     <span class="text-muted"> (*Requerido)</span>         
+                                        Correo Electrónico (*):
                                     </label>
                                     <br>
                                   <input 
                                         id="direccionemail" 
                                         type="email" 
-                                        size="64" maxlength="64" 
+                                        size="64" 
+                                        maxlength="64" 
                                         requerired placeholder="usuario@suemail.com" 
                                         pattern=".+suemail.com" 
                                         class="email"> 
+                                        <br/>
+                                        <br>
                                     <div class="invalid-feedback">
-                                        <font style="vertical-align:inherit">
-                                            <font style="vertical-align:inherit"> Por favor, ingrese una direccion de Correo Electrónico válida</font>
-                                        </font>
+                                        <font style="vertical-align:inherit">Por favor, ingrese una direccion de Correo Electrónico válida</font>
+                                        <br>
+                                        <br>
+                                    <span class="text-muted"> (*) Campos obligatorios</span>     
                                     </div>    
                                 </div>
+                              <br>
                               <br>
                             <h3><strong>EDUCACIÓN</strong></h3>
                             <label for="educación">Seleccione su Nivel Educativo</label>
@@ -135,8 +156,8 @@
                                 name="comentarios" 
                                 value="" 
                                 placeholder="Escriba su comentario" 
-                                rows="6" 
-                                cols="80"
+                                rows="2" 
+                                cols="30"
                             >
                             </textarea>
                         </div>
