@@ -1,5 +1,6 @@
 <html>
     <head>
+        
         <title>Mi Articulo de Blog</title>
         <style>
             /* 
@@ -16,14 +17,18 @@
             /* Aqui tienen unos ejemplos de otras clases  de referencia.*/
             /* Estructura */
            
-         /* ---- Inicio caja --- */
-.caja {
+            .caja {
             text-align:center;
-            background: orange;
-            font-family: system-ui;
-            color: #ffff;
+            background: white;
+            font-family: 'Montserrat', sans-serif;
+            color:grey;
             width: 1000px;
             margin: 0 auto;
+            --webkit-box-shadow: 0px 0px 13px 5px rgba(0,0,0,0.18);
+            -moz-box-shadow: 0px 0px 13px 5px rgba(0,0,0,0.18);
+            box-shadow: 0px 0px 13px 5px rgba(0,0,0,0.18);
+            border: 1px #e3e3e3 solid;
+            border-radius: 25px;
           }
 
 article {
@@ -40,23 +45,45 @@ aside {
 
             /* contenidoy tipografias */
 h1 {
-            font-size: 70px;
+            font-size: 50px;
             font-weight: bold;
-            text-shadow: 3px 0px 3px rgba(150, 150, 150, 1);
-            padding: 50px; text-align: center;
+            text-align: center;
+            letter-spacing: 5px;
+            padding: 20px;
+            background: powderblue;
+            color: white;
+            text-transform:uppercase;
             }
-p h2 h3 {
-              text-align:center;
 
-            }
-
-            /* ----fin contenidoy tipografias --- */
+h3 {
+    color:rgb(255, 255, 255);
+    background-color:powderblue;
+    text-transform:uppercase;
+    letter-spacing: 5px;
+}
+h2 {
+    color:rgb(53, 53, 53);
+    text-transform:uppercase;
+    letter-spacing: 5px;
+}
+p {
+    font-weight:lighter;   
+}
+/* ----fin contenidoy tipografias --- */
+/* ---- texto links --- */
+.a{
+    color: grey;
+    line-height: 30px;
+    text-align: left;
+}
+/* ---- fin texto links --- */
+            
 
             /* pie de pagina - footer */
  .footer {
                 display: inline-flex;
                 text-align:center;
-                background: #333;
+                background: #e3e3e3;
                 padding: 40px;
                 }
 .footer .links {
@@ -67,15 +94,23 @@ p h2 h3 {
                 text-align:justify;
                 width: calc(33% - 40px);
                 padding: 0 20px;
-  
             }
             /* ----fin pie de pagina --- */
-
-.img {
-    width: 300px;
-}
           
+          /* ----imagen --- */
+.img {
+        width: 250px;
+        height: 250px;
+        padding: 50px 50x;
+        text-align: center;
+        margin: 0 auto;
+        border-radius: 10px;
+}
+/* ---- fin imagen --- */
+
+
         </style>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;600&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="caja">
@@ -104,15 +139,11 @@ p h2 h3 {
                 <div class="container">
                     <h4>Mapa del sitio</h4>
                     <ul>
-                       <a href="">¿Quienes somos?</a>
-                      <br>
-                       <a href="">Preguntas Frecuentes</a>
-                       <br>
-                       <a href="">Terminos y Condiciones</a>
-                       <br>
-                       <a href="">Nosotros</a>
-                       <br>
-                       <a href="">Contactanos</a>                      
+                    <li><a class="a" href="">¿Quienes somos?</a></li>
+                    <li><a class="a" href="">Preguntas Frecuentes</a></li>
+                    <li><a class="a" href="">Terminos y Condiciones</a></li>
+                    <li><a class="a" href="">Nosotros</a></li>
+                    <li><a class="a" href="">Contactanos</a></li>                  
                     </ul>
                 </div>                
                 <div class="container">
