@@ -23,38 +23,90 @@
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type="text/css">
+/*Estilado general*/
         body{
             background-color: #EEEEEE;
             color: #222831;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 16px;
+            font-size: 18px;
         }
-        .table-wrapper{
+/* Encabezado de la tabla */
+        .table-header{
             background-color: #32E0C4;
-            padding: 20px 25px;
-            margin: 30px 0;
-            border-radius: 3px;
-            box-shadow: 0 1px 1px rgba(0,0,0,.05);
-            font-size: 30px;
+            padding: 10px 10px;
+            border-radius: 10px;
+            font-size: 20px;
         }
+        .table-header h1{
+          text-decoration: underline;
+          font-style: oblique;
+        }      
+/*Contenido de la tabla*/
+        table{
+          width: 100%;
+          vertical-align: center;
+          border-collapse: collapse;
+          margin-top: 10px;
+        }
+        th{
+          font-size: 20px;
+        }
+        td{
+          background-color: lightgray;
+        }
+        th, td{
+          text-align: center;
+          padding: 15px;
+        }
+/*División del contenido*/
+        thead{
+          background-color: #393e46;
+          color: #EEEEEE;
+          border-bottom: solid 5px #222831;
+        }
+/*Resaltar th de footer*/
+        tfoot th{
+          background-color: rgb(252, 252, 93);
+        }
+       
+/*Pseudoclases*/
+       tr:hover td{
+          background-color:#32E0C4;
+        }
+        td:nth-child(odd){
+          background-color: lightcyan;
+        }
+/*Seccion de ciudades en bloque una al lado de la otra*/
+           .city-section {
+                display: inline-flex;
+                width: 100%;
+                }
+           .city-section .container {
+                width: 50%;
+            }
+            .city-section .container h3{
+              font-size: 30px;
+              text-align: center;
+              
+            }
+            .city-section .container p{
+              font-size: 15px;
+              text-align: center;
+              padding: 0 20px 0 20px;
+            }
     </style>
   </head>
   <body>
-    <div class="container">
-        <div class="table-wrapper">
-            <div class="table-title">    
+        <div class="table-header">   
                 <header>
                 <h1>Tabla de viaje</h1>
                     <caption class="table-caption">
                     Conozca el tiempo necesario para viajar desde Philadelphia
                     </caption>
-                </header>  
-            </div>
+                </header>
         </div>
-    </div>
     <section>
     <table>
-        
         <thead>
           <tr>
             <th scope="col">Destino</th>
@@ -94,8 +146,8 @@
       </table>
     </section>
     <br />
-    <section>
-      <div>
+    <section class="city-section">
+      <div class="container">
         <h3>Nueva York</h3>
         <p>
           Situado sobre la costa este de Estados Unidos de América, encontramos
@@ -108,7 +160,7 @@
           nunca duerme.
         </p>
       </div>
-      <div>
+      <div class="container">
         <h3>Washington D.C.</h3>
         <p>
           Es una ciudad de categoría mundial con estatuas y monumentos
@@ -121,7 +173,7 @@
           de todo el mundo.
         </p>
       </div>
-      <div>
+      <div class="container">
         <h3>New Jersey</h3>
         <p>
           Situado en el noreste de Estados Unidos, Nueva Jersey es uno de los
