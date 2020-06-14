@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head lang="es" >
+        <meta> 
+        <title> Consigna Formulario </title>
+    </head>
+    <body>
+        <header>
+            <nav> <h1>Formulario Múltiple Choice</h1></nav>
+        </header>
+        <main>
+            <section id="formulario">
+                <article>
+                    <form action="consigna1.html" method="POST">
+                        <label class="label" for="nombre" aria-label="nombre">Nombre:</label> 
+                        <input style="width: 15%;" id="nombre" type="text" minlength="3" maxlength="15" placeholder="Nombre"> <br>
+
+                        <label class="label" for="apellido" aria-label="apellido">Apellido:</label>
+                        <input style="width: 15%;" id="apellido" type="text" minlength="3" maxlength="15" placeholder="Apellido"> <br>
+
+                        <label class="label" for="direccion" aria-label="dirección">Dirección:</label> 
+                        <input style="width: 20%;"id="direccion" type="text" minlength="3" maxlength="20" placeholder="Calle 123, Ciudad, País"> <br>
+
+                        <label class="label" for="telefono" aria-label="teléfono">Teléfono:</label>
+                        <input id="telefono" type="number"  placeholder="000 000 0000"> <br>
+
+                        <label class="label" for="email" aria-label="email">E-mail:</label>
+                        <input type="email"> <br>
+
+
+
+                        <div>
+                            <label class="label" for="genero" aria-label="género">Género:</label> <br>
+
+                            <input id="genero" type="radio" name="genero">
+                            <label for="genero" value="F">Femenino</label> <br>
+
+                            <input id="genero" type="radio" name="genero">
+                            <label for="genero" value="M">Masculino</label> <br>
+
+                            <input id="genero" type="radio" name="genero">
+                            <label for="genero" value="O">Otro</label> <br>
+
+                        </div>
+                        
+
+
+                        <label class="label" for="educacion" aria-label="educación">Educación:</label> <br>
+                        
+                        <input type="submit" value="Guardar"></input> 
+                    </form>
+                </article>
+            </section>            
+        </main>
+    </body>
+</html>
