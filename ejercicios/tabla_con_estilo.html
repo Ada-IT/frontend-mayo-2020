@@ -18,15 +18,42 @@
     7) todo el estilo de escribirá dentro de la etiqueta <style>
     -->
     <meta charset="utf-8" />
-    <title></title>
+    <title>Tabla con Estilo</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style></style>
+    <style>
+      body {
+        background-color: rgb(244, 252, 249);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+        font-size: 18px;
+      }
+        header {
+        text-align: center;
+        transition: initial;
+        font-size: 20px;
+        font-family: Tahoma;
+      }
+      
+      table{
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <h1>Tabla de viaje</h1>
+      <b><h1>TABLA DE VIAJE</h1></b>
+      <hr>
     </header>
     <section>
       <table>
