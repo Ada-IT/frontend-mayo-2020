@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Mi Formulario de Login</title>    
+        <style>
+            .menu {
+                background-color: lightpink;
+                border-radius: 30px;
+                margin-right: 10px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bold;
+                color: black;
+                padding: 10px 10px;
+            }
+            .menu:hover{
+                background-color: crimson;
+                border-radius: 30px;
+                padding: 10px;
+                font-size: x-large;
+
+            }
+            input{
+                background-color: lightgray;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bold;
+                color: black;
+                border-radius: 30px;
+                border: none;
+                box-sizing: 30px;
+                margin-bottom: 10px;
+                padding: 10px 10px;
+                }
+            input:focus{
+                background-color: lightpink;
+                border-radius: 30px;                
+            }
+            input:invalid{
+                background-color: rgb(211, 48, 48);
+            }
+            h1{
+                font-size: 20px;
+            }
+            label{
+                font-size: 20px;
+            }
+            .ingresar{
+                background-color: lightpink;
+                border-radius: 30px;
+                font-weight: bold;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: black;
+                padding: 10px 10px;
+            }
+            .ingresar:hover{
+                background-color: crimson;
+                border-radius: 30px;
+                padding: 10px 10px;
+                font-size: x-large;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <nav>
+                    <a class="menu" href="">Menú 1</a>
+                    <a class="menu" href="">Menú 2</a>
+                </nav>
+            </header>                        
+            <article>
+                <section id="formulario-login">                
+                    <h1>Login</h1>
+                    <div>
+                        <!-- Formulario de Login -->
+                        <form class="login-validation" id="login" action="formulario-login.html" method="POST">
+                            <label for="usuario">Usuario:</label>
+                            <input 
+                                id="usuario" 
+                                type="email" 
+                                name="usuario"                                
+                            >
+                            <br>
+                            <label for="password">Password:</label>
+                            <input 
+                                id="password" 
+                                type="password" 
+                                minlength="4" 
+                                maxlength="10" 
+                                name="password"
+                            >
+                            <br>
+                            <input class="ingresar" type="submit" value="Ingresar">
+                        </form>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>                
