@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Mi Formulario de Login</title>   
+        <style>
+            .menu a{
+                padding:5px 20px 5px 20px;
+                color: blue;
+                border-style:dotted;
+                border-color:blueviolet;
+            }
+            h1{
+                color: blue;
+            }
+            .menu a:hover   {
+                color: burlywood;
+            }
+           input{
+                border-radius: 50px;
+                border-color: black;
+            }
+            input[type="submit"]{
+                border-radius: 50px;
+                border-color: dodgerblue;
+                background-color: floralwhite;
+            }
+           input:focus {
+                background-color: lawngreen;
+            }
+            .login-validation input[type="password"]:focus{
+               background-color: blue;
+            }
+            .login-validation input[type="submit"]:focus{
+               background-color:cornsilk;
+            }
+            a:visited{
+                color: mediumorchid;
+                border-radius: 20px;
+            }
+
+        </style> 
+    </head>
+    <body>
+        <main>
+            <header>
+                <nav class="menu">
+                    <a href="">Menu 1</a>
+                    <a href="">Menu 2</a>
+                </nav>
+            </header>                        
+            <article>
+                <section id="formulario-login">                
+                    <h1>Login</h1>
+                    <div>
+                        <!-- Formulario de Login -->
+                        <form class="login-validation" id="login" action="formulario-login.html" method="POST">
+                            <label for="usuario">Usuario:</label>
+                            <input
+                                id="usuario" 
+                                type="email" 
+                                name="usuario"                                
+                            >
+                            <br>
+                            <br>
+                            <label for="password">Password:</label>
+                            <input
+                                id="password" 
+                                type="password" 
+                                minlength="4" 
+                                maxlength="10" 
+                                name="password"
+                            >
+                            <br>
+                            <input type="submit" value="Ingresar">
+                        </form>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>                
