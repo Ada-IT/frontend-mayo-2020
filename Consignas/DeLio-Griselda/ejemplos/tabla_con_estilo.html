@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <!-- 
+    Crear una rama con el nombre tabla_con_estilo desde su rama de desarrollo
+    y trabajar sobre ella.
+    COPIAR este archivo a su carpeta de usuario.
+    Este es un ejercicio de css.
+    Requerimientos:
+    1) Cada tipo elemento de la tabla debe contener al menos 1 estilo css,
+     se debe lograr diferenciar los espacios de cada celda, fila y columna como asi
+     resaltar la información cuando se pasa con el cursor por arriba.
+    2) Cada elemento de h1 a h6 que esten definidos deben contener al menos 2 propiedades css.
+    3) Cada elemento contenedor tipo section o div debe contener almenos 3 propiedades de css.
+    4) Los divs con informacion de las ciudades deben poder visualizar uno al lado de otro en bloques del mismo tamaño.    
+    5) El cuerpo del  documento debe tener un color de fondo y fuente definida.
+    6) Se deben agregar clases y utilizar selectores que se consideren necesarios.
+    7) todo el estilo de escribirá dentro de la etiqueta <style>
+    -->
+    <meta charset="utf-8" />
+    <title>Tabla con Estilo</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+      body {
+        background-color: rgb(252, 252, 252);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+        font-size: 18px;
+        margin: 50px;
+      }
+      header {
+        text-align: center;
+        font-size: 25px;
+        color: red;
+        text-decoration: underline;
+      }
+      caption {
+        text-shadow: 2px 2px rgb(247, 247, 167);
+        font-style: italic;
+        font-family: BlinkMacSystemFont;
+        margin-bottom: 10px;
+        }
+        /*Diseño de la tabla*/
+      table{
+        padding: 10px;
+        margin-right: 30px;
+        width: 75%;
+        margin-left: 9rem;
+      }
+      .mitabla tr:hover {
+        background-color: #ddd;
+        }
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      th{
+        background-color: rgb(220, 228, 227);
+        text-align: center;
+      }
+      div {
+        border: 2px rgb(10, 10, 10) solid;
+        width: 33,3%;
+        padding: 8px;
+        margin:0px 20px;
+      }
+      p{
+        word-wrap: break-word;
+      }
+      h3 {
+        text-align: center;
+        font-size: 30px;
+      }
+      /*Animacion*/
+      .slidein {
+        animation-duration: 3s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      @keyframes slidein {
+        from {
+          margin-left:100%;
+          width:300%
+        }
+        to {
+        margin-left:0%;
+        width:100%;
+        }
+      }
+      /*imagen de fondo*/
+      .fondo{
+        display:inline-flex;
+        background-image:url("data:image/jpeg;base64,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");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <b><h1>TABLA DE VIAJE</h1></b>
+      <hr>
+    </header>
+    <section>
+      <table class="mitabla">
+        <caption class="slidein">
+          Conozca el tiempo necesario para viajar desde Philadelphia
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; Destino</th>
+            <th scope="col">
+              <i class="fa fa-car" aria-hidden="true"></i>&nbsp; En auto</th>
+            <th scope="col">
+              <i class="fa fa-train" aria-hidden="true"></i> &nbsp; En Tren</th>
+            <th scope="col">
+              <i class="fa fa-bicycle" aria-hidden="true"></i> &nbsp; En bicicleta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nueva York</td>
+            <td><time>1:51</time>min</td>
+            <td><time>1:22</time>min</td>
+            <td><time>8:53</time>min</td>
+          </tr>
+          <tr>
+            <td>Washington</td>
+            <td><time>2:25</time>min</td>
+            <td><time>2:51</time>min</td>
+            <td><time>12:46</time>min</td>
+          </tr>
+          <tr>
+            <td>Nueva Jersey</td>
+            <td><time>1:20</time>min</td>
+            <td><time>1:05</time>min</td>
+            <td><time>3:56</time>min</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Promedio</th>
+            <td><time>1:45</time>min</td>
+            <td><time>1:55</time>min</td>
+            <td><time>8:36</time>min</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+    <br />
+    <section class="fondo">
+      <div>
+        <h3>Nueva York</h3>
+        <p>
+          Situado sobre la costa este de Estados Unidos de América, encontramos
+          a la ciudad de Nueva York. Esta, además esta bañada por el océano
+          Atlántico y en el que desemboca el río Hudson, el cual atraviesa todo
+          el estado.
+          <br />
+          Esta ciudad se caracteriza por ser la más poblada del estado de Nueva
+          York y del país. Tan diversa como versátil, es llamada la ciudad que
+          nunca duerme.
+        </p>
+      </div>
+      <div>
+       <h3>Washington D.C.</h3>
+        <p>
+          Es una ciudad de categoría mundial con estatuas y monumentos
+          conmemorativos icónicos, museos increíbles (y gratuitos), pasión por
+          la política, embajadas extranjeras, barrios históricos y veneradas
+          universidades y escuelas universitarias.
+          <br />
+          Con conexiones de vuelo directo a más de 30 destinos internacionales,
+          Washington, DC es un destino imprescindible en EE. UU. para viajeros
+          de todo el mundo.
+        </p>
+      </div>
+      <div>
+        <h3>New Jersey</h3>
+        <p>
+          Situado en el noreste de Estados Unidos, Nueva Jersey es uno de los
+          estados más pequeños del país. Sin embargo, su naturaleza es sumamente
+          diversa: pintorescas montañas en el norte, el océano Atlántico en las
+          costas del este y el sur, y una mezcla de colinas, granjas y una
+          inmensa reserva interior cubierta de pinos en el oeste.
+          <br />
+          A lo largo de toda la costa, verás paseos marítimos atractivos y
+          coloridos. Más hacia el interior, los bosques y senderos de río te
+          mostrarán los secretos de las montañas, como miradores, cascadas y
+          aves exóticas. Aquí, encontrarás interesantes museos, instituciones
+          culturales e históricas, y vistas panorámicas de íconos
+          estadounidenses, como la Statue of Liberty (Estatua de la Libertad).
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
