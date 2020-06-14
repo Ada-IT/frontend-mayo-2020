@@ -8,6 +8,7 @@
         <header>
             <nav> <h1>Formulario Múltiple Choice</h1></nav>
         </header>
+
         <main>
             <section id="formulario">
                 <article>
@@ -22,31 +23,57 @@
                         <input style="width: 20%;"id="direccion" type="text" minlength="3" maxlength="20" placeholder="Calle 123, Ciudad, País"> <br>
 
                         <label class="label" for="telefono" aria-label="teléfono">Teléfono:</label>
-                        <input id="telefono" type="number"  placeholder="000 000 0000"> <br>
+                        <input id="telefono" type="tel"  placeholder="000 000 0000"> <br>
 
-                        <label class="label" for="email" aria-label="email">E-mail:</label>
-                        <input type="email"> <br>
-
-
-
+                        <div>
+                            <style>
+                                input:valid {
+                                   background-color: rgb(233, 255, 251);
+                                }
+                                #email:invalid {
+                                   background-color: rgb(255, 126, 126);
+                                   }   
+                               </style>
+                               <label class="label" for="email" aria-label="email">E-mail:</label>
+                               <input type="email" placeholder="nombre@mail.com" id="email" name="email"> <br>
+                        </div>
                         <div>
                             <label class="label" for="genero" aria-label="género">Género:</label> <br>
 
                             <input id="genero" type="radio" name="genero">
-                            <label for="genero" value="F">Femenino</label> <br>
+                            <label value="F">Femenino</label> <br>
 
                             <input id="genero" type="radio" name="genero">
-                            <label for="genero" value="M">Masculino</label> <br>
+                            <label value="M">Masculino</label> <br>
 
                             <input id="genero" type="radio" name="genero">
-                            <label for="genero" value="O">Otro</label> <br>
+                            <label value="O">Otro</label> <br>
 
                         </div>
-                        
+                        <div>
+                            <label class="label" for="educacion" aria-label="educación">Educación:</label> <br>
+                           
+                            <input id="educacion" type="radio" name="educacion">
+                            <label value="P">Primaria</label> <br>
+
+                            <input id="educacion" type="radio" name="educacion">
+                            <label value="S">Secundaria</label> <br>
+
+                            <input id="educacion" type="radio" name="educacion">
+                            <label value="U">Universitaria</label> <br>
+                        </div>
+                        <div>
+                            <label class="label" for="trabajo" aria-label="educación">Trabajo:</label> <br>
+                           
+                            <input id="trabajo" type="radio" name="trabajo">
+                            <label value="S">Sí</label> <br>
+
+                            <input id="trabajo" type="radio" name="trabajo">
+                            <label value="N">No</label> <br>
+
+                        </div>
 
 
-                        <label class="label" for="educacion" aria-label="educación">Educación:</label> <br>
-                        
                         <input type="submit" value="Guardar"></input> 
                     </form>
                 </article>
