@@ -44,14 +44,17 @@ body {
 }
 
 /* --- MAIN --- */
+
+main {
+    width: 70%;
+}
 .noticia {
     margin-top: 40px;
-    width: 700px;
-    max-width: 100%;
+    width: 100%;
 }
 
 .noticia .titulo {
-    font-size: 30px;
+    font-size: 2em;
     font-weight: 700;
 }
 
@@ -106,7 +109,7 @@ blockquote {
     margin: 40px 20px;
     background-color: #ffa742;
     border-radius: 3px;
-    width: 100%;
+    width: 30%;
 }
 
 .sidebar h4 {
