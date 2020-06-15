@@ -22,6 +22,8 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://kit.fontawesome.com/b58405ced3.js" crossorigin="anonymous"></script>
     <style>
       body {
         background-image: url("img/Travel-Tips.jpeg");
@@ -51,12 +53,41 @@
       text-transform: uppercase;
       }
 
-      section.tabla {
+
+      i {
+        color: rgb(13, 135, 241);
+        border: aquamarine;
+      }
+    .titulo {
+     text-align:center;
+     font-size: 1.2rem; 
+     font-family: monospace;
+     padding: 2%;
+    }
+
+      .tabla {
       color: rgb(19, 4, 85);
       font-family: serif;
-      text-align: justify;
-      
+      text-align: center;
+      margin: 7% 35% 7% 35%;
+      width: 60%;
+      font-size: 1.5rem;
       }
+
+      td {
+        margin: 3% 3% 3% 3%;
+      }
+      .thead {
+        border: 1px solid rgb(253, 252, 252);
+        border-collapse:separate;
+        border-style: double;
+
+        }
+
+        .tfoot{
+        font-style: oblique,bold;
+        text-decoration: underline overline;
+        }
 
       .description {
         display: block;
@@ -65,12 +96,12 @@
         border-radius: 2rem;
       }
 
-     .text .description {
-      display:inline-flex;
-      color: rgb(0, 0, 0);
-      padding: 0.2rem;  
-      margin-left: 1.5rem;
-      }
+      .text .description {
+        display:inline-flex;
+        color: rgb(0, 0, 0);
+        padding: 0.2rem;  
+        margin-left: 1.5rem;
+        }
 
       @media screen and (min-width: 481px) and (max-width: 767px) {
          body {
@@ -110,38 +141,39 @@
     </header>
     <section class="tabla">
       <table > 
-        <caption>
+        <caption class="titulo">
           Conozca el tiempo necesario para viajar desde Philadelphia
         </caption>
-        <thead>
+        <br>
+        <thead class="thead">
           <tr>
-            <th scope="col">Destino</th>
-            <th scope="col">En auto</th>
-            <th scope="col">En tren</th>
-            <th scope="col">En bicicleta</th>
-          </tr>
+            <th scope="col">Destino <span><i class="fas fa-globe-americas"></i></span></th>
+            <th scope="col">En auto <span><i class="fas fa-car"></i></span></th>
+            <th scope="col">En tren <span></span><i class="fas fa-subway"></i></th>
+            <th scope="col">En bicicleta<span><i class="fas fa-bicycle"></i></span></th>
+              </tr>
         </thead>
-        <tbody>
-          <tr>
+        <tbody class="tbody">
+          <tr class="1">
             <td>Nueva York</td>
             <td><time>1:51</time>min</td>
-            <td><time>1:22</time>min</td>
+           <td><time>1:22</time>min</td>
             <td><time>8:53</time>min</td>
           </tr>
-          <tr>
+          <tr class="2">
             <td>Washington</td>
             <td><time>2:25</time>min</td>
             <td><time>2:51</time>min</td>
             <td><time>12:46</time>min</td>
           </tr>
-          <tr>
+          <tr class="3">
             <td>Nueva Jersey</td>
             <td><time>1:20</time>min</td>
             <td><time>1:05</time>min</td>
             <td><time>3:56</time>min</td>
           </tr>
         </tbody>
-        <tfoot>
+        <tfoot class="tfoot">
           <tr>
             <th>Promedio</th>
             <td><time>1:45</time>min</td>
