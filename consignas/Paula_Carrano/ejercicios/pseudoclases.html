@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Mi Formulario de Login</title>    
+       <style>
+         .menu{
+          font-family: cursive;
+          font-style: inherit;
+          padding: 5px;
+          color: black;
+          background-color: rgb(178, 247, 178);
+          border: double lightseagreen;
+         }
+
+         .menu a:hover{
+          color: lightcoral;
+          border-radius: 15px;
+        }
+
+        h1 { 
+          font-size: x-large;
+          font-style: inherit;
+           
+         }
+         input{
+           font-weight: bolder;
+           border-radius: 30px;
+           border-color: rgb(151, 54, 44);
+         }
+         
+         input:focus {
+            background-color:  grey;
+            color:black;
+          }
+                
+        input[type="email" i]:valid {
+            background-color: green!important;
+        }
+        input[type="email" i]:invalid {
+            background-color: red!important;
+        } 
+         a:hover{
+          background-color: hotpink;
+          font-style: inherit;
+
+         }
+         .login-validation {
+           background-color: lemonchiffon;
+           font-weight: 200 px;
+      }
+          </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <nav>
+                  <a class="menu" href="">Menu1</a>
+                  <a class="menu" href="">Menu2</a>
+                </nav>
+            </header>                        
+            <article>
+                <section id="formulario-login">                
+                    <h1>Login</h1>
+                    <div>
+                        <!-- Formulario de Login -->
+                        <form class="login-validation" id="login" action="formulario-login.html" method="POST">
+                            <label for="usuario">Usuario:</label>
+                            <input 
+                            class="usario"
+                                id="usuario" 
+                                type="email" 
+                                name="usuario"                                
+                            >
+                            <br>
+                            <label for="password">Password:</label>
+                            <input 
+                            class="password"
+                                id="password" 
+                                type="password" 
+                                minlength="4" 
+                                maxlength="10" 
+                                name="password"
+                            >
+                            <br>
+                            <input type="submit" value="Ingresar">
+                        </form>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>     
