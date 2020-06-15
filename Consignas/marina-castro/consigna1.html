@@ -7,7 +7,7 @@
 
             font-style: normal;
             font-family: Cambria;
-            font-size: 20px;
+            font-size: 30px;
             margin-top: 10px;
             margin-left: 30px;
             font-weight: 100
@@ -19,6 +19,7 @@
             font-size: 20px;
             margin-top: 10px;
             margin-left: 30px;
+            width: fit-content;
 
         }
 
@@ -26,18 +27,47 @@
             color:black;
             width: fit-content;
             font-size: 16px;
-            font-weight: 100;
+            font-weight: 50;
         }
         
         .miheader {
             font-family: 'Lucida Sans';
-            font-size: 20px;
+            font-size: 30px;
         }
 
         label {
+
             font-size: 16px;
             color:black;
             font-family: sans-serif;
+
+        }
+
+        input:invalid {
+
+            background-color: #facccc;
+            border: 3px solid #f80808;
+
+
+        }
+
+        .button {
+            background-color: rgb(23, 47, 100); /* Blue */
+            border:5px solid #f8faf8;
+            border-radius: 10px;
+            padding: 12px 28px;
+            text-align: right;
+            color:rgb(255, 253, 253);
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,2), 0 6px 20px 0 rgba(0,0,0,19);
+
+        }
+
+        #number {
+            width: 3rem;
         }
 
         </style>
@@ -49,163 +79,151 @@
                 </nav>
             </header>
             <article>
-                <section id="Formulario de Incripción">
+                <section id="Formulario-de-Incripción-on-line">
                     <h1>   
-                    <div 
-                        style="color:rgb(7, 1, 1); 
+                    <div style="color:rgb(14, 13, 13); width: fit-content;
                         font-family: Verdana;
-                        background-color: rgb(55, 34, 116);width:fit-content;  
-                        border-radius:10px; 
-                        padding: 30px;
-                        border: 0.5rem outset rgb(86, 57, 192);
-                        outline: 0.5rem solid rgb(164, 197, 219);
-                        box-shadow: 0 0 0 2rem rgb(2, 81, 112);
-                        border-radius: 12px;
+                        background-color: rgb(159, 188, 250);  
+                        border-radius: 1px; 
+                        padding: 10px;
+                        border: 0.5rem outset rgb(117, 169, 248);
+                        outline: 0.3rem solid rgb(203, 215, 247);
+                        box-shadow: 0 0 0 1.5rem rgb(18, 65, 119);
+                        border-radius: 10px;
                         font: bold 1rem sans-serif;
-                        margin: 2rem;
+                        margin: 5rem;
                         padding: 1rem;
                         outline-offset: 0.5rem;"> 
-                        <br>
-                        <font style="vertical-align:inherit">FORMULARIO DE INSCRIPCION ON-LINE</font>
+                        <font style="vertical-align:inherit"><strong><big>FORMULARIO DE INSCRIPCION ON-LINE</big></strong></font>
                     </h1>
-                    <br>
-                    <div>
-                        <!-- Formulario de Inscripción On-Line -->
-                        <form id="preguntas" method="POST">
-                        <div style="border-radius:10px; 
-                        padding: 30px;
-                        color:rgb(252, 252, 252); 
-                        font-family: Verdana;
-                        background-color: rgb(167, 150, 216);width:fit-content;  
-                        border: radius 15px; 
-                        padding: 0.5px;
-                        outline: 0.3rem solid rgb(164, 197, 219);
-                        border: 0.3rem outset rgb(2, 81, 112);
-                        box-shadow: 0 0 0 2rem rgb(86, 57, 192);
-                        border-radius: 12px;
-                        font: bold 1rem sans-serif;
-                        margin: 1rem;
-                        padding: 1rem;
-                        outline-offset: 0.5rem;"> 
                         <br>
-                            <h2><label>DATOS PERSONALES:</label></h2>
-                            <br>
-                            <br>
-                            <label>Complete sus datos</label>    
-                            <br>
-                            <br>
-                            <form>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Nombre completo(*):</label><br>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" placeholder="Ingrese su nombre/s"
-                                           size="70" maxlength="15">
-                                    </div>
-                                </div>
+                        <div>
+                            <!-- Formulario de Inscripción On-Line -->
+                            <form id="preguntas" method="POST">
+                                <div style="border-radius: 0.5px; 
+                                    padding: 5px; 
+                                    font-family: Verdana;
+                                    background-color: rgb(159, 188, 250);width:fit-content;  
+                                    padding: 1px;
+                                    outline: 0.5rem solid rgb(163, 202, 247);
+                                    border: 0.7rem outset rgb(117, 169, 248);
+                                    box-shadow: 0 0 0 3rem  rgb(18, 65, 119);
+                                    border-radius: 2px;
+                                    font: bold 1rem sans-serif;
+                                    margin: 3rem;
+                                    padding: 2rem;
+                                    outline-offset: 1rem;"> 
                                 <br>
-                                <div class="form-group row">
-                                    <label class="col-sm-5 col-form-label">Apellido/s(*):</label><br>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" placeholder="Ingrese su apellido/s"
-                                           size="70" maxlength="15">
-                                    </div>
-                                </div>       
-                                    <br>
-                                <div class="form-group row"> 
-                                    <label class="col-sm-5 col-form-label">Domicilio(*):</label><br>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" placeholder="Ingrese el domicilio y altura" 
-                                           size="70" maxlength="20">
-                                    </div>  
-                                </div>         
-                                    <br>
-                                    <br>
-                                <div class="form-group row">    
-                                    <label class="col-sm-5 col-form-label">Localidad(*):</label><br>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" placeholder="Elija su Localidad"
-                                            list="defoultlocalidad" size="70" maxlength="20">
-                                            <datalist id="defoultlocalidad"> 
-                                                <option value="Martinez">
-                                                <option value="Olivos">
-                                                <option value="Munro">
-                                                <option value="Villa Ballester">
-                                                <option value="Florida">
-                                                <option value="Vicente López">
-                                                <option value="San Fernando">
-                                                <option value="Capital Federal">
-                                                <option value="Mar del Plata">
-                                            </datalist>
-                                    </div>        
-                                </div>        
-                                    <br>
-                                    <br>
-                                    <div class="form-group row"> 
-                                        <label class="col-sm-5 col-form-label">Teléfono(*):</label><br>
+                                <h2>
+                                    <label><big><bold>DATOS PERSONALES:</bold></big></label>
+                                </h2>
+                                <br>
+                                <br>
+                                <label><big>Complete sus datos</big></label>    
+                                <br>
+                                <br>
+                                <form>
+                                    <div class="form-group row">
+                                        <label class="col-sm-5 col-form-label">Nombre completo(*):</label><br>
                                         <div class="col-sm-10">
-                                            <input type="tel" class="form-control" placeholder="Ingresar cod. area + número" 
-                                               size="70" maxlength="20">
+                                            <input type="text" class="form-control" placeholder="Ingrese su nombre/s"
+                                            size="70" maxlength="15">
                                         </div>
-                                    </div>                          
-                                <br>
-                                <br>
-                                <div class="casillademail">
-                                    <div class="form-group col-md-20">
-                                        <label for="email">
-                                            Correo Electrónico (*):
-                                        </label>
-                                        <br>
-                                    <input 
-                                            id="direccionemail" 
-                                            type="email" 
-                                            size="64" 
-                                            maxlength="64" 
-                                            requerired placeholder="usuario@suemail.com" 
-                                            pattern=".+suemail.com" 
-                                            class="email"> 
-                                            <br/>
-                                            <br>
-                                        <div class="invalid-feedback">
-                                            <font style="vertical-align:inherit">Por favor, ingrese una direccion de Correo Electrónico válida</font>
-                                            <br>
-                                            <br>
-                                        <span class="text-muted"> (*) Campos obligatorios</span>     
-                                        </div> 
-                                        <h3><strong>EDUCACIÓN</strong></h3>
-                                        <label for="educación">Seleccione su Nivel Educativo</label>
-                                        <select name="educacion" id="educación" >
-                                            <option value="P">Primaria</option>
-                                            <option value="S">Secundaria</option>
-                                            <option value="U">Universitaria</option>
-                                        </select>   
                                     </div>
-                                <br>
-                                <br>
-                                <h3><strong>EDUCACIÓN</strong></h3>
-                                <label for="educación">Seleccione su Nivel Educativo</label>
-                                <select name="educacion" id="educación" >
-                                    <option value="P">Primaria</option>
-                                    <option value="S">Secundaria</option>
-                                    <option value="U">Universitaria</option>
-                                </select>
-                                <h3>Comentarios:</h3>
-                                <textarea 
-                                    name="comentarios" 
-                                    value="" 
-                                    placeholder="Escriba su comentario" 
-                                    rows="2" 
-                                    cols="30"
-                                >
-                                </textarea>
-                            </div>
-                                <br>
-                                <br>
-                                <hr>
-                                <input type="submit" value="Enviar">
-                                </div>
-                            </form>
-                        </form>
-                    </div>
+                                    <br>
+                                    <div class="form-group row">
+                                        <label class="col-sm-5 col-form-label">Apellido/s(*):</label><br>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" placeholder="Ingrese su apellido/s"
+                                            size="70" maxlength="15">
+                                        </div>
+                                    </div>       
+                                        <br>
+                                    <div class="form-group row"> 
+                                        <label class="col-sm-5 col-form-label">Domicilio(*):</label><br>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" placeholder="Ingrese el domicilio y altura" 
+                                            size="70" maxlength="20">
+                                        </div>  
+                                    </div>         
+                                        <br>
+                                        <br>
+                                    <div class="form-group row">    
+                                        <label class="col-sm-5 col-form-label">Localidad(*):</label><br>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" placeholder="Elija su Localidad"
+                                                list="defoultlocalidad" size="70" maxlength="20">
+                                                <datalist id="defoultlocalidad"> 
+                                                    <option value="Martinez">
+                                                    <option value="Olivos">
+                                                    <option value="Munro">
+                                                    <option value="Villa Ballester">
+                                                    <option value="Florida">
+                                                    <option value="Vicente López">
+                                                    <option value="San Fernando">
+                                                    <option value="Capital Federal">
+                                                    <option value="Mar del Plata">
+                                                </datalist>
+                                        </div>                
+                                                <br>
+                                                <br>
+                                                <div class="form-group row"> 
+                                                    <label class="col-sm-5 col-form-label">Teléfono(*):</label><br>
+                                                    <div class="col-sm-10">
+                                                            <input type="number" id="telefono" name="telefono" placeholder="Ingresar cod. area + número" 
+                                                        size="100" pattern="[0-9]+([0-9]-{9})-[.]+[0-9]-{0}"  required class="number" multiple>
+                                                    </div>
+                                                </div>                          
+                                                <br>
+                                                <br>
+                                                    <div class="casillademail">
+                                                        <div class="form-group col-md-20">
+                                                            <label for="direccion_email">
+                                                                Correo Electrónico (*):
+                                                            </label><br>
+                                                            <input 
+                                                                id="direccion_email" 
+                                                                type="email" 
+                                                                size="70" 
+                                                                maxlength="64" 
+                                                                requerired placeholder="usuario@suemail.com" 
+                                                                pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
+                                                                class="email"
+                                                                multiple
+                                                            >
+                                                        <br>
+                                                        <span style="color:red"><small>(*) Campos obligatorios</small></span> 
+                                                        <br>  
+                                                        </div>
+                                                        <br>
+                                                        <hr>
+                                                        <h3><strong>EDUCACIÓN:</strong></h3>
+                                                        <label for="educación">Seleccione su Nivel Educativo</label>
+                                                        <select name="educacion" id="educación">
+                                                            <option value="NI">No Informa</option>
+                                                            <option value="P">Primaria</option>
+                                                            <option value="S">Secundaria</option>
+                                                            <option value="U">Universitaria</option>
+                                                        </select>
+                                                        <hr>
+                                                        <h3><strong>TRABAJO:</strong></h3>
+                                                        <label for="trabajo">Actualmente, se encuentra trabajando?</label>
+                                                        <select name="trabajo" id="trabajo">
+                                                            <option value="NI">No Informa</option>
+                                                            <option value="S">Si</option>
+                                                            <option value="N">No</option>
+                                                        </select> 
+                                                        <br>
+                                                        <br>
+                                                        <div>
+                                                            <input class="button" type="submit" value="Enviar">
+                                                        </div> 
+                                                    </div>           
+                                        </div>
+                                </div>       
+                            </form>  
+                        </div>       
+                    
                 </section>
             </article>
         </main>
