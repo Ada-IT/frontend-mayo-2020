@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html class="no-js" lang="es">
   <head>
-    <!-- 
-    Crear una rama con el nombre tabla_con_estilo desde su rama de desarrollo
-    y trabajar sobre ella.
-    COPIAR este archivo a su carpeta de usuario.
-    Este es un ejercicio de css.
-    Requerimientos:
-    1) Cada tipo elemento de la tabla debe contener al menos 1 estilo css,
-     se debe lograr diferenciar los espacios de cada celda, fila y columna como asi
-     resaltar la información cuando se pasa con el cursor por arriba.
-    2) Cada elemento de h1 a h6 que esten definidos deben contener al menos 2 propiedades css.
-    3) Cada elemento contenedor tipo section o div debe contener almenos 3 propiedades de css.
-    4) Los divs con informacion de las ciudades deben poder visualizar uno al lado de otro en bloques del mismo tamaño.    
-    5) El cuerpo del  documento debe tener un color de fondo y fuente definida.
-    6) Se deben agregar clases y utilizar selectores que se consideren necesarios.
-    7) todo el estilo de escribirá dentro de la etiqueta <style>
-    -->
+    <link rel="stylesheet" href="font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="utf-8" />
     <title></title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style></style>
+    <style>
+         h1 h2 h3 h4 h5 h6 {
+            font-family:'Heebo', sans-serif;
+            font-weight: bold;
+            font-size: 1.7em;
+            }
+        h1 {
+            text-align: center;
+            }
+
+        p {
+            font-family: 'Heebo', sans-serif;;
+            font-size: 1em;
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+             }
+        body {
+            background-color: #D7DEEA;
+            }
+       
+        .title {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-size: 1.4em;
+            }
+    </style>
   </head>
   <body>
     <header>
@@ -39,23 +52,24 @@
             <th scope="col">En auto</th>
             <th scope="col">En tren</th>
             <th scope="col">En bicicleta</th>
+            <i class="fas fa-car"></i>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Nueva York</td>
+            <td class="title">Nueva York</td>
             <td><time>1:51</time>min</td>
             <td><time>1:22</time>min</td>
             <td><time>8:53</time>min</td>
           </tr>
           <tr>
-            <td>Washington</td>
+            <td class="title">Washington</td>
             <td><time>2:25</time>min</td>
             <td><time>2:51</time>min</td>
             <td><time>12:46</time>min</td>
           </tr>
           <tr>
-            <td>Nueva Jersey</td>
+            <td class="title">Nueva Jersey</td>
             <td><time>1:20</time>min</td>
             <td><time>1:05</time>min</td>
             <td><time>3:56</time>min</td>
@@ -63,7 +77,7 @@
         </tbody>
         <tfoot>
           <tr>
-            <th>Promedio</th>
+            <th class="title">Promedio</th>
             <td><time>1:45</time>min</td>
             <td><time>1:55</time>min</td>
             <td><time>8:36</time>min</td>
@@ -84,6 +98,8 @@
           Esta ciudad se caracteriza por ser la más poblada del estado de Nueva
           York y del país. Tan diversa como versátil, es llamada la ciudad que
           nunca duerme.
+          <br>
+          <br>
         </p>
       </div>
       <div>
@@ -97,6 +113,8 @@
           Con conexiones de vuelo directo a más de 30 destinos internacionales,
           Washington, DC es un destino imprescindible en EE. UU. para viajeros
           de todo el mundo.
+          <br>
+          <br>
         </p>
       </div>
       <div>
