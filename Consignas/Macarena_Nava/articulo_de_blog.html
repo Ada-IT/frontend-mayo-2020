@@ -1,15 +1,22 @@
-<html>
+<html style= background-color:black>
     <head>
         <title>Mi Articulo de Blog</title>
         <style>
-            /* En este ejercicio deberan agregar el código que crean util para lograr un articulo colorido.
+            /* 
+            Crear nueva rama articulo_de_blog.
+            Copiar archivo a su carpeta de ejercicios.
+            Nombre de archivo articulo_de_blog.html.
+            En este ejercicio deberan agregar el código que crean util para lograr un articulo colorido.
             Cada elemento h1 a h6 debe tener una clase css con al menos 2 propiedades y 1 propiedad que las diferencie.
             Para los elementos section y article, cada uno debe contener 2 propiedades que separen el contenido 
             a una distancia clara de de entre 20 y 40 px. 
             Cada elemento que tenga contenido en parrafos debe contener almenos 2 propiedades de css*/
+            /*corregir tamaño de imagen a un maximo de 250px de alto. remarcar el contenedor con un border de 1px   de color gris- */
+            /* Agregar color de fondo por seccion y de documento*/
             /* Aqui tienen unos ejemplos de otras clases  de referencia.*/
             /* Estructura */
             article {
+                background-color:rgb(226,149,175) ;
                 float: left;
                 width: 70%;
             }
@@ -20,17 +27,24 @@
             /* ----fin Estructura  --- */
 
             /* contenidoy tipografias */
-            h1 {
+            h1 { color:blanchedalmond;
+                text-align: center;
+                letter-spacing:5mm ;
+                background-color: lightcoral;
+                
+                
 
             }
 
-            p { 
+            p { color: black;
+                text-align: left;
 
             }
             /* ----fin contenidoy tipografias --- */
 
             /* pie de pagina - footer */
             .footer {
+                background-color: rgb(226,149,175);
                 display: inline-flex;
                 width: 100%;
                 }
@@ -40,6 +54,10 @@
 
             .footer  .container {
                 width: 33.3%;
+            }
+            .footer .container2 {
+                padding-left: 0%;
+                
             }
             /* ----fin pie de pagina --- */
 
@@ -68,26 +86,35 @@
                   </figure>                    
             </aside>  
             <footer class="footer">
+                <hr>
                 <div class="container">
+                    <hr>
                     <h4>Mapa del sitio</h4>
                     <ul>
-                        <li><a href="">Link 1</a></li>
-                        <li><a href="">Link 2</a></li>
-                        <li><a href="">Link 3</a></li>
-                        <li><a href="">Link 2</a></li>
-                        <li><a href="">Link 3</a></li>                        
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Twitter</a></li>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">Youtube</a></li>
+                        <li><a href="">porahi</a></li>                        
                     </ul>
                 </div>                
+                <hr>
                 <div class="container">
+                    <hr>
                     <h4>
                         Nuestra Misión
                     </h4>
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>          
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                         type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic 
+                         typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem 
+                         Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                     </p>                    
                 </div>
-                <div class="container">
+                <hr>
+                <div class="container2">
+                    <hr>
                     <h4>Visitanos</h4>
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1673.5604294085454!2d-60.647548641807454!3d-32.97421304522823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7aba497cefcb3%3A0x2360fada20f0529c!2sFruter%C3%ADa%20y%20Verduler%C3%ADa%20Miguel!5e0!3m2!1ses-419!2sar!4v1591577767984!5m2!1ses-419!2sar"
@@ -100,7 +127,9 @@
                         tabindex="0">
                     </iframe>    
                 </div>
-            </footer>            
+                <hr>
+            </footer> 
+            <hr>     
         </main>
     </body>
 </html>
