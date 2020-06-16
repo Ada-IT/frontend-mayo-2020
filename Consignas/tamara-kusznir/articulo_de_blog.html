@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <title>Mi Articulo de Blog</title>
+        <style>
+            /* En este ejercicio deberan agregar el código que crean util para lograr un articulo colorido.
+            Cada elemento h1 a h6 debe tener una clase css con al menos 2 propiedades y 1 propiedad que las diferencie.
+            Para los elementos section y article, cada uno debe contener 2 propiedades que separen el contenido 
+            a una distancia clara de de entre 20 y 40 px. 
+            Cada elemento que tenga contenido en parrafos debe contener almenos 2 propiedades de css*/
+            /* Aqui tienen unos ejemplos de otras clases  de referencia.*/
+            /* Estructura */
+            article {
+                float: left;
+                width: 80%;
+            }
+            aside {
+                float: right;
+                width: 20%;
+            }
+            /* ----fin Estructura  --- */
+
+            /* contenido y tipografias */
+            h1 {
+                font-family: Arial, Helvetica, sans-serif;
+                color: black;
+                margin: initial;
+                background-color: violet;
+                text-align: center;
+            }
+            h2 {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-style: italic;
+                text-shadow: grey;
+            }
+            h3 {
+                font-family: Arial, Helvetica, sans-serif;
+                color: rgb(64, 26, 170);
+                text-shadow: grey;
+            }
+            h4 {
+                font-family: Arial, Helvetica, sans-serif;
+                text-shadow: grey;
+                font-size: 1.5rem;
+                background-color: violet;
+            }
+            p { 
+                padding: 2%;
+                font-family: fantasy;
+            }
+            /* ----fin contenidoy tipografias --- */
+
+            /* pie de pagina - footer */
+            .caja { 
+                font-family: sans-serif; 
+                font-size: 18px; 
+                font-weight: 400; 
+                color: #ffffff; 
+                background:#ee0467 }
+            .footer {
+                display: inline-flex;
+                width: fit-content;
+                }
+            .footer .links {
+                font-weight: bold;
+            }
+
+            .footer  .container {
+                width: 33.3%;
+                border-style: outset;
+                border-color: violet;
+            }
+            /* ----fin pie de pagina --- */
+            body {
+                background-color: rgb(224, 161, 233);
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Un artículo con secciones</h1>
+            <article>
+                <h2> Las variedades de manzanas</h2>
+                <p> La manzana es la fruta de la semilla de la manzana del árbol … </p>
+                <section>
+                    <hr color="black" size="1">
+                <h2> Red Delicious </h2>
+                <p> Estas manzanas rojas brillantes son los más comunes se encuentran en muchos supermercados … </p>
+                </section>
+                <hr color="black" size="1">
+                <section>
+                <h2> Granny Smith </h2>
+                <p> Estos, manzanas verdes jugosas hacen un gran relleno para tartas de manzana.</p>
+                </section>              
+            </article >
+            <aside>
+                <h3> Granny Smith </h3>
+                <figure style="float: right">
+                    <img src="C:\ADA\ADA\Archivos ADA\Clonada - frontend-mayo-2020\consignas\tamara-kusznir\img\manzanas.jpg"
+                    <figcaption>
+                        Esta imagen muestra manzanas.
+                    </figcaption>   
+                         
+                  </figure>                    
+            </aside>  
+            <footer class="footer">
+                
+                <div class="container">
+                    <h4>Mapa del sitio</h4>
+                    <ul>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Eventos</a></li>
+                        <li><a href="">Nosotros</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Contacto</a></li>                        
+                    </ul>
+                </div>         
+                <div class="container">
+                    <h4>
+                        Nuestra Misión
+                    </h4>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>          
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>                    
+                </div>
+                <div class="container">
+                    <h4>Visitanos</h4>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1673.5604294085454!2d-60.647548641807454!3d-32.97421304522823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7aba497cefcb3%3A0x2360fada20f0529c!2sFruter%C3%ADa%20y%20Verduler%C3%ADa%20Miguel!5e0!3m2!1ses-419!2sar!4v1591577767984!5m2!1ses-419!2sar"
+                        width="100" 
+                        height="auto"  
+                        aria-hidden="false" 
+                        tabindex="0">
+                    </iframe>    
+                </div>
+            </footer>            
+        </main>
+    </body>
+</html>
