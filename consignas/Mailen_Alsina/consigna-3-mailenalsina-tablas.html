@@ -18,29 +18,91 @@
     7) todo el estilo de escribirá dentro de la etiqueta <style>
     -->
     <meta charset="utf-8" />
-    <title></title>
+    <title>Mi tabla con CSS</title>
+
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style></style>
+    
+    <style>
+       
+        caption {
+            background-color: rgb(228, 22, 153);
+            color: blanchedalmond;
+        }
+
+        h1 {
+            font-style: italic;
+            font-size: xx-large;
+            background-color:aquamarine
+        }
+
+        h3 {background-color: aquamarine;
+            color: brown;
+        
+        }
+
+        table {border-collapse: collapse;}
+
+        td, th { border: 2px solid saddlebrown;
+                 padding: 5px 10px;
+
+        }
+
+        .body {
+            
+            background:rgb(255, 239, 188);
+            
+            text-align: justify;
+            text-align: center;
+
+        
+              }
+
+        .misection {
+            
+            color: rgb(2, 22, 2);
+            font-style: oblique;
+            size: 2rem;
+        
+        }
+
+        
+
+
+
+    </style>
+
   </head>
-  <body>
+
+  <body class="body">
+
     <header>
+
       <h1>Tabla de viaje</h1>
+   
     </header>
-    <section>
-      <table>
+
+    <section class="misection">
+
+
+      <table style="margin: 0 auto;">
+
         <caption>
           Conozca el tiempo necesario para viajar desde Philadelphia
         </caption>
+
         <thead>
+
           <tr>
             <th scope="col">Destino</th>
             <th scope="col">En auto</th>
             <th scope="col">En tren</th>
             <th scope="col">En bicicleta</th>
           </tr>
+
         </thead>
+
         <tbody>
           <tr>
             <td>Nueva York</td>
