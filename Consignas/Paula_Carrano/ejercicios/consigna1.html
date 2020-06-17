@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+  <title>Formularios de inscripcion</title>
+</head>
+<style>
+  
+  body {
+  background-color: powderblue;
+  background-attachment: local;
+  }
+ 
+  h1 {
+    color: rgb(6, 124, 124); 
+    font-style: initial; 
+    text-shadow: 2px 2px 1px black; 
+    text-align: center;
+    text-decoration: underline;
+    }
+ h3 {
+   color: grey;
+   font-family: cursive;
+   font-size: medium;
+   text-shadow: -1px -1px 1px rgb(67, 68, 70);
+   font-style:oblique;
+   text-decoration: overline underline;
+ }
+
+ div {
+  background-position:right;
+  background-color: rgb(128, 196, 248);
+  border-radius:7px; 
+  padding:5px;
+  border-color: rgb(57, 163, 163);
+  border-style: double;
+   }
+ div label {
+   font-style: italic;
+font-weight:700;
+}
+
+.datos_personales {
+    justify-content: left;
+    display:flex ;
+    font-style: italic;
+    font-weight:700;
+    padding: 5px;
+}
+
+</style>
+<header>
+  <h1>Formulario de inscripcion</h1>
+  <nav>
+  </nav>
+</header>
+<body>
+  <article>
+    <section id: formulario>
+<div>
+  <h3>Datos personales</h3>
+<form action="consigna1.html" method="POST">
+  <label for="Nombre" class="datos_personales">Nombre:</label>
+<input 
+  id="nombre" 
+  type="text" 
+minlength="1" 
+maxlength="15" 
+name="nombre"
+placeholder="Escriba su nombre">
+ <br>
+<label for="Apellido" class="datos_personales">Apellido:</label>
+<input 
+  id="Apellido" 
+  type="text" 
+minlength="1" 
+maxlength="15" 
+name="Apellido"
+placeholder="Escriba su apellido"
+> 
+<br>
+<label for="Domicilio" class="datos_personales">Domicilio:</label>
+<input 
+  id="Domicilio" 
+  type="text, number"
+minlength="1" 
+maxlength="20" 
+name="Direccion"
+placeholder="Escriba su Direccion"
+> <br>
+<label for="Telefono" class="datos_personales">Telefono:</label>
+<input id="Telefono" 
+type="number" 
+min="0" 
+max="" 
+name="Telefono"
+placeholder="Escriba su Telefono">
+</div>
+<div>
+  <style>
+    input:valid {
+       background-color: white;
+    }
+    input:invalid {
+       background-color: red;
+       }   
+   </style>
+<label for="Email" class="datos_personales">Email:</label>
+ <input id="Email" type="email" name="Email" placeholder="Escriba su email">
+</div>
+ <br>
+<div>
+  <h3>Genero:</h3>
+  <input name="genero" type="radio" value="f">
+  <label>Femenino</label>
+  <br>                           
+  <input name="genero" type="radio" value="m">
+  <label>Masculino</label>  
+  <br>                           
+  <input name="genero" type="radio" value="o">
+  <label>Otro</label>
+</div>
+<br>
+<div>
+<h3>Educacion:</h3>                       
+<label for="educacion">Seleccione su nivel de educación:</label>
+<select name="educacion" id="educacion">
+  <option value="p">Primaria</option>
+  <option value="s">Secundaria</option>
+<option value="u">Universitaria</option>
+</select>
+</div>
+<br>
+<div>
+  <h3>Trabaja:</h3>
+  <input name="Trabaja" type="radio" value="S">
+  <label>Si</label><br>
+  <input name="Trabaja" type="radio" value="N">
+  <label>No</label><br>
+</div>
+<br>
+
+<input type="submit" value="Guardar">
+</form>
+</div>   
+    </section>
+  </article>
+</body>
+<footer>
+</footer>
+</html>
