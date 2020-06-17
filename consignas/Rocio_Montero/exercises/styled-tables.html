@@ -8,12 +8,12 @@
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-         h1 h2 h3 h4 h5 h6 {
+         h1, h2, h3, h4, h5, h6 {
             font-family:'Heebo', sans-serif;
             font-weight: bold;
             font-size: 1.7em;
             }
-        h1 {
+        h1, .caption {
             text-align: center;
             }
 
@@ -34,6 +34,29 @@
             font-family:Verdana, Geneva, Tahoma, sans-serif;
             font-weight: bold;
             font-size: 1.4em;
+            }
+        table, th, td {
+            border: 1.5px solid black;
+            }
+        table {
+            border-collapse: collapse;
+            width: 400px;
+            margin: 0 auto;
+            }
+        tr:hover {background-color: #f5f5f5;}
+        tr:nth-child(even) {background-color: #f2f2f2;}
+        th {
+            height: 50px;
+            background-color:rgb(201, 228, 245);
+            color: white;
+            }
+        td {
+          vertical-align: center;
+            }
+        th, td {
+          padding: 17px;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
             }
     </style>
   </head>
