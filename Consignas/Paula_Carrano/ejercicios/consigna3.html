@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+       <meta charset="utf-8" />
+       <meta name="description" content="If you want to confirm your attendance to ADA´s event, please fill the form. " />
+       <meta name="keywords" content="event,registration,form" />
+       <meta name="viewport" content="width=device-width, initial-scale=1" />
+       <title>Event_registration_form</title>
+       <link rel="stylesheet" href="https://fonts.google.com/specimen/Open+Sans">
+       
+       <style>
+     
+        header {
+          background-color: #1a1a1a; 
+          font-family: "Helvetica Neue"; 
+          color:#ffffff;
+          text-transform: uppercase;       
+        }
+      
+        body {
+           background-color: #ffffff;
+           font-family:sans-serif; 
+         }  
+
+       </style>
+    </head>
+    <body>
+      <main>
+        <header>
+          <h1>event registration form</h1>
+        </header>
+          <article>
+            <section>
+              <form action="consigna3.html" method="POST">
+                <div class="name">
+                <h3>name</h3>
+                  <input
+                    id="first_name"
+                    type="text"
+                    minlength="1"
+                    maxlength="20"
+                    name="first_name"/>
+                    <label for="first_name">first name</label>
+                    <input
+                    id="last_name"
+                    type="text"
+                    minlength="1"
+                    maxlength="20"
+                    name="last_name" />
+                  <label for="last_name">last name</label>
+                 </div>
+                <div class="company">
+                  <h3>company</h3>
+                    <input
+                      id="company"
+                      type="text"
+                      minlength="1"
+                      maxlength="20"
+                      name="company"/>
+                  </div>  
+                  <div class="email">
+                    <h3>email</h3>
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"/>
+                </div>
+                <div class="phone">
+                  <h3>phone</h3>
+                    <input
+                      id="area_code"
+                      type="number"
+                      minlength="1"
+                      maxlength=""
+                      name="area_code"/>
+                      <label for="area_code">area code</label>
+                    <input
+                      id="phone_number"
+                      type="number"
+                      minlength="1"
+                      maxlength=""
+                      name="phone_number"/>
+                    <label for="phone_number">phone number</label>
+                </div>
+                <div class="subject">
+                    <h3>subject</h3>
+                    <select name="subject" id="subject">
+                      <option value="support">support department</option>
+                      <option value="sales">sales department</option>
+                      <option value="claim">claims department</option>
+                    </select>
+                </div>
+                <div class="customer">
+                  <h3>Are you an existing customer</h3>
+                  <br>
+                  <input 
+                     name="customer" 
+                     type="radio"
+                     value="y">
+                    <label>yes</label>
+                    <input 
+                     name="customer" 
+                     type="radio"
+                     value="n">
+                    <label>no</label>
+                </div>
+                <input type="submit" value="Register">
+            </section>
+          </article>
+      </main>
+    </body>
+  </html>
