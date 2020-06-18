@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+   <!-- Realizar una pagina web que contenga un formulario basado en la información de la imagen.
+
+Requerimientos: Nombre (Limite de 20 caracteres) Empresa (Limite de 20 caracteres) Email (Validacion por CSS) Telefono (que solo deje ingresar numeros) subject (support department/ sales department /claims department) - Valores(support sales,claim) Are you customer? Valores (y,n)
+
+La pagina debe tener la estructura actual de html5 que hemos practicado. Se debe lograr una apariencia lo más similiar a la imagen de ejemplo. El formulario debe ser Adaptativo. Se debe poder ver bien en Tablets y Telefonos Apple y Android.
+
+La unica referencia que se les entregará de css son los colores de fondo de pagina y el efecto de transicion de color que se desea realizar al pasar por el boton Register: Colores de Fondo: #08aeea , #b721ff Idea de mezcla de color : degrade
+
+Color de boton de registro al pasar el mouse por arriba: #eb3746;
+
+Los demas colores deben ser tomados de la imagen con las herramientas que crean utiles.Se deben escribir en hexadecimal.
+
+La fuente de la web debe ser "Open Sans" y "Helvetica Neue".-->
+<head>
+   <title>Cosigna III</title>
+   <style>
+       body {
+           background-color: #0779e4;
+           background-image: linear-gradient(90deg, #08aeea, #b721ff);
+       }
+
+       form {
+            max-width: 800px;
+            height: 900px;
+	        margin: 10px auto;
+	        padding: 20px;
+	        background: #ffffff;
+            border-radius: 10px;
+            font-family: open sans,
+       }
+
+       h1 {
+            font-family: Helvetica;
+            background:#1a1a1a;
+            padding: 20px 20px;
+            font-size: 140%;
+            font-weight: 300;
+            text-align: center;
+            color: #ffffff;
+            margin: -20px -20px 20px -20px;
+            border-radius: 10px 10px 0px 0px;
+       }
+
+       .name {
+            align-items: center;
+            display: inline-flex; 
+            justify-content: space-between;
+            padding: 10px;
+            margin: 20px;               
+       }
+
+       input {
+           background: gray;
+       }
+       
+   </style>
+</head>
+<body>
+    <form action="form" id="form" method="POST">
+
+   
+    <h1><b> EVENT REGISTRATION FORM</b></h1>
+
+    <div class="name">
+
+    <label for="name">Name:</label>
+    <input id="name" type="text" minlength="2" maxlength="15"></input> 
+    
+    
+    <label for="lastname">Last Name:</label>
+    <input id="lastname" type="text" minlength="2" maxlength="15"></input>
+    </div>
+
+
+
+        
+
+
+
+    <p>Indique su Género:
+        <input type="radio" name="1" value="F"> <i>Femenino</i> 
+        <input type="radio" name="2" value="M"> <i>Masculino</i> 
+        <input type="radio" name="3" value="O"> <i>Otro</i> 
+      </p>
+
+   
+    
+   
+    <!--Boton guardar-->
+    <form action="consigna1.html">
+    <input type="submit" value="ingresar" style="background-color:teal;height:2rem;font-family: Verdana, Geneva, Tahoma, sans-serif;border-radius:5px;color:azure;"></input>
+                
+            </form>     
+    </body>
+</html>
