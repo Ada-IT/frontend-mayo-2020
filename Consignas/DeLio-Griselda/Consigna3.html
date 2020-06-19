@@ -15,7 +15,7 @@
          section {
             background-color: #ffffff;
             border-radius: 15px;
-            margin:20px 350px; 
+            margin:20px auto; 
             width: 700px;
          }
          h1{
@@ -89,17 +89,15 @@
          /*media queris tablets*/
          @media screen and (min-width: 763px) and (max-width: 1100px){
              section{
-                 float: left;;
+                display: block;
                  width: 700px;
-                 margin: 80px;
              }
          }
          /*media queris smartphone*/
          @media screen and (min-width: 300px) and (max-width: 762px){
              section{
-                 float:left;
+                 display: flex;
                  width: 600px;
-                 margin: 40px;
              }
              input, select {
                  width: 300px;
@@ -173,7 +171,7 @@
                                    <br>
                             </div>
                         </form>
-                    </div>
+                </div>
                 </section>
             </article>
         </main>
