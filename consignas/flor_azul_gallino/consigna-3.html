@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang=es>
+    <head>
+        <title>Consigna-3</title>
+        <style>
+            body{
+                font-family: Helvetica;
+                font-size: 16px;
+                background: linear-gradient(to bottom left, #b721ff, #08aeea);
+                background-repeat: no-repeat;
+            }
+            #formulario{
+                background-color: #ffffff;
+                border-radius: 10px;
+                margin: 10px;
+                display: block;
+
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article>
+                <section>
+                    <div id="formulario">
+                        <h2>
+                            EVENT REGISTRATION FROM
+                        </h2>
+                        <form action="eventregistrationfrom" method="POST">
+                            <h4>Name</h4>
+                            <input id="name" type="text" name="name" minlength="3" maxlength="20">
+                            <label for="name">First Name</label>
+                            <input id="lastname" type="text" name="lastname" minlength="3" maxlength="20">
+                            <label for="lastname">Last Name</label>
+
+                            <h4>Company</h4>
+                            <label for="company"></label>
+                            <input id="company" type="text" name="company" minlength="3" maxlength="20">
+
+                            <h4>Email</h4>
+                            <label for="email"></label>
+                            <input id="email" type="email" name="email">
+
+                            <h4>Phone</h4>
+                            <input id="areacode" type="number" name="areacode" min="3" max="6">
+                            <label for="areacode">Area Code</label>
+                            <input id="phone" type="number" name="phone">
+                            <label for="phone">Phone Number</label>
+
+                            <h4>Subjet</h4>
+                            <label for="subjet"></label>
+                            <select name="subjet" id="subjet">
+                                <option value="none">Choose option</option>
+                                <option value="Support">Support department</option>
+                                <option value="Sales">Sales department</option>
+                                <option value="Claim">Claims department</option>
+                            </select>
+
+                            <h4>Are you an existing customer?</h4>
+                            <input name="customer" type="radio" value="y">
+                            <label for="customer">Yes</label>
+                            <input name="customer" type="radio" value="n">
+                            <label for="customer">No</label>
+
+                            <input type="submit" value="Register">
+                        </form>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>
