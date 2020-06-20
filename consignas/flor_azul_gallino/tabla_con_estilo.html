@@ -1,28 +1,83 @@
 <!DOCTYPE html>
 <html class="no-js" lang="es">
   <head>
-    <!-- 
-    Crear una rama con el nombre tabla_con_estilo desde su rama de desarrollo
-    y trabajar sobre ella.
-    COPIAR este archivo a su carpeta de usuario.
-    Este es un ejercicio de css.
+    <!--
     Requerimientos:
-    1) Cada tipo elemento de la tabla debe contener al menos 1 estilo css,
-     se debe lograr diferenciar los espacios de cada celda, fila y columna como asi
-     resaltar la información cuando se pasa con el cursor por arriba.
-    2) Cada elemento de h1 a h6 que esten definidos deben contener al menos 2 propiedades css.
     3) Cada elemento contenedor tipo section o div debe contener almenos 3 propiedades de css.
     4) Los divs con informacion de las ciudades deben poder visualizar uno al lado de otro en bloques del mismo tamaño.    
     5) El cuerpo del  documento debe tener un color de fondo y fuente definida.
     6) Se deben agregar clases y utilizar selectores que se consideren necesarios.
-    7) todo el estilo de escribirá dentro de la etiqueta <style>
     -->
     <meta charset="utf-8" />
     <title></title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style></style>
+    <style>
+        body{
+          font-family: Helvetica;
+          font-size: 16px;
+          background-image: url(https://cdn.pixabay.com/photo/2019/05/27/14/43/pattern-4232865_960_720.png);
+          background-size: 2300px 1300px;
+          background-repeat: no-repeat;
+          background-position: top;
+        }
+        h1{
+          text-align: center;
+          font-size: 50px;
+          text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+          font-family: Arial;
+          font-weight: bold;
+        }
+        h3{
+          text-align: center;
+          font-size: 20px;
+          font-family: Verdana;
+        }
+        caption{
+          font-size: 30px;
+          text-align: center;
+          font-family: Verdana;
+        }
+
+        /* Tablas */
+        table{
+          text-align: center;
+          width: 80%;
+          border-collapse: separate;
+          border-spacing: 3px;
+          margin: auto;
+        }
+        table tr:hover {
+        background-color: rgba(224, 222, 222, 0.5);
+        cursor: pointer;
+        }
+        th, td{
+          padding: 20px;
+          width: 20%;
+          border: 1px solid rgb(0, 0, 0);
+          background-color: rgba(245, 245, 245, 0.5);
+
+        }
+        th {
+          background-color: rgb(255, 165, 176);
+          font-size: 20px;
+          color:black;
+        }
+        #promedio{
+          background-color: rgb(255, 165, 176);
+        }
+        #texto{
+          display: inline-flex;
+        }
+        div{
+          background-color: rgb(106, 25, 125, 0.5);
+          width: 30%;
+          border-radius: 10px;
+          margin: 3%;
+          padding: 10px;
+        }
+    </style>
   </head>
   <body>
     <header>
@@ -41,7 +96,7 @@
             <th scope="col">En bicicleta</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="table-color">
           <tr>
             <td>Nueva York</td>
             <td><time>1:51</time>min</td>
@@ -63,7 +118,7 @@
         </tbody>
         <tfoot>
           <tr>
-            <th>Promedio</th>
+            <th id="promedio">Promedio</th>
             <td><time>1:45</time>min</td>
             <td><time>1:55</time>min</td>
             <td><time>8:36</time>min</td>
@@ -72,8 +127,8 @@
       </table>
     </section>
     <br />
-    <section>
-      <div>
+    <section id="texto">
+      <div id="nuevayork">
         <h3>Nueva York</h3>
         <p>
           Situado sobre la costa este de Estados Unidos de América, encontramos
@@ -86,7 +141,7 @@
           nunca duerme.
         </p>
       </div>
-      <div>
+      <div id="washington">
         <h3>Washington D.C.</h3>
         <p>
           Es una ciudad de categoría mundial con estatuas y monumentos
@@ -99,7 +154,7 @@
           de todo el mundo.
         </p>
       </div>
-      <div>
+      <div id="newjersey">
         <h3>New Jersey</h3>
         <p>
           Situado en el noreste de Estados Unidos, Nueva Jersey es uno de los
