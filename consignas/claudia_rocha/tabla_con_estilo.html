@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <!-- 
+    Crear una rama con el nombre tabla_con_estilo desde su rama de desarrollo
+    y trabajar sobre ella.
+    COPIAR este archivo a su carpeta de usuario.
+    Este es un ejercicio de css.
+    Requerimientos:
+    1) Cada tipo elemento de la tabla debe contener al menos 1 estilo css,
+     se debe lograr diferenciar los espacios de cada celda, fila y columna como asi
+     resaltar la información cuando se pasa con el cursor por arriba.
+    2) Cada elemento de h1 a h6 que esten definidos deben contener al menos 2 propiedades css.
+    3) Cada elemento contenedor tipo section o div debe contener almenos 3 propiedades de css.
+    4) Los divs con informacion de las ciudades deben poder visualizar uno al lado de otro en bloques del mismo tamaño.    
+    5) El cuerpo del  documento debe tener un color de fondo y fuente definida.
+    6) Se deben agregar clases y utilizar selectores que se consideren necesarios.
+    7) todo el estilo de escribirá dentro de la etiqueta <style>
+    -->
+    <meta charset="utf-8" />
+    <title>Tabla de viaje</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        
+        body {
+            background-image: url(img/destino.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+        }
+            
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #e8ead3;
+            text-align: center;
+            text-shadow: #e7dfd5; 
+            text-decoration: underline;
+            
+        }
+        
+            
+        
+        .table {
+            background-color: #aea79f;
+            
+            border-collapse: collapse;
+            border: 1px solid #eee;
+            border-bottom: 4px solid #373d37;
+            width: 80%;
+            margin: 0 auto;
+            border-radius: 3px;
+            box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        }
+            
+        caption {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.5rem;
+            color: #e8ead3;
+        }
+
+        th {
+          color: #d5dde5;
+          font-family: 'Roboto', sans-serif;
+          background-color: #1b1e24;
+          border-bottom: : 4px solid #9ea7af;
+          border-right: 2px solid #343a45;
+          font-size: 15px;
+          font-weight: 200;
+          font-variant: small-caps;
+          font-stretch: expanded;
+          text-align: center;
+          vertical-align: middle;
+        }
+
+        tr {
+          border-top: 1px solid #c1c3d1;
+          border-bottom: 1px solid gray;
+          color: #666b85;
+          font-size: 16px;
+          font-weight: normal;
+          font-family: 'Roboto', sans-serif;
+          text-align: center;
+          
+          
+        }
+
+        tr:hover td {
+          background: #4e5066;
+          color: #ffffff;
+          border-top: 1px solid #22262e;
+        }
+
+
+        tbody tr td {
+            padding: 12px 15px;
+        }
+
+        td {
+          background: #ffffff;
+          padding: 20px;
+          text-align: center;
+          vertical-align: middle;
+          font-weight: 300;
+          font-size: 18px;
+          border-right: 1px solid #c1c3d1;
+        }
+           
+        .destinos {
+            display: inline-flex;
+            width: 100%;
+            border: 2px solid #black;
+            
+        }
+
+        .ciudad {
+          width: 31.3%;
+          border: 4px solid #black;
+          
+          
+          padding: 1rem;
+          overflow: hidden;
+
+        }
+
+
+        .ciudad p {
+          color:#c1c3d1;
+          font-family: 'Roboto', sans-serif;
+          font-size: 12px;
+            
+        }
+
+        .ciudad h3 {
+          color: #373d37;
+          background-color: #aea79f;
+        }
+            
+            
+
+            
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Tabla de viaje</h1>
+    </header>
+    <section>
+      <table class="table">
+        <caption>
+          Conozca el tiempo necesario para viajar desde Philadelphia
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Destino</th>
+            <th scope="col">En auto</th>
+            <th scope="col">En tren</th>
+            <th scope="col">En bicicleta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nueva York</td>
+            <td><time>1:51</time>min</td>
+            <td><time>1:22</time>min</td>
+            <td><time>8:53</time>min</td>
+          </tr>
+          <tr>
+            <td>Washington</td>
+            <td><time>2:25</time>min</td>
+            <td><time>2:51</time>min</td>
+            <td><time>12:46</time>min</td>
+          </tr>
+          <tr>
+            <td>Nueva Jersey</td>
+            <td><time>1:20</time>min</td>
+            <td><time>1:05</time>min</td>
+            <td><time>3:56</time>min</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Promedio</th>
+            <td><time>1:45</time>min</td>
+            <td><time>1:55</time>min</td>
+            <td><time>8:36</time>min</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+        
+    <br/>
+    <section class="destinos">
+      
+        <div class="ciudad">
+        <h3>Nueva York</h3>
+        <p>
+          Situado sobre la costa este de Estados Unidos de América, encontramos
+          a la ciudad de Nueva York. Esta, además esta bañada por el océano
+          Atlántico y en el que desemboca el río Hudson, el cual atraviesa todo
+          el estado.
+          <br />
+          Esta ciudad se caracteriza por ser la más poblada del estado de Nueva
+          York y del país. Tan diversa como versátil, es llamada la ciudad que
+          nunca duerme.
+        </p>
+        </div>
+     
+        <div class="ciudad">
+        <h3>Washington D.C.</h3>
+        <p>
+          Es una ciudad de categoría mundial con estatuas y monumentos
+          conmemorativos icónicos, museos increíbles (y gratuitos), pasión por
+          la política, embajadas extranjeras, barrios históricos y veneradas
+          universidades y escuelas universitarias.
+          <br />
+          Con conexiones de vuelo directo a más de 30 destinos internacionales,
+          Washington, DC es un destino imprescindible en EE. UU. para viajeros
+          de todo el mundo.
+        </p>
+        </div>
+      
+        <div class="ciudad">
+        <h3>New Jersey</h3>
+        <p>
+          Situado en el noreste de Estados Unidos, Nueva Jersey es uno de los
+          estados más pequeños del país. Sin embargo, su naturaleza es sumamente
+          diversa: pintorescas montañas en el norte, el océano Atlántico en las
+          costas del este y el sur, y una mezcla de colinas, granjas y una
+          inmensa reserva interior cubierta de pinos en el oeste.
+          <br />
+          A lo largo de toda la costa, verás paseos marítimos atractivos y
+          coloridos. Más hacia el interior, los bosques y senderos de río te
+          mostrarán los secretos de las montañas, como miradores, cascadas y
+          aves exóticas. Aquí, encontrarás interesantes museos, instituciones
+          culturales e históricas, y vistas panorámicas de íconos
+          estadounidenses, como la Statue of Liberty (Estatua de la Libertad).
+        </p>
+        </div>
+    
+    </section>
+  </body>
+</html>
+
+            
+                
+            
+        
+            
+            
+            
+
+
+          
+          
+
+
+
+
+        
+
+            
+            
+
+            
+            
+
+
+
+       
+
+
+        
+
+    
+
