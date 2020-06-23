@@ -18,9 +18,8 @@ La fuente de la web debe ser "Open Sans" y "Helvetica Neue".-->
     <title>Cosigna III</title>
     <style>
         body {
-            background-color: #000000;
+            background-color: #04223d;
             background-image: linear-gradient(90deg, #08aeea, #b721ff);
-            background-repeat: no-repeat;
         }
 
         /* 
@@ -321,18 +320,26 @@ La fuente de la web debe ser "Open Sans" y "Helvetica Neue".-->
 
             <p> Are you an existing customer?</p>
 
-            <div class="buttons">
+            <select class="dropdown">
 
-                <input type="radio" checked="checked" name="radio" value="y">
-                <label class="button-y">Yes
-                    <span class="checkmark"></span>
-                </label>
+                <option class="head">Choose Option</option>
+                <option value="support">Support Department</option>
+                <option value="sales">Sales Department</option>
+                <option value="claims">Claims Department</option>
 
-                <input type="radio" checked="checked" name="radio" value="n">
-                <label class="button-n">No
-                    <span class="checkmark"></span>
+            </select>
+            </div>
 
-                </label>
+            <input type="radio" checked="checked" name="radio" value="y">
+            <label class="button-y">Yes
+                <span class="checkmark"></span>
+            </label>
+
+            <input type="radio" checked="checked" name="radio" value="n">
+            <label class="button-n">No
+                <span class="checkmark"></span>
+
+            </label>
 
             </div>
         </section>
