@@ -26,9 +26,61 @@
     
     <style>
        
+        .encabezado {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.Tabla_1 {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-right: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
+}
+
+.Tabla_2  {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
         caption {
             background-color: rgb(228, 22, 153);
-            color: blanchedalmond;
+            color: blanchedalmond; 
+                      
         }
 
         h1 {
@@ -42,20 +94,36 @@
         
         }
 
-        table {border-collapse: collapse;}
+        table {border-collapse: collapse;
+              text-size-adjust: 300px;
+              background-color: rgb(201, 171, 225);
+              margin: 0 auto; 
+        } 
+        
+        
+
+          
 
         td, th { border: 2px solid saddlebrown;
-                 padding: 5px 10px;
+                 padding: 5px 10px
+        }
+        table.Tabla_1 td:hover {color:greenyellow;}
+        table.Tabla_1 th:hover {color:greenyellow;}
+
+        table.Tabla_2 {
+                width: 75%;
+                background: rgb(228, 154, 127); 
+        }
+        table.Tabla_2 td,
+        table.Tabla_2 th { border: 2px solid rgb(245, 242, 134);
+                 padding: 5px 10px; width: 25%;
 
         }
 
-        .body {
-            
-            background:rgb(255, 239, 188);
-            
-            text-align: justify;
+        .body {    
+            background-color: rgb(243, 244, 189);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             text-align: center;
-
         
               }
 
@@ -63,21 +131,23 @@
             
             color: rgb(2, 22, 2);
             font-style: oblique;
-            size: 2rem;
-        
         }
 
-        
+        .mitbody {
+          
+            text-align: left;
+            text-align: justify;
+            }
+       
 
-
-
+          
     </style>
 
   </head>
 
   <body class="body">
 
-    <header>
+    <header class="encabezado">
 
       <h1>Tabla de viaje</h1>
    
@@ -86,14 +156,14 @@
     <section class="misection">
 
 
-      <table style="margin: 0 auto;">
+      <table class="Tabla_1">
 
         <caption>
           Conozca el tiempo necesario para viajar desde Philadelphia
         </caption>
 
         <thead>
-
+          
           <tr>
             <th scope="col">Destino</th>
             <th scope="col">En auto</th>
@@ -134,50 +204,74 @@
       </table>
     </section>
     <br />
+
     <section>
-      <div>
-        <h3>Nueva York</h3>
-        <p>
-          Situado sobre la costa este de Estados Unidos de América, encontramos
-          a la ciudad de Nueva York. Esta, además esta bañada por el océano
-          Atlántico y en el que desemboca el río Hudson, el cual atraviesa todo
-          el estado.
-          <br />
-          Esta ciudad se caracteriza por ser la más poblada del estado de Nueva
-          York y del país. Tan diversa como versátil, es llamada la ciudad que
-          nunca duerme.
-        </p>
-      </div>
-      <div>
-        <h3>Washington D.C.</h3>
-        <p>
-          Es una ciudad de categoría mundial con estatuas y monumentos
-          conmemorativos icónicos, museos increíbles (y gratuitos), pasión por
-          la política, embajadas extranjeras, barrios históricos y veneradas
-          universidades y escuelas universitarias.
-          <br />
-          Con conexiones de vuelo directo a más de 30 destinos internacionales,
-          Washington, DC es un destino imprescindible en EE. UU. para viajeros
-          de todo el mundo.
-        </p>
-      </div>
-      <div>
-        <h3>New Jersey</h3>
-        <p>
-          Situado en el noreste de Estados Unidos, Nueva Jersey es uno de los
-          estados más pequeños del país. Sin embargo, su naturaleza es sumamente
-          diversa: pintorescas montañas en el norte, el océano Atlántico en las
-          costas del este y el sur, y una mezcla de colinas, granjas y una
-          inmensa reserva interior cubierta de pinos en el oeste.
-          <br />
-          A lo largo de toda la costa, verás paseos marítimos atractivos y
-          coloridos. Más hacia el interior, los bosques y senderos de río te
-          mostrarán los secretos de las montañas, como miradores, cascadas y
-          aves exóticas. Aquí, encontrarás interesantes museos, instituciones
-          culturales e históricas, y vistas panorámicas de íconos
-          estadounidenses, como la Statue of Liberty (Estatua de la Libertad).
-        </p>
-      </div>
+
+      <table class="Tabla_2">
+
+      <thead>
+        <tr>
+          <th scope="col">Nueva York</th>
+          <th scope="col">Washington D.C.</th>
+          <th scope="col">New Jersey</th>
+        </tr>
+      </thead>
+
+     <tbody class="mitbody">
+     <div> 
+        <tr>
+          <td>
+            
+              Situado sobre la costa este de Estados Unidos de América, encontramos
+              a la ciudad de Nueva York. Esta, además esta bañada por el océano
+              Atlántico y en el que desemboca el río Hudson, el cual atraviesa todo
+              el estado.
+              <br />
+              Esta ciudad se caracteriza por ser la más poblada del estado de Nueva
+              York y del país. Tan diversa como versátil, es llamada la ciudad que
+              nunca duerme.
+            
+          </td>
+        </div>
+        <div>
+          <td>
+            
+              Es una ciudad de categoría mundial con estatuas y monumentos
+              conmemorativos icónicos, museos increíbles (y gratuitos), pasión por
+              la política, embajadas extranjeras, barrios históricos y veneradas
+              universidades y escuelas universitarias.
+              <br />
+              Con conexiones de vuelo directo a más de 30 destinos internacionales,
+              Washington, DC es un destino imprescindible en EE. UU. para viajeros
+              de todo el mundo.
+            
+          </td>
+        </div>
+        <div>
+          <td>
+            
+              Situado en el noreste de Estados Unidos, Nueva Jersey es uno de los
+              estados más pequeños del país. Sin embargo, su naturaleza es sumamente
+              diversa: pintorescas montañas en el norte, el océano Atlántico en las
+              costas del este y el sur, y una mezcla de colinas, granjas y una
+              inmensa reserva interior cubierta de pinos en el oeste.
+              <br />
+              A lo largo de toda la costa, verás paseos marítimos atractivos y
+              coloridos. Más hacia el interior, los bosques y senderos de río te
+              mostrarán los secretos de las montañas, como miradores, cascadas y
+              aves exóticas. Aquí, encontrarás interesantes museos, instituciones
+              culturales e históricas, y vistas panorámicas de íconos
+              estadounidenses, como la Statue of Liberty (Estatua de la Libertad).
+            
+          </td>
+        </div>
+        </tr>
+
+
+      </tbody>
+
+    </table>
+      
     </section>
   </body>
 </html>
