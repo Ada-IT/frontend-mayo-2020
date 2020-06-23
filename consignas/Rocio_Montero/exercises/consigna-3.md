@@ -1,1 +1,100 @@
-!
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Event Registration Form</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        * {
+  border: 0;
+}
+body {
+  background: linear-gradient(to top left, #08aeea, #b721ff); 
+  font-family: Open Sans, Helvetica Neue;
+}
+#formSection {
+width: 600px;
+margin: 0 auto;
+}
+h1 {
+  line-height: 100px;
+  background: #000;
+  margin: 0;
+  color: #fff;
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+}
+form {
+background: #fff;
+}
+input {
+  background: #e5e5e5;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+.button {
+  background: #ff4b5a;
+  color: white;
+  border-radius: 10px;
+  width: 100px;
+  text-align: center;
+}
+        </style>
+  </head>
+  <body>
+   <main>
+      <header>
+        <nav></nav>
+      </header>
+      <article>
+        <section id="formSection">
+          <h1>EVENT REGISTRATION FORM</h1>
+          <div>
+            <form action="formulario.html" method="POST"> 
+            <label for="name">Name</label>
+            <br/>
+            <label for="fname">First Name</label>
+              <input id="fname" type="text" minlength="3" maxlength="20" name="fname"/>
+            <label for="lname">Last Name</label>
+              <input id="lname" type="text" min="3" max="20"name="lname"/>
+              <br/><br/>
+            <label for="company">Company</label>
+              <input id="company" type="text" min="3" max="20" name="company"/>
+              <br/><br/>
+            <label for="email">E-mail</label>
+              <input id="email" type="text" min="3" max="20" name="email"/>
+                           <br/>
+               <br/>
+            <label for="phone">Phone</label>
+              <input id="areacode" type="tel" min="3" max="3" name="areacode" required>
+              <input id="phonenumber" type="tel" min="7" max="7" name="phonenumber"required>
+             <br/>
+              <br/>
+             <div class="dropdown">
+            <select class="dropbtn">Subject
+                <option value="">Support</option>
+                <option value="">Sales</option>
+                <option value="">Claim</option>
+            </select>
+                </div>
+             <br/>
+            <br/>
+              <label for="check">Are you an existing customer?</label>
+                <input type="checkbox" name="check" id="check" value="test" />
+                yes 
+                <input type="checkbox" name="check" id="check" value="test" />
+                no
+              <br/>
+                <br/>
+                <input type="Register" class="button" value="Register">
+              <br/>
+            </form>
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
