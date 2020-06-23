@@ -13,14 +13,74 @@ Color de boton de registro al pasar el mouse por arriba: #eb3746;
 Los demas colores deben ser tomados de la imagen con las herramientas que crean utiles.Se deben escribir en hexadecimal.
 
 La fuente de la web debe ser "Open Sans" y "Helvetica Neue".-->
+
 <head>
    <title>Cosigna III</title>
    <style>
        body {
-           background-color: #0779e4;
+           background-color: #04223d;
            background-image: linear-gradient(90deg, #08aeea, #b721ff);
        }
 
+      /* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+   
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+   
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+   
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+   
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  
+}
+                  
        form {
             max-width: 800px;
             height: 830px;
@@ -46,7 +106,7 @@ La fuente de la web debe ser "Open Sans" y "Helvetica Neue".-->
      section {
          margin: 3rem 2rem 2rem 3rem;
          max-width: 100rem;
-         max-height: auto;
+         max-height: auto;     
          
          }
 
@@ -70,6 +130,10 @@ La fuente de la web debe ser "Open Sans" y "Helvetica Neue".-->
            height: 50px;
            width: 33rem;
            margin: 1rem 1rem 1rem 1rem;                    
+       }
+
+       input:hover{
+           background-color: #c4bdbd;
        }
 
        .name, .phone {
@@ -158,6 +222,13 @@ La fuente de la web debe ser "Open Sans" y "Helvetica Neue".-->
            height: 50px;
            width: 33rem;
            margin: 1rem 1rem -2rem 1rem; 
+           font-size: 1rem;
+           padding-left: 15px;
+           color: #251f1f;
+       }
+
+       select:hover{
+           background-color: #c4bdbd;
        }
 
        p {
@@ -177,7 +248,7 @@ La fuente de la web debe ser "Open Sans" y "Helvetica Neue".-->
        .buttons input {
           width: 20px;
           margin: 0px;
-          color: gray;
+          color: #7c7373;
 
        }
 
@@ -189,10 +260,6 @@ La fuente de la web debe ser "Open Sans" y "Helvetica Neue".-->
 
        label.button-y {
            padding-right: 60px;
-       }
-
-       .container .button-y:after {
-           background-color: red;
        }
 
        .submit {
@@ -257,11 +324,12 @@ La fuente de la web debe ser "Open Sans" y "Helvetica Neue".-->
         <label for="name">Subject</label>
 
         <select class="dropdown">
-            <option>Choose Option</option>
+           
+            <option class="head">Choose Option</option>
             <option value="support">Support Department</option>
             <option value="sales">Sales Department</option>
             <option value="claims">Claims Department</option>
-        
+           
          </select>
    </div>
 
