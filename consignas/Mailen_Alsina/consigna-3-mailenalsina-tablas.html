@@ -43,43 +43,12 @@
   }
 }
 
-.Tabla_1 {
-  animation-duration: 3s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-right: 100%;
-    width: 300%
-  }
-
-  to {
-    margin-right: 0%;
-    width: 100%;
-  }
-}
-
-.Tabla_2  {
-  animation-duration: 3s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
 
         caption {
             background-color: rgb(228, 22, 153);
             color: blanchedalmond; 
+            text-decoration: underline;
+            font-size: 20px;
                       
         }
 
@@ -110,15 +79,22 @@
         table.Tabla_1 td:hover {color:greenyellow;}
         table.Tabla_1 th:hover {color:greenyellow;}
 
+        table.Tabla_1 th {background-color:#fff8dc;}
+
         table.Tabla_2 {
                 width: 75%;
-                background: rgb(228, 154, 127); 
+                background: rgb(238, 209, 198);
+                
         }
         table.Tabla_2 td,
-        table.Tabla_2 th { border: 2px solid rgb(245, 242, 134);
+        table.Tabla_2 th { border: 2px solid rgb(232, 143, 35);
                  padding: 5px 10px; width: 25%;
-
+      
         }
+
+        
+
+        table.Tabla_2 th {background-color: #fff8dc;}
 
         .body {    
             background-color: rgb(243, 244, 189);
