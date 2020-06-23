@@ -16,12 +16,10 @@
         }
 
         h2 {
-
             font-size: 20px;
             margin-top: 10px;
             margin-left: 30px;
             width: fit-content;
-
         }
 
         h3 {
@@ -64,11 +62,7 @@
             margin: 4px 2px;
             cursor: pointer;
             box-shadow: 0 8px 16px 0 rgba(0,0,0,2), 0 6px 20px 0 rgba(0,0,0,19);
-
-        }
-
-        #number {
-            width: 520px;
+            width: 3rem;
         }
 
         </style>
@@ -166,65 +160,64 @@
                                                     <option value="Mar del Plata">
                                                 </datalist>
                                         </div>                
-                                        <br>
-                                        <br>
-                                    <div class="form-group row"> 
-                                        <label class="col-sm-5 col-form-label">Teléfono(*):</label><br>
-                                        <div class="col-sm-10">
-                                            <input type="number" id="number" name="telefono" placeholder="Ingresar cod. area + número" 
-                                                    pattern="[0-9]+([0-9]-{9})-[.]+[0-9]-{0}" required class="number">
+                                                <br>
+                                                <br>
+                                                <div class="form-group row"> 
+                                                    <label class="col-sm-5 col-form-label">Teléfono(*):</label><br>
+                                                    <div class="col-sm-10">
+                                                            <input type="number" id="telefono" name="telefono" placeholder="Ingresar cod. area + número" 
+                                                        size="100" pattern="[0-9]+([0-9]-{9})-[.]+[0-9]-{0}"  required class="number" multiple>
+                                                    </div>
+                                                </div>                          
+                                                <br>
+                                                <br>
+                                                    <div class="casillademail">
+                                                        <div class="form-group col-md-20">
+                                                            <label for="direccion_email">
+                                                                Correo Electrónico (*):
+                                                            </label><br>
+                                                            <input 
+                                                                id="direccion_email" 
+                                                                type="email" 
+                                                                size="70" 
+                                                                maxlength="64" 
+                                                                requerired placeholder="usuario@suemail.com" 
+                                                                pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
+                                                                class="email"
+                                                                multiple
+                                                            >
+                                                        <br>
+                                                        <span style="color:red"><small>(*) Campos obligatorios</small></span> 
+                                                        <br>  
+                                                        </div>
+                                                        <br>
+                                                        <hr>
+                                                        <h3><strong>EDUCACIÓN:</strong></h3>
+                                                        <label for="educación">Seleccione su Nivel Educativo</label>
+                                                        <select name="educacion" id="educación">
+                                                            <option value="NI">No Informa</option>
+                                                            <option value="P">Primaria</option>
+                                                            <option value="S">Secundaria</option>
+                                                            <option value="U">Universitaria</option>
+                                                        </select>
+                                                        <hr>
+                                                        <h3><strong>TRABAJO:</strong></h3>
+                                                        <label for="trabajo">Actualmente, se encuentra trabajando?</label>
+                                                        <select name="trabajo" id="trabajo">
+                                                            <option value="NI">No Informa</option>
+                                                            <option value="S">Si</option>
+                                                            <option value="N">No</option>
+                                                        </select> 
+                                                        <br>
+                                                        <br>
+                                                        <div>
+                                                            <input class="button" type="submit" value="Enviar">
+                                                        </div> 
+                                                    </div>           
                                         </div>
-                                    </div>                          
-                                        <br>
-                                        <br>
-                                    <div class="casillademail">
-                                        <div class="form-group col-md-20">
-                                        <label for="direccion_email">
-                                               Correo Electrónico (*):
-                                        </label>
-                                        <br>
-                                            <input 
-                                                id="direccion_email" 
-                                                type="email" 
-                                                size="70" 
-                                                maxlength="64" 
-                                                requerired placeholder="usuario@suemail.com" 
-                                                pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
-                                                class="email"
-                                                multiple
-                                                >
-                                        <br>
-                                        <span style="color:red"><small>(*) Campos obligatorios</small></span> 
-                                        <br>  
-                                    </div>
-                                        <br>
-                                <h3><strong>EDUCACIÓN:</strong></h3>
-                                        <label for="educación">Seleccione su Nivel Educativo</label>
-                                        <select name="educacion" id="educación">
-                                            <option value="NI">No Informa</option>
-                                            <option value="P">Primaria</option>
-                                            <option value="S">Secundaria</option>
-                                            <option value="U">Universitaria</option>
-                                        </select>
-                                        <hr>
-                                <h3><strong>TRABAJO:</strong></h3>
-                                        <label for="trabajo">Actualmente, se encuentra trabajando?</label>
-                                        <select name="trabajo" id="trabajo">
-                                            <option value="NI">No Informa</option>
-                                            <option value="S">Si</option>
-                                            <option value="N">No</option>
-                      
-                                        </select> 
-                                    <br>
-                                    <br>
-                                    <div>
-                                        <input class="button" type="submit" value="Enviar">
-                                    </div>
-                                </div>     
-                                </form>  
-                            </form>
-                        </div>    
-                    </div>
+                                </div>       
+                            </form>  
+                        </div>       
                 </section>
             </article>
         </main>
