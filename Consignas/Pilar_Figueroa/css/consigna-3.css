@@ -1,0 +1,162 @@
+/* --- ESTILOS GENERALES DEL DOCUMENTO */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(8,174,234);
+    background: linear-gradient(45deg, rgba(8,174,234,1) 33%, rgba(183,33,255,1) 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* --- HEADER --- */
+
+.titulo {
+    background-color: #1a1a1a;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.titulo h1 {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+/* --- FORMULARIO --- */
+
+.formulario {
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+label {
+    font-weight: 700;
+    color: #424242;
+    text-align: center;
+    display: inline-block;
+    width: 20%;
+}
+
+input {
+    border: none;
+    background: #e5e5e5;
+    border-radius: 3px;
+    margin: 20px 10px;
+    padding: 15px 30px;
+}
+
+input[type="email"]:invalid {background: #ff4b23;}
+
+select {
+    border: none;
+    background: #e5e5e5;
+    border-radius: 3px;
+    margin: 20px 10px;
+    padding: 15px 30px;
+    width: 63%;
+}
+
+input[type="submit"] {
+    background: #ff4b5a;
+    color: #fff;
+    font-weight: 700;
+    width: 180px;
+}
+
+/* --- MEDIAQUERIES --- */
+
+@media screen and (max-width: 900px) {
+    body {
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .contenedor {
+        width: 100%;
+        max-width: 600px;
+    }
+    input {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .contenedor {
+        width: 100%;
+        max-width: 500px;
+    }
+    input {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    body {
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .contenedor {
+        width: 100%;
+        max-width: 300px;
+    }
+    form {
+        display: flex;
+        align-items: center;
+    }
+    .form-group {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .form-group-subject {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    label {
+        font-size: 1.2em;
+        width: auto;
+    }
+    select {
+        width: 80%;
+        font-size: 1.2em;
+    }
+    input {
+        width: 80%;
+        font-size: 1.2em;
+    }
+    .radio-container {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .radio-container input {
+        width: auto;
+        text-align: center;
+    }
+}

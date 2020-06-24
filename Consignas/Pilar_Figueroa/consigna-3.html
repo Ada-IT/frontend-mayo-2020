@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/consigna-3.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="contenedor">
+        <section class="titulo">
+            <h1>EVENT REGISTRATION FORM</h1>
+        </section>
+        <section class="formulario">
+            <form action="consigna-3.html" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="First Name" maxlength="20">
+                    <input type="text" name="l-name" id="l-name" placeholder="Last Name" maxlength="20">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" name="company" id="company" maxlength="20">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="phone" id="phone" placeholder="Area Code" maxlength="3">
+                    <input type="tel" name="phone" id="phone" placeholder="Phone Number" maxlength="10">
+                </div>
+
+                <div class="form-group-subject">
+                    <label for="subject">Subject</label>
+                    <select name="subject" id="subject">
+                        <option value="support">Support Department</option>
+                        <option value="sales">Sales Department</option>
+                        <option value="claim">Claims Department</option>
+                    </select>
+                </div>
+                
+                <label for="customer" class="customer">Are you a customer?<br/>
+                    <div class="radio-container">
+                    <input type="radio" name="yes" id="yes" value="y">Yes
+                    <input type="radio" name="no" id="no" value="n">No
+                    </div>
+                </label>
+                <input type="submit" value="REGISTER">
+            </form>
+        </section>
+    </div>
+</body>
+</html>
