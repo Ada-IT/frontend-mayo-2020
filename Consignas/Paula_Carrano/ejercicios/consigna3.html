@@ -6,21 +6,200 @@
        <meta name="keywords" content="event,registration,form" />
        <meta name="viewport" content="width=device-width, initial-scale=1" />
        <title>Event_registration_form</title>
-       <link rel="stylesheet" href="https://fonts.google.com/specimen/Open+Sans">
-       
+       <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+             
        <style>
-     
+        /*structure*/ 
+        body {
+          background: linear-gradient(45deg,#08aeea,#b721ff);
+          font-family: 'Open Sans', sans-serif;
+          text-transform: capitalize;
+          text-align: justify;
+        } 
+
         header {
           background-color: #1a1a1a; 
-          font-family: "Helvetica Neue"; 
+          font-family: Helvetica, sans-serif; 
           color:#ffffff;
-          text-transform: uppercase;       
+          text-transform: uppercase;   
+          text-align: center; 
+          margin: 5% 15% 0% 15%;
+          padding: 1% 1% 1% 1%;
+          border-radius: 2rem 2rem 0rem 0rem;
         }
       
-        body {
-           background-color: #ffffff;
-           font-family:sans-serif; 
-         }  
+        section {
+          background-color: #ffffff;
+          margin: 0% 15% 3% 15%;
+          padding: 2% 2% 2% 2%;
+          border-radius: 0rem 0rem 2rem 2rem;
+        }
+
+          h4 {
+            color:#525151;
+            font-weight: bold;
+            margin: 4%;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        input {
+            color:#312f2f;
+            border-radius: 0.5rem;
+            margin: 2%;  
+            border: none;
+            height:3rem;
+            background-color:#e5e5e5;
+            align-items: flex-start;
+        }
+
+        div {
+          margin-left: 3%;
+        }
+
+         /*inputs design */
+         .name{
+             width: 16rem;
+             margin:0% 15% 0% -2.5%;
+         }
+
+         .area_code{
+            width: 10rem;
+            margin:0% 30% 0% -3%;
+         }
+         
+         .phone {
+             width:22rem;
+             margin:0% 15% 0% -4%;
+         }
+         
+         .col {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+         }
+
+         label {
+            color:#8b8989;
+            font-weight:normal;
+            font-size: small;
+            margin: 4%;
+        } 
+
+          .company, .email {
+          display: flex;
+          flex-direction: row;
+          align-items: baseline;
+       }
+
+       .email input {
+         width: 36rem;
+         margin-left: 3.5%;
+       }
+
+       .company input {
+        width: 36rem;
+        margin-left: 0%;
+       }
+
+        .subject {
+          display:inline-flex;          
+          color:#525151;
+          justify-content: flex-start;
+          margin: 2% 0% 0% 3%;  
+
+        }
+
+        .subject select {
+          background-color:#e5e5e5;
+          border: none;
+          color:#525151;
+          text-align: center;
+          border-radius: 0.5rem;
+          width: 42rem;
+          margin-left: 3%;
+        }
+
+        .client {
+          margin-left: 3%;
+        }
+
+          /*email valid*/     
+
+        .email input:valid {
+            background-color:#e5e5e5;
+            color:#312f2f;
+        }
+
+        .email input:invalid {
+            background-color: #F90B0B;
+            color:#fcd2d2;
+        }  
+        /*radio btn green*/
+      
+        .radio-item {
+            display: inline-block;
+            position: relative;
+            padding: 0 2px;
+            margin: 0 0 0;
+        }
+
+        .radio-item input[type='radio'] {
+            display: none;
+        }
+
+        .radio-item label {
+              color: #666;
+              font-weight: normal;
+        }
+
+        .radio-item label:before {
+                content: " ";
+                display: inline-block;
+                position: relative;
+                top: 0.31rem;
+                margin: 0 0.5rem 0 0;
+                width: 1rem;
+                height: 1rem;
+                border-radius: 1rem;
+                border: 0.2rem solid #e5e5e5;
+                background-color: #e5e5e5;
+        }
+
+        .radio-item input[type=radio]:checked + label:after {
+                border-radius: 1rem;
+                width: 1rem;
+                height: 1rem;
+                position: absolute;
+                top: 0.5rem;
+                left: 0.5rem;
+                content: " ";
+                display: block;
+                background: #0d9700;
+        }
+   
+            /*submit btn*/
+        #register input{
+            display: block;
+            position: relative;
+            padding: 2% 2% 2% 2%;
+            margin: 2% 2% 2% 6%;
+            background-color: #909091;
+            font-style: oblique;
+            color: #ffffff;
+            border-radius: 1rem;
+            cursor: pointer;
+            width: 10rem;
+          }
+
+          #register :hover{
+              background-color: #eb3746;
+              border-radius: 1rem;
+              font-size: 1rem;
+              text-transform: uppercase;
+              font-weight: bolder;
+              color: #ffffff;
+          }
 
        </style>
     </head>
@@ -30,27 +209,31 @@
           <h1>event registration form</h1>
         </header>
           <article>
-            <section>
+            <section id="section">
               <form action="consigna3.html" method="POST">
-                <div class="name">
-                <h3>name</h3>
-                  <input
-                    id="first_name"
-                    type="text"
-                    minlength="1"
-                    maxlength="20"
-                    name="first_name"/>
-                    <label for="first_name">first name</label>
-                    <input
-                    id="last_name"
-                    type="text"
-                    minlength="1"
-                    maxlength="20"
-                    name="last_name" />
-                  <label for="last_name">last name</label>
+                <div class="col">
+                <h4 id="name">name</h4>
+                    <div>
+                        <input
+                          class="name"
+                          type="text"
+                          minlength="1"
+                          maxlength="20"
+                          name="first_name"/>
+                          <label for="first_name">first name</label>
+                      </div>
+                      <div>
+                          <input
+                          class="name"
+                          type="text"
+                          minlength="1"
+                          maxlength="20"
+                          name="last_name"/>
+                        <label for="last_name">last name</label>
+                        </div>
                  </div>
                 <div class="company">
-                  <h3>company</h3>
+                  <h4>company</h4>
                     <input
                       id="company"
                       type="text"
@@ -59,52 +242,66 @@
                       name="company"/>
                   </div>  
                   <div class="email">
-                    <h3>email</h3>
+                    <h4>email</h4>
                     <input
                       id="email"
                       type="email"
                       name="email"/>
                 </div>
-                <div class="phone">
-                  <h3>phone</h3>
-                    <input
-                      id="area_code"
-                      type="number"
-                      minlength="1"
-                      maxlength=""
-                      name="area_code"/>
-                      <label for="area_code">area code</label>
-                    <input
-                      id="phone_number"
-                      type="number"
-                      minlength="1"
-                      maxlength=""
-                      name="phone_number"/>
-                    <label for="phone_number">phone number</label>
-                </div>
+                <div class="col">
+                  <h4 id="number">phone</h4>
+                    <div>
+                        <input
+                          class="area_code"
+                          type="number"
+                          minlength="1"
+                          maxlength=""
+                          name="area_code"/>
+                          <label for="area_code">area code</label>
+                      </div>
+                      <div> 
+                        <input
+                          class="phone"
+                          type="number"
+                          minlength="1"
+                          maxlength=""
+                          name="phone_number"/>
+                           <label for="phone_number">phone number</label>
+                    </div>  
+                  </div>
                 <div class="subject">
-                    <h3>subject</h3>
+                    <h4>subject</h4>
                     <select name="subject" id="subject">
-                      <option value="support">support department</option>
+                      <option hidden selected>Choose option</option>
+                      <option value="support">support department<t/option>
                       <option value="sales">sales department</option>
                       <option value="claim">claims department</option>
                     </select>
                 </div>
-                <div class="customer">
-                  <h3>Are you an existing customer</h3>
-                  <br>
-                  <input 
-                     name="customer" 
-                     type="radio"
-                     value="y">
-                    <label>yes</label>
-                    <input 
-                     name="customer" 
-                     type="radio"
-                     value="n">
-                    <label>no</label>
+                <div>
+                  <h4 id="customer">Are you an existing customer?</h4>
+                  <div class="client">
+                      <div class="radio-item"> 
+                         <input 
+                          name="customer" 
+                          id="customer1"
+                          type="radio"
+                          value="y"
+                          checked="checked">
+                          <label for="customer1">yes</label>
+                      </div>
+                      <div class="radio-item">
+                          <input 
+                          name="customer" 
+                          id="customer2"
+                          type="radio"
+                          value="n"
+                          checked="checked">
+                          <label for="customer2">no</label>
+                        </div>
                 </div>
-                <input type="submit" value="Register">
+              </div>
+                <span id="register"><input  type="submit" value="Register"></span>
             </section>
           </article>
       </main>
