@@ -1,4 +1,4 @@
-<html style= background-color:black>
+<html>
     <head>
         <title>Mi Articulo de Blog</title>
         <style>
@@ -17,29 +17,34 @@
             /* Estructura */
             body {
                 background-image: url("img/acuarela.jpg");
-                background-size: 2000px 1000px;
-
+                background-size: 190em ;
             }
             article {
+                display:flex;
+                flex-direction: column;
                 background-color:rgb(226,149,175,0.6) ;
                 float: left;
-                width: 60%;
+                width: 55%;
                 padding-right: 3%;
                 padding-left: 3%;
-                padding-bottom: 4%;
+                padding-bottom: 3%;
                 border-radius: 3%;
-                
-            
+                margin-left:2%
             }
-            aside {
-                float: right;
+            aside {           
+                display:block;
+                float:right;
                 width: 30%;
-                text-align:center;
-                color:blanchedalmond;
-                padding-top:4%
-                
+                padding-top: 15%;
             }
-            
+
+
+            figcaption {
+                background-color:rgb(214, 75, 75, 0.3);
+                text-align: center;
+                font-size: 1em;
+                font-family: tahoma;
+            }
             /* ----fin Estructura  --- */
 
             /* contenidoy tipografias */
@@ -50,9 +55,21 @@
                 padding-bottom: 2%;
                 font-size: 4em;
                 text-shadow: black 0.1em 0.1em 0.2em;
-
             }
 
+            h3 {
+                color:blanchedalmond;
+
+                font-family: tahoma;
+                font-size: 2em;
+                text-shadow: -1px 0 black, 0 1px black,
+	            1px 0 black, 0 -1px black;
+                text-align:left;
+            }
+            h4{
+                font-family: 'Franklin Gothic Medium';
+                text-align: center;
+            }
             p { color: black ;
                 text-align: left;
                 text-align:justify;
@@ -68,8 +85,6 @@
                 font-weight: 500;
                 font-family:tahoma;
                 line-height: 20px;
-
-
             }
             /* ----fin contenidoy tipografias --- */
 
@@ -78,27 +93,35 @@
                 background-color: rgb(226,149,175,0.6);
                 display: inline-flex;
                 width: 100%;
-                
+                margin-top: 4%;
+                border-color: black;
+                padding-bottom: 3%;
+                background: fit-content;
+                height: 30%;
                 }
             .footer .links {
                 font-weight: bold;
+                text-align: center;
+                line-height: 3em;
+                list-style-type: none;
+                margin-right: 2em;              
             }
-
+            a:hover {
+                color:blanchedalmond;
+            }
             .footer  .container {
                 width: 33.3%;
             }
-            .footer .container2 {
-                padding-left: 0%;
-                
+            .footer .container {
+                padding-left: 9%;
+                padding-right:3%               
             }
             /* ----fin pie de pagina --- */
-
         </style>
     </head>
     <body>
         <main>
-            <h1>Manzana Blog</h1>>
-            <div class="transbox">
+            <h1>Manzana Blog</h1>
             <article>
                 <h2>Historia</h2>
                 <p> Provienen de los bosques Tian Shan, una zona límite entre China, Kazajistán y Kirguistán. Con las expediciones
@@ -190,70 +213,57 @@
                         <br>
                     </ul>
                 </p>
-                </section> 
-            </div>        
+                </section>     
             </article >
-            <br>
             <div >
             <aside >
                 <h3> <b>Manzana Argentina</b> </h3>
-                <figure style="float: right">
+                <figure style= "float:right">
                     <img src="img/manzana.jpg"
                         height="400px"
                         width="600px"
-                        display= "auto"
-                        style= padding-left:3%;
-                        
                     >
-                    <br>
-                    <br>
-                    <figcaption style= background-color:indianred;><i>Valor nutricional por cada 100 g c/ piel</i></figcaption>        
+                    <div><figcaption><i>Valor nutricional por cada 100 g c/ piel</i></figcaption></div>       
                   </figure>                    
             </aside> 
             </div>
             <footer class="footer">
-                <hr>
                 <div class="container">
-                    <hr>
                     <h4>Mapa del sitio</h4>
-                    <ul>
+                    <hr>
+                    <ul class="links">
                         <li><a href="">Facebook</a></li>
                         <li><a href="">Twitter</a></li>
                         <li><a href="">Instagram</a></li>
-                        <li><a href="">Youtube</a></li>
-                        <li><a href="">porahi</a></li>                        
+                        <li><a href="">Youtube</a></li>                   
                     </ul>
                 </div>                
-                <hr>
                 <div class="container">
-                    <hr>
                     <h4>
                         Nuestra Misión
                     </h4>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>          
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                         type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic 
-                         typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem 
-                         Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <hr>
+                    <p>          
+                    Nuestra mision es sencilla, buscamos informar acerca de alimentos sanos y sus beneficios a la comunidad web.
+                    Impulsando la calidad de vida sana en varios aspectos ya sea fisico o metal.
+                    Mediante nuestros productos.
                     </p>                    
                 </div>
-                <hr>
-                <div class="container2">
-                    <hr>
+                <div class="container">
                     <h4>Visitanos</h4>
+                    <hr>
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1673.5604294085454!2d-60.647548641807454!3d-32.97421304522823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7aba497cefcb3%3A0x2360fada20f0529c!2sFruter%C3%ADa%20y%20Verduler%C3%ADa%20Miguel!5e0!3m2!1ses-419!2sar!4v1591577767984!5m2!1ses-419!2sar"
-                        width="300" 
-                        height="300" 
-                        frameborder="0" 
-                        style="border:0;" 
+                        width="400" 
+                        height="250" 
+                        frameborder="1" 
+                        style="border:0" 
                         allowfullscreen="" 
                         aria-hidden="false" 
-                        tabindex="0">
+                        tabindex="0"
+                        display="block">
                     </iframe>    
                 </div>
-                <hr>
             </footer> 
             <hr>     
         </main>
