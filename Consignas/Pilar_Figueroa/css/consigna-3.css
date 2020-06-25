@@ -83,6 +83,11 @@ input[type="submit"] {
     width: 180px;
 }
 
+input[type="submit"]:hover {
+    background: #eb3746;
+    cursor: pointer;
+}
+
 /* --- MEDIAQUERIES --- */
 
 @media screen and (max-width: 900px) {
