@@ -20,12 +20,7 @@
             color:black;
             width: fit-content;
             font-size: 16px;
-            font-weight: 100;
-        }
-        
-        .miheader {
-            font-family: sans-serif;
-            font-size: 20px;
+            font-weight: 400;
         }
 
         label {
@@ -51,7 +46,7 @@
             color:#0e2f36;
             font-family:Verdana;
             font-size:19px;
-            padding:11px 29px;
+            padding:4px 9px;
             text-decoration:none;
             text-shadow:0px 1px 0px #dbdeff;
         }
@@ -64,11 +59,20 @@
             top:1px;
         }
 
+        .casilla-de-email input:focus:invalid{
+            background-color: rgb(243, 178, 167);
+            border-color: tomato;
+        }
+
+        .casilla-de-email input:required:valid{
+            background-color: rgb(175, 247, 184);
+            border-color: rgb(77, 243, 85);
+        }
         </style>
     </head>
     <body>
         <main>
-            <header class="miheader">
+            <header>
                 <nav>
                 </nav>
             </header>
@@ -78,16 +82,17 @@
                     <div 
                         style="color:rgb(252, 252, 252); 
                                 font-family: Verdana;
-                                background-color: rgb(55, 34, 116);width:fit-content;  
+                                background-color: rgb(37, 23, 78);
+                                width:max-content;
                                 border-radius:10px; 
-                                padding: 30px;
+                                padding: 1rem;
                                 border: 0.5rem outset rgb(86, 57, 192);
-                                outline: 0.5rem solid rgb(164, 197, 219);
-                                box-shadow: 0 0 0 2rem rgb(2, 81, 112);
+                                outline: 0.5rem solid rgb(163, 189, 206);
+                                box-shadow: 0 0 0 2rem rgb(26, 71, 88);
                                 border-radius: 12px;
                                 font: bold 1rem sans-serif;
                                 margin: 2rem;
-                                padding: 1rem;
+                                padding: 1rem 6rem;
                                 outline-offset: 0.5rem;"
                         > 
                         <br>
@@ -98,15 +103,15 @@
                         <!-- Formulario de Inscripción On-Line -->
                     <form id="preguntas" method="POST">
                         <div style="border-radius:10px; 
-                                padding: 30px;
+                                padding: 2rem;
                                 color:rgb(252, 252, 252); 
                                 font-family: Verdana;
-                                background-color: rgb(167, 150, 216);width:fit-content;  
+                                background-color: rgb(141, 165, 233);width:fit-content;  
                                 border: radius 15px; 
                                 padding: 0.5px;
                                 outline: 0.3rem solid rgb(164, 197, 219);
-                                border: 0.3rem outset rgb(2, 81, 112);
-                                box-shadow: 0 0 0 2rem rgb(86, 57, 192);
+                                border: 0.4rem outset rgb(47, 94, 112);
+                                box-shadow: 0 0 0 2rem rgb(36, 11, 124);
                                 border-radius: 12px;
                                 font: bold 1rem sans-serif;
                                 margin: 1rem;
@@ -122,7 +127,7 @@
                             <br>
                             <br>
                                 <div class="form-group row">
-                                    <label class="col-sm-5 col-form-label">Nombre completo(*):</label>
+                                    <label class="col-sm-5 col-form-label">Nombre completo*:</label>
                                     <br>
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" placeholder="Ingrese su nombre/s"
@@ -131,7 +136,7 @@
                                 </div> 
                                 <br>
                                 <div class="form-group row">
-                                    <label class="col-sm-5 col-form-label">Apellido(*):</label>
+                                    <label class="col-sm-5 col-form-label">Apellido*:</label>
                                     <br>
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" placeholder="Ingrese su apellido/s"
@@ -140,7 +145,7 @@
                                 </div>   
                                 <br>
                                 <div class="form-group row">
-                                    <label class="col-sm-5 col-form-label">Domicilio(*):</label>
+                                    <label class="col-sm-5 col-form-label">Domicilio*:</label>
                                     <br>
                                         <div class="col-sm-10">    
                                             <input type="text" class="form-control" placeholder="Ingrese el domicilio y altura" 
@@ -150,7 +155,7 @@
                                 <br>
                                 <br>
                                 <div class="form-group row">
-                                    <label class="col-sm-5 col-form-label">Localidad(*):</label>
+                                    <label class="col-sm-5 col-form-label">Localidad*:</label>
                                     <br>
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" placeholder="Elija su Localidad"
@@ -171,7 +176,7 @@
                                 <br>
                                 <br>
                                 <div class="form-group row">
-                                    <label class="col-sm-5 col-form-label">Teléfono(*):</label>
+                                    <label class="col-sm-5 col-form-label">Teléfono*:</label>
                                     <br>
                                         <div class="col-sm-10">
                                             <input type="number"  
@@ -180,31 +185,36 @@
                                                     placeholder="ingresar cod. area + núnero" 
                                                     pattern="[0-9]+([0-9]-{-9})-[.]+[9-0]-{0}" 
                                                     required class="number"
+                                                    size="50%"
+                                                    maxlength="20"
                                             >
                                         </div>
                                 </div>        
                                 <br>
                                 <br>
-                                <div class="casilladeemail">
+                                <div class="casilla-de-email">
                                         <div class="form-group col-md-20">
-                                            <label for="direccion_email">Correo Electrónico(*):</label>
+                                            <label for="direccion_email">Correo Electrónico*:</label>
                                     <br>
                                     <br>
-                                                <input 
-                                                    id="direccion_email" 
+                                            <input 
+                                                    id="casilla-de-email" 
                                                     type="email" 
                                                     size="70" 
                                                     maxlength="64" 
                                                     requerired placeholder="usuario@suemail.com" 
                                                     pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
-                                                    class="email" multiple> 
+                                                    class="email" 
+                                                    multiple
+                                                    required
+                                            > 
                                     <br/>
                                     <br>
-                                        <div class="invalid-feedback">
+                                        <div>
                                             <font style="vertical-align:inherit">Por favor, ingrese una direccion de Correo Electrónico válida</font>
                                             <br>
                                             <br>
-                                            <span style="text-align: left;"><small>(*) Campos obligatorios</small></span>     
+                                            <span style="text-align: left; color: red;"><strong><small>(*) Campos obligatorios</small></strong></span>     
                                         </div> 
                                 </div>
                                 <br>
