@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Consigna 1</title>
+        <style>
+        h1 h2 { 
+            background-color: rgb(242, 242, 248);
+            font-style: normal;
+            font-family: Tahoma;
+        }
+
+        h1 {
+
+            font-size: 20px;
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+
+        h3 {
+            color:black;
+            width: fit-content;
+            font-size: 16px;
+            font-weight: 100;
+        }
+        
+        .miheader {
+            font-family: 'Lucida Sans';
+            font-size: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            color:black;
+            font-family: sans-serif;
+        }
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <header class="miheader">
+                <nav>
+                </nav>
+            </header>
+            <article>
+                <section id="Formulario de Incripción">
+                    <h1>   
+                    <div 
+                        style="color:rgb(252, 252, 252); 
+                        font-family: Verdana;
+                        background-color: rgb(55, 34, 116);width:fit-content;  
+                        border-radius:10px; 
+                        padding: 30px;
+                        border: 0.5rem outset rgb(86, 57, 192);
+                        outline: 0.5rem solid rgb(164, 197, 219);
+                        box-shadow: 0 0 0 2rem rgb(2, 81, 112);
+                        border-radius: 12px;
+                        font: bold 1rem sans-serif;
+                        margin: 2rem;
+                        padding: 1rem;
+                        outline-offset: 0.5rem;"> 
+                        <br>
+                        <font style="vertical-align:inherit">FORMULARIO DE INSCRIPCION ON-LINE</font>
+                    </h1>
+                    <br>
+                    <div>
+                        <!-- Formulario de Inscripción On-Line -->
+                        <form id="preguntas" method="POST">
+                        <div style="border-radius:10px; 
+                        padding: 30px;
+                        color:rgb(252, 252, 252); 
+                        font-family: Verdana;
+                        background-color: rgb(167, 150, 216);width:fit-content;  
+                        border: radius 15px; 
+                        padding: 0.5px;
+                        outline: 0.3rem solid rgb(164, 197, 219);
+                        border: 0.3rem outset rgb(2, 81, 112);
+                        box-shadow: 0 0 0 2rem rgb(86, 57, 192);
+                        border-radius: 12px;
+                        font: bold 1rem sans-serif;
+                        margin: 1rem;
+                        padding: 1rem;
+                        outline-offset: 0.5rem;"> 
+                            <br>
+                                <label>DATOS PERSONALES:</label>
+                                <br>
+                                <br>
+                                <label>Complete sus datos</label>    
+                            <br>
+                            <br>
+                            <form>
+                                <div class="form-row align-items-center">
+                                    <div class="col-auto">
+                                        <label>Nombre completo(*):</label>
+                                        <input type="text" class="form-control" placeholder="Ingrese su nombre completo"
+                                            size="55" maxlength="15" multiple>
+                                    </div>
+                                </div> 
+                                    <br>
+                                <div class="form-row align-items-center">
+                                    <div class="col-auto">           
+                                        <label>Apellido/s(*):</label><br>
+                                        <input type="text" class="form-control" placeholder="Ingrese su apellido"
+                                            size="64" maxlength="15" multiple>
+                                    </div>
+                                </div>
+                            </form>    
+                            <br>
+                            <label>Dirección(*):</label>
+                            <input name="direccion" type="text" placeholder="Ingrese el domicilio y altura" 
+                                   size="64" maxlength="20" multiple>
+                            <br>
+                            <br>
+                            <label>Localidad(*):</label>
+                            <input name="defoultlocalidad" type="text" placeholder="Elija su Localidad"
+                                    list="defoultlocalidad" size="64" maxlength="256" multiple>
+                                <datalist id="defoultlocalidad"> 
+                                    <option value="Martinez">
+                                    <option value="Olivos">
+                                    <option value="Munro">
+                                    <option value="Villa Ballester">
+                                    <option value="Florida">
+                                    <option value="Vicente López">
+                                    <option value="San Fernando">
+                                    <option value="Capital Federal">
+                                    <option value="Mar del Plata">
+                                </datalist>
+                            <br>
+                            <br>
+                            <label>Teléfono (*):</label>
+                            <input type="tel" minlength="8" maxlength="10" placeholder="ingrese 0 + cod de area"
+                                   size="64" multiple number>
+                            <br>
+                            <br>
+                            <div class="casillademail">
+                                <div class="form-group col-md-20">
+                                    <label for="email">
+                                        Correo Electrónico (*):
+                                    </label>
+                                    <br>
+                                  <input 
+                                        id="direccionemail" 
+                                        type="email" 
+                                        size="64" 
+                                        maxlength="64" 
+                                        requerired placeholder="usuario@suemail.com" 
+                                        pattern=".+suemail.com" 
+                                        class="email"> 
+                                        <br/>
+                                        <br>
+                                    <div class="invalid-feedback">
+                                        <font style="vertical-align:inherit">Por favor, ingrese una direccion de Correo Electrónico válida</font>
+                                        <br>
+                                        <br>
+                                    <span class="text-muted"> (*) Campos obligatorios</span>     
+                                    </div> 
+                                    <h3><strong>EDUCACIÓN</strong></h3>
+                                    <label for="educación">Seleccione su Nivel Educativo</label>
+                                    <select name="educacion" id="educación" >
+                                        <option value="P">Primaria</option>
+                                        <option value="S">Secundaria</option>
+                                        <option value="U">Universitaria</option>
+                                    </select>   
+                                </div>
+                              <br>
+                              <br>
+                            <h3><strong>EDUCACIÓN</strong></h3>
+                            <label for="educación">Seleccione su Nivel Educativo</label>
+                            <select name="educacion" id="educación" >
+                                <option value="P">Primaria</option>
+                                <option value="S">Secundaria</option>
+                                <option value="U">Universitaria</option>
+                            </select>
+                            <h3>Comentarios:</h3>
+                            <textarea 
+                                name="comentarios" 
+                                value="" 
+                                placeholder="Escriba su comentario" 
+                                rows="2" 
+                                cols="30"
+                            >
+                            </textarea>
+                        </div>
+                            <br>
+                            <br>
+                            <hr>
+                            <input type="submit" value="Enviar">
+                        </form>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>
