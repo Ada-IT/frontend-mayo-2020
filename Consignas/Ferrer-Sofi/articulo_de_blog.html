@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <title>Mi Articulo de Blog</title>
+        <style>
+            /* En este ejercicio deberan agregar el código que crean util para lograr un articulo colorido.
+            Cada elemento h1 a h6 debe tener una clase css con al menos 2 propiedades y 1 propiedad que las 
+            diferencie. Para los elementos section y article, cada uno debe contener 2 propiedades que separen 
+            el contenido a una distancia clara de de entre 20 y 40 px. 
+            Cada elemento que tenga contenido en parrafos debe contener almenos 2 propiedades de css*/
+            /* Aqui tienen unos ejemplos de otras clases  de referencia.*/
+            /* Estructura */
+            article {
+                float: left;
+                width: 60%;
+                background-color:beige;
+                margin: 20px 30px;
+            }
+            aside {
+                margin: 10px;
+                float: right;
+                width: 30%;
+                background-color: chocolate;
+                text-align: center;
+            }
+            /* ----fin Estructura  --- */
+
+            /* contenidoy tipografias */
+            
+            html {
+                background-color: rgb(248, 199, 126);
+            }
+
+            body {
+                width: 1100px;
+                margin: 0 auto;
+                background-color: rgb(235, 215, 188);
+                padding: 0 20px 20px 20px;
+                border: 5px solid black;
+            }
+
+
+
+            h1 {
+                color:crimson;
+                font-size: 3rem;
+                letter-spacing: 0.1rem;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-weight: bolder;
+                text-align: center;
+                text-decoration: underline;
+                text-shadow: 3px 2px 3px rgb(59, 58, 58)
+            }
+
+            h2 {
+                color: coral;
+                font-size: 2rem;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+
+            h3 {
+                color: brown;
+                font-size: 1.5rem;
+                font-style: italic;
+            }
+
+            h4 {
+                font-size: 1.2rem;
+                text-decoration: double;
+                font-style: oblique;
+            }
+
+            h5 {
+                font-size: 1.2rem;
+                font-weight: bold;
+                text-decoration: dotted;
+            }
+
+            p { 
+                color: rgb(29, 31, 31);
+                font-size: 1rem;    
+                line-height: 2;
+                letter-spacing: 1px;
+            }
+
+            section {
+                padding: 20px;
+            }
+            /* ----fin contenidoy tipografias --- */
+
+            /* pie de pagina - footer */
+            .footer {
+                display: inline-flex;
+                width: 100%;
+                }
+            .footer .links {
+                font-weight: bold;
+            }
+
+            .footer  .container {
+                width: 33.3%;
+            }
+            /* ----fin pie de pagina --- */
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Un artículo con secciones</h1>
+            <article>
+                <h2> Las variedades de manzanas</h2>
+                <p> La manzana es la fruta de la semilla de la manzana del árbol … </p>
+                <section>
+                <h3> Red Delicious </h3>
+                <p> Estas manzanas rojas brillantes son los más comunes se encuentran en muchos supermercados … </p>
+                </section>
+                <section>
+                <h3> Granny Smith </h3>
+                <p> Estas manzanas verdes jugosas hacen un gran relleno para tartas de manzana … </p>
+                </section>              
+            </article>
+            <aside>
+                <h4> Granny Smith </h4>
+                <figure style="float: right">
+                    <img src="C:\Users\Sofi\frontend-mayo-2020\ejercicios\img\file_example_JPG_100kB.jpg" width="300px">
+                    <figcaption>Esta imagen...</figcaption>        
+                </figure>                  
+            </aside> 
+            <footer class="footer">
+                <div class="container">
+                    <h5>Mapa del sitio</h5>
+                    <ul>
+                        <li><a href="">Link 1</a></li>
+                        <li><a href="">Link 2</a></li>
+                        <li><a href="">Link 3</a></li>
+                        <li><a href="">Link 4</a></li>
+                        <li><a href="">Link 5</a></li>                        
+                    </ul>
+                </div>                
+                <div class="container">
+                    <h5>
+                        Nuestra Misión
+                    </h5>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>          
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>                    
+                </div>
+                <div class="container">
+                    <h5>Visitanos</h5>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1673.5604294085454!2d-60.647548641807454!3d-32.97421304522823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7aba497cefcb3%3A0x2360fada20f0529c!2sFruter%C3%ADa%20y%20Verduler%C3%ADa%20Miguel!5e0!3m2!1ses-419!2sar!4v1591577767984!5m2!1ses-419!2sar"
+                        width="300" 
+                        height="300" 
+                        frameborder="0" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        aria-hidden="false" 
+                        tabindex="0">
+                    </iframe>    
+                </div>
+            </footer>            
+        </main>
+    </body>
+</html>
