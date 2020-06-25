@@ -12,6 +12,7 @@
         /*structure*/ 
         body {
           background: linear-gradient(45deg,#08aeea,#b721ff);
+          background-repeat: no-repeat;
           font-family: 'Open Sans', sans-serif;
           text-transform: capitalize;
           text-align: justify;
@@ -86,7 +87,7 @@
             margin: 4%;
         } 
 
-          .company, .email {
+        .company, .email {
           display: flex;
           flex-direction: row;
           align-items: baseline;
@@ -179,7 +180,7 @@
         }
    
             /*submit btn*/
-        #register input{
+          #register input{
             display: block;
             position: relative;
             padding: 2% 2% 2% 2%;
@@ -201,7 +202,76 @@
               color: #ffffff;
           }
 
-       </style>
+
+          /*Tablet*/
+          @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+            header {
+              width: 34rem;
+            }
+
+            section {
+              display: block;
+              width: 33rem;
+            }
+
+            .subject select {
+              width: 28rem;
+            }
+
+            .name {
+              width: 20rem;
+            }
+            #last_name{
+              margin:0% 10% 0% 20%;
+            }
+
+            #phone_number{
+              margin:0% 10% 0% 20%;
+            }
+          }
+
+            /*Smartphone/Iphone*/
+            @media only screen and (min-device-width: 300px) and (max-device-width: 720px) {
+            
+            header {
+              font-size: small;
+            }
+            section {
+              display: block;
+              font-size: small;
+            }
+
+            .subject select {
+              width: 7rem;
+            }
+
+            .name {
+              width: 10rem;
+            }
+
+            .company, .email {
+              display: block;
+              margin:0% 5% 0% 5%;
+            }
+
+            .company input, .email input {
+              width: 10rem;
+            }
+
+            .phone {
+              width: 10rem;
+            }
+
+            #last_name{
+              margin:0% 5% 0% 5%;
+            }
+
+            #phone_number{
+              margin:0% 30% 0% 5%;
+            }
+          }
+
+    </style>
     </head>
     <body>
       <main>
@@ -222,7 +292,7 @@
                           name="first_name"/>
                           <label for="first_name">first name</label>
                       </div>
-                      <div>
+                      <div id="last_name">
                           <input
                           class="name"
                           type="text"
@@ -259,7 +329,7 @@
                           name="area_code"/>
                           <label for="area_code">area code</label>
                       </div>
-                      <div> 
+                      <div id="phone_number"> 
                         <input
                           class="phone"
                           type="number"
