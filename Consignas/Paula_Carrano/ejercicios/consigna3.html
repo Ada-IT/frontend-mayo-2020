@@ -24,6 +24,7 @@
           color:#ffffff;
           text-transform: uppercase;   
           text-align: center; 
+          width: 68%;
           margin: 5% 15% 0% 15%;
           padding: 1% 1% 1% 1%;
           border-radius: 2rem 2rem 0rem 0rem;
@@ -31,27 +32,29 @@
       
         section {
           background-color: #ffffff;
-          margin: 0% 15% 3% 15%;
+          width: 66%;
+          margin: 0%15% 3% 15%;
           padding: 2% 2% 2% 2%;
           border-radius: 0rem 0rem 2rem 2rem;
-        }
+          align-content: stretch;        
+          }
 
           h4 {
             color:#525151;
             font-weight: bold;
-            margin: 4%;
+            margin: 6%;
             display: flex;
             justify-content: flex-start;
         }
 
         input {
             color:#312f2f;
-            border-radius: 0.5rem;
-            margin: 2%;  
+            border-radius: 0.5rem;  
             border: none;
             height:3rem;
             background-color:#e5e5e5;
             align-items: flex-start;
+            width: 59%;
         }
 
         div {
@@ -59,30 +62,29 @@
         }
 
          /*inputs design */
-         .name{
-             width: 16rem;
-             margin:0% 15% 0% -2.5%;
+                 
+         .col {
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            width: 100%;
          }
 
+         .name{
+             width: 100%;
+             }
+
          .area_code{
-            width: 10rem;
-            margin:0% 30% 0% -3%;
+          width: 100%;
          }
          
          .phone {
-             width:22rem;
-             margin:0% 15% 0% -4%;
-         }
-         
-         .col {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: baseline;
+          width: 94%;
          }
 
          label {
             color:#8b8989;
-            font-weight:normal;
+            font-weight:bold;
             font-size: small;
             margin: 4%;
         } 
@@ -93,32 +95,27 @@
           align-items: baseline;
        }
 
-       .email input {
-         width: 36rem;
-         margin-left: 3.5%;
-       }
-
-       .company input {
-        width: 36rem;
-        margin-left: 0%;
+      .email input {
+          margin: 4%;
        }
 
         .subject {
-          display:inline-flex;          
           color:#525151;
-          justify-content: flex-start;
-          margin: 2% 0% 0% 3%;  
-
+          margin: 0% 0% 0% 2.5%;  
+          display: flex;
+          flex-wrap: wrap;
+          align-items: baseline;
         }
 
         .subject select {
           background-color:#e5e5e5;
           border: none;
           color:#525151;
-          text-align: center;
+          font-weight: bold;
           border-radius: 0.5rem;
-          width: 42rem;
-          margin-left: 3%;
+          width: 60%;
+          height:3rem;
+          margin-left: 2%;
         }
 
         .client {
@@ -142,8 +139,7 @@
             display: inline-block;
             position: relative;
             padding: 0 2px;
-            margin: 0 0 0;
-        }
+          }
 
         .radio-item input[type='radio'] {
             display: none;
@@ -185,12 +181,12 @@
             position: relative;
             padding: 2% 2% 2% 2%;
             margin: 2% 2% 2% 6%;
-            background-color: #909091;
+            background-color:#ff3d4e;
             font-style: oblique;
             color: #ffffff;
             border-radius: 1rem;
             cursor: pointer;
-            width: 10rem;
+            width: 20%;
           }
 
           #register :hover{
@@ -204,72 +200,91 @@
 
 
           /*Tablet*/
-          @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-            header {
-              width: 34rem;
+        
+          @media only screen and (min-device-width: 768px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+            input {
+              display:block;
+              flex-direction: column;
+              flex-wrap: wrap;
+            }
+            
+            .company {
+              margin-left:2%;
             }
 
-            section {
-              display: block;
-              width: 33rem;
+            #name {
+              width: 60%;
+            }
+           
+            .area_code {
+              width: 30%;
+            }
+            #phone_number {
+              width: 63%;
+              margin-left: 23.5%;
             }
 
-            .subject select {
-              width: 28rem;
-            }
-
-            .name {
-              width: 20rem;
-            }
-            #last_name{
-              margin:0% 10% 0% 20%;
-            }
-
-            #phone_number{
-              margin:0% 10% 0% 20%;
+            #register input{
+              padding:3% 2% 2% 4%;
+              margin: 2% 2% 2% 7%;
             }
           }
 
             /*Smartphone/Iphone*/
             @media only screen and (min-device-width: 300px) and (max-device-width: 720px) {
             
-            header {
-              font-size: small;
-            }
-            section {
-              display: block;
-              font-size: small;
-            }
-
-            .subject select {
-              width: 7rem;
-            }
-
-            .name {
-              width: 10rem;
-            }
-
-            .company, .email {
-              display: block;
-              margin:0% 5% 0% 5%;
+              header{
+                width: 90%;
+                margin: 2% 0% 0% 2%;
+              }
+              section {  
+                width: 88%;
+                margin: 0% 0% 2% 2%;
+              }
+            
+              input {
+              display:block;
+              flex-direction: column;
+              flex-wrap: wrap;
+              width: 100%;
             }
 
-            .company input, .email input {
-              width: 10rem;
+            .company, .email, .subject{
+              display:block;
+              flex-direction: column;
+              width: 85%;
             }
 
-            .phone {
-              width: 10rem;
+            .company input {
+              margin: 4%;
             }
 
-            #last_name{
-              margin:0% 5% 0% 5%;
+            .subject select{
+              width: 100%;
+              text-align: center;
             }
 
-            #phone_number{
-              margin:0% 30% 0% 5%;
+              #name {
+              width: 90%;
             }
-          }
+           
+              .area_code {
+              width: 40%;
+            }
+
+             #phone_number {
+              width: 90%;
+  
+            }
+
+              #register input{
+              width: 80%;
+              padding: 5% 20% 5% 25% ;
+              margin-left: 10%;
+              text-transform: uppercase;
+              text-align: center;
+            }
+            }
 
     </style>
     </head>
@@ -279,10 +294,11 @@
           <h1>event registration form</h1>
         </header>
           <article>
-            <section id="section">
+            <section>
               <form action="consigna3.html" method="POST">
                 <div class="col">
-                <h4 id="name">name</h4>
+                <h4>name</h4>
+                    <div id="name">
                     <div>
                         <input
                           class="name"
@@ -301,6 +317,7 @@
                           name="last_name"/>
                         <label for="last_name">last name</label>
                         </div>
+                      </div>
                  </div>
                 <div class="company">
                   <h4>company</h4>
