@@ -14,6 +14,8 @@
     <title>Galeria de Fotos - Grids CSS</title>
     <!-- Este tipo de galeria es aplicada en sitios como Unsplash, Pinterest y otros.
           Aquí podremos ver las tecnicas aprendidas de grid CSS.
+    CREAR RAMA galeria_de_fotos desde desarrollo 
+    Copiar archivo html y carpeta img a su carpeta de consignas. 
     Requerimientos: 
     - La galeria se debe ver como en las fotos :
     1.png (Desktop)
@@ -23,6 +25,15 @@
     - Se debe aplicar lo aprendido en Grids CSS
     - El titulo siempre se debe visualizar en 1 sola linea.  
     - El css contendrá al menos 2 media queries.
+    medias queries requeridas:
+    Para tablets :
+    @media (min-width: 768px) and (max-width: 1024px)  
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) 
+    Para celulares:
+    @media (min-width: 320px) and (max-width: 767px)     
+    
+    REVISAR FOTOGRAFIAS DE EJEMPLOS
+
     -->
     <style>
         *,
@@ -86,7 +97,10 @@
 
         .gallery__item--6 {
         }      
-    </style> 
+        @media (min-width: 768px) and (max-width: 1024px)  {}
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}        
+        @media (min-width: 320px) and (max-width: 767px) {}     
+   </style> 
   </head>
   <body>
     <main class="container">
