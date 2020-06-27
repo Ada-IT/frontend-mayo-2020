@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang=es>
+    <head>
+        <title>Formulario</title>
+    <style>
+        body {
+            background: -webkit-linear-gradient(top, #08aeea, #b721ff);
+            width: 100%;
+                }
+        
+       
+        .box {
+            overflow:hidden;
+            padding-bottom: 30px;
+            -webkit-border-radius: 5px;
+            border-radius: 10px;
+            margin-left:300px;
+            margin-right: 300px;
+            color: #1a1a1a;
+            background-color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            vertical-align: middle; 
+                }
+
+        h1 {
+            overflow:hidden;
+	        padding:20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            text-align: center;
+            color: #fff;
+            background-color: #1a1a1a;
+            margin-top: initial;
+            margin-left: initial;
+            margin-right: initial;
+             }
+
+        
+        label {
+            padding-left: 30px;
+            display:inline-block;
+            
+        }
+        
+        .contenedor-inputs {
+            padding: 10px 30px;
+              }
+        
+        .form-group {
+
+        }
+
+        input {
+            overflow: hidden;
+            border: #e5e5e5;
+            border-radius: 5px;
+            background-color: #e5e5e5;
+            padding: 10px;
+            
+                }
+        
+        .input-48 {
+            width: 35%;         
+                }
+
+        .input-100 {
+            width: 70%;            
+        }
+
+        .input-30 {
+            width: 10%;
+        }
+        
+        .input-70 {
+            width: 50%;
+        }
+        select {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 14px;
+            margin-left: 30px;
+            border: 1px solid #e5e5e5;
+            border-radius: 5px;
+            width: 200px;
+            height: 30px;
+            background-color: #e5e5e5;
+                }
+        
+        .contenedor {
+            border: 1px solid #e5e5e5;
+            border-radius: 1em;
+            overflow: hidden;
+            width: 100px;
+            height: 15px;
+            display: inline-flex;
+            justify-content: space-around;
+            flex-flow: column wrap;
+                    }
+
+        .contenedor3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            text-align: center;
+            color: #fff;
+            background-color: #ff4b5a;
+            width: 150px;
+            height: 40px;
+            margin-left: 40px;
+                    }
+        .contenedor3:hover {
+            color: #eb3746;
+                    }
+        
+        .contenedor4 {
+            margin-left: -40px;
+            display: -webkit-flex;
+            align-content: flex-start;
+                    }
+        
+        h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            padding-left: 40px;
+        }
+
+        figcaption {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            color:  #D1CEBD;
+            
+            }
+
+ 
+        
+
+    </style>
+    </head>
+    <body>
+        <main>
+            <article>
+                <section id="formulario">
+                <div class="box">
+                    <h1>EVENT REGISTRATION FORM</h1>
+                <div class="contenedor-inputs">
+                    <form action="consigna-3.html" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input  class="input-48" 
+                                id="nombre" 
+                                type="text" 
+                                minlength="3" 
+                                maxlength="20" 
+                                name="name">
+                        <figcaption>First name</figcaption>
+                        <input  class="input-48"
+                                id="nombre" 
+                                type="text" 
+                                minlength="3" 
+                                maxlength="20" 
+                                name="name"
+                            >
+                            <figcaption>Last name</figcaption>
+                        </div>
+                        <br>
+                        <br>
+                        <div clas="form-group">
+                        <label for="company">Company</label>
+                        <input 
+                                class="input-100"        
+                                id="company" 
+                                type="text" 
+                                minlength="3" 
+                                maxlength="20" 
+                                name="company"
+                            >
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input  class="input-100"
+                                id="email" 
+                                type="email" 
+                                name="email"                                
+                            >
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input  class="input-30"
+                                id="phone" 
+                                type="number"  
+                                name="phone">
+                            <figcaption>Area Code</figcaption>
+                            <input  class="input-70"
+                            id="phone" 
+                            type="number"  
+                            name="phone">
+                            <figcaption>Phone number</figcaption>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select name="subject" id="subject" class="input-100">
+                            <option hidden selected>Choose an option...</option>
+                            <option value="1">Departamento de soporte</option>
+                            <option value="2">Departamento de ventas</option>
+                            <option value="3">Departamento de reclamos</option>
+                    </select>
+                    </div>
+                        <br>
+                        <br>
+                        <div>
+                        <h3>Are you an existing costumer?</h3>
+                        <div >
+                            <input  class="contenedor"
+                                    name="costumer" 
+                                    type="radio" 
+                                    value="y"
+                                >
+                                <label>Yes</label>
+                                <br>                           
+                                <input 
+                                    class="contenedor"
+                                    name="costumer" 
+                                    type="radio" 
+                                    value="n">
+                                <label>No</label>
+                        </div>
+                        <br>
+                        <input class="contenedor3" type="submit" value="REGISTER">
+                    </form>
+                </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>
