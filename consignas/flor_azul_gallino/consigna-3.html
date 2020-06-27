@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang=es>
     <head>
-        <title>Consigna-3</title>
+        <title>Event registration from</title>
         <style>
-            /* Estructura */
+            /* -----Estructura----- */
             body{
                 font-family: Helvetica Neue;
                 font-size: 16px;
                 background: linear-gradient(to bottom left, #b721ff, #08aeea);
                 background-repeat: no-repeat;
                 background-size: 2500px 1000px;
-                height: 750px;
+                color:#4d4d4d;
             }
             section{
                 background-color: #ffffff;
                 border-radius: 10px;
                 display: block;
                 margin: auto;
-                width: 50%;
+                width: 70%;
             }
             h2 {
                 background-color: #1a1a1a;
@@ -45,53 +45,60 @@
                 border-radius: 5px;
             }
             input.register {
+                text-align: justify;
                 background-color: #ff4b5a;
-                width: 150px;
-                text-align: center;
+                width: 100px;
+                color: white;
             }
-            p {
-                display: inline-flex;
-                color: gray;
-                font-size: 12px;
+            label {
+                font-weight: bold;
+            }
+            input.register:hover {
+                background-color: #eb3746;
             }
 
-            /* Forma */
+            /* -----Forma----- */
             
             label, input {
               display: inline-flex;
             }
             label {
                 width: 20%;
-                
             }
             input.customer {
                 width: 50px;
             }
             input {
                 margin-bottom: 20px;
-                width: 340px;
             }
             #name, #lastname {
-                width: 153px;
+                display: inline-flex;
+                width: 30%;
+            }
+            #email, #company {
+                display: inline-flex;
+                width: 67%;
             }
             #areacode {
-                width: 50px;
+                display: inline-flex;
+                width: 20%;
             }
             #phone {
-                width: 255px;
+                display: inline-flex;
+                width: 40%;
             }
             select {
-                width: 370px;
-            }
-            input.customer {
-                width: 50px;
+                display: inline-flex;
+                width: 72.5%;
             }
 
-            /* validación de email */
+            /* ----validación de email---- */
             input[type="email" ]:invalid {
                 background-color: #ff4b5a!important;
             } 
-            
+
+            /* -----Fin de Diseño----- */
+
         </style>
     </head>
     <body>
@@ -101,14 +108,12 @@
                     <div>
                         <h2>EVENT REGISTRATION FROM</h2>
 
-                        <form action="registration" method="POST">
+                        <form action="consigna-3.html" method="POST">
 
                         <div class="name">
                             <label for="name">Name</label>
                             <input id="name" type="text" name="name" minlength="3" maxlength="20">
                             <input id="lastname" type="text" name="lastname" minlength="3" maxlength="20">
-                            <p>First Name</p>
-                            <p>Last Name</p>
                         </div>
 
                         <div class="company">
@@ -125,8 +130,6 @@
                             <label for="phone">Phone</label>
                             <input id="areacode" type="number" name="areacode" min="3" max="6">
                             <input id="phone" type="number" name="phone">
-                            <p>Area Code</p>
-                            <p>Phone Number</p>
                         </div>
 
                         <div class="subjet">
@@ -142,10 +145,10 @@
                         <div>
                             <h4>Are you an existing customer?</h4>
                             <br>
-                            <input class="customer" name="customer" type="radio" value="y">
-                            <label for="customer">Yes</label>
-                            <input class="customer" name="customer" type="radio" value="n">
-                            <label for="customer">No</label>
+                            <input name="customer" type="radio" value="y">
+                            <label id="customer" for="customer">Yes</label>
+                            <input name="customer" type="radio" value="n">
+                            <label id="customer" for="customer">No</label>
                         </div>
                         <br>
                         <div class="register">
