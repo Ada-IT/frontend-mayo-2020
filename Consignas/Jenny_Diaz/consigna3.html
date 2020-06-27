@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Event Registration Form</title> 
+        <style>
+            body{
+                background-size: auto;                
+                font-family: Arial, Helvetica, sans-serif;
+                color: #465053;
+                font-size: 15px; 
+            }
+            #degradado {
+                background: -webkit-linear-gradient(left bottom, #08aeea , #b721ff); /* For Safari 5.1 to 6.0 */
+                background: -o-linear-gradient(top right, #08aeea , #b721ff); /* For Opera 11.1 to 12.0 */
+                background: -moz-linear-gradient(top right, #08aeea , #b721ff); /* For Firefox 3.6 to 15 */
+                background: linear-gradient(to top right, #08aeea , #b721ff); /* Standard syntax */
+            }
+            
+            .contenedor{
+                    margin: auto;
+                    width: 50%;
+                    border-radius: 12px; 
+                    background-color: #ffffff;                     
+                    padding:5px; 
+                                                      
+            }
+            .titulo{
+                border-radius: 12px 12px 0px 0px ;
+                background-color: #1a1a1a;
+                border: 1px solid #1a1a1a;
+                color: #ffffff;
+                margin: 0;
+                padding:10px;                
+                font-size: 20px;
+                text-align: center;
+            }
+            
+           
+            input {
+                display: flex;
+                justify-content: flex-center;
+                align-items: center;
+                margin-left: 25px;
+                background-color: #e5e5e5;
+                border: none;
+                border-radius: 3px;
+                padding: 10px;
+                width: 100%;           
+            }
+            select{
+                display: flex;
+                justify-content: flex-center;
+                align-items: center;
+                margin-left: 25px;
+                background-color: #e5e5e5;
+                border: none;
+                border-radius: 3px;
+                padding: 10px;
+                width: 100%;
+            }
+            h3{
+                display: flex;
+                justify-content: flex-start;
+                min-width: 20%;
+            }
+            .align {
+                display: flex;
+                margin: 5%;
+            }
+            .titulo-radio{
+                display: flex;
+                margin-left: 5%;   
+            }
+            .radio{
+                display: flex;
+                justify-content: flex-start;
+                width: 200px;
+                margin-bottom: 5%;
+            }
+          
+            .login-validation input[type="email"]:focus{
+                input:valid {
+                                            background-color: lightgreen;
+                                            }
+                                            input:invalid {
+                                                background-color: lightsalmon;
+                                            } 
+            }
+            .button{
+                font-size: 15px;
+                font-weight: bold;
+                border-radius: 6px;
+                color: #ffffff;
+                margin: 5%; 
+                background-color: #ff4b5a;
+                padding: 10px;
+                width: 14%;
+                cursor: pointer;
+            }
+            .button:hover{
+                background-color: #eb3746;
+            }
+            @media screen and (max-width: 600px){
+                body{
+                    font-size: 10px;
+                }
+                .contenedor{
+                    width: 100%;
+                }  
+                .titulo{
+                    font-size: 15px;
+                }  
+                .align{
+                    flex-direction: column;
+                }
+                 
+            }
+
+        </style>       
+    </head>
+    <body id="degradado">
+        <main>
+            <header>
+                <nav>
+                </nav>
+            </header>                        
+            <article>
+                <section>                
+                    <div class="contenedor">
+                        <div class="titulo">
+                            <h1>EVENT REGISTRATION FORM</h1>
+                        </div>
+                        
+                        <div>
+                            <form action="consigna3.html" method="POST">
+                                <div>
+                                    
+                                    <div class="align">
+
+                                        <h3>Name</h3>
+
+                                        <input
+                                        id="first_name"
+                                        type="text"
+                                        minlength="3"
+                                        maxlength="20"
+                                        name="first_name"
+                                        />
+                                        <input
+                                        id="last_name"
+                                        type="text"
+                                        minlength="3"
+                                        maxlength="20"
+                                        name="last_name"
+                                        />
+                                    </div>
+                                   
+                                    <div class="align">
+                                        <h3>Company</h3>
+                                        <input
+                                        id="company"
+                                        type="text"
+                                        minlength="3"
+                                        maxlength="20"
+                                        name="company"
+                                        />
+                                    </div>
+                                    
+                                    <div class="align">
+                                        <h3>Email</h3>
+                                        <input 
+                                            id="email" 
+                                            type="email" 
+                                            name="email"                                
+                                        />
+                                        </div>
+                                    
+                                    <div class="align">
+                                       
+                                        <h3>Phone</h3>
+                                        
+                                        <input 
+                                            id="area_code" 
+                                            type="number" 
+                                            min="3" 
+                                            max="3" 
+                                            name="area_code" 
+                                        />
+                                        <input 
+                                            id="phone" 
+                                            type="number" 
+                                            min="10" 
+                                            max="10" 
+                                            name="phone" 
+                                        />
+                                    </div>
+                                    <div class="align">
+
+                                        <h3>Subject</h3>  
+
+                                        <select name="subject" id="subject" type=>
+                                            <option value="default" disabled selected>Choose Option</option>
+                                            <option value="support">Support Department</option>
+                                            <option value="sales">Sales Department</option>
+                                            <option value="claim">Claims Department</option>
+                                        </select>
+                                    </div>
+                                
+                                    <div class="titulo-radio">
+
+                                        <h3>Are you an existing customer?</h3>
+                                    </div>
+                                        <div class="radio">
+                                            <input 
+                                                name="customer" 
+                                                type="radio" 
+                                                value="y"
+                                            />
+                                            <label>Yes</label>
+                                            <input 
+                                                name="customer" 
+                                                type="radio" 
+                                                value="n"
+                                            />
+                                            <label>No</label>  
+                                        </div>                              
+                                    
+                                </div>
+                                <input class="button" type="submit" value="REGISTER"  />
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>
