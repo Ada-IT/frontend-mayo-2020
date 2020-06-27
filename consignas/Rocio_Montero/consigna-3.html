@@ -9,10 +9,15 @@
     <style>
         * {
   border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 body {
   background: linear-gradient(to top left, #08aeea, #b721ff); 
+  background-repeat: no-repeat;
   font-family: Open Sans, Helvetica Neue;
+  padding-top: 20px;
 }
 #formSection {
 width: 600px;
@@ -20,27 +25,38 @@ margin: 0 auto;
 }
 h1 {
   line-height: 100px;
-  background: #000;
+  background:#1a1a1a;
   margin: 0;
-  color: #fff
+  color: #fff;
   border-radius: 15px 15px 0 0;
   text-align: center;
+  padding: 15px 0;
 }
 form {
 background: #fff;
+padding: 40px;
 }
-input {
+input, select {
   background: #e5e5e5;
   padding: 5px;
   font-size: 20px;
   border-radius: 5px;
 }
+select {
+  width: 300px
+}
 .button {
   background: #ff4b5a;
   color: white;
   border-radius: 10px;
-  width: 100px;
-  text-align: center;
+  width: 125px;
+  font-size: 15px;
+  text-align: center;}
+  a:hover {
+  background-color: yellow;
+}
+div{
+  display: block;
 }
         </style>
   </head>
@@ -53,43 +69,49 @@ input {
         <section id="formSection">
           <h1>EVENT REGISTRATION FORM</h1>
           <div>
-            <form action="formulario.html" method="POST"> 
-            <label for="name">Name</label>
-            <br/>
-            <label for="fname">First Name</label>
-              <input id="fname" type="text" minlength="3" maxlength="20" name="fname"/>
-            <label for="lname">Last Name</label>
-              <input id="lname" type="text" min="3" max="20"name="lname"/>
-              <br/><br/>
-            <label for="company">Company</label>
+            <form action="consigna-3.html" method="POST"> 
+              <table>
+                <tr>
+                  <td>
+                    <label for="name">Name</label>
+                  </td>
+                  <td>
+
+                  </td>
+                </tr>
+              </table>
+              <label for="fname">First Name</label>
+                <input id="fname" type="text" minlength="3" maxlength="20" name="fname"/>
+              <label for="lname">Last Name</label>
+                <input id="lname" type="text" min="3" max="20"name="lname"/>
+                
+              <label for="company">Company</label>
+
               <input id="company" type="text" min="3" max="20" name="company"/>
-              <br/><br/>
-            <label for="email">E-mail</label>
-              <input id="email" type="text" min="3" max="20" name="email"/>
-                           <br/>
-               <br/>
-            <label for="phone">Phone</label>
-              <input id="areacode" type="tel" min="3" max="3" name="areacode" required>
-              <input id="phonenumber" type="tel" min="7" max="7" name="phonenumber"required>
-             <br/>
+                
+              <label for="email">E-mail</label>
+                <input id="email" type="text" min="3" max="20" name="email"/>
+              <label for="phone">Phone</label>
+                <input id="areacode" type="tel" min="3" max="3" name="areacode" required>
+                <input id="phonenumber" type="tel" min="7" max="7" name="phonenumber"required>
+              <div class="dropdown">
+                <label for="select">Subject</label>
+              <select class="dropbtn" name="select">
+                  <option value="">Support</option>
+                  <option value="">Sales</option>
+                  <option value="">Claim</option>
+              </select>
+                  </div>
               <br/>
-             <div class="dropdown">
-            <select class="dropbtn">Subject
-                <option value="">Support</option>
-                <option value="">Sales</option>
-                <option value="">Claim</option>
-            </select>
-                </div>
-             <br/>
-            <br/>
-              <label for="check">Are you an existing customer?</label>
-                <input type="checkbox" name="check" id="check" value="test" />
-                yes 
-                <input type="checkbox" name="check" id="check" value="test" />
-                no
               <br/>
+                <label for="check">Are you an existing customer?</label>
+                  <input type="radio" name="check" value="yes" />
+                  yes 
+                  <input type="radio" name="check" value="no" />
+                  no
                 <br/>
-                <input type="Register" class="button" value="Register">
+                <br/>
+                <input type="button" class="button" value="REGISTER">
               <br/>
             </form>
           </div>
