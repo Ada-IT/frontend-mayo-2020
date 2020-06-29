@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <style>
+        html {
+            font-family: 'Open Sans', 'Helvetica Neue';
+            background: linear-gradient(#978c9c, #08aeea) no-repeat;
+            background-attachment: fixed;
+            height: 100%;
+        }
+
+        /* css del formulario */
+        .register-form {
+            border-radius: 10px;
+            background-color: #ffffff;
+            display: block;
+            width: 700px;
+            margin: 0 auto;
+            height: auto;
+        }
+
+        /* titulo del formulario dentro del formulario*/
+        .register-form h1 {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            margin: 0;
+            text-align: center;
+            text-transform: uppercase;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        /* css general de los campos de input y select*/
+        input,
+        select {
+            padding: 15px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e5e5e5;
+            margin-top: 30px;
+            color: #3f3f44;
+            font-weight: 750;
+
+        }
+
+        /*css para ajustar el contenido de las columnas y el ancho de los inputs*/
+        .column {
+            width: 33%;
+            float: left;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .column-q {
+            /*Columna con pregunta*/
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .column-2 {
+            width: 67%;
+            float: left;
+        }
+
+        .column-2 input {
+            width: 400px;
+        }
+
+        .column-2 select {
+            width: 420px;
+        }
+
+        .column-3 {
+            width: 15%;
+            float: left;
+        }
+
+        .column-3 input {
+            width: 75px;
+        }
+
+        .column-33 {
+            width: 52%;
+            float: left;
+        }
+
+        .column-33 input {
+            width: 297px;
+        }
+
+        /* css para los nombres de cada categoria*/
+        .label-1 {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            color: #3f3f44;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        /* css para la descripcion de los inputs*/
+        .labelsub {
+            color: #949494;
+            font-weight: 500;
+            font-size: small;
+        }
+
+        /*css para la categoria de pregunta*/
+        .question {
+            margin-top: 35px;
+            color: #3f3f44;
+        }
+
+
+        /*css para estilar y alinear la categoria de pregunta y el boton de submit 
+        con el resto del css sin repetir el codigo*/
+        .foot-form {
+            color: #3f3f44;
+            font-weight: bold;
+            margin-left: 85px;
+        }
+
+        /*css para pa el boton de submit del formulario de regitro*/
+        .submit {
+            padding-bottom: 50px;
+            margin-left: 85px;
+        }
+
+        .input-submit {
+            padding-left: 50px;
+            padding-right: 50px;
+            color: #ffffff;
+            background-color: #1a1a1a;
+            text-transform: uppercase;
+
+        }
+
+        .input-submit:hover {
+            background-color: #f06d78;
+        }
+
+        /*css para la validacion de email*/
+        input[type="email"]:invalid {
+            background-color: #fd4848 !important;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 850px) {
+            .register-form {
+                width: 320px;
+            }
+            .column{
+                float: none;
+            
+            }
+            
+        .column-2 input {
+            width: auto;
+        }
+
+        .column-2 select {
+            width: auto;
+        }
+        .column-3{
+            float: none;
+        }
+        .column-33 input{
+            width: auto;
+            float: none;
+        }
+        .label-1{
+            margin-left: 60px;
+            justify-content: start;
+            font-size: large;
+        }
+        input, select{
+            margin-left: 60px;
+            
+        }
+        .labelsub{
+            margin-left: 60px;
+            flex-direction: row;
+        }
+        .foot-form{
+            margin-left: 60px;
+        }
+      .submit{
+          margin-left: 15px;
+      }
+        /*esta clase es para alinear los input radio cuando se apliquen las media queries*/
+        .answer-mq{
+            margin-left: 0;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <article>
+            <section class="register-form">
+                <h1>event registration form</h1>
+                <div>
+                    <!--Este div contiene el formulario de registro-->
+                    <form action="">
+                        <!--Empieza el formulario-->
+                        <div>
+                            <!--Div fila 1, name, a dividir en tres-->
+                            <div class="column">
+                                <label class="label-1" for="name">Name</label>
+                            </div>
+                            <div class="column">
+                                <input type="text" id="firstname" name="firstname" maxlength="20">
+                                <br>
+                                <label class="labelsub" for="firstname">FirstName</label>
+                            </div>
+                            <div class="column">
+                                <input type="text" id="lastname" name="lastname" maxlength="20">
+                                <br>
+                                <label class="labelsub" for="lastname">LastName</label>
+                            </div>
+                        </div>
+                        <div>
+                            <!--Div fila 2, a dividir en dos-->
+                            <div class="column">
+                                <label class="label-1" for="company" name="company">Company</label>
+                            </div>
+                            <div class="column-2">
+                                <input type="text" id="company" name="company" maxlength="20">
+                            </div>
+                        </div>
+                        <div>
+                            <!--Div fila 3, a dividir en dos-->
+                            <div class="column">
+                                <label class="label-1" for="email" id="email" name="email">Email</label>
+                            </div>
+                            <div class="column-2">
+                                <input type="email" id="email" name="email" class="email.validation">
+                            </div>
+                        </div>
+                        <div>
+                            <!--Div fila 4, a dividir en tres pero con tamaños diferentes a la fila 1-->
+                            <div class="column">
+                                <label class="label-1" for="phone">Phone</label>
+                            </div>
+                            <div class="column-3">
+                                <input type="number" id="area-code" name="area-code">
+                                <br>
+                                <label class="labelsub" for="area-code">AreaCode</label>
+                            </div>
+                            <div class="column-33">
+                                <input type="number" id="phone-number" name="phone-number">
+                                <br>
+                                <label class="labelsub" for="phone-number">Phone Number</label>
+                            </div>
+                        </div>
+                        <div>
+                        
+                            <!--Div fila 5, a dividir en dos-->
+                            <div class="column">
+                                <label class="label-1" for="subject">Subject</label>
+                            </div>
+                            <div class="column-2">
+                                <select name="subject" id="subject">
+                                    <option value="">Choose option</option>
+                                    <option value="support">Support Deparment</option>
+                                    <option value="sales">Sales Deparment</option>
+                                    <option value="claim">Claims Deparment</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="foot-form">
+                            <!--Esta clase es para no repetir codigo-->
+                            <div>
+                                <!--Div fila 6, seccion de pregunta-->
+                                <div class=column-q>
+                                    <!--este class es para alinearlo con las demas columnas-->
+                                    <label class="question" for="">Are you an existing customer?</label>
+                                </div>
+                                <input type="radio" value="y" name="answer" class="answer-mq">
+
+                                <label for="">Yes</label>
+
+                                <input type="radio" value="n" name="answer">
+                                <label for="">No</label>
+
+                            </div>
+                        </div>
+                        <!--Boton submit-->
+                        <div class="submit">
+                            <input class="input-submit" type="submit" value="register">
+                        </div>
+                </div>
+                </form>
+
+                </div>
+
+
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>
