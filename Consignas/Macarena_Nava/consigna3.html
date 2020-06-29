@@ -2,12 +2,120 @@
 <html lang= "es">
     <head>
         <title>Formulario de consigna 3</title>
+        <meta charset= "UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+
+        <style>
+             input[type="email" i]:valid 
+            {background-color: green!important;
+            }
+                            
+            input[type="email" i]:invalid 
+            { background-color: red!important;
+            } 
+
+            select:required:invalid {
+                color:#000;
+            }
+            option[value=""][disable] {
+                display:none;
+            }
+        </style>
     </head>
     <body>
         <main>
             <header>
                 <article>
                     <section>
+                    <div>
+                        <form action= consigna3.html method=POST>
+                        <h1>Event Registration Form</h1>
+                    <div>
+                    <div>
+                        <form action= "consigna3.html" method=POST>
+                            <div>
+                                <h3>Name</h3>                            
+                                <input 
+                                id="name" 
+                                type="text" 
+                                minlength="3" 
+                                maxlength="20"
+                                name="name"
+                                >
+                                <label for="name">First Name</label>
+                                <input 
+                                id="lastname" 
+                                type="text" 
+                                minlength="0" 
+                                maxlength="20"
+                                name="name"
+                                >
+                                <label for="name">Last Name</label>
+                            </div>
+                            <div>
+                                <h3>Company</h3>
+                                <label for="company"></label>
+                                <input 
+                                id="company" 
+                                type="text" 
+                                minlength="0" 
+                                maxlength="20"
+                                name="company"
+                                >
+                            </div> 
+                            <div>
+                                <h3>Email</h3>
+                                <label for="email"></label>
+                                <input 
+                                id="email" 
+                                type="email" 
+                                name="email"
+                                >
+                            </div>
+                            <div>
+                                <h3>Phone</h3>
+                                <input 
+                                id="areacode" 
+                                type="tel" 
+                                name="phone"
+                                >                                
+                                <label for="phone">Area Code</label>
+                                <input 
+                                id="phone" 
+                                type="tel" 
+                                name="phone"
+                                >
+                                <label for="phone">Phone Number</label>
+                            </div>
+                            <div>
+                            <h3>Subject</h3>
+                             <label for="subject"></label>
+                             <select name="subject" id="subject" required>
+                                 <option value="" disable selected>Choose option:</option>
+                                 <option value="support">Support Department</option>
+                                 <option value="sales">Sales Department</option>
+                                 <option value="claims">Claims Department</option>
+                             </select>
+                         </div>
+                         <div>
+                            <h4>Are you an existing customer?</h4>
+                                <input 
+                                name="customer" 
+                                type="radio" 
+                                value="y"
+                                >
+                                <label>Yes</label>                        
+                                <input 
+                                name="customer" 
+                                type="radio" 
+                                value="n"
+                                >
+                                <label>No</label>
+                            </div> 
+                            <input type="submit" value="Register">                       
+                         </div>
+                        </form>
+                    </div>
                     </section>
                 </article>
             </header>
