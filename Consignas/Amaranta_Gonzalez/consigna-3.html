@@ -119,7 +119,7 @@
             color: #3f3f44;
         }
 
-      
+
         /*css para estilar y alinear la categoria de pregunta y el boton de submit 
         con el resto del css sin repetir el codigo*/
         .foot-form {
@@ -152,7 +152,53 @@
             background-color: #fd4848 !important;
         }
 
-    
+        @media screen and (min-width: 320px) and (max-width: 850px) {
+            .register-form {
+                width: 320px;
+            }
+            .column{
+                float: none;
+            
+            }
+            
+        .column-2 input {
+            width: auto;
+        }
+
+        .column-2 select {
+            width: auto;
+        }
+        .column-3{
+            float: none;
+        }
+        .column-33 input{
+            width: auto;
+            float: none;
+        }
+        .label-1{
+            margin-left: 60px;
+            justify-content: start;
+            font-size: large;
+        }
+        input, select{
+            margin-left: 60px;
+            
+        }
+        .labelsub{
+            margin-left: 60px;
+            flex-direction: row;
+        }
+        .foot-form{
+            margin-left: 60px;
+        }
+      .submit{
+          margin-left: 15px;
+      }
+        /*esta clase es para alinear los input radio cuando se apliquen las media queries*/
+        .answer-mq{
+            margin-left: 0;
+        }
+        }
     </style>
 </head>
 
@@ -173,12 +219,12 @@
                             <div class="column">
                                 <input type="text" id="firstname" name="firstname" maxlength="20">
                                 <br>
-                                <label class="labelsub" for="firstname">First Name</label>
+                                <label class="labelsub" for="firstname">FirstName</label>
                             </div>
                             <div class="column">
                                 <input type="text" id="lastname" name="lastname" maxlength="20">
                                 <br>
-                                <label class="labelsub" for="lastname">Last Name</label>
+                                <label class="labelsub" for="lastname">LastName</label>
                             </div>
                         </div>
                         <div>
@@ -207,7 +253,7 @@
                             <div class="column-3">
                                 <input type="number" id="area-code" name="area-code">
                                 <br>
-                                <label class="labelsub" for="area-code">Area Code</label>
+                                <label class="labelsub" for="area-code">AreaCode</label>
                             </div>
                             <div class="column-33">
                                 <input type="number" id="phone-number" name="phone-number">
@@ -216,6 +262,7 @@
                             </div>
                         </div>
                         <div>
+                        
                             <!--Div fila 5, a dividir en dos-->
                             <div class="column">
                                 <label class="label-1" for="subject">Subject</label>
@@ -237,21 +284,21 @@
                                     <!--este class es para alinearlo con las demas columnas-->
                                     <label class="question" for="">Are you an existing customer?</label>
                                 </div>
-                                    <input type="radio" value="y" name="answer">
+                                <input type="radio" value="y" name="answer" class="answer-mq">
 
-                                    <label for="">Yes</label>
+                                <label for="">Yes</label>
 
-                                    <input type="radio" value="n" name="answer">
-                                    <label for="">No</label>
-                                
-                                </div>
-                            </div>
-                            <!--Boton submit-->
-                            <div class="submit">
-                                <input class="input-submit" type="submit" value="register">
+                                <input type="radio" value="n" name="answer">
+                                <label for="">No</label>
+
                             </div>
                         </div>
-                    </form>
+                        <!--Boton submit-->
+                        <div class="submit">
+                            <input class="input-submit" type="submit" value="register">
+                        </div>
+                </div>
+                </form>
 
                 </div>
 
