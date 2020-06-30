@@ -3,6 +3,8 @@
     <head>
         <title>Formulario de consigna 3</title>
         <meta charset= "UTF-8"/>
+        <meta name="viewport" content="width, user-scalable=no, initial-scale=1.0,
+        maximum-scale=1.0, minimum-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
 
         <style>
@@ -10,24 +12,27 @@
                 background: rgb(183,33,255);
                 background: linear-gradient(223deg, rgba(183,33,255,1) 5%, rgba(8,174,234,1) 100%);
                 background-attachment:fixed;
+                margin:0
             }
             .container {
                 margin-top: 30px;
                 margin-bottom: 30px;
+                width: 30%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 100%;
                 background-color: #ffffff;
-            }
+                position: absolute;
+                left: 50%;
+            }    
             .form {
                 background-color: #ffffff;
-                width:35%;
+
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-            }
-            @font-face {
+            }  
+                @font-face {
                 font-family: "helvetica-neue";
                 src: url(css/fonts/helvetica-neue.otf);
             }
@@ -35,9 +40,6 @@
                 font-family: "helvetica-neue";
                 color: #ffffff;
                 background-color: #1a1a1a;
-                display: flex;
-                flex-direction: column;
-                align-items:center
             }
             @font-face {
                 font-family: "opensans";
@@ -51,6 +53,8 @@
             }
             label {
                 font-family: "opensans";
+                display: flex;
+                justify-content: start;
             }
 
             input[type="email" i]:valid 
