@@ -6,10 +6,14 @@
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
 
         <style>
-            body {
+            body {                               
                 background: rgb(183,33,255);
                 background: linear-gradient(223deg, rgba(183,33,255,1) 5%, rgba(8,174,234,1) 100%);
                 background-attachment:fixed;
+            }
+            .container {
+                width: 40%;
+                background-color: #ffffff;
             }
             @font-face {
                 font-family: "helvetica-neue";
@@ -19,12 +23,19 @@
                 font-family: "helvetica-neue";
                 color: #ffffff;
                 background-color: #1a1a1a;
+                width:40%;
             }
             @font-face {
                 font-family: "opensans";
-                src: url(css/fonts/opensans.tff);
+                src: url(css/fonts/opensans.ttf);
             }
             h3 {
+                font-family: "opensans";
+            }
+            h4 {
+                font-family: "opensans";
+            }
+            label {
                 font-family: "opensans";
             }
 
@@ -46,9 +57,27 @@
             .register:hover {
                 color: #ffffff;
                 background-color: #eb3746;
+                font-family: "helvetica-neue";
+            }
+            .register {
+                background-color: #1a1a1a;
+                color: #ffffff;
+                font-family: "helvetica-neue";
+                height: 40px;
+                border-radius: 5%;
+
             }
             input{
                 background-color: #e5e5e5;
+                height: 40px;
+                border-color: #e5e5e5;
+                border-radius: 5%;
+            }
+            select {
+                background-color: #e5e5e5;
+                height: 40px;
+                border-color: #e5e5e5;
+                border-radius: 5%;
             }
             
         </style>
@@ -62,7 +91,7 @@
                         <form action= consigna3.html method=POST>
                         <h1>EVENT REGISTRATION FORM</h1>
                     <div>
-                    <div>
+                    <div class="container">
                         <form action= "consigna3.html" method=POST>
                             <div>
                                 <h3>Name</h3>                            
@@ -143,7 +172,7 @@
                                 >
                                 <label>No</label>
                             </div> 
-                            <input class="register" type="submit" value="Register">                       
+                            <input class="register" type="submit" value="REGISTER">                       
                          </div>
                         </form>
                     </div>
