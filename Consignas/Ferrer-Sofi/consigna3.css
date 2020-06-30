@@ -1,0 +1,88 @@
+/*
+Colores de Fondo: #08aeea , #b721ff
+Idea de mezcla de color : degrade
+Fondo blanco tabla: #ffffff
+Fondo inputs: #e5e5e5
+Cabecera negra: #lalala
+Boton register: #ff4b5a
+Hover boton register: #eb3746
+La fuente de la web debe ser "Open Sans" y "Helvetica Neue"
+*/
+/*div {    
+    input:valid {
+    background-color: #62eb62;}
+    input:invalid {
+    background-color: red;}
+}*/
+
+@media (max-width:660px) {
+    form {
+        width: 100%;
+    }
+}
+
+body{
+    font-size: 1rem;
+    min-height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle at 100% 0, #b721ff, #08aeea);
+    display: flex;
+    flex-direction: column;
+}
+/*width: 500px*/
+form{
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 550px;    
+    margin: 4rem auto auto auto;
+    padding: 0rem 2rem 2rem 2rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+}
+/*h1
+background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Open Sans';
+    text-align: center;
+    padding: 0.7rem;
+    box-sizing: border-box;
+    margin-top: 0rem;
+    width: 550px; 
+*/
+h1{
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Open Sans';
+    text-align: center;  
+}
+
+h3{
+    font-size: 1rem;
+}
+
+input {
+    background-color: #e5e5e5;
+    margin-bottom: 1rem;
+    border-radius: 0.2rem;
+    border: none;
+    padding: 0.7rem;
+}
+
+.form input {
+    background-color: #b721ff;
+}
+
+.boton {
+    color: #ffffff;
+    border-radius: 0.5rem;   
+    background-color:#ff4b5a; 
+    padding: 0.6rem 1rem 0.6rem 1rem;
+}
+
+.boton:hover {
+    background-color: #eb3746;
+    cursor: pointer;
+}
+
