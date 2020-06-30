@@ -6,12 +6,19 @@
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
 
         <style>
+            body {
+                background: rgb(183,33,255);
+                background: linear-gradient(223deg, rgba(183,33,255,1) 5%, rgba(8,174,234,1) 100%);
+                background-attachment:fixed;
+            }
+
              input[type="email" i]:valid 
-            {background-color: green!important;
+            {color: #000000!important;
             }
                             
             input[type="email" i]:invalid 
-            { background-color: red!important;
+            { color: #ff0000!important;
+              background-color: #ff9999!important;
             } 
 
             select:required:invalid {
@@ -19,6 +26,17 @@
             }
             option[value=""][disable] {
                 display:none;
+            }
+            .register:hover {
+                color: #ffffff;
+                background-color: #eb3746;
+            }
+            input{
+                background-color: #e5e5e5;
+            }
+            h1 {
+                color: #ffffff;
+                background-color: #1a1a1a;
             }
         </style>
     </head>
@@ -76,7 +94,7 @@
                                 <h3>Phone</h3>
                                 <input 
                                 id="areacode" 
-                                type="tel" 
+                                type="number" 
                                 name="phone"
                                 >                                
                                 <label for="phone">Area Code</label>
@@ -112,7 +130,7 @@
                                 >
                                 <label>No</label>
                             </div> 
-                            <input type="submit" value="Register">                       
+                            <input class="register" type="submit" value="Register">                       
                          </div>
                         </form>
                     </div>
