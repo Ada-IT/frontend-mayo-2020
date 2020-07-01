@@ -3,8 +3,6 @@
     <head>
         <title>Formulario de consigna 3</title>
         <meta charset= "UTF-8"/>
-        <meta name="viewport" content="width, user-scalable=no, initial-scale=1.0,
-        maximum-scale=1.0, minimum-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
 
         <style>
@@ -12,25 +10,18 @@
                 background: rgb(183,33,255);
                 background: linear-gradient(223deg, rgba(183,33,255,1) 5%, rgba(8,174,234,1) 100%);
                 background-attachment:fixed;
-                margin:0
             }
             .container {
-                margin-top: 30px;
-                margin-bottom: 30px;
-                width: 30%;
+                background-color: #ffffff;
+            }
+            .form {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                background-color: #ffffff;
-                position: absolute;
-                left: 50%;
-            }    
-            .form {
+                justify-content: center;
                 background-color: #ffffff;
 
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+
+                
             }  
                 @font-face {
                 font-family: "helvetica-neue";
@@ -40,6 +31,7 @@
                 font-family: "helvetica-neue";
                 color: #ffffff;
                 background-color: #1a1a1a;
+                text-align: center;
             }
             @font-face {
                 font-family: "opensans";
@@ -55,6 +47,8 @@
                 font-family: "opensans";
                 display: flex;
                 justify-content: start;
+                flex-direction: column;
+                font-size: 15px;
             }
 
             input[type="email" i]:valid 
@@ -90,9 +84,6 @@
                 height: 40px;
                 border-color: #e5e5e5;
                 border-radius: 5%;
-                display: flex;
-                flex-direction: column;
-                align-items:center
             }
             select {
                 background-color: #e5e5e5;
@@ -115,7 +106,7 @@
                     <div class="form">
                         <form action= "consigna3.html" method=POST>
                             <div>
-                                <h3>Name</h3>                            
+                                <h4>Name</h4>                            
                                 <input 
                                 id="name" 
                                 type="text" 
@@ -134,7 +125,7 @@
                                 <label for="name">Last Name</label>
                             </div>
                             <div>
-                                <h3>Company</h3>
+                                <h4>Company</h4>
                                 <label for="company"></label>
                                 <input 
                                 id="company" 
@@ -145,7 +136,7 @@
                                 >
                             </div> 
                             <div>
-                                <h3>Email</h3>
+                                <h4>Email</h4>
                                 <label for="email"></label>
                                 <input 
                                 id="email" 
@@ -154,7 +145,7 @@
                                 >
                             </div>
                             <div>
-                                <h3>Phone</h3>
+                                <h4>Phone</h4>
                                 <input 
                                 id="areacode" 
                                 type="number" 
@@ -169,7 +160,7 @@
                                 <label for="phone">Phone Number</label>
                             </div>
                             <div>
-                            <h3>Subject</h3>
+                            <h4>Subject</h4>
                              <label for="subject"></label>
                              <select name="subject" id="subject" required>
                                  <option value="" disable selected>Choose option:</option>
@@ -179,7 +170,7 @@
                              </select>
                          </div>
                          <div>
-                            <h4>Are you an existing customer?</h4>
+                            <h3>Are you an existing customer?</h3>
                                 <input 
                                 name="customer" 
                                 type="radio" 
