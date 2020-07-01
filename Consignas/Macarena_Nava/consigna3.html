@@ -15,9 +15,6 @@
                 background-color: #ffffff;
             }
             .form {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
                 background-color: #ffffff;
 
 
@@ -45,9 +42,6 @@
             }
             label {
                 font-family: "opensans";
-                display: flex;
-                justify-content: start;
-                flex-direction: column;
                 font-size: 15px;
             }
 
@@ -106,15 +100,14 @@
                     <div class="form">
                         <form action= "consigna3.html" method=POST>
                             <div>
-                                <h4>Name</h4>                            
+                                <label for="name">Name</label>                      
                                 <input 
                                 id="name" 
                                 type="text" 
                                 minlength="3" 
                                 maxlength="20"
-                                name="name"
-                                >
-                                <label for="name">First Name</label>
+                                name="name">
+                                <label for="name"></label>
                                 <input 
                                 id="lastname" 
                                 type="text" 
@@ -122,11 +115,11 @@
                                 maxlength="20"
                                 name="name"
                                 >
-                                <label for="name">Last Name</label>
+                                <h5>First Name</h5>
+                                <h5>Last Name</h5>
                             </div>
                             <div>
-                                <h4>Company</h4>
-                                <label for="company"></label>
+                                <label for="company">Company</label>
                                 <input 
                                 id="company" 
                                 type="text" 
@@ -136,8 +129,7 @@
                                 >
                             </div> 
                             <div>
-                                <h4>Email</h4>
-                                <label for="email"></label>
+                                <label for="email">Email</label>
                                 <input 
                                 id="email" 
                                 type="email" 
@@ -145,19 +137,20 @@
                                 >
                             </div>
                             <div>
-                                <h4>Phone</h4>
+                                <label for="phone">Phone</label>
                                 <input 
                                 id="areacode" 
                                 type="number" 
                                 name="phone"
                                 >                                
-                                <label for="phone">Area Code</label>
                                 <input 
                                 id="phone" 
                                 type="tel" 
                                 name="phone"
                                 >
-                                <label for="phone">Phone Number</label>
+                                <label for="phone"></label>
+                                <h5>Area Code</h5>
+                                <h5>Phone Number</h5>
                             </div>
                             <div>
                             <h4>Subject</h4>
