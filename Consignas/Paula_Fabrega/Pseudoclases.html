@@ -14,22 +14,26 @@
             .menu:hover
             {
                 color: rgb(187, 187, 187);
+                text-decoration-style: wavy;
             }
 
             input:focus
             {
-                background-color: rgb(114, 156, 114);
-                box-shadow: 3px 3px 5px 3px red inset;
+                background-color: grey;
+                box-shadow: 3px 3px 1px 1px red ;
             }
-
-            a:hover
+            input:invalid
             {
-
+                background-color:  red ;
             }
+            
+            .login-validation input[type="email"]:focus{
+                color: hotpink;
+            } 
 
-            .login-validation 
+            .login-validation input[type="email"]:valid 
             {
-
+background-color: green;
             }
 
         </style>
