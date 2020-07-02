@@ -21,13 +21,15 @@
                 
             } 
             .elemento {
-                margin-left: 30%;
-                margin-right: 30%;
+                margin-left: 25%;
+                margin-right: 25%;
+                padding-top: 3%;
+                padding-bottom: 4%;
                 display: flex;
                 flex-direction: column;
                 background-color: #ffffff;
                 font-family: "opensans";
-                align-items: center;
+                
             }
             @font-face {
                 font-family: "helvetica-neue";
@@ -37,21 +39,59 @@
                 font-family: "opensans";
                 src: url(css/fonts/opensans.ttf);
             }    
+
             .elemento1 {
-            display: flex;
+                display: flex;
+                padding-bottom: 5% ;
+                padding-left: 5%;
+            }
+            
+            label {
+                font-weight: 800;
+                font-size: medium;
+                padding-right: 1em;
+            }
+            .elemento2 {
+                padding-left: 5%;
+                padding-bottom: 5%;
 
             }
-            p {
+            .elemento3 {
                 display: flex;
+                width: 100%;
+                scroll-padding-left: 12%;
+                padding-bottom: 5%;
             }
             .elemento4 {
                 display: flex;
-            }             
+                width: 100%;
+                margin-bottom: 5%;
+            }
+            .elemento5{
+                display: flex;
+                width: 100%;
+                margin-bottom: 5%;
+            }
+            .elemento6{
+                display: flex;
+                width: 100%;
+                margin-bottom: 5%;
+            }
+            .elemento7 {
+                display: flex;
+                width: 100%;
+                margin-bottom: 5%;
+            }        
             h1 {
                 font-family: "helvetica-neue";
                 color: #ffffff;
                 background-color: #1a1a1a;
                 text-align: center;
+                margin-left: 25%;
+                margin-right: 25%;
+                margin-bottom: 0;
+                padding-bottom: 1%;
+                padding-top: 1%;
             }
             h3 {
                 font-family: "opensans";
@@ -98,8 +138,8 @@
                 <article>
                     <section>
                     <div class="container">
+                        <h1>EVENT REGISTRATION FORM</h1>
                         <form action= "consigna3.html" method=POST class="elemento">
-                            <h1>EVENT REGISTRATION FORM</h1>
                             <div class="elemento1">
                                 <p>
                                 <label for="name">Name</label>                                                                                   
@@ -109,17 +149,16 @@
                                 minlength="3" 
                                 maxlength="20"
                                 name="name">
-                                First Name
-                                </p>
+                                <small><b>First Name</b></small>
                                 <label for="name"></label>                               
-                                <p>
                                 <input 
                                 id="lastname" 
                                 type="text" 
                                 minlength="0" 
                                 maxlength="20"
                                 name="name"
-                                >Last Name
+                                >
+                                <small><b>Last Name</b></small>
                                </p>
                             </div>
                             <div class="elemento2">
@@ -147,15 +186,15 @@
                                 id="areacode" 
                                 type="number" 
                                 name="phone"
-                                >Area Code
-                                </p>
-                                <p>
+                                >
+                                <small><b>Area Code</b></small>
                                 <label for="phone"></label>                                                        
                                 <input 
                                 id="phone" 
                                 type="tel" 
                                 name="phone"
-                                >Phone Number
+                                >
+                                <small><b>Phone Number</b></small>
                                 </p>                                                           
                             </div>
                             <div class="elemento5">
