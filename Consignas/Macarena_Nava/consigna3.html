@@ -3,6 +3,7 @@
     <head>
         <title>Formulario de consigna 3</title>
         <meta charset= "UTF-8"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
 
         <style>
@@ -12,39 +13,49 @@
                 background-attachment:fixed;
             }
             .container {
-                background-color: #ffffff;
-            }
-            .form {
-                background-color: #ffffff;
-
-
+                width: 100%;
+                height: 600px;
+                margin:10% auto;
+                display: flex;
+                flex-direction: column;
                 
-            }  
-                @font-face {
+            } 
+            .elemento {
+                margin-left: 30%;
+                margin-right: 30%;
+                display: flex;
+                flex-direction: column;
+                background-color: #ffffff;
+                font-family: "opensans";
+                align-items: center;
+            }
+            @font-face {
                 font-family: "helvetica-neue";
                 src: url(css/fonts/helvetica-neue.otf);
             }
+            @font-face {
+                font-family: "opensans";
+                src: url(css/fonts/opensans.ttf);
+            }    
+            .elemento1 {
+            display: flex;
+
+            }
+            p {
+                display: flex;
+            }
+            .elemento4 {
+                display: flex;
+            }             
             h1 {
                 font-family: "helvetica-neue";
                 color: #ffffff;
                 background-color: #1a1a1a;
                 text-align: center;
             }
-            @font-face {
-                font-family: "opensans";
-                src: url(css/fonts/opensans.ttf);
-            }
             h3 {
                 font-family: "opensans";
             }
-            h4 {
-                font-family: "opensans";
-            }
-            label {
-                font-family: "opensans";
-                font-size: 15px;
-            }
-
             input[type="email" i]:valid 
             {color: #000000!important;
             }
@@ -69,23 +80,16 @@
                 background-color: #1a1a1a;
                 color: #ffffff;
                 font-family: "helvetica-neue";
-                height: 40px;
-                border-radius: 5%;
-
             }
             input{
                 background-color: #e5e5e5;
-                height: 40px;
-                border-color: #e5e5e5;
-                border-radius: 5%;
+                margin-left: 5px;
             }
             select {
                 background-color: #e5e5e5;
-                height: 40px;
                 border-color: #e5e5e5;
-                border-radius: 5%;
             }
-            
+             
         </style>
     </head>
     <body>
@@ -93,32 +97,32 @@
             <header>
                 <article>
                     <section>
-                    <div>
-                        <form action= consigna3.html method=POST>
-                        <h1>EVENT REGISTRATION FORM</h1>
                     <div class="container">
-                    <div class="form">
-                        <form action= "consigna3.html" method=POST>
-                            <div>
-                                <label for="name">Name</label>                      
-                                <input 
+                        <form action= "consigna3.html" method=POST class="elemento">
+                            <h1>EVENT REGISTRATION FORM</h1>
+                            <div class="elemento1">
+                                <p>
+                                <label for="name">Name</label>                                                                                   
+                               <input 
                                 id="name" 
                                 type="text" 
                                 minlength="3" 
                                 maxlength="20"
                                 name="name">
-                                <label for="name"></label>
+                                First Name
+                                </p>
+                                <label for="name"></label>                               
+                                <p>
                                 <input 
                                 id="lastname" 
                                 type="text" 
                                 minlength="0" 
                                 maxlength="20"
                                 name="name"
-                                >
-                                <h5>First Name</h5>
-                                <h5>Last Name</h5>
+                                >Last Name
+                               </p>
                             </div>
-                            <div>
+                            <div class="elemento2">
                                 <label for="company">Company</label>
                                 <input 
                                 id="company" 
@@ -128,7 +132,7 @@
                                 name="company"
                                 >
                             </div> 
-                            <div>
+                            <div class="elemento3">
                                 <label for="email">Email</label>
                                 <input 
                                 id="email" 
@@ -136,25 +140,26 @@
                                 name="email"
                                 >
                             </div>
-                            <div>
-                                <label for="phone">Phone</label>
+                            <div class="elemento4">
+                                <p>
+                                <label for="phone">Phone</label>                              
                                 <input 
                                 id="areacode" 
                                 type="number" 
                                 name="phone"
-                                >                                
+                                >Area Code
+                                </p>
+                                <p>
+                                <label for="phone"></label>                                                        
                                 <input 
                                 id="phone" 
                                 type="tel" 
                                 name="phone"
-                                >
-                                <label for="phone"></label>
-                                <h5>Area Code</h5>
-                                <h5>Phone Number</h5>
+                                >Phone Number
+                                </p>                                                           
                             </div>
-                            <div>
-                            <h4>Subject</h4>
-                             <label for="subject"></label>
+                            <div class="elemento5">
+                             <label for="subject">Subject</label>
                              <select name="subject" id="subject" required>
                                  <option value="" disable selected>Choose option:</option>
                                  <option value="support">Support Department</option>
@@ -162,7 +167,7 @@
                                  <option value="claims">Claims Department</option>
                              </select>
                          </div>
-                         <div>
+                         <div class="elemento6">
                             <h3>Are you an existing customer?</h3>
                                 <input 
                                 name="customer" 
@@ -177,8 +182,9 @@
                                 >
                                 <label>No</label>
                             </div> 
-                            <input class="register" type="submit" value="REGISTER">                       
-                         </div>
+                            <div class="elemento7">
+                            <input class="register" type="submit" value="REGISTER"> 
+                            </div>                     
                         </form>
                     </div>
                     </section>
