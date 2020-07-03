@@ -38,16 +38,21 @@
 
         
         label {
-            padding-left: 30px;
-            display:inline-block;
-            
-        }
+            padding-left: 20px;
+            align-self: center;   
+                }
         
         .contenedor-inputs {
             padding: 10px 30px;
+            display: inline-flex;
+            flex-direction: column;
+            align-content: flex-start;            
               }
         
         .form-group {
+            display:flex;
+            flex-direction: row;
+            align-content: space-around;
 
         }
 
@@ -57,11 +62,16 @@
             border-radius: 5px;
             background-color: #e5e5e5;
             padding: 10px;
+            margin-left: 10px;
             
                 }
         
         .input-48 {
-            width: 35%;         
+            width: 100%;
+            display: grid;
+            grid-column-start: 1;
+            grid-column-end: 3;
+                     
                 }
 
         .input-100 {
@@ -69,12 +79,23 @@
         }
 
         .input-30 {
-            width: 10%;
+            width: 40%;
         }
         
         .input-70 {
-            width: 50%;
+            width: 100%;
         }
+
+        figcaption {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            color:  #D1CEBD;
+            display: flex;
+            flex-direction: row;
+            align-self: flex-end;       
+            }
+
         select {
             font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
             font-size: 14px;
@@ -86,15 +107,18 @@
             background-color: #e5e5e5;
                 }
         
+        .form-row {
+            display: flex;
+            flex-direction: row;
+            
+        }
+        
         .contenedor {
             border: 1px solid #e5e5e5;
             border-radius: 1em;
             overflow: hidden;
             width: 100px;
             height: 15px;
-            display: inline-flex;
-            justify-content: space-around;
-            flex-flow: column wrap;
                     }
 
         .contenedor3 {
@@ -106,33 +130,19 @@
             width: 150px;
             height: 40px;
             margin-left: 40px;
+            margin-top: 20px;
                     }
+
         .contenedor3:hover {
             color: #eb3746;
                     }
         
-        .contenedor4 {
-            margin-left: -40px;
-            display: -webkit-flex;
-            align-content: flex-start;
-                    }
         
         h3 {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 15px;
             padding-left: 40px;
-        }
-
-        figcaption {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 13px;
-            font-weight: bold;
-            color:  #D1CEBD;
-            
             }
-
- 
-        
 
     </style>
     </head>
@@ -146,6 +156,7 @@
                     <form action="consigna-3.html" method="post">
                     <div class="form-group">
                         <label for="name">Name</label>
+                        <figure>
                         <input  class="input-48" 
                                 id="nombre" 
                                 type="text" 
@@ -153,6 +164,8 @@
                                 maxlength="20" 
                                 name="name">
                         <figcaption>First name</figcaption>
+                    </figure>
+                        <figure>
                         <input  class="input-48"
                                 id="nombre" 
                                 type="text" 
@@ -161,6 +174,7 @@
                                 name="name"
                             >
                             <figcaption>Last name</figcaption>
+                        </figure>
                         </div>
                         <br>
                         <br>
@@ -189,22 +203,27 @@
                         <br>
                         <div class="form-group">
                         <label for="phone">Phone</label>
+                        <figure>
                         <input  class="input-30"
                                 id="phone" 
                                 type="number"  
                                 name="phone">
                             <figcaption>Area Code</figcaption>
+                        </figure>
+                        <figure>
                             <input  class="input-70"
                             id="phone" 
                             type="number"  
-                            name="phone">
+                            name="phone"
+                            >
                             <figcaption>Phone number</figcaption>
+                        </figure>
                         </div>
                         <br>
                         <br>
                     </div>
                     <div class="form-group">
-                        <label for="subject">Subject</label>
+                        <label>Subject</label>
                         <select name="subject" id="subject" class="input-100">
                             <option hidden selected>Choose an option...</option>
                             <option value="1">Departamento de soporte</option>
@@ -216,7 +235,7 @@
                         <br>
                         <div>
                         <h3>Are you an existing costumer?</h3>
-                        <div >
+                        <div class="form-row">
                             <input  class="contenedor"
                                     name="costumer" 
                                     type="radio" 

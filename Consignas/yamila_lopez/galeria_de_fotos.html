@@ -60,47 +60,47 @@
         .gallery__item--1 {
             display:grid;
             grid-column-start: 1;
-            grid-column-end: 5;
+            grid-column-end: 3;
             grid-row-start: 1;
             grid-row-end: 3;
         }
 
         .gallery__item--2 {
             display:grid;
-            grid-column-start: 5;
-            grid-column-end: 9;
+            grid-column-start: 3;
+            grid-column-end: 5;
             grid-row-start: 1;
             grid-row-end: 3;
         }
 
         .gallery__item--3 {
             display:grid;
-            grid-column-start: 1;
+            grid-column-start: 5;
             grid-column-end: 9;
-            grid-row-start: 3;
+            grid-row-start: 1;
             grid-row-end: 5;
         }
 
         .gallery__item--4 {
             display:grid;
             grid-column-start: 1;
-            grid-column-end: 4;
-            grid-row-start: 5;
-            grid-row-end: 8;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 5;
         }
 
 
         .gallery__item--5 {
             display:grid;
-            grid-column-start: 4;
-            grid-column-end: 6;
+            grid-column-start: 1;
+            grid-column-end: 5;
             grid-row-start: 5;
             grid-row-end: 8;
         }
 
         .gallery__item--6 {
             display:grid;
-            grid-column-start: 6;
+            grid-column-start: 5;
             grid-column-end: 9;
             grid-row-start: 5;
             grid-row-end: 8;
@@ -296,7 +296,36 @@
             grid-row-start: 11;
             grid-row-end: 13;
         }      
-        }     
+        }
+        .sepia {
+          -webkit-filter: sepia(90%);
+          filter: sepia(90%);
+        }  
+
+        .blur {
+          -webkit-filter: blur(5px);
+          filter:blur(5px);
+        }  
+
+        .greyscale {
+          -webkit-filter: grayscale(75%);
+          filter:grayscale(75%);
+        } 
+
+        .brighten {
+          -webkit-filter: brightness(50%);
+          filter:brightness(50%);
+        }
+
+        .contrast {
+          -webkit-filter: contrast(50%);
+          filter: contrast(50%);
+        }
+
+        .saturate {
+          -webkit-filter: saturate(200%);
+          filter: saturate(200%);
+        }
    </style> 
   </head>
   <body>
@@ -309,38 +338,42 @@
           <img
             src="img/arandanos.jpeg"
             alt="Gallery image 1"
-            class="gallery__img"
+            class="gallery__img sepia"
           >
         </figure>
         <figure class="gallery__item gallery__item--2">
           <img
             src="img/auto.jpeg" 
             alt="Gallery image 2" 
-            class="gallery__img"
+            class="gallery__img blur"
             >
         </figure>
         <figure class="gallery__item gallery__item--3">
           <img
             src="img/camarafotos.jpeg"
             alt="Gallery image 3"
-            class="gallery__img"
+            class="gallery__img greyscale"
           />
         </figure>
         <figure class="gallery__item gallery__item--4">
-          <img src="img/bici.jpeg" alt="Gallery image 4" class="gallery__img" />
+          <img 
+            src="img/bici.jpeg" 
+            alt="Gallery image 4" 
+            class="gallery__img brighten"
+          >
         </figure>
         <figure class="gallery__item gallery__item--5">
           <img
             src="img/flores.jpeg"
             alt="Gallery image 5"
-            class="gallery__img"
+            class="gallery__img contrast"
           />
         </figure>
         <figure class="gallery__item gallery__item--6">
           <img
             src="img/mujer.jpeg"
             alt="Gallery image 6"
-            class="gallery__img"
+            class="gallery__img saturate"
           />
         </figure>
       </div>
