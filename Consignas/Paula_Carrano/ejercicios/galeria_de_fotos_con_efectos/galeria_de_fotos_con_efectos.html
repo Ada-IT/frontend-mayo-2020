@@ -102,6 +102,30 @@
       grid-area: 6/5/9/9;
     }
 
+    .drop-shadow {
+      filter: drop-shadow(16px 16px 10px rgb(126, 124, 124));
+    }
+
+    .grayscale {
+      filter: grayscale(80%) blur(0.7px);
+    }
+
+    .invert {
+      filter: invert(100%);
+    }
+
+    .sepia {
+      filter: sepia(80%) contrast(50%);
+    }
+
+    .brightness {
+      filter: brightness(100%) contrast (30%);
+    }
+
+    .opacity {
+      filter: opacity(50%);
+    }
+
     /*TABLET PORTRAIT*/
     @media (min-width: 768px) and (max-width: 1024px) {
       H1 {
@@ -243,22 +267,22 @@
     </header>
     <div class="gallery">
       <figure class="gallery__item gallery__item--1">
-        <img src="img/arandanos.jpeg" alt="Gallery image 1" class="gallery__img" />
+        <img src="img/arandanos.jpeg" alt="Gallery image 1" class="gallery__img opacity" />
       </figure>
       <figure class="gallery__item gallery__item--2">
-        <img src="img/auto.jpeg" alt="Gallery image 2" class="gallery__img" />
+        <img src="img/auto.jpeg" alt="Gallery image 2" class="gallery__img invert " />
       </figure>
       <figure class="gallery__item gallery__item--3">
-        <img src="img/camarafotos.jpeg" alt="Gallery image 3" class="gallery__img" />
+        <img src="img/camarafotos.jpeg" alt="Gallery image 3" class="gallery__img grayscale" />
       </figure>
       <figure class="gallery__item gallery__item--4">
-        <img src="img/bici.jpeg" alt="Gallery image 4" class="gallery__img" />
+        <img src="img/bici.jpeg" alt="Gallery image 4" class="gallery__img sepia" />
       </figure>
       <figure class="gallery__item gallery__item--5">
-        <img src="img/flores.jpeg" alt="Gallery image 5" class="gallery__img" />
+        <img src="img/flores.jpeg" alt="Gallery image 5" class="gallery__img brightness" />
       </figure>
-      <figure class="gallery__item gallery__item--6">
-        <img src="img/mujer.jpeg" alt="Gallery image 6" class="gallery__img" />
+      <figure class="gallery__item gallery__item--6 sepia">
+        <img src="img/mujer.jpeg" alt="Gallery image 6" class="gallery__img drop-shadow" />
       </figure>
     </div>
     </div>
