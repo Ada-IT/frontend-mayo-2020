@@ -42,6 +42,7 @@ h1 {
   object-fit: cover;
   display: block;
 }
+
 @media (min-width: 768px) {
   .gallery {
     grid-template-columns: repeat(8, 1fr);
