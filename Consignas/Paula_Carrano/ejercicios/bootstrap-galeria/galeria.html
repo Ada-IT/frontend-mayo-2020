@@ -19,21 +19,131 @@
     -->
 
    <meta charset="utf-8" />
-   <title></title>
+   <title>photo gallery</title>
    <meta name="description" content="" />
    <meta name="keywords" content="" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    <link rel="stylesheet" href="../../../../assets/bootstrap/css/bootstrap.min.css" />
+
+   <style>
+      body {
+         background-image: url("../img/madera.jpeg");
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+      }
+   </style>
 </head>
 
 <body>
    <main>
-      <div>
-         <header>
-         </header>
-         <section>
-         </section>
-      </div>
+      <header>
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class=" navbar-brand" href="#">Menu</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Today</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Follow</a>
+                  </li>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">For you</a>
+                  </li>
+               </ul>
+               <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+               </form>
+            </div>
+         </nav>
+         <div class="titulo">
+            <h1>galeria de fotos</h1>
+         </div>
+      </header>
+      <section>
+         <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../../../../img/galeria_de_fotos/arandanos.jpeg" alt="Card image cap">
+            <div class="card-body">
+               <h5 class="card-title">arandanos</h5>
+            </div>
+            <div class="card" style="width: 18rem;">
+               <img class="card-img-top" src="../../../../img/galeria_de_fotos/auto.jpeg" alt="Card image cap">
+               <div class="card-body">
+                  <h5 class="card-title">auto</h5>
+               </div>
+               <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="../../../../img/galeria_de_fotos/bici.jpeg" alt="Card image cap">
+                  <div class="card-body">
+                     <h5 class="card-title">bicicleta</h5>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                     <img class="card-img-top" src="../../../../img/galeria_de_fotos/camarafotos.jpeg"
+                        alt="Card image cap">
+                     <div class="card-body">
+                        <h5 class="card-title">camara de fotos</h5>
+                     </div>
+                     <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="../../../../img/galeria_de_fotos/casa.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                           <h5 class="card-title">casa</h5>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                           <img class="card-img-top" src="../../../../img/galeria_de_fotos/flores.jpeg"
+                              alt="Card image cap">
+                           <div class="card-body">
+                              <h5 class="card-title">flores</h5>
+                           </div>
+                           <div class="card" style="width: 18rem;">
+                              <img class="card-img-top" src="../../../../img/galeria_de_fotos/guitarra.jpeg"
+                                 alt="Card image cap">
+                              <div class="card-body">
+                                 <h5 class="card-title">guitarra</h5>
+                              </div>
+                              <div class="card" style="width: 18rem;">
+                                 <img class="card-img-top" src="../../../../img/galeria_de_fotos/hombre.jpeg"
+                                    alt="Card image cap">
+                                 <div class="card-body">
+                                    <h5 class="card-title">hombre</h5>
+                                 </div>
+                                 <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="../../../../img/galeria_de_fotos/jugo.jpeg"
+                                       alt="Card image cap">
+                                    <div class="card-body">
+                                       <h5 class="card-title">jugo</h5>
+                                    </div>
+                                    <div class="card" style="width: 18rem;">
+                                       <img class="card-img-top" src="../../../../img/galeria_de_fotos/mujer.jpeg"
+                                          alt="Card image cap">
+                                       <div class="card-body">
+                                          <h5 class="card-title">mujer</h5>
+                                       </div>
+                                       <div class="card" style="width: 18rem;">
+                                          <img class="card-img-top" src="../../../../img/galeria_de_fotos/laptop.jpeg"
+                                             alt="Card image cap">
+                                          <div class="card-body">
+                                             <h5 class="card-title">laptop</h5>
+                                          </div>
+                                          <div class="card" style="width: 18rem;">
+                                             <img class="card-img-top"
+                                                src="../../../../img/galeria_de_fotos/telefono.jpeg"
+                                                alt="Card image cap">
+                                             <div class="card-body">
+                                                <h5 class="card-title">telefono</h5>
+                                             </div>
+
+
+      </section>
    </main>
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
