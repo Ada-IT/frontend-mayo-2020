@@ -13,18 +13,18 @@
                 background-attachment:fixed;
             }
             .container {
-                height: 600px;
+                height: 800px;
                 display: flex;
                 flex-direction: column;
-                margin-left: 25%;
-                margin-right: 25%;
-                padding-top: 3%;
-                padding-bottom: 4%;
+                margin-left: 25% ;
+                margin-right: 25% ;
+                margin-bottom: 10%;
+                padding: 4%;
+                border-bottom-left-radius: 2%;
+                border-bottom-right-radius: 2%;           
                 background-color: #ffffff;
-                font-family: "opensans";              
+                font-family: "opensans"         
             } 
-                
-            }
             @font-face {
                 font-family: "helvetica-neue";
                 src: url(css/fonts/helvetica-neue.otf);
@@ -37,58 +37,71 @@
             .elemento1 {
                 display: flex;
                 flex-wrap: wrap;
-            }
-                
-           
+                margin-bottom: 5%;
+                width: 100%;
+            }                
             .elemento2 {
                 display: flex;
-                flex-wrap: wrap;                 
-            }
+                flex-wrap: wrap;
+                margin-bottom: 7%;
+            }   
             .elemento3 {
                 display: flex;
-                flex-wrap: wrap;                           
+                flex-wrap: wrap;
+                margin-bottom: 7%;
+                                        
             }
             .elemento4 { 
                 display: flex;
-                flex-wrap: wrap;                      
+                flex-wrap: wrap;
+                margin-bottom: 5%; 
+                                
             }
             .elemento5{
                 display: flex;
-                flex-wrap: wrap;              
+                flex-wrap: wrap;
+                margin-bottom: 7%;
+                         
             }
             .elemento6{ 
                 display: flex;
-                flex-direction: column;                        
+                margin-bottom: 7%;                                  
             }
             .elemento7 {
                 display: flex;
-                flex-wrap: wrap;               
+                flex-wrap: wrap;
+                margin-bottom: 7%;
+                       
             }
             .casilleros {
                 display: flex;
                 flex-direction: column; 
                 color: #9c9c9c;
-                font-size: small;      
+                font-size: small;
+                width: 39%;
+                   
             }
             label {
                 font-family: "Opensans";
-                font-weight: 800;
-                font-size: medium;
-                padding-right: 1em;
-            }      
+                font-weight:bold;
+                margin-right: 4%;             
+                margin-top:2%;
+            }
             h1 {
                 font-family: "helvetica-neue";
                 color: #ffffff;
                 background-color: #1a1a1a;
+                font-size:xx-large;
+                font-weight: 800;
                 text-align: center;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                margin-bottom: 0%;
+                margin-top:10%;
                 margin-left: 25%;
                 margin-right: 25%;
-                margin-bottom: 0;
-                padding-bottom: 1%;
-                padding-top: 1%;
-            }
-            h3 {
-                font-family: "opensans";
+                border-radius: 3%;
+               
             }
             input[type="email" i]:valid 
             {color: #000000!important;
@@ -114,15 +127,30 @@
                 background-color: #1a1a1a;
                 color: #ffffff;
                 font-family: "helvetica-neue";
+                width:25%; 
             }
             input{
                 background-color: #e5e5e5;
+                border:none;
+                height: 4em;
+                border-radius: 3%;        
             }
             select {
                 background-color: #e5e5e5;
                 border-color: #e5e5e5;
+                height: 4em;
+                border-radius: 3%;
+                margin-left: 2%;
+                width:83%
             }
-             
+            .company {
+                width: 82%;
+                margin-left: 2px;              
+            }
+            .email {
+                width: 82%;
+                margin-left: 4%;
+            }
         </style>
     </head>
     <body>
@@ -135,7 +163,7 @@
                             <div class="container">
                                 <div class="elemento1"> 
                                     <label for="name">Name</label>                        
-                                    <div class="casilleros">                                                                               
+                                    <div style="margin-left: 4%"class="casilleros">                                                                               
                                     <input 
                                         id="name" 
                                         type="text" 
@@ -145,7 +173,7 @@
                                         required>
                                         <label for="name">First Name</label>
                                     </div>
-                                    <div class="casilleros">                           
+                                    <div style="margin-left: 5%" class="casilleros">                           
                                         <input 
                                         id="lastname" 
                                         type="text" 
@@ -158,72 +186,69 @@
                                 </div>                                   
                                 <div class="elemento2">
                                     <label for="company">Company</label>
-                                    <div>
                                         <input 
                                         id="company" 
                                         type="text" 
                                         minlength="0" 
                                         maxlength="20"
-                                        name="company">
-                                    </div>     
+                                        name="company"
+                                        class="company"
+                                        required
+                                        >     
                                 </div>                                 
                                 <div class="elemento3">
                                     <label for="email">Email</label>                                    
-                                    <div>
                                         <input 
                                         id="email" 
                                         type="email" 
-                                        name="email">
-                                    </div>
+                                        name="email"
+                                        class="email"
+                                        >                      
                                 </div>
                                 <div class="elemento4">
                                         <label for="phone">Phone</label>
-                                        <div class="casilleros">                            
+                                        <div style="margin-left:3%;width:18%;"class="casilleros">                            
                                             <input 
                                             id="areacode" 
                                             type="number" 
-                                            name="phone">
+                                            name="phone"
+                                            >
                                             <label>Area Code</label>
                                         </div>                                                                                            
-                                        <div class="casilleros">
+                                        <div style="margin-left:5%;width: 60%;"class="casilleros">
                                             <input 
                                             id="phone" 
                                             type="tel" 
-                                            name="phone">
+                                            name="phone"
+                                            >
                                             <label for="phone">Phone Number</label>                                              
                                         </div>
                                 </div>
                                 <div class="elemento5">
                                     <label for="subject">Subject</label>
-                                        <div>
                                             <select name="subject" id="subject" required>
                                                 <option value="" disable selected>Choose option:</option>
                                                 <option value="support">Support Department</option>
                                                 <option value="sales">Sales Department</option>
                                                 <option value="claims">Claims Department</option>
                                             </select>
-                                        </div>
                                 </div>
                                 <div class="elemento6">
-                                        
-                                            <label for="custumer">Are you an existing customer?</label>
-                                        
-                                        <div>
+                                            <label for="custumer">Are you an existing customer?</label>                                                         
                                             <input 
                                             name="customer" 
                                             type="radio" 
                                             value="y">
-                                            <label>Yes</label>                     
+                                            <label>Yes</label>                   
                                             <input 
                                             name="customer" 
                                             type="radio" 
                                             value="n">
-                                            <label>No</label>
-                                        </div>      
+                                            <label>No</label>                                        
                                 </div> 
                                 <div class="elemento7">
                                         <input 
-                                        class="register" 
+                                        class="register"
                                         type="submit" 
                                         value="REGISTER"> 
                                 </div>                                               
