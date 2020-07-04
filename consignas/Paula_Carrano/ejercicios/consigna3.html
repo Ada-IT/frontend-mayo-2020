@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+       <meta charset="utf-8" />
+       <meta name="description" content="If you want to confirm your attendance to ADA´s event, please fill the form. " />
+       <meta name="keywords" content="event,registration,form" />
+       <meta name="viewport" content="width=device-width, initial-scale=1" />
+       <title>Event_registration_form</title>
+       <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+             
+       <style>
+        /*structure*/ 
+        body {
+          background: linear-gradient(45deg,#08aeea,#b721ff);
+          background-repeat: no-repeat;
+          font-family: 'Open Sans', sans-serif;
+          text-transform: capitalize;
+          text-align: justify;
+        } 
+
+        header {
+          background-color: #1a1a1a; 
+          font-family: Helvetica, sans-serif; 
+          color:#ffffff;
+          text-transform: uppercase;   
+          text-align: center; 
+          width: 68%;
+          margin: 5% 15% 0% 15%;
+          padding: 1% 1% 1% 1%;
+          border-radius: 2rem 2rem 0rem 0rem;
+        }
+      
+        section {
+          background-color: #ffffff;
+          width: 66%;
+          margin: 0%15% 3% 15%;
+          padding: 2% 2% 2% 2%;
+          border-radius: 0rem 0rem 2rem 2rem;
+          align-content: stretch;        
+          }
+
+          h4 {
+            color:#525151;
+            font-weight: bold;
+            margin: 6%;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        input {
+            color:#312f2f;
+            border-radius: 0.5rem;  
+            border: none;
+            height:3rem;
+            background-color:#e5e5e5;
+            align-items: flex-start;
+            width: 59%;
+        }
+
+        div {
+          margin-left: 3%;
+        }
+
+         /*inputs design */
+                 
+         .col {
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            width: 100%;
+         }
+
+         .name{
+             width: 100%;
+             }
+
+         .area_code{
+          width: 100%;
+         }
+         
+         .phone {
+          width: 94%;
+         }
+
+         label {
+            color:#8b8989;
+            font-weight:bold;
+            font-size: small;
+            margin: 4%;
+        } 
+
+        .company, .email {
+          display: flex;
+          flex-direction: row;
+          align-items: baseline;
+       }
+
+      .email input {
+          margin: 4%;
+       }
+
+        .subject {
+          color:#525151;
+          margin: 0% 0% 0% 2.5%;  
+          display: flex;
+          flex-wrap: wrap;
+          align-items: baseline;
+        }
+
+        .subject select {
+          background-color:#e5e5e5;
+          border: none;
+          color:#525151;
+          font-weight: bold;
+          border-radius: 0.5rem;
+          width: 60%;
+          height:3rem;
+          margin-left: 2%;
+        }
+
+        .client {
+          margin-left: 3%;
+        }
+
+          /*email valid*/     
+
+        .email input:valid {
+            background-color:#e5e5e5;
+            color:#312f2f;
+        }
+
+        .email input:invalid {
+            background-color: #F90B0B;
+            color:#fcd2d2;
+        }  
+        /*radio btn green*/
+      
+        .radio-item {
+            display: inline-block;
+            position: relative;
+            padding: 0 2px;
+          }
+
+        .radio-item input[type='radio'] {
+            display: none;
+        }
+
+        .radio-item label {
+              color: #666;
+              font-weight: normal;
+        }
+
+        .radio-item label:before {
+                content: " ";
+                display: inline-block;
+                position: relative;
+                top: 0.31rem;
+                margin: 0 0.5rem 0 0;
+                width: 1rem;
+                height: 1rem;
+                border-radius: 1rem;
+                border: 0.2rem solid #e5e5e5;
+                background-color: #e5e5e5;
+        }
+
+        .radio-item input[type=radio]:checked + label:after {
+                border-radius: 1rem;
+                width: 1rem;
+                height: 1rem;
+                position: absolute;
+                top: 0.5rem;
+                left: 0.5rem;
+                content: " ";
+                display: block;
+                background: #0d9700;
+        }
+   
+            /*submit btn*/
+          #register input{
+            display: block;
+            position: relative;
+            padding: 2% 2% 2% 2%;
+            margin: 2% 2% 2% 6%;
+            background-color:#ff3d4e;
+            font-style: oblique;
+            color: #ffffff;
+            border-radius: 1rem;
+            cursor: pointer;
+            width: 20%;
+          }
+
+          #register :hover{
+              background-color: #eb3746;
+              border-radius: 1rem;
+              font-size: 1rem;
+              text-transform: uppercase;
+              font-weight: bolder;
+              color: #ffffff;
+          }
+
+
+          /*Tablet*/
+        
+          @media only screen and (min-device-width: 768px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+            input {
+              display:block;
+              flex-direction: column;
+              flex-wrap: wrap;
+            }
+            
+            .company {
+              margin-left:2%;
+            }
+
+            #name {
+              width: 60%;
+            }
+           
+            .area_code {
+              width: 30%;
+            }
+            #phone_number {
+              width: 63%;
+              margin-left: 23.5%;
+            }
+
+            #register input{
+              padding:3% 2% 2% 4%;
+              margin: 2% 2% 2% 7%;
+            }
+          }
+
+            /*Smartphone/Iphone*/
+            @media only screen and (min-device-width: 300px) and (max-device-width: 720px) {
+            
+              header{
+                width: 90%;
+                margin: 2% 0% 0% 2%;
+              }
+              section {  
+                width: 88%;
+                margin: 0% 0% 2% 2%;
+              }
+            
+              input {
+              display:block;
+              flex-direction: column;
+              flex-wrap: wrap;
+              width: 100%;
+            }
+
+            .company, .email, .subject{
+              display:block;
+              flex-direction: column;
+              width: 85%;
+            }
+
+            .company input {
+              margin: 4%;
+            }
+
+            .subject select{
+              width: 100%;
+              text-align: center;
+            }
+
+              #name {
+              width: 90%;
+            }
+           
+              .area_code {
+              width: 40%;
+            }
+
+             #phone_number {
+              width: 90%;
+  
+            }
+
+              #register input{
+              width: 80%;
+              padding: 5% 20% 5% 25% ;
+              margin-left: 10%;
+              text-transform: uppercase;
+              text-align: center;
+            }
+            }
+
+    </style>
+    </head>
+    <body>
+      <main>
+        <header>
+          <h1>event registration form</h1>
+        </header>
+          <article>
+            <section>
+              <form action="consigna3.html" method="POST">
+                <div class="col">
+                <h4>name</h4>
+                    <div id="name">
+                    <div>
+                        <input
+                          class="name"
+                          type="text"
+                          minlength="1"
+                          maxlength="20"
+                          name="first_name"/>
+                          <label for="first_name">first name</label>
+                      </div>
+                      <div id="last_name">
+                          <input
+                          class="name"
+                          type="text"
+                          minlength="1"
+                          maxlength="20"
+                          name="last_name"/>
+                        <label for="last_name">last name</label>
+                        </div>
+                      </div>
+                 </div>
+                <div class="company">
+                  <h4>company</h4>
+                    <input
+                      id="company"
+                      type="text"
+                      minlength="1"
+                      maxlength="20"
+                      name="company"/>
+                  </div>  
+                  <div class="email">
+                    <h4>email</h4>
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"/>
+                </div>
+                <div class="col">
+                  <h4 id="number">phone</h4>
+                    <div>
+                        <input
+                          class="area_code"
+                          type="number"
+                          minlength="1"
+                          maxlength=""
+                          name="area_code"/>
+                          <label for="area_code">area code</label>
+                      </div>
+                      <div id="phone_number"> 
+                        <input
+                          class="phone"
+                          type="number"
+                          minlength="1"
+                          maxlength=""
+                          name="phone_number"/>
+                           <label for="phone_number">phone number</label>
+                    </div>  
+                  </div>
+                <div class="subject">
+                    <h4>subject</h4>
+                    <select name="subject" id="subject">
+                      <option hidden selected>Choose option</option>
+                      <option value="support">support department<t/option>
+                      <option value="sales">sales department</option>
+                      <option value="claim">claims department</option>
+                    </select>
+                </div>
+                <div>
+                  <h4 id="customer">Are you an existing customer?</h4>
+                  <div class="client">
+                      <div class="radio-item"> 
+                         <input 
+                          name="customer" 
+                          id="customer1"
+                          type="radio"
+                          value="y"
+                          checked="checked">
+                          <label for="customer1">yes</label>
+                      </div>
+                      <div class="radio-item">
+                          <input 
+                          name="customer" 
+                          id="customer2"
+                          type="radio"
+                          value="n"
+                          checked="checked">
+                          <label for="customer2">no</label>
+                        </div>
+                </div>
+              </div>
+                <span id="register"><input  type="submit" value="Register"></span>
+            </section>
+          </article>
+      </main>
+    </body>
+  </html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>REGISTRO</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+       body {
+            height: 100%;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            color: darkslategrey;
+            text-align: left; 
+            background: linear-gradient(100deg, #b721ff,#08aeea);
+            background-repeat: no-repeat;      
+            }
+         h1 {
+            background-color: #1a1a1a;
+            color: #f5f5f5;
+            font-size: 25px;
+            font-family: 'Open Sans', sans-serif;
+            border-radius: 10px 10px 0px 0px; 
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+            }
+
+        .body-form {
+            background-color: #ffffff;
+            border-radius: 10px;
+            margin-left: 50px;
+            margin-right: 50px;
+            height: 100%;
+        }
+
+        .formu {
+            padding: 30px;
+            margin-left: 30px;
+            margin-right: 30px;
+            line-height: 50px;
+        }
+
+        .item {
+            display: flex;
+            margin-bottom: 40px;
+        }
+
+        label {
+          font-size: 15px;
+            display: flex;
+            justify-content: flex-start;
+            min-width: 10%;
+
+        }
+                input {
+            justify-content: flex-start;
+            margin-top: 10px;
+            margin-left: 40px;
+            background-color: #e5e5e5;
+            border-radius: 5px;
+            border-color: transparent;
+            width: 100%;
+            
+              }
+        .areacode {
+            width: 20%;
+        }
+
+        select {
+            display: flex;
+            justify-content: flex-end;
+            margin-left: 50px;
+            background-color: #e5e5e5;
+            border-radius: 5px;
+            font-weight: 700;
+            color: slategrey;
+            width: 100%;
+       
+        }
+
+        .radio {
+          display: flex;
+          justify-content: flex-end;
+          align-items: baseline;
+          flex-direction: row-reverse;
+          width: fit-content;
+        }
+
+        .register {
+            margin-top: 50px;
+          display: block;
+            background-color: #ff4b5a;
+            padding: 10px;
+            text-align: center;
+
+        
+            font-weight: 700;
+            color: #ffffff;
+            width: 150px;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 700px) {
+            h1 {
+                font-size: 15px;
+            }            
+             .item {
+                flex-direction: column;
+            }
+            label{
+              width: 75%;
+            }
+            input {
+                height: 30px;
+                margin-bottom: 10px;
+                width: 75%;
+            }           
+            }
+        
+    </style>
+</head>
+
+<body>
+    <main>
+        <header></header>
+
+        <article>
+            <section id="formulario" class="body-form">
+                <h1>EVENT REGISTRATION FORM</h1>
+                <div class="formu">
+                    <form action="consigna3.html" method="POST">
+                        <div class="item">
+                            <label for="name">Name</label>
+                            <input  id="name" type="text" minlength="3" maxlength="20" name="Name" />
+                            <input  id="lastname" type="text" minlength="3" maxlength="20"
+                                name="Lastname" />
+                        </div>
+                        
+                        <div class="item">
+                            <label for="company">Company</label>
+                            <input id="company" type="text" minlength="5" maxlength="25"
+                                name="company" />
+                        </div>
+                        
+                        <div class="item">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" name="email" />
+                        </div>                        
+                        <div class="item">
+                            <label for="phone">Phone</label>
+                            <input id="areacode" type="number" name="areacode" />
+                            <input id="phone" type="number" name="phone" />
+                        </div>                        
+                        <div class="item">
+                            <label for="subject">Subject</label>
+                            <select name=subject id=subject>
+                            <option value="" hidden selected>Choose option</option>
+                            <option value="support">support department</option>
+                            <option value="sales">sales department</option>
+                            <option value="claim">claims department</option>  
+                            </select>      
+                        </div>
+                        <div class="item">
+                          <label for="existing-customer">Are you an existing customer?</label>
+                      </div>
+                      <div class="radio">
+                           <label>No</label>
+                          <input id="no" type="radio" value="no" name="customer">
+                          <label>Yes</label>
+                          <input id="Yes" type="radio" value="Yes" name="customer" />
+                      </div>
+                      <input class=register type="submit" value="REGISTER">
+
+                    </form>
+
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>

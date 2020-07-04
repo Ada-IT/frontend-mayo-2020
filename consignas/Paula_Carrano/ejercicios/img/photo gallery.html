@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html class="no-js" lang="es">
-
-<head>
+<!-- saved from url=(0137)file:///C:/Users/R7%20smart/Documents/ADA%20COURSE/frontend-mayo-2020/consignas/Paula_Carrano/ejercicios/bootstrap-galeria/galeria.html?# -->
+<html class="no-js" lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
    <!-- 
             Rama bootstrap_galeria
 
@@ -18,24 +17,25 @@
             
     -->
 
-   <meta charset="utf-8" />
+   
    <title>photo gallery</title>
-   <meta name="description" content="" />
-   <meta name="keywords" content="" />
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <link rel="stylesheet" href="../../../../assets/bootstrap/css/bootstrap.min.css" />
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="./photo gallery_files/bootstrap.min.css">
 
    <style>
       /*structure*/
       body {
          background-image: url("../img/wood.jpg");
+         background-repeat: repeat;
       }
 
       .title {
          text-transform: uppercase;
-         color: rgb(179, 182, 177);
+         color: rgb(126, 190, 52);
          margin-right: 4%;
-         font-family: fantasy;
+         font-family: Arial, Helvetica, sans-serif;
          text-shadow: 1.5rem 0.5rem rgb(109, 108, 108, 0.5);
       }
 
@@ -47,7 +47,7 @@
       .card {
          margin: 2% 2% 0% 2%;
          padding: 3% 3% 0% 3%;
-         box-shadow: 1rem 1rem 0.5rem rgb(82, 80, 80);
+         box-shadow: 1rem 1rem 1rem rgb(82, 80, 80);
          border-radius: 0.5rem;
          overflow: hidden;
       }
@@ -121,22 +121,15 @@
 
       /*mov effect*/
       .card:hover {
-         -webkit-transform: scale(1.1);
-         transform: scale(1.1);
-      }
-
-      .movement {
-         transform: rotate(5deg);
-      }
-
-      .movement2 {
-         transform: rotate(-5deg);
+         -webkit-transform: scale(1.2);
+         transform: scale(1.2);
+         cursor: pointer;
       }
 
       /*mediaquery tablet portrait*/
       @media (min-width: 768px) and (max-width: 1024px) {
          .container {
-            margin: 10% 2% 4% 2%;
+            margin: 2% 2% 4% 2%;
             width: 85%;
          }
 
@@ -159,47 +152,6 @@
             margin-top: 2%;
          }
       }
-
-      /*mediaquery tablet landscape*/
-      @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-         .container {
-            margin: 2% 5% 2% 8%;
-         }
-
-         .gallery {
-            grid-gap: 1.5rem;
-         }
-
-
-         .title {
-            padding: 0% 2% 0% 2%;
-            text-align: justify;
-         }
-
-         h5 {
-            font-size: 1.3rem;
-            margin-top: 2%;
-         }
-      }
-
-      /*mediaquary mobile*/
-      @media (min-width: 320px) and (max-width: 767px) {
-
-         .gallery {
-            display: flex;
-            flex-direction: column;
-         }
-
-         .title {
-            text-align: center;
-            margin: auto;
-         }
-
-         .navbar {
-            padding: 0rem 0rem;
-         }
-
-      }
    </style>
 </head>
 
@@ -207,117 +159,108 @@
    <main>
       <header>
          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="title">
+            <span class="title">
                <h1>galeria de fotos</h1>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            </span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-               <ul class="navbar-nav ml-auto">
+               <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                     <a class="nav-link" href="file:///C:/Users/R7%20smart/Documents/ADA%20COURSE/frontend-mayo-2020/consignas/Paula_Carrano/ejercicios/bootstrap-galeria/galeria.html?#">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="#">Today</a>
+                     <a class="nav-link" href="file:///C:/Users/R7%20smart/Documents/ADA%20COURSE/frontend-mayo-2020/consignas/Paula_Carrano/ejercicios/bootstrap-galeria/galeria.html?#">Today</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="#">Follow</a>
+                     <a class="nav-link" href="file:///C:/Users/R7%20smart/Documents/ADA%20COURSE/frontend-mayo-2020/consignas/Paula_Carrano/ejercicios/bootstrap-galeria/galeria.html?#">Follow</a>
                   </li>
-                  </li>
+                  
                   <li class="nav-item">
-                     <a class="nav-link" href="#">For you</a>
+                     <a class="nav-link" href="file:///C:/Users/R7%20smart/Documents/ADA%20COURSE/frontend-mayo-2020/consignas/Paula_Carrano/ejercicios/bootstrap-galeria/galeria.html?#">For you</a>
                   </li>
                </ul>
+               <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+               </form>
             </div>
          </nav>
-         </div>
+         
       </header>
       <article class="container">
          <section class="gallery">
 
-            <div class="card movement">
-               <img class="card-img-top contrast" src="../../../../img/galeria_de_fotos_paisajes/bench-560435_1920.jpg"
-                  alt="Card image cap">
+            <div class="card">
+               <img class="card-img-top contrast" src="./photo gallery_files/bench-560435_1920.jpg" alt="Card image cap">
                <div class="card-body">
                   <h5 class="card-title">bench</h5>
                </div>
             </div>
-            <div class="card movement2">
-               <img class="card-img-top opacity" src="../../../../img/galeria_de_fotos_paisajes/bird-1045954_1920.jpg"
-                  alt="Card image cap">
+            <div class="card">
+               <img class="card-img-top opacity" src="./photo gallery_files/bird-1045954_1920.jpg" alt="Card image cap">
                <div class="card-body">
                   <h5 class="card-title">bird</h5>
                </div>
             </div>
-            <div class="card movement">
-               <img class="card-img-top invert"
-                  src="../../../../img/galeria_de_fotos_paisajes/butterfly-4884620_1920.jpg" alt="Card image cap">
+            <div class="card">
+               <img class="card-img-top invert" src="./photo gallery_files/butterfly-4884620_1920.jpg" alt="Card image cap">
                <div class="card-body">
                   <h5 class="card-title">butterfly</h5>
                </div>
             </div>
-            <div class="card movement2">
-               <img class="card-img-top hue_rotate"
-                  src="../../../../img/galeria_de_fotos_paisajes/kingfisher-1905255_1920.jpg" alt="Card image cap">
+            <div class="card">
+               <img class="card-img-top hue_rotate" src="./photo gallery_files/kingfisher-1905255_1920.jpg" alt="Card image cap">
                <div class="card-body">
                   <h5 class="card-title">kingfisher</h5>
                </div>
             </div>
-            <div class="card movement">
-               <img class="card-img-top sepia" src="../../../../img/galeria_de_fotos_paisajes/sun-3713835_1920.jpg"
-                  alt="Card image cap">
+            <div class="card">
+               <img class="card-img-top sepia" src="./photo gallery_files/sun-3713835_1920.jpg" alt="Card image cap">
                <div class="card-body">
                   <h5 class="card-title">sun</h5>
                </div>
             </div>
-            <div class="card movement2">
-               <img class="card-img-top saturated"
-                  src="../../../../img/galeria_de_fotos_paisajes/winter-5027855_1920.jpg" alt="Card image cap">
+            <div class="card">
+               <img class="card-img-top saturated" src="./photo gallery_files/winter-5027855_1920.jpg" alt="Card image cap">
                <div class="card-body">
                   <h5 class="card-title">winter</h5>
                </div>
             </div>
-            <div class="card movement">
-               <img class="card-img-top grayscale"
-                  src="../../../../img/galeria_de_fotos_paisajes/butterfly-4884620_1920.jpg" alt="Card image cap">
+            <div class="card">
+               <img class="card-img-top grayscale" src="./photo gallery_files/butterfly-4884620_1920.jpg" alt="Card image cap">
                <div class="card-body">
                   <h5 class="card-title">butterfly</h5>
                </div>
             </div>
-            <div class="card movement2">
-               <img class="card-img-top blur" src="../../../../img/galeria_de_fotos_paisajes/wing-5316289_1920.jpg"
-                  alt="Card image cap">
+            <div class="card">
+               <img class="card-img-top blur" src="./photo gallery_files/wing-5316289_1920.jpg" alt="Card image cap">
                <div class="card-body">
                   <h5 class="card-title">wing</h5>
                </div>
             </div>
-            <div class="card movement">
-               <img class="card-img-top satured blur"
-                  src="../../../../img/galeria_de_fotos_paisajes/kingfisher-1905255_1920.jpg" alt="Card image cap">
+            <div class="card">
+               <img class="card-img-top satured blur" src="./photo gallery_files/kingfisher-1905255_1920.jpg" alt="Card image cap">
                <div class="card-body">
                   <h5 class="card-title">kingfisher</h5>
                </div>
             </div>
-            <div class="card movement2">
-               <img class="card-img-top grayscale opacity"
-                  src="../../../../img/galeria_de_fotos_paisajes/nature-5176637_1920.jpg" alt="Card image cap">
+            <div class="card">
+               <img class="card-img-top grayscale opacity" src="./photo gallery_files/nature-5176637_1920.jpg" alt="Card image cap">
                <div class="card-body">
                   <h5 class="card-title">nature</h5>
                </div>
             </div>
-            <div class="card movement">
-               <img class="card-img-top sepia contrast"
-                  src="../../../../img/galeria_de_fotos_paisajes/bird-4498326_1920.jpg" alt="Card image cap">
+            <div class="card">
+               <img class="card-img-top sepia contrast" src="./photo gallery_files/bird-4498326_1920.jpg" alt="Card image cap">
                <div class="card-body">
                   <h5 class="card-title">bird</h5>
                </div>
             </div>
-            <div class="card movement2">
-               <img class="card-img-top invert brightness" src="../../../../img/galeria_de_fotos/telefono.jpeg"
-                  alt="Card image cap">
+            <div class="card">
+               <img class="card-img-top invert brightness" src="./photo gallery_files/telefono.jpeg" alt="Card image cap">
                <div class="card-body">
                   <h5 class="card-title">telefono</h5>
                </div>
@@ -327,16 +270,9 @@
          </section>
       </article>
    </main>
-   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"></script>
-   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"></script>
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"></script>
-   <footer></footer>
-</body>
+   <script src="./photo gallery_files/jquery-3.5.1.slim.min.js.descarga" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="./photo gallery_files/popper.min.js.descarga" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="./photo gallery_files/bootstrap.min.js.descarga" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-</html>
+
+</body></html>
