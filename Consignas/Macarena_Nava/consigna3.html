@@ -13,22 +13,16 @@
                 background-attachment:fixed;
             }
             .container {
-                width: 100%;
                 height: 600px;
-                margin:10% auto;
                 display: flex;
                 flex-direction: column;
-                
-            } 
-            .elemento {
                 margin-left: 25%;
                 margin-right: 25%;
                 padding-top: 3%;
                 padding-bottom: 4%;
-                display: flex;
-                flex-direction: column;
                 background-color: #ffffff;
-                font-family: "opensans";
+                font-family: "opensans";              
+            } 
                 
             }
             @font-face {
@@ -42,46 +36,46 @@
 
             .elemento1 {
                 display: flex;
-                padding-bottom: 5% ;
-                padding-left: 5%;
+                flex-wrap: wrap;
             }
-            
-            label {
-                font-weight: 800;
-                font-size: medium;
-                padding-right: 1em;
-            }
+                
+           
             .elemento2 {
-                padding-left: 5%;
-                padding-bottom: 5%;
-
+                display: flex;
+                flex-wrap: wrap;                 
             }
             .elemento3 {
                 display: flex;
-                width: 100%;
-                scroll-padding-left: 12%;
-                padding-bottom: 5%;
+                flex-wrap: wrap;                           
             }
-            .elemento4 {
+            .elemento4 { 
                 display: flex;
-                width: 100%;
-                margin-bottom: 5%;
+                flex-wrap: wrap;                      
             }
             .elemento5{
                 display: flex;
-                width: 100%;
-                margin-bottom: 5%;
+                flex-wrap: wrap;              
             }
-            .elemento6{
+            .elemento6{ 
                 display: flex;
-                width: 100%;
-                margin-bottom: 5%;
+                flex-direction: column;                        
             }
             .elemento7 {
                 display: flex;
-                width: 100%;
-                margin-bottom: 5%;
-            }        
+                flex-wrap: wrap;               
+            }
+            .casilleros {
+                display: flex;
+                flex-direction: column; 
+                color: #9c9c9c;
+                font-size: small;      
+            }
+            label {
+                font-family: "Opensans";
+                font-weight: 800;
+                font-size: medium;
+                padding-right: 1em;
+            }      
             h1 {
                 font-family: "helvetica-neue";
                 color: #ffffff;
@@ -123,7 +117,6 @@
             }
             input{
                 background-color: #e5e5e5;
-                margin-left: 5px;
             }
             select {
                 background-color: #e5e5e5;
@@ -137,95 +130,105 @@
             <header>
                 <article>
                     <section>
-                    <div class="container">
-                        <h1>EVENT REGISTRATION FORM</h1>
-                        <form action= "consigna3.html" method=POST class="elemento">
-                            <div class="elemento1">
-                                <p>
-                                <label for="name">Name</label>                                                                                   
-                               <input 
-                                id="name" 
-                                type="text" 
-                                minlength="3" 
-                                maxlength="20"
-                                name="name">
-                                <small><b>First Name</b></small>
-                                <label for="name"></label>                               
-                                <input 
-                                id="lastname" 
-                                type="text" 
-                                minlength="0" 
-                                maxlength="20"
-                                name="name"
-                                >
-                                <small><b>Last Name</b></small>
-                               </p>
-                            </div>
-                            <div class="elemento2">
-                                <label for="company">Company</label>
-                                <input 
-                                id="company" 
-                                type="text" 
-                                minlength="0" 
-                                maxlength="20"
-                                name="company"
-                                >
-                            </div> 
-                            <div class="elemento3">
-                                <label for="email">Email</label>
-                                <input 
-                                id="email" 
-                                type="email" 
-                                name="email"
-                                >
-                            </div>
-                            <div class="elemento4">
-                                <p>
-                                <label for="phone">Phone</label>                              
-                                <input 
-                                id="areacode" 
-                                type="number" 
-                                name="phone"
-                                >
-                                <small><b>Area Code</b></small>
-                                <label for="phone"></label>                                                        
-                                <input 
-                                id="phone" 
-                                type="tel" 
-                                name="phone"
-                                >
-                                <small><b>Phone Number</b></small>
-                                </p>                                                           
-                            </div>
-                            <div class="elemento5">
-                             <label for="subject">Subject</label>
-                             <select name="subject" id="subject" required>
-                                 <option value="" disable selected>Choose option:</option>
-                                 <option value="support">Support Department</option>
-                                 <option value="sales">Sales Department</option>
-                                 <option value="claims">Claims Department</option>
-                             </select>
-                         </div>
-                         <div class="elemento6">
-                            <h3>Are you an existing customer?</h3>
-                                <input 
-                                name="customer" 
-                                type="radio" 
-                                value="y"
-                                >
-                                <label>Yes</label>                        
-                                <input 
-                                name="customer" 
-                                type="radio" 
-                                value="n"
-                                >
-                                <label>No</label>
-                            </div> 
-                            <div class="elemento7">
-                            <input class="register" type="submit" value="REGISTER"> 
-                            </div>                     
+                        <form action= "consigna3.html" method=POST>   
+                            <h1>EVENT REGISTRATION FORM</h1>
+                            <div class="container">
+                                <div class="elemento1"> 
+                                    <label for="name">Name</label>                        
+                                    <div class="casilleros">                                                                               
+                                    <input 
+                                        id="name" 
+                                        type="text" 
+                                        minlength="3" 
+                                        maxlength="20"
+                                        name="name"
+                                        required>
+                                        <label for="name">First Name</label>
+                                    </div>
+                                    <div class="casilleros">                           
+                                        <input 
+                                        id="lastname" 
+                                        type="text" 
+                                        minlength="0" 
+                                        maxlength="20"
+                                        name="name"
+                                        required>
+                                        <label>Last Name</label>
+                                    </div>
+                                </div>                                   
+                                <div class="elemento2">
+                                    <label for="company">Company</label>
+                                    <div>
+                                        <input 
+                                        id="company" 
+                                        type="text" 
+                                        minlength="0" 
+                                        maxlength="20"
+                                        name="company">
+                                    </div>     
+                                </div>                                 
+                                <div class="elemento3">
+                                    <label for="email">Email</label>                                    
+                                    <div>
+                                        <input 
+                                        id="email" 
+                                        type="email" 
+                                        name="email">
+                                    </div>
+                                </div>
+                                <div class="elemento4">
+                                        <label for="phone">Phone</label>
+                                        <div class="casilleros">                            
+                                            <input 
+                                            id="areacode" 
+                                            type="number" 
+                                            name="phone">
+                                            <label>Area Code</label>
+                                        </div>                                                                                            
+                                        <div class="casilleros">
+                                            <input 
+                                            id="phone" 
+                                            type="tel" 
+                                            name="phone">
+                                            <label for="phone">Phone Number</label>                                              
+                                        </div>
+                                </div>
+                                <div class="elemento5">
+                                    <label for="subject">Subject</label>
+                                        <div>
+                                            <select name="subject" id="subject" required>
+                                                <option value="" disable selected>Choose option:</option>
+                                                <option value="support">Support Department</option>
+                                                <option value="sales">Sales Department</option>
+                                                <option value="claims">Claims Department</option>
+                                            </select>
+                                        </div>
+                                </div>
+                                <div class="elemento6">
+                                        
+                                            <label for="custumer">Are you an existing customer?</label>
+                                        
+                                        <div>
+                                            <input 
+                                            name="customer" 
+                                            type="radio" 
+                                            value="y">
+                                            <label>Yes</label>                     
+                                            <input 
+                                            name="customer" 
+                                            type="radio" 
+                                            value="n">
+                                            <label>No</label>
+                                        </div>      
+                                </div> 
+                                <div class="elemento7">
+                                        <input 
+                                        class="register" 
+                                        type="submit" 
+                                        value="REGISTER"> 
+                                </div>                                               
+                            </div>   
                         </form>
-                    </div>
                     </section>
                 </article>
             </header>
