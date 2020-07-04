@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="galeria de fotos" />
+    <meta name="keywords" content="galeria, foto, bootstrap" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../assets/bootstrap/js/bootstrap.min.js">
+
+    <title>Galeria bootstrap</title>
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        html {
+            box-sizing: border-box;
+            font-size: 62.5%;
+        }
+
+        body {
+            font-family: "Nunito", sans-serif;
+            background-image: url(img/retina_wood/retina_wood.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-align: left;
+        }
+
+        .container {
+            width: 60%;
+            margin: 2rem auto;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 5vw);
+            grid-gap: 1.5rem;
+        }
+
+        #gallery__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="row">
+            <nav class="navbar navbar-dark bg-dark">
+                <h1>Polaroid</h1>
+                <div class="navbar-nav-inline-flex">
+                    <a class="nav-item nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">Button-1</a>
+                    <a class="nav-item nav-link" href="#">Button-2</a>
+                    <a class="nav-item nav-link" href="#">Button-3</a>
+                    <a class="nav-item nav-link" href="#">Button-4</a>
+
+
+
+                </div>
+    </div>
+    </nav>
+
+    </header>
+    <main class="container">
+
+        <div class="card" style="width: 18rem;">
+            <img src="img/arandanos.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Foto-1</h5>
+
+                <div class="gallery">
+                    <figure class="gallery__item gallery__item--1 blur">
+                        <img src="img/arandanos.jpeg" alt="Gallery image 1" class="img-responsive" id="gallery__img" />
+                    </figure>
+                    <figure class="gallery__item gallery__item--2 opacity">
+                        <img src="img/Mujeres-programadoras-web.jpg" alt="Gallery image 2" class="img-responsive"
+                            id="gallery__img" />
+                    </figure>
+                    <figure class="gallery__item gallery__item--3 invert">
+                        <img src="img/camarafotos.jpeg" alt="Gallery image 3" class="img-responsive"
+                            id="gallery__img" />
+                    </figure>
+                    <figure class="gallery__item gallery__item--4 sepia">
+                        <img src="img/bici.jpeg" alt="Gallery image 4" class="img-responsive" id="gallery__img" />
+                    </figure>
+                    <figure class="gallery__item gallery__item--5 drop-shadow">
+                        <img src="img/flores.jpeg" alt="Gallery image 5" class="img-responsive" id="gallery__img" />
+                    </figure>
+                    <figure class="gallery__item gallery__item--6 contrast">
+                        <img src="img/animalitos.jpg" alt="Gallery image 6" class="img-responsive" id="gallery__img" />
+                    </figure>
+                    <figure class="gallery__item gallery__item--7 contrast">
+                        <img src="img/casa.jpeg" alt="Gallery image 7" class="img-responsive" id="gallery__img" />
+                    </figure>
+                    <figure class="gallery__item gallery__item--8 contrast">
+                        <img src="img/guitarra.jpeg" alt="Gallery image 8" class="img-responsive" id="gallery__img" />
+                    </figure>
+                    <figure class="gallery__item gallery__item--9 contrast">
+                        <img src="img/jugo.jpeg" alt="Gallery image 9" class="img-responsive" id="gallery__img" />
+                    </figure>
+                </div>
+    </main>
+</body>
+
+</html>
