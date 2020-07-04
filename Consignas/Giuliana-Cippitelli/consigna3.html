@@ -22,6 +22,7 @@
             text-align: center;
             padding: 10px;
             margin-top: 40px;
+            
             }
 
         .body-form {
@@ -37,6 +38,7 @@
             margin-left: 30px;
             margin-right: 30px;
             line-height: 50px;
+            margin-bottom: 50px
         }
 
         .item {
@@ -78,44 +80,61 @@
         }
 
         .radio {
-          display: flex;
-          justify-content: flex-end;
-          align-items: baseline;
-          flex-direction: row-reverse;
-          width: fit-content;
+            display: flex;
+            justify-content: flex-end;
+            align-items: baseline;
+            flex-direction: row-reverse;
+            width: fit-content;
         }
 
         .register {
             margin-top: 50px;
-          display: block;
+            display: block;
             background-color: #ff4b5a;
             padding: 10px;
-            text-align: center;
-
-        
+            text-align: center;        
             font-weight: 700;
             color: #ffffff;
             width: 150px;
-            text-align: center;
+     
         }
 
         @media (max-device-width: 800px) and (orientation: portrait) {
             h1 {
-                font-size: 15px;
+                font-size: 25px;
             }            
              .item {
                 flex-direction: column;
             }
             label{
-              width: 75%;
+                display: flex;
+                justify-content: center;
+                font-size: 25px;
+                height: 40px;
+                width: 100%;
             }
             input {
-                height: 30px;
+                height: 50px;
                 margin-bottom: 10px;
-                width: 75%;
-            }           
+                width: 90%;
+            }     
+            
+            select {
+            display: flex;
+            justify-content: flex-end;
+            font-weight: 700;
+            width: 90%;
+            height: 50px;
+            margin-top: 20px;
             }
-        
+            
+        .radio {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            width: auto
+        }
+    }
     </style>
 </head>
 
