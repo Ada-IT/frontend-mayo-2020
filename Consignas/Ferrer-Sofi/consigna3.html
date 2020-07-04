@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <title>Formulario Consigna3</title>
+        <link href="https://allfont.es/allfont.css?fonts=open-sans" rel="stylesheet" type="text/css" />
         <style>
             /*
             Colores de Fondo: #08aeea , #b721ff
@@ -12,33 +14,20 @@
             Hover boton register: #eb3746
             La fuente de la web debe ser "Open Sans" y "Helvetica Neue"
             */
-            /*div {    
-            input:valid {
-            background-color: #62eb62;}
-            input:invalid {
-            background-color: red;}
-            }*/
-
-            @media (max-width:660px) {
-            form {
-            width: 100%;}
-            }
             
             body{
+            font-family: 'Open Sans', arial;
             font-size: 1rem;
             min-height: 100vh;
             margin: 0;
             background: radial-gradient(circle at 100% 0, #b721ff, #08aeea);
-            display: flex;
-            flex-direction: column;
             }
 
             .formulario{
             background-color: #ffffff;
-            width: 95%;
+            width: 100%;
             max-width: 550px;    
-            margin: 4rem auto auto auto;
-            box-sizing: border-box;
+            margin: 1rem auto auto auto;
             border-radius: 0.5rem;
             }
             
@@ -54,37 +43,86 @@
             }
 
             .contenedor-formulario {
-                padding: 1rem;
                 display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
-
-            .input-mitad {
-                width: 45%;
-            }
-
-            .input-completo {
-                width: 90%;
-            }
-
-            .input-40 {
-                width: 20%;
-            }
-
-            .input-60 {
-                width: 58%;
+                flex-direction: column;
+                width: 100%;
+                padding: 1rem;
+                height: 450px;              
             }
 
             input {
+                width: 70%;
+                display: flex;
+                justify-content: flex-end;
                 background-color: #e5e5e5;
-                margin-bottom: 1rem;
+                margin-bottom: 0.3rem;
+                margin-left: 1rem;
                 border-radius: 0.2rem;
                 border: none;
                 padding: 0.7rem;
+                align-items: center;
             }
 
+            label {
+                min-width: 15%;
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            .form-nombre {
+                display: flex;
+            } 
+            
+            .div-comun {
+                display: flex;
+            }
+
+            .form-telefono {
+                display: flex; 
+            }
+
+            /*.telefono {
+                width: 70%;
+            }
+            .codigo-area {
+                width: 30%;
+            }*/
+
+            .form-costumer {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .costumer {
+                justify-content: start;
+                width: 40%;
+            }
+            
+            .etiqueta {
+                color: gray;
+                margin-left: 1rem;
+            }    
+
+            select {
+                width: 70%;
+                display: flex;
+                background-color: #e5e5e5;
+                margin-bottom: 0.3rem;
+                border-radius: 0.2rem;
+                border: none;
+                padding: 0.7rem;
+                align-items: center;
+            }
+
+            input[type="email"]:valid {
+            color: rgb(70, 155, 70);
+            }
+            input[type="email"]:invalid{
+            color: rgb(224, 33, 33);
+            }
+     
             .boton {
+                width: 20%;
                 color: #ffffff;
                 border-radius: 0.5rem;   
                 background-color:#ff4b5a; 
@@ -95,87 +133,110 @@
                 background-color: #eb3746;
                 cursor: pointer;
             }
-            </style>
-        <title>Formulario Consigna3</title>                     
+
+            @media (max-width:660px) {
+            form {
+            width: 100%;}
+            }
+        </style>                            
     </head>
     <body>
-        <main>
-            <!--<div class="contendor-formulario">  
-                <section class="titulo">
-                    <h1>EVENT REGISTRATION FORM</h1> 
-                </section>                  
-                <section class="formulario">-->                                       
-                    <form action="" method="post" class="formulario">
-                        <h1 class="titulo">EVENT REGISTRATION FORM</h1>  
-                    <div class="contenedor-formulario">                 
-                        <input class="input-mitad"
-                            id="nombre" 
-                            type="text" 
-                            maxlength="20" 
-                            name="nombre"
-                            required>
-                        <!--<label for="nombre" class="etiqueta-nombre">
-                            <span class="name">First Name</span></label>-->
-                        <input class="input-mitad"
-                            id="apellido"
-                            type="text"
-                            maxlength="20"
-                            name="apellido"
-                            required>
-                        <!--<label for="apellido" class="etiqueta-apellido">
-                            <span class="apellido">Last name</span></label>-->                            
-                            <br>
-                        <label for="empresa">Empresa:</label>
-                        <input class="input-completo"
+        <main>                                      
+            <form action="consigna3.html" method="post" class="formulario">
+                <h1 class="titulo">EVENT REGISTRATION FORM</h1>  
+                    <div class="contenedor-formulario">
+                        <div class="form-nombre">
+                            <label for="name">Name:</label>
+                            <div class="input-nombre">                                                                             
+                                <input
+                                id="nombre" 
+                                type="text" 
+                                maxlength="20" 
+                                name="nombre"
+                                required>
+                                <label for="nombre" class="etiqueta" >First Name</label>
+                            </div>
+                            <div class="input-apellido">
+                                <input
+                                id="apellido"
+                                type="text"
+                                maxlength="20"
+                                name="apellido"
+                                required>
+                                <label for="apellido" class="etiqueta">Last Name</label>
+                            </div>
+                        </div>
+                        <br>                           
+                        <div class="div-comun">
+                        <label for="empresa">Company:</label>
+                        <input
                             id="empresa" 
                             type="text" 
                             maxlength="20" 
                             name="empresa"
                             required>
-                            <br>
+                        </div>
+                        <br>
+                        <div class="div-comun">
                         <label for="email">Email:</label>
-                        <input class="input-completo"
+                        <input
                             id="email" 
                             type="email" 
                             name="email"
                             required>
-                            <br>                            
-                        <label for="telefono">Phone:</label>
-                        <input class="input-40"
-                            id="telefono" 
-                            type="number"  
-                            name="telefono"
-                            required>
-                            <input class="input-60"
-                            id="telefono" 
-                            type="number"  
-                            name="telefono"
-                            required>
-                            <br>  
+                        </div>
+                        <br>
+                        <div class="form-telefono">  
+                            <label for="telefono">Phone:</label>
+                            <div>                 
+                                <input class="codigo-area"
+                                id="codigo-area" 
+                                type="number"  
+                                name="codigo-area"
+                                required>
+                                <label for="codigo-area" class="etiqueta">Area Code</label>
+                            </div> 
+                            <div>
+                                <input class="telefono"
+                                id="telefono" 
+                                type="number"  
+                                name="telefono"
+                                required>
+                                <label for="telefono" class="etiqueta">Phone Number</label>
+                            </div>
+                        </div>
+                        <br>    
+                        <div class="div-comun">
                         <label for="subject">Subject</label>
-                        <select name="subject" id="subject" class="input-completo">
+                        <select name="subject" id="subject" class="campo">
                             <option value="" disabled selected>Choose option</option>
                             <option value="support">Support department</option>
                             <option value="sales">Sales department</option>
                             <option value="claim">Claims department</option>
-                        </select>          
-                            <br>
-                        <h3>Are you costumer?</h3>
-                        <input 
-                            name="costumer" 
-                            type="radio" 
-                            value="y">
-                        <label>Yes</label>                         
-                        <input 
-                            name="costumer" 
-                            type="radio" 
-                            value="N">
-                        <label>No</label> 
-                            <br>
-                            <br>
-                        <input type="submit" class="boton" value="REGISTER">
+                        </select> 
+                        </div> 
+                        <br>       
+                        <div class="costumer">
+                            <label for="costumer">Are you costumer?</label>
+                                <div class="form-costumer">
+                                <input 
+                                name="costumer" 
+                                type="radio" 
+                                value="y">
+                                <label>Yes</label>                         
+                                <input 
+                                name="costumer" 
+                                type="radio" 
+                                value="N">
+                                <label>No</label> 
+                                </div>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="submit" class="boton" value="REGISTER">
+                        </div>
                     </div>
-                    </form>
+            </form>
                 <!--</section>-->
             <!--</div>-->
         </main>
