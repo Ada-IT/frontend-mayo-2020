@@ -1,149 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400&display=swap" rel="stylesheet">
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i"
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-    <link rel="stylesheet" href="css/style.css">
-
-    <title>Galeria de Fotos Con Efecto</title>
     <style>
+      *{ 
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;}
 
-.sepia {
-  -webkit-filter: sepia(90%);
-  filter: sepia(90%);
-}
+      body{
+      font-family:'Times New Roman', Times, serif;
+      background-color: black;}
 
-.blur {
-  -webkit-filter: blur(5px) sepia(90%);
-  filter: blur(5px) sepia(90%);
-}
+      h1{
+      font-weight: 400;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 40px;
+      color: white;}
 
-.grayscale {
-  filter: grayscale(70%);
-}
+      .linea{background-color:cornflowerblue;
+      height: 5px;
+      width: 100%;
+      display: block;}
+      
+      .gallery{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      width: 95%;
+      margin: auto;
+      grid-gap: 10px;
+      padding: 40px;
+      overflow: hidden;}
 
-.brillo {
-  -webkit-filter: brightness(43%);
-  filter: brightness(43%);
-}
-
-.opacidad {
-  -webkit-filter: opacity(68%);
-  filter: opacity(68%);
-}
-.hrotate {
-  -webkit-filter: hue-rotate(107deg);
-  filter: hue-rotate(107deg);
-}
-*,
-        *::after,
-        *::before {
-          margin: 0;
-          padding: 0;
-          box-sizing: inherit;
+      .gallery img{
+      width: 100%;
+      vertical-align: top;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.5s }
+      
+      .gallery a:hover img { 
+      filter: blur(2px);
+      transform: rotate(10deg);
+      }
+        @media (min-width: 768px) and (max-width: 1024px)  {
+          .container{background-color: rgb(red, green, blue);}
+          .contenido, .contenido-lateral{ width: 50%;}
         }
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+          .container{background-color: rgb(red, green, blue);}
+          .contenido, .contenido-lateral{ width: 100%;}
+        }        
+        @media (min-width: 320px) and (max-width: 767px) {
+          .container{height: 80px;}
+          .contenido{background-color: rgb(red, green, blue);}
+          .contenido, .contenido-lateral{width: 100%;}
+        }
+       </style>
+       </head>
 
-        html {
-          box-sizing: border-box;
-          font-size: 62.5%;
-        }
+    <body>
+      <h1>Galeria de imagenes</h1>
+      <span class="linea"></span>
+      <section class="gallery">
+        <a href="gallery__item gallery__item--1">
+          <img src="../ana_campos/imagenes/imagen1.jpg" alt="Gallery image 1" class="gallery__img">
+        </a>
+        <a href="gallery__item gallery__item--2">
+          <img src="../ana_campos/imagenes/imagen2.jpg" alt="Gallery image 2"  class="gallery__img">
+        </a>
+        <a href="gallery__item gallery__item--3">
+          <img src="../ana_campos/imagenes/imagen3.jpg" alt="Gallery image 3" class="gallery__img">
+        </a>
+        <a href="gallery__item gallery__item--4">
+          <img src="../ana_campos/imagenes/imagen4.jpg" alt="Gallery image 4" class="gallery__img">
+        </a>
+        <a href="gallery__item gallery__item--5">
+          <img src="../ana_campos/imagenes/imagen5.jpg" alt="Gallery image 5" class="gallery__img">
+        </a>
+        <a href="gallery__item gallery__item--6">
+            <img src="imagenes/imagen6.jpg" alt="Gallery image 6" class="gallery__img">
+        </a>
+      </section>
 
-        body {
-          font-family: "Nunito", sans-serif;
-          color: #333;
-          font-weight: 300;
-          line-height: 1.6;
-        }
-
-        h1 {
-          font-size: 4rem;
-          text-align: center;
-        }
-
-        .container {
-          width: 60%;
-          margin: 2rem auto;
-        }
-.gallery {
-          display: grid;
-          grid-template-columns: repeat( auto-fill, minmax(200px, 1fr));
-          grid-gap: 2px;
-          grid-auto-rows: 100px;
-          grid-auto-flow:row dense;
-          
-        }
-
-        .gallery__img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-.gallery img:nth-child(3n) {
-          /* grid-column: 3 / span 4;
-          grid-row: 2 / span 2; */
-          /* grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end: */
-          grid-area: span 2 / span 5;
-        }
-        .gallery img:nth-child(5n) {
-          grid-area: span 3;
-        }
-
-        .gallery__img:nth-child(5n) {
-          grid-area: span 2 / span 2;
-        }
-
-    </style>
-
-  </head>
-  <body>
-    <main class="container">
-      <header>
-        <h1>Galeria de Fotos</h1>
-      </header>        
-      <div class="gallery">
-        <figure class="gallery__item gallery__item--1">
-          <img
-            src="../../img/galeria_de_fotos/arandanos.jpeg"
-            alt="Gallery image 1"
-            class="gallery__img sepia"
-          />
-        </figure>
-        <figure class="gallery__item gallery__item--2">
-          <img src="../../img/galeria_de_fotos/auto.jpeg" alt="Gallery image 2"
-               class="gallery__img hrotate" />
-        </figure>
-        <figure class="gallery__item gallery__item--3 blur">
-          <img
-            src="../../img/galeria_de_fotos//camarafotos.jpeg"
-            alt="Gallery image 3"
-            class="gallery__img sepia"
-          />
-        </figure>
-        <figure class="gallery__item gallery__item--4 grayscale" >
-          <img src="../../img/galeria_de_fotos/bici.jpeg" alt="Gallery image 4" class="gallery__img grayscale" />
-        </figure>
-        <figure class="gallery__item gallery__item--5">
-          <img
-            src="../../img/galeria_de_fotos/flores.jpeg"
-            alt="Gallery image 5"
-            class="gallery__img brillo"
-          />
-        </figure>
-        <figure class="gallery__item gallery__item--6">
-          <img
-            src="../../img/galeria_de_fotos/mujer.jpeg"
-            alt="Gallery image 6"
-            class="gallery__img opacidad"
-          />
-        </figure>
-      </div>
-    </div>
-  </body>
-</html>
+    
+      </article>
+    </body>
