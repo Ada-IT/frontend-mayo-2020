@@ -13,96 +13,233 @@
                 background-attachment:fixed;
             }
             .container {
-                height: 800px;
-                display: flex;
-                flex-direction: column;
-                margin-left: 25% ;
-                margin-right: 25% ;
-                margin-bottom: 10%;
-                padding: 4%;
-                border-bottom-left-radius: 2%;
-                border-bottom-right-radius: 2%;           
-                background-color: #ffffff;
-                font-family: "opensans"         
+                height: 900px;
+                display: flex; flex-direction: column;
+                margin-left: 25% ; margin-right: 25% ; margin-bottom: 10%; margin-top: 10%;
+                padding-bottom: 10%;
+                border-radius: 3%;           
+                background-color: #ffffff; font-family: "opensans";                   
             } 
+            /*fuente del titulo*/
             @font-face {
                 font-family: "helvetica-neue";
                 src: url(css/fonts/helvetica-neue.otf);
             }
+            /*fuente del formulario*/
             @font-face {
                 font-family: "opensans";
                 src: url(css/fonts/opensans.ttf);
-            }    
+            }
+             /* Tablets, Ipad (Landscape)  */
 
+            @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+                .container {
+                    display: flex;
+                    height: 900px;
+                    width:80%;
+                    margin-left: 10%;
+                    margin-right: 5%;                       
+                }
+                .elemento3 {
+                    align-items: flex-start;
+                }
+            }
+
+            /* Tablets, Ipad (portrait)  */
+            @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+                .container {
+                    width:90%;
+                    margin-right: 5%;
+                    margin-left:5%;
+                    
+                    }
+            
+            }   
+                /* baja Resolution Tablets, Mobiles (Landscape)*/
+
+            @media (min-width: 481px) and (max-width: 767px) and (orientation: landscape){
+                    .container {
+                        width: 80%;
+                        height: 800px;
+                        margin-left: 10%;
+                        margin-right: 10%;
+                        margin-bottom: 5%;
+                        margin-top: 5%;
+                    }
+            }
+
+                /* Smartphones Mobiles (Portrait) */
+
+            @media (min-width: 481px) and (max-width: 767px) and (orientation:portrait){
+                    .container {
+                        width:95%;
+                        height: 900px;
+                        margin-left: 3%;
+                        margin-right: 5%;
+                        margin-top: 10%;
+                        margin-bottom: 10%;
+                    }                    
+            }               
+            @media  (min-width: 414px) and (max-width: 736px) and (orientation:portrait){
+                .container {
+                    margin-left:5%;
+                    margin-right:5%;
+                    width:90%;
+                }
+                .elemento1 {
+                    flex-direction: column;
+                }
+                .elemento5 {
+                    flex-direction: column;
+                }
+            }
+
+            /*Css de formulario*/
             .elemento1 {
-                display: flex;
-                flex-wrap: wrap;
+                display: flex; flex-wrap: wrap;
+                margin-top: 4%;
                 margin-bottom: 5%;
+                margin-left: 6%;
+                margin-right: 5%;
                 width: 100%;
             }                
             .elemento2 {
-                display: flex;
-                flex-wrap: wrap;
-                margin-bottom: 7%;
-            }   
+                display: flex; flex-wrap: wrap;                     
+                margin-bottom: 5%;
+                margin-left: 6%;
+                margin-right: 5%;
+                         
+            }                           
             .elemento3 {
-                display: flex;
-                flex-wrap: wrap;
-                margin-bottom: 7%;
-                                        
+                display: flex; flex-wrap: wrap;
+                margin-bottom: 5%;
+                margin-left: 6%;
+                margin-right: 5%;                                          
             }
             .elemento4 { 
-                display: flex;
-                flex-wrap: wrap;
-                margin-bottom: 5%; 
-                                
+                display: flex; flex-wrap: wrap;
+                margin-bottom: 5%;
+                margin-left: 6%;
+                margin-right: 5%; 
+                                               
             }
             .elemento5{
-                display: flex;
-                flex-wrap: wrap;
-                margin-bottom: 7%;
-                         
+                display: flex; flex-wrap: wrap;
+                margin-bottom: 5%;
+                margin-left: 6%;
+                margin-right: 5%;
+                width: 100%;                     
             }
             .elemento6{ 
-                display: flex;
-                margin-bottom: 7%;                                  
+                margin-bottom: 5%;
+                margin-left: 6%;
+                margin-right: 5%;                               
             }
             .elemento7 {
-                display: flex;
-                flex-wrap: wrap;
-                margin-bottom: 7%;
-                       
+                display: flex; flex-wrap: wrap;
+                margin-bottom: 5%;
+                margin-left: 6%;
+                margin-right: 5%;           
             }
-            .casilleros {
-                display: flex;
-                flex-direction: column; 
-                color: #9c9c9c;
-                font-size: small;
-                width: 39%;
-                   
+            .firstname {
+                display: flex; flex-direction: column; 
+                color: #9c9c9c; font-size: small;
+                width: 45%;                                  
+            }
+            .lastname {
+                display: flex; flex-direction: column; 
+                color: #9c9c9c; font-size: small;
+                width: 45%;            
+            }
+            .areacode {
+                display: flex; flex-direction: column; 
+                color: #9c9c9c; font-size: small; 
+                width: 30%;
+               
+            }
+            .phone {
+                display: flex; flex-direction: column; 
+                color: #9c9c9c; font-size: small;
+                width: 60%;             
             }
             label {
                 font-family: "Opensans";
                 font-weight:bold;
-                margin-right: 4%;             
                 margin-top:2%;
             }
-            h1 {
+            .labelcompany {
+                margin-right: 28.77px;
+            }
+            .company {
+               width: 73%;                            
+            }
+            .email {
+                width: 73%;                
+            }
+            .labelemail {
+                margin-right:  59.22px;
+            }
+            .radio{
+                display: flex;                  
+            }
+            .labelname {
+                margin-right: 55.17px;
+            }
+            .divname {
+               display: flex;
+                width:64%;
+                justify-content: space-between;                                        
+            }
+            .labelphone {
+                margin-right: 52.08px;           
+            }
+            .divphone {
+                display: flex;
+                width: 74%;
+                justify-content: space-between;      
+            }
+            .labelsubject {
+                margin-right: 45.30px;
+            }
+            .divsubject {
+                width: 69%;
+            }
+            h3{
+                font-family: "Opensans"; font-weight:bold;
+                font-size: medium; 
+            }
+            .h1 {
+                display: block;            
                 font-family: "helvetica-neue";
                 color: #ffffff;
                 background-color: #1a1a1a;
-                font-size:xx-large;
+                font-size:x-large;
+                letter-spacing: 4px;
                 font-weight: 800;
-                text-align: center;
-                padding-top: 2%;
-                padding-bottom: 2%;
-                margin-bottom: 0%;
-                margin-top:10%;
-                margin-left: 25%;
-                margin-right: 25%;
-                border-radius: 3%;
-               
+                border-top-left-radius: 20px; border-top-right-radius: 20px;
+                text-align: center;              
+                padding-top: 1%; padding-bottom: 1%; margin-bottom: 4%; padding-left: 5%; padding-right: 4%;    
             }
+            .register {
+                background-color: #1a1a1a;
+                color: #ffffff;
+                font-family: "helvetica-neue";
+                width:25%; 
+            }
+            input{
+                background-color: #e5e5e5;
+                border:none;
+                height: 4em;
+                border-radius: 3%;    
+            }
+            select {
+                background-color: #e5e5e5;
+                border-color: #e5e5e5;
+                height: 4em;
+                border-radius: 3%;
+                width:94%
+            }
+            /*funciones */
             input[type="email" i]:valid 
             {color: #000000!important;
             }
@@ -122,34 +259,11 @@
                 color: #ffffff;
                 background-color: #eb3746;
                 font-family: "helvetica-neue";
-            }
-            .register {
-                background-color: #1a1a1a;
-                color: #ffffff;
-                font-family: "helvetica-neue";
-                width:25%; 
-            }
-            input{
-                background-color: #e5e5e5;
-                border:none;
-                height: 4em;
-                border-radius: 3%;        
-            }
-            select {
-                background-color: #e5e5e5;
-                border-color: #e5e5e5;
-                height: 4em;
-                border-radius: 3%;
-                margin-left: 2%;
-                width:83%
-            }
-            .company {
-                width: 82%;
-                margin-left: 2px;              
-            }
-            .email {
-                width: 82%;
-                margin-left: 4%;
+            }      
+            input[type=number]::-webkit-inner-spin-button, 
+            input[type=number]::-webkit-outer-spin-button { 
+                -webkit-appearance: none; 
+                margin: 0; 
             }
         </style>
     </head>
@@ -158,99 +272,108 @@
             <header>
                 <article>
                     <section>
-                        <form action= "consigna3.html" method=POST>   
-                            <h1>EVENT REGISTRATION FORM</h1>
+                        <form action= "consigna3.html" method=POST>                              
                             <div class="container">
+                                <div class="h1"><h1>EVENT REGISTRATION FORM</h1></div>
                                 <div class="elemento1"> 
-                                    <label for="name">Name</label>                        
-                                    <div style="margin-left: 4%"class="casilleros">                                                                               
-                                    <input 
-                                        id="name" 
-                                        type="text" 
-                                        minlength="3" 
-                                        maxlength="20"
-                                        name="name"
-                                        required>
-                                        <label for="name">First Name</label>
-                                    </div>
-                                    <div style="margin-left: 5%" class="casilleros">                           
-                                        <input 
-                                        id="lastname" 
-                                        type="text" 
-                                        minlength="0" 
-                                        maxlength="20"
-                                        name="name"
-                                        required>
-                                        <label>Last Name</label>
-                                    </div>
+                                    <label for="name" class="labelname">Name</label>
+                                    <div class="divname">                       
+                                        <div class="firstname">                                                                               
+                                            <input 
+                                            id="name" 
+                                            type="text" 
+                                            minlength="3" 
+                                            maxlength="20"
+                                            name="name"
+                                            required>
+                                            <label for="name">First Name</label>
+                                        </div>
+                                        <div class="lastname">                           
+                                            <input 
+                                            id="lastname" 
+                                            type="text" 
+                                            minlength="0" 
+                                            maxlength="20"
+                                            name="name"
+                                            required>
+                                            <label>Last Name</label>
+                                        </div>
+                                    </div> 
                                 </div>                                   
                                 <div class="elemento2">
-                                    <label for="company">Company</label>
-                                        <input 
+                                    <label for="company" class="labelcompany">Company</label>
+                                    <input 
                                         id="company" 
                                         type="text" 
                                         minlength="0" 
                                         maxlength="20"
                                         name="company"
                                         class="company"
-                                        required
-                                        >     
+                                        required>                                        
                                 </div>                                 
                                 <div class="elemento3">
-                                    <label for="email">Email</label>                                    
-                                        <input 
+                                    <label for="email" class="labelemail">Email</label>                                    
+                                    <input 
                                         id="email" 
                                         type="email" 
                                         name="email"
-                                        class="email"
-                                        >                      
+                                        class="email">                    
                                 </div>
                                 <div class="elemento4">
-                                        <label for="phone">Phone</label>
-                                        <div style="margin-left:3%;width:18%;"class="casilleros">                            
+                                        <label for="phone" class="labelphone">Phone</label>
+                                    <div class="divphone">
+                                        <div class="areacode">                            
                                             <input 
                                             id="areacode" 
-                                            type="number" 
-                                            name="phone"
-                                            >
+                                            type="number"                                       
+                                            name="phone" required>
                                             <label>Area Code</label>
                                         </div>                                                                                            
-                                        <div style="margin-left:5%;width: 60%;"class="casilleros">
+                                        <div class="phone">
                                             <input 
                                             id="phone" 
-                                            type="tel" 
-                                            name="phone"
-                                            >
+                                            type="number" 
+                                            name="phone" required>
                                             <label for="phone">Phone Number</label>                                              
                                         </div>
+                                    </div>
                                 </div>
                                 <div class="elemento5">
-                                    <label for="subject">Subject</label>
-                                            <select name="subject" id="subject" required>
-                                                <option value="" disable selected>Choose option:</option>
-                                                <option value="support">Support Department</option>
-                                                <option value="sales">Sales Department</option>
-                                                <option value="claims">Claims Department</option>
-                                            </select>
-                                </div>
+                                    <label for="subject" class="labelsubject">Subject</label>
+                                    <div class="divsubject">
+                                    <select name="subject" id="subject" required>
+                                            <option value="" disable selected>Choose option:</option>
+                                            <option value="support">Support Department</option>
+                                            <option value="sales">Sales Department</option>
+                                            <option value="claims">Claims Department</option>
+                                           
+                                    </select>
+                                    </div> 
+                                </div>  
                                 <div class="elemento6">
-                                            <label for="custumer">Are you an existing customer?</label>                                                         
-                                            <input 
+                                    <h3>Are you an existing customer?</h3>
+                                    <div class="radio">                                                                                                                                                                                                                     
+                                        <input 
                                             name="customer" 
                                             type="radio" 
-                                            value="y">
-                                            <label>Yes</label>                   
-                                            <input 
+                                            value="y"
+                                            style="margin-right: 2%"
+                                            required>
+                                        <label class="radio">Yes</label>                                                                                        
+                                        <input 
                                             name="customer" 
                                             type="radio" 
-                                            value="n">
-                                            <label>No</label>                                        
+                                            value="n"
+                                            style="margin-right: 2%"
+                                            required>
+                                        <label>No</label>
+                                    </div>                                                                                                                                     
                                 </div> 
                                 <div class="elemento7">
-                                        <input 
-                                        class="register"
-                                        type="submit" 
-                                        value="REGISTER"> 
+                                    <input 
+                                    class="register"
+                                    type="submit" 
+                                    value="REGISTER"> 
                                 </div>                                               
                             </div>   
                         </form>
