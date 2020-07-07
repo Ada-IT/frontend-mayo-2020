@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <!-- 
+            Rama bootstrap_galeria
+            En su carpeta de consignas crear carpeta bootstrap-galeria
+            En la carpeta crear archivo galeria.html
+            El archivo debe contener la libreria de bootstrap css incluida
+            La galeria debe contener 9 imagenes:
+            - Cada imagen debe estar dentro de un card.
+            - Las fotografias se encuentran en /img/galeria_de_fotos_paisajes  
+            - Cada card va a contener un titulo corto. 
+            - El titulo de cada foto puede ser demo, ej. : foto 1, foto 2.. etc
+
+            Los cards van a tener un efecto de movimiento en el evento hover.
+            La web debera tener:
+            - El menu debe estar en la cabecera del sitio y debe contener con 4 botones.
+            - El titulo que este al costado izquierdo del menu  y alineado verticalmente.
+            - El contenido debera esta centrado en el medio. Queda a criterio la alineación respecto del menu.
+            - El sitio debe tener las media queries para mobile, tablets  y desktop.        
+            - La galeria se debe adaptar en su forma según tipo de dispositivo.
+            - Fondo de madera        
+    -->
+
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="../../../assets/bootstrap/css/bootstrap.min.css"
+    />
+    <style>
+        body {
+            background-image: url("../../../img/fondos/madera-bg.jpg");
+        }
+        .card {
+            filter: drop-shadow(5px 5px 10px #000000);
+        }
+        .card1 {
+            transform: rotate(5deg);
+        }
+        .card:hover {
+            filter: drop-shadow(10px 10px 5px #000000);
+        }
+        .card1:hover {
+            transform: none;            
+        }  
+        .card2 {
+            transform: rotate(-5deg);
+        }      
+        .card2:hover {
+            transform: none;
+        }
+        .card3 {
+            transform: rotate(-10deg);
+        }
+        .card3:hover {
+            transform: none;
+        }
+        .card4 {
+            transform: rotate(10deg);
+        }
+        .card4:hover {
+            transform: none;
+        }
+        .card7 {
+            transform: rotate(2deg);
+        }
+        .card7:hover {
+            transform: none;
+        }
+        .img1 {
+            filter: sepia(100%);
+        }
+        .img1:hover {
+            filter: none;
+        }
+        .img2 {
+            filter: saturate(250%);
+        }
+        .img2:hover {
+            filter: none;
+        }
+        .img3 {
+            filter: invert(90%);
+        }
+        .img3:hover {
+            filter: none;
+        }
+        .img4 {
+            filter: hue-rotate(60deg);
+        }
+        .img4:hover {
+            filter: none;
+        }
+        .img5 {
+            filter: opacity(35%);
+        }
+        .img5:hover {
+            filter: none;
+        }
+        .img6 {
+            filter: contrast(150%);
+        }
+        .img6:hover {
+            filter: none;
+        }
+        .img7 {
+            filter: blur(5px);
+        }
+        .img7:hover {
+            filter: none;
+        }
+        .img8 {
+            filter: grayscale(100%);
+        }
+        .img8:hover {
+            filter: none;
+        }
+        .img9 {
+            filter: brightness(200%);
+        }
+        .img9:hover {
+            filter: none;
+        }
+    </style>
+  </head>
+  <body>
+    <main>
+      
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">Features</a>
+                    <a class="nav-item nav-link" href="#">Pricing</a>
+                    <a class="nav-item nav-link disabled " href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  </div>
+                </div>                
+              </nav>
+        </header>
+        <article>
+        <section>
+            <div class="container">
+          <div class="row">
+              <div class="col text-center">
+                  <div class="d-flex flex-row justify-content-center mt-5">
+                <div class="card card1 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                    <img src="../../../img/galeria_de_fotos_paisajes/bird-1045954_1920.jpg" height="172px" class="card-img-top img1">
+                    <div class="card-body">
+                      <h5 class="card-title">Foto 1</h5>
+                    </div>
+                </div>
+                <div class="card card2 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                    <img src="../../../img/galeria_de_fotos_paisajes/birds-5035164_1920.jpg" height="172px" class="card-img-top img2">
+                    <div class="card-body">
+                      <h5 class="card-title">Foto 2</h5>
+                    </div>  
+                </div>
+                <div class="card card3 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                    <img src="../../../img/galeria_de_fotos_paisajes/bird-4498326_1920.jpg" height="172px" class="card-img-top img3">
+                    <div class="card-body">
+                      <h5 class="card-title">Foto 3</h5>
+                    </div>  
+                </div>
+                <div class="card card7 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                    <img src="../../../img/galeria_de_fotos_paisajes/kingfisher-1905255_1920.jpg" height="172px" class="card-img-top img4">
+                    <div class="card-body">
+                      <h5 class="card-title">Foto 4</h5>
+                    </div>
+                </div> 
+                </div>         
+          </div> 
+        </div>
+        <div class="row ">
+            <div class="col text-center ">
+                <div class="d-flex flex-row justify-content-center mt-5">  
+                <div class="card card3 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                    <img src="../../../img/galeria_de_fotos_paisajes/nature-5176637_1920.jpg" height="172px" class="card-img-top img5">
+                    <div class="card-body">
+                      <h5 class="card-title">Foto 5</h5>
+                    </div>  
+                </div>
+                <div class="card card7 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                    <img src="../../../img/galeria_de_fotos_paisajes/sun-3713835_1920.jpg" height="172px" class="card-img-top img6">
+                    <div class="card-body">
+                      <h5 class="card-title">Foto 6</h5>
+                    </div>  
+                </div>
+                <div class="card card7 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                    <img src="../../../img/galeria_de_fotos_paisajes/bench-560435_1920.jpg" height="172px" class="card-img-top img7">
+                    <div class="card-body">
+                      <h5 class="card-title">Foto 7</h5>
+                    </div>  
+                </div>
+                <div class="card card2 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                    <img src="../../../img/galeria_de_fotos_paisajes/winter-5027855_1920.jpg" height="172px" class="card-img-top img8">
+                    <div class="card-body">
+                      <h5 class="card-title">Foto 8</h5>
+                    </div>  
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <div class="d-flex flex-row justify-content-center mt-5">
+                    <div class="card card7 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                        <img src="../../../img/galeria_de_fotos_paisajes/butterfly-4884620_1920.jpg" height="172px" class="card-img-top img9">
+                        <div class="card-body">
+                          <h5 class="card-title">Foto 9</h5>
+                        </div>  
+                    </div>
+                    <div class="card card2 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                        <img src="../../../img/galeria_de_fotos_paisajes/pic-wood-5295949_1920.jpg" height="172px" class="card-img-top img3">
+                        <div class="card-body">
+                          <h5 class="card-title">Foto 10</h5>
+                        </div>  
+                    </div>
+                    <div class="card card2 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                        <img src="../../../img/galeria_de_fotos_paisajes/wing-5316289_1920.jpg" height="172px" class="card-img-top img4">
+                        <div class="card-body">
+                          <h5 class="card-title">Foto 11</h5>
+                        </div>  
+                    </div>
+                    <div class="card card7 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                        <img src="../../../img/animalitos.jpg" height="172px" class="card-img-top img6">
+                        <div class="card-body">
+                          <h5 class="card-title">Foto 12</h5>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </section>
+        </article>
+      </div>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
