@@ -2,21 +2,24 @@
 <html class="no-js" lang="es">
 
 <head>
-    <!-- 
+  <!-- 
             Rama bootstrap_galeria
-            carpeta bootstrap-galeria
-            galeria.html
-            bootstrap css incluido
-            La galeria debe contener 9 imagenes
-            Cada imagen debe estar dentro de un card.
-            Cada card va a contener un titulo corto. 
+            En su carpeta de consignas crear carpeta bootstrap-galeria
+            En la carpeta crear archivo galeria.html
+            El archivo debe contener la libreria de bootstrap css incluida
+            La galeria debe contener 9 imagenes:
+            - Cada imagen debe estar dentro de un card.
+            - Las fotografias se encuentran en /img/galeria_de_fotos_paisajes  
+            - Cada card va a contener un titulo corto. 
+            - El titulo de cada foto puede ser demo, ej. : foto 1, foto 2.. etc
             Los cards van a tener un efecto de movimiento en el evento hover.
             La web debera tener:
-            - un menu de navegación con 4 botones.
-            - un titulo 
-            - cabecera para el menu.
-            - el contenido debera esta centrado en el medio.
-            
+            - El menu debe estar en la cabecera del sitio y debe contener con 4 botones.
+            - El titulo que este al costado izquierdo del menu  y alineado verticalmente.
+            - El contenido debera esta centrado en el medio. Queda a criterio la alineación respecto del menu.
+            - El sitio debe tener las media queries para mobile, tablets  y desktop.        
+            - La galeria se debe adaptar en su forma según tipo de dispositivo.
+            - Fondo de madera        
     -->
     <meta charset="utf-8">
     <title></title>
@@ -24,44 +27,40 @@
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device=width, initial-scale=1">
     <link rel="stylesheet" href="C:\Users\Ama y Dani\frontend-mayo-2020\assets\bootstrap\css\bootstrap.min.css">
+    <style>
+        body{
+            font-family: Helvetica, sans-serif;
+        }
+    </style>
 </head>
 
 <body>
     <main>
         <div class="container">
             <header>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Library</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Data</li>
-                    </ol>
-                </nav>
+                <div class="container">
+                    <div class="row">
+                      <div class="col-sm-8">
+                        <h1>Galeria de fotos con bootstrap</h1>
+                      </div>
+                      <div>
+                        <ul class="nav justify-content-end">
+                            <li class="nav-item">
+                              <a class="nav-link active" href="#">Active</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>
+                          </ul>
+                      </div>
             </header>
-            <section>
-                <form>
-                    <div class="form-group">
-                        <div class="form-row">
-                            <div class="row">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="First name">
-                            </div>
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Last name">
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-row">
-                            <div class="col">
-                                <button type="button" class="btn btn-outline-primary">Guardar</button>
-                            </div>
-                        </div>
-                    </div>
-                  </form>
-            </section>
-        </div>
+
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
