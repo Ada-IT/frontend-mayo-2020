@@ -38,99 +38,60 @@
         }
         .card {
             filter: drop-shadow(5px 5px 10px #000000);
+        }        
+        .card:hover {
+            filter: drop-shadow(10px 10px 5px #000000);
+            transform: scale(1.1);
         }
         .card1 {
             transform: rotate(5deg);
         }
-        .card:hover {
-            filter: drop-shadow(10px 10px 5px #000000);
-        }
-        .card1:hover {
-            transform: none;            
-        }  
         .card2 {
             transform: rotate(-5deg);
-        }      
-        .card2:hover {
-            transform: none;
         }
         .card3 {
             transform: rotate(-10deg);
         }
-        .card3:hover {
-            transform: none;
-        }
         .card4 {
             transform: rotate(10deg);
-        }
-        .card4:hover {
-            transform: none;
         }
         .card7 {
             transform: rotate(2deg);
         }
-        .card7:hover {
-            transform: none;
+        img:hover {
+            filter: none;
         }
         .img1 {
             filter: sepia(100%);
         }
-        .img1:hover {
-            filter: none;
-        }
         .img2 {
             filter: saturate(250%);
-        }
-        .img2:hover {
-            filter: none;
         }
         .img3 {
             filter: invert(90%);
         }
-        .img3:hover {
-            filter: none;
-        }
         .img4 {
             filter: hue-rotate(60deg);
-        }
-        .img4:hover {
-            filter: none;
         }
         .img5 {
             filter: opacity(35%);
         }
-        .img5:hover {
-            filter: none;
-        }
         .img6 {
             filter: contrast(150%);
-        }
-        .img6:hover {
-            filter: none;
         }
         .img7 {
             filter: blur(5px);
         }
-        .img7:hover {
-            filter: none;
-        }
         .img8 {
             filter: grayscale(100%);
-        }
-        .img8:hover {
-            filter: none;
         }
         .img9 {
             filter: brightness(200%);
         }
-        .img9:hover {
-            filter: none;
-        }
     </style>
   </head>
   <body>
-    <main>
-      
+    <main>      
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">Navbar</a>
@@ -151,27 +112,27 @@
         <section>
             <div class="container">
           <div class="row">
-              <div class="col text-center">
-                  <div class="d-flex flex-row justify-content-center mt-5">
-                <div class="card card1 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+              <div class="col d-flex justify-content-center  text-center">
+                  <div class="d-flex flex-lg-row flex-column  mt-5 ">
+                <div class="card card1 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4 mb-5 " style="width: 12rem;">
                     <img src="../../../img/galeria_de_fotos_paisajes/bird-1045954_1920.jpg" height="172px" class="card-img-top img1">
                     <div class="card-body">
                       <h5 class="card-title">Foto 1</h5>
                     </div>
                 </div>
-                <div class="card card2 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                <div class="card card2 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4 mb-5" style="width: 12rem;">
                     <img src="../../../img/galeria_de_fotos_paisajes/birds-5035164_1920.jpg" height="172px" class="card-img-top img2">
                     <div class="card-body">
                       <h5 class="card-title">Foto 2</h5>
                     </div>  
                 </div>
-                <div class="card card3 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                <div class="card card3 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4 mb-5" style="width: 12rem;">
                     <img src="../../../img/galeria_de_fotos_paisajes/bird-4498326_1920.jpg" height="172px" class="card-img-top img3">
                     <div class="card-body">
                       <h5 class="card-title">Foto 3</h5>
                     </div>  
                 </div>
-                <div class="card card7 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                <div class="card card7 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4 mb-5" style="width: 12rem;">
                     <img src="../../../img/galeria_de_fotos_paisajes/kingfisher-1905255_1920.jpg" height="172px" class="card-img-top img4">
                     <div class="card-body">
                       <h5 class="card-title">Foto 4</h5>
@@ -181,27 +142,27 @@
           </div> 
         </div>
         <div class="row ">
-            <div class="col text-center ">
-                <div class="d-flex flex-row justify-content-center mt-5">  
-                <div class="card card3 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+            <div class="col d-flex justify-content-center text-center ">
+                <div class="d-flex flex-md-row flex-column justify-content-center">  
+                <div class="card card3 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4 mb-5" style="width: 12rem;">
                     <img src="../../../img/galeria_de_fotos_paisajes/nature-5176637_1920.jpg" height="172px" class="card-img-top img5">
                     <div class="card-body">
                       <h5 class="card-title">Foto 5</h5>
                     </div>  
                 </div>
-                <div class="card card7 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                <div class="card card7 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4 mb-5" style="width: 12rem;">
                     <img src="../../../img/galeria_de_fotos_paisajes/sun-3713835_1920.jpg" height="172px" class="card-img-top img6">
                     <div class="card-body">
                       <h5 class="card-title">Foto 6</h5>
                     </div>  
                 </div>
-                <div class="card card7 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                <div class="card card7 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4 mb-5" style="width: 12rem;">
                     <img src="../../../img/galeria_de_fotos_paisajes/bench-560435_1920.jpg" height="172px" class="card-img-top img7">
                     <div class="card-body">
                       <h5 class="card-title">Foto 7</h5>
                     </div>  
                 </div>
-                <div class="card card2 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                <div class="card card2 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4 mb-5" style="width: 12rem;">
                     <img src="../../../img/galeria_de_fotos_paisajes/winter-5027855_1920.jpg" height="172px" class="card-img-top img8">
                     <div class="card-body">
                       <h5 class="card-title">Foto 8</h5>
@@ -211,27 +172,27 @@
             </div>
         </div>
         <div class="row">
-            <div class="col text-center">
-                <div class="d-flex flex-row justify-content-center mt-5">
-                    <div class="card card7 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+            <div class="col d-flex justify-content-center text-center">
+                <div class="d-flex flex-md-row flex-column justify-content-center">
+                    <div class="card card7 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4 mb-5" style="width: 12rem;">
                         <img src="../../../img/galeria_de_fotos_paisajes/butterfly-4884620_1920.jpg" height="172px" class="card-img-top img9">
                         <div class="card-body">
                           <h5 class="card-title">Foto 9</h5>
                         </div>  
                     </div>
-                    <div class="card card2 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                    <div class="card card2 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4 mb-5" style="width: 12rem;">
                         <img src="../../../img/galeria_de_fotos_paisajes/pic-wood-5295949_1920.jpg" height="172px" class="card-img-top img3">
                         <div class="card-body">
                           <h5 class="card-title">Foto 10</h5>
                         </div>  
                     </div>
-                    <div class="card card2 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                    <div class="card card2 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4 mb-5" style="width: 12rem;">
                         <img src="../../../img/galeria_de_fotos_paisajes/wing-5316289_1920.jpg" height="172px" class="card-img-top img4">
                         <div class="card-body">
                           <h5 class="card-title">Foto 11</h5>
                         </div>  
                     </div>
-                    <div class="card card7 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4" style="width: 12rem;">
+                    <div class="card card7 mx-xl-5 px-xl-3 pt-2 px-md-1 mx-md-4 mb-5" style="width: 12rem;">
                         <img src="../../../img/animalitos.jpg" height="172px" class="card-img-top img6">
                         <div class="card-body">
                           <h5 class="card-title">Foto 12</h5>
@@ -240,7 +201,6 @@
                 </div>
             </div>
         </div>
-
         </section>
         </article>
       </div>
