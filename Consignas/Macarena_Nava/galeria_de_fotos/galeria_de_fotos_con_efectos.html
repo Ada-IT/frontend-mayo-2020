@@ -11,30 +11,7 @@
     />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
-    <title>Galeria de Fotos - Grids CSS</title>
-    <!-- Este tipo de galeria es aplicada en sitios como Unsplash, Pinterest y otros.
-          Aquí podremos ver las tecnicas aprendidas de grid CSS.
-    CREAR RAMA galeria_de_fotos desde desarrollo 
-    Copiar archivo html y carpeta img a su carpeta de consignas. 
-    Requerimientos: 
-    - La galeria se debe ver como en las fotos :
-    1.png (Desktop)
-    2.png(Tablets)
-    3.png(Mobile)        
-
-    - Se debe aplicar lo aprendido en Grids CSS
-    - El titulo siempre se debe visualizar en 1 sola linea.  
-    - El css contendrá al menos 2 media queries.
-    medias queries requeridas:
-    Para tablets :
-    @media (min-width: 768px) and (max-width: 1024px)  
-    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) 
-    Para celulares:
-    @media (min-width: 320px) and (max-width: 767px)     
-    
-    REVISAR FOTOGRAFIAS DE EJEMPLOS
-
-    -->
+    <title>Galeria de Fotos con efectos</title>
     <style>
         *,
         *::after,
@@ -81,28 +58,180 @@
         }
 
         .gallery__item--1 {
+          display: grid;
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start:1 ;
+          grid-row-end: 3;
+   
         }
+        .sepia {
+          filter: sepia(70%);
+            
+          }
 
         .gallery__item--2 {
+          display: grid;
+          grid-column-start: 3;
+          grid-column-end: 5;
+          grid-row-start:1 ;
+          grid-row-end: 3;
         }
 
         .gallery__item--3 {
+          display: grid;
+          grid-area: 1/5/6/9 ;
+        }
+        .invert {
+          filter: invert(100%);
         }
 
         .gallery__item--4 {
+          display: grid;
+          grid-area:3/1/6/5;
         }
-
+        .hue-rotate {
+          filter: hue-rotate(78deg)
+          blur(2px)
+             
+        }
         .gallery__item--5 {
+          display: grid;
+          grid-area:6/1/9/5;
         }
 
         .gallery__item--6 {
+          display: grid;
+          grid-area:6/5/9/9;
         }      
-        .sepia{
-            filter:sepia(70%)
+        .grayscale {
+          filter: grayscale(71%);
         }
-        @media (min-width: 768px) and (max-width: 1024px)  {}
-        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}        
-        @media (min-width: 320px) and (max-width: 767px) {}     
+        /*medias queries*/
+        /*tablet portrait*/
+
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation:portrait) {
+          .gallery {
+          display: grid;
+          grid-template-columns: repeat(8, 1fr);
+          grid-template-rows: repeat(10, 5vw);
+          grid-gap: 1.5rem;
+        }
+        .container {
+          margin-bottom: 15%;
+          margin-top: 15%;
+          width: 70%;
+        }
+          .gallery__item--1 {
+          display: grid;
+          grid-area: 1/1/3/5 ;
+        }
+
+        .gallery__item--2 {
+          display: grid;
+          grid-area: 1/5/3/9;
+        }
+
+        .gallery__item--3 {
+          display: grid;
+          grid-area: 3/1/6/9 ;
+        }
+
+        .gallery__item--4 {
+          display: grid;
+          grid-area: 6/1/8/5;
+        }
+
+        .gallery__item--5 {
+          display: grid;
+          grid-area: 6/5/8/9;
+        }
+
+        .gallery__item--6 {
+          display: grid;
+          grid-area: 8/1/11/9;
+        }
+        }
+        /*tablet landscape*/
+
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        .gallery {
+          display: grid;
+          grid-template-columns: repeat(8, 1fr);
+          grid-template-rows: repeat(7, 5vw);
+          grid-gap: 1.5rem;
+        }
+        .container {
+          margin-top:5%;    
+        }
+          .gallery__item--1 {
+          display: grid;
+          grid-area: 1/1/3/3 ;
+        }
+
+        .gallery__item--2 {
+          display: grid;
+          grid-area: 1/3/3/5;
+        }
+
+        .gallery__item--3 {
+          display: grid;
+          grid-area: 3/1/6/5 ;
+        }
+
+        .gallery__item--4 {
+          display: grid;
+          grid-area: 6/1/8/3;
+        }
+
+        .gallery__item--5 {
+          display: grid;
+          grid-area: 6/3/8/5;
+        }
+
+        .gallery__item--6 {
+          display: grid;
+          grid-area: 1/5/8/9;
+        }
+        }   
+        /*Dispositivos moviles*/
+
+        @media (min-width: 320px) and (max-width: 767px) {
+          .gallery {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: repeat(18, 5vw);
+          grid-gap: 1.5rem;
+        }
+          .gallery__item--1 {
+          display: grid;
+          grid-area: 1/1/4/13 ;
+        }
+
+        .gallery__item--2 {
+          display: grid;
+          grid-area: 4/1/8/13;
+        }
+
+        .gallery__item--3 {
+          display: grid;
+          grid-area: 8/1/12/13 ;
+        }
+
+        .gallery__item--4 {
+          display: grid;
+          grid-area: 12/1/16/13;
+        }
+
+        .gallery__item--5 {
+          display: none;    
+        }
+
+        .gallery__item--6 {
+          display: grid;
+          grid-area: 16/1/19/13;
+        }
+        }     
    </style> 
   </head>
   <body>
@@ -115,7 +244,7 @@
           <img
             src="img/arandanos.jpeg"
             alt="Gallery image 1"
-            class="gallery__img"
+            class="gallery__img sepia"
           />
         </figure>
         <figure class="gallery__item gallery__item--2">
@@ -123,13 +252,13 @@
         </figure>
         <figure class="gallery__item gallery__item--3">
           <img
-            src="ejercicios/galeria_de_fotos/img/camarafotos.jpeg"
+            src="img/camarafotos.jpeg"
             alt="Gallery image 3"
-            class="gallery__img sepia "
+            class="gallery__img invert"
           />
         </figure>
         <figure class="gallery__item gallery__item--4">
-          <img src="img/bici.jpeg" alt="Gallery image 4" class="gallery__img" />
+          <img src="img/bici.jpeg" alt="Gallery image 4" class="gallery__img hue-rotate" />
         </figure>
         <figure class="gallery__item gallery__item--5">
           <img
@@ -142,10 +271,11 @@
           <img
             src="img/mujer.jpeg"
             alt="Gallery image 6"
-            class="gallery__img"
+            class="gallery__img grayscale"
           />
         </figure>
       </div>
     </div>
   </body>
 </html>
+
