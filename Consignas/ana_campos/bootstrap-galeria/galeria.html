@@ -35,51 +35,127 @@
      <style>
        body{
          background-image: url(../bootstrap-galeria/galeria_de_fotos_paisajes/fondomadera.jpg);
-         width: 2000px; height: 2000px;
        }
+       .container{margin-top: 8%;}
+       .inner{ overflow: hidden;
+       border-collapse: collapse;}
+       .inner img{transition: all 1.5s ease;}
+       .inner:hover img{ transform: scale(1.5);}
+       .encabezado, .container, .pie-pagina{ padding: 1em 2em;}
+       .container, .pie-pagina{ box-sizing: border-box;}
+       .encabezado{background-color: black;
+       padding: 3em;}
+       .container{text-align: center; }
+       .pie-pagina{background-color: black;
+       padding: 3em;}
+       @media (min-width: 768px) and (max-width: 1024px) {}
+
+      @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+    
+      @media (min-width: 320px) and (max-width: 767px)  {}
+       
+      
      </style>
   </head>
   <body>
-    <main>
-      <div class="row row-cols-1 row-cols-md-3">
+    <header class="encabezado"></header>
+   <div class="container">
+    <div class="row row-cols-1 row-cols-md-3">
+      <div class="col mb-4">
+        <div class="card shadow" style="width: 20rem;">
+          <div class="inner">
+            <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/bench-560435_1920.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card" style="width: 20rem;">
+          <div class="inner">
+            <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/wing-5316289_1920.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card" style="width: 20rem;">
+          <div class="inner">
+            <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/kingfisher-1905255_1920.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card" style="width: 20rem;">
+          <div class="inner">
+            <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/sun-3713835_1920.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+          </div>
+        </div>
+      </div>
         <div class="col mb-4">
-          <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
+          <div class="card" style="width: 20rem;">
+            <div class="inner">
+              <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/bench-560435_1920.jpg" class="card-img-top" alt="...">
+            </div>
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
           </div>
         </div>
         <div class="col mb-4">
-          <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
+          <div class="card" style="width: 20rem;">
+            <div class="inner">
+              <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/sun-3713835_1920.jpg" class="card-img-top" alt="...">
+            </div>
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a short card.</p>
             </div>
           </div>
         </div>
         <div class="col mb-4">
-          <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
+          <div class="card" style="width: 20rem;">
+            <div class="inner">
+              <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/bench-560435_1920.jpg" class="card-img-top" alt="...">
+            </div>
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
             </div>
           </div>
         </div>
         <div class="col mb-4">
-          <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
+          <div class="card" style="width: 20rem;">
+            <div class="inner">
+              <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/winter-5027855_1920.jpg" class="card-img-top" alt="...">
+            </div>
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card" style="width: 20rem;">
+            <div class="inner">
+              <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/winter-5027855_1920.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </div>
+    <footer class="pie-pagina"></footer>
+         
+  </body>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
