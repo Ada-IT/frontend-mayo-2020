@@ -72,14 +72,13 @@
           grid-template-rows: repeat(8, 5vw);
           grid-gap: 1.5rem;
         }
-        
+
         .gallery__img {
           width: 100%;
           height: 100%;
           object-fit: cover;
           display: block;
         }
-        /* CSS para ubicar las imagenes dentro del grid*/
         .gallery__item--1 {
           grid-column-start: 1;
           grid-column-end: 3;
@@ -217,32 +216,8 @@
         .gallery__item--4 {grid-area: 10/1/13/11;}
         .gallery__item--5 {grid-area: 13/1/16/11;}
         .gallery__item--6 {grid-area: 16/1/19/11;}
-        }
-
-        .saturate {
-          -webkit-filter: contrast(123%) saturate(180%) hue-rotate(293deg);
-          filter: contrast(123%) saturate(180%) hue-rotate(293deg);
-        }
-        .sepia{
-          -webkit-filter: contrast(161%) sepia(100%);
-          filter: contrast(161%) sepia(100%);
-        }
-        .blur{
-          -webkit-filter: blur(5px);
-          filter: blur(5px);
-        }
-        .brillo{
-          -webkit-filter: brightness(192%);
-          filter: brightness(192%);
-        }
-        .reyes{
-          -webkit-filter: brightness(110%) contrast(85%) saturate(75%) sepia(22%);
-          filter: brightness(110%) contrast(85%) saturate(75%) sepia(22%);
-        }
-        .invert{
-          -webkit-filter: invert(100%);
-          filter: invert(100%);
-        }
+        }   
+        }     
    </style> 
   </head>
   <body>
@@ -251,38 +226,38 @@
         <h1>Galeria de Fotos</h1>
       </header>        
       <div class="gallery">
-        <figure class="gallery__item gallery__item--1 invert">
+        <figure class="gallery__item gallery__item--1">
           <img
             src="img/arandanos.jpeg"
             alt="Gallery image 1"
-            class="gallery__img invert"
+            class="gallery__img"
           />
         </figure>
         <figure class="gallery__item gallery__item--2">
-          <img src="img/auto.jpeg" alt="Gallery image 2" class="gallery__img brillo" />
+          <img src="img/auto.jpeg" alt="Gallery image 2" class="gallery__img" />
         </figure>
-        <figure class="gallery__item gallery__item--3 blur">
+        <figure class="gallery__item gallery__item--3">
           <img
             src="img/camarafotos.jpeg"
             alt="Gallery image 3"
-            class="gallery__img blur"
+            class="gallery__img"
           />
         </figure>
         <figure class="gallery__item gallery__item--4">
-          <img src="img/bici.jpeg" alt="Gallery image 4" class="gallery__img sepia" />
+          <img src="img/bici.jpeg" alt="Gallery image 4" class="gallery__img" />
         </figure>
         <figure class="gallery__item gallery__item--5">
           <img
             src="img/flores.jpeg"
             alt="Gallery image 5"
-            class="gallery__img saturate"
+            class="gallery__img"
           />
         </figure>
         <figure class="gallery__item gallery__item--6">
           <img
             src="img/mujer.jpeg"
             alt="Gallery image 6"
-            class="gallery__img invert"
+            class="gallery__img"
           />
         </figure>
       </div>
