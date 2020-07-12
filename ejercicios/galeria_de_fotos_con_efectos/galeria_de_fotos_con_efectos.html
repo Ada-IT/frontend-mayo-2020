@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Galeria de Fotos - Grids CSS</title>
     <!-- Este tipo de galeria es aplicada en sitios como Unsplash, Pinterest y otros.
@@ -35,72 +36,7 @@
     REVISAR FOTOGRAFIAS DE EJEMPLOS
 
     -->
-    <style>
-        *,
-        *::after,
-        *::before {
-          margin: 0;
-          padding: 0;
-          box-sizing: inherit;
-        }
 
-        html {
-          box-sizing: border-box;
-          font-size: 62.5%;
-        }
-
-        body {
-          font-family: "Nunito", sans-serif;
-          color: #333;
-          font-weight: 300;
-          line-height: 1.6;
-        }
-
-        h1 {
-          font-size: 4rem;
-          text-align: center;
-        }
-
-        .container {
-          width: 60%;
-          margin: 2rem auto;
-        }
-
-        .gallery {
-          display: grid;
-          grid-template-columns: repeat(8, 1fr);
-          grid-template-rows: repeat(8, 5vw);
-          grid-gap: 1.5rem;
-        }
-
-        .gallery__img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;
-        }
-
-        .gallery__item--1 {
-        }
-
-        .gallery__item--2 {
-        }
-
-        .gallery__item--3 {
-        }
-
-        .gallery__item--4 {
-        }
-
-        .gallery__item--5 {
-        }
-
-        .gallery__item--6 {
-        }      
-        @media (min-width: 768px) and (max-width: 1024px)  {}
-        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}        
-        @media (min-width: 320px) and (max-width: 767px) {}     
-   </style> 
   </head>
   <body>
     <main class="container">
@@ -112,34 +48,35 @@
           <img
             src="../../img/galeria_de_fotos/arandanos.jpeg"
             alt="Gallery image 1"
-            class="gallery__img"
+            class="gallery__img sepia"
           />
         </figure>
         <figure class="gallery__item gallery__item--2">
-          <img src="../../img/galeria_de_fotos/auto.jpeg" alt="Gallery image 2" class="gallery__img" />
+          <img src="../../img/galeria_de_fotos/auto.jpeg" alt="Gallery image 2"
+               class="gallery__img hrotate" />
         </figure>
-        <figure class="gallery__item gallery__item--3">
+        <figure class="gallery__item gallery__item--3 blur">
           <img
-            src="../../img/galeria_de_fotos/camarafotos.jpeg"
+            src="../../img/galeria_de_fotos//camarafotos.jpeg"
             alt="Gallery image 3"
-            class="gallery__img"
+            class="gallery__img sepia"
           />
         </figure>
-        <figure class="gallery__item gallery__item--4">
-          <img src="../../img/galeria_de_fotos/bici.jpeg" alt="Gallery image 4" class="gallery__img" />
+        <figure class="gallery__item gallery__item--4 grayscale" >
+          <img src="../../img/galeria_de_fotos/bici.jpeg" alt="Gallery image 4" class="gallery__img grayscale" />
         </figure>
         <figure class="gallery__item gallery__item--5">
           <img
             src="../../img/galeria_de_fotos/flores.jpeg"
             alt="Gallery image 5"
-            class="gallery__img"
+            class="gallery__img brillo"
           />
         </figure>
         <figure class="gallery__item gallery__item--6">
           <img
             src="../../img/galeria_de_fotos/mujer.jpeg"
             alt="Gallery image 6"
-            class="gallery__img"
+            class="gallery__img opacidad"
           />
         </figure>
       </div>

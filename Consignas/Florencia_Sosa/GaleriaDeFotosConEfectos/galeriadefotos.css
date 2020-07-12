@@ -7,6 +7,34 @@
   box-sizing: inherit;
 }
 
+/*efectos*/
+.bw {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+.blur {
+  filter: blur(3px);
+  -webkit-filter: blur(1px);
+}
+
+.brighten {
+  filter: brightness(200%);
+  -webkit-filter: brightness(117%);
+}
+.contrast {
+  filter: contrast(200%);
+  -webkit-filter: contrast(75%);
+}
+.drop-shadow {
+  filter: drop-shadow(8px 8px 10px grey);
+  -webkit-filter: drop-shadow(8px 8px 10px grey);
+}
+.hue {
+  filter: hue-rotate(90deg);
+  -webkit-filter: hue-rotate(20deg);
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -42,7 +70,6 @@ h1 {
   object-fit: cover;
   display: block;
 }
-
 @media (min-width: 768px) {
   .gallery {
     grid-template-columns: repeat(8, 1fr);
