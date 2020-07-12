@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html class="no-js" lang="es">
   <head>
-
     <!-- 
->>>>>>> Ejercicio de Galeria
-
-  
->>>>>>> 
             Rama bootstrap_galeria
             En su carpeta de consignas crear carpeta bootstrap-galeria
             En la carpeta crear archivo galeria.html
             El archivo debe contener la libreria de bootstrap css incluida
-
-
->>>>>>> 
             La galeria debe contener 9 imagenes:
             - Cada imagen debe estar dentro de un card.
             - Las fotografias se encuentran en /img/galeria_de_fotos_paisajes  
@@ -29,9 +21,10 @@
             - La galeria se debe adaptar en su forma según tipo de dispositivo.
             - Fondo de madera        
     -->
+
     <meta charset="utf-8" />
-    <title></title>
-    <meta name="description" content="" />
+    <title>Galeria con Boostrap</title>
+    <meta name="description" content="Galeria con Bootstrap" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -39,14 +32,227 @@
       rel="stylesheet"
       href="../../assets/bootstrap/css/bootstrap.min.css"
     />
+    <style>
+      body {
+        background-image: url("../../img/fondos/madera-bg.jpg");
+      }
+
+      .polaroids {
+        -webkit-transition: -webkit-transform 0.15s linear;
+        -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+      }
+
+      /*Efectos de rotacion*/
+      .rotateleft {
+        -webkit-transform: rotate(-2deg);
+        -moz-transform: rotate(-2deg);
+      }
+      .rotateright {
+        -webkit-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
+      }
+      .rotateleft-4g {
+        -webkit-transform: rotate(-4deg);
+        -moz-transform: rotate(-4deg);
+      }
+      .rotateright-4g {
+        -webkit-transform: rotate(4deg);
+        -moz-transform: rotate(4deg);
+      }
+      .rotateleft-6g {
+        -webkit-transform: rotate(-6deg);
+        -moz-transform: rotate(-6deg);
+      }
+      .rotateright-6g {
+        -webkit-transform: rotate(6deg);
+        -moz-transform: rotate(6deg);
+      }
+      /*Efectos de color*/
+      .grayscale {
+        -webkit-filter: grayscale(80%);
+        filter: grayscale(80%);
+      }
+
+      .sepia {
+        -webkit-filter: sepia(80%);
+        filter: sepia(80%);
+      }
+
+      .hrotate {
+        -webkit-filter: hue-rotate(120deg);
+        filter: hue-rotate(120deg);
+      }
+      /*Correccion a card*/
+      .card {
+        width: 18rem !important;
+      }
+      /* On hover, darken the shadows a bit */
+      .polaroids:hover {
+        -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+        -webkit-transform: scale(1.25);
+        -moz-transform: scale(1.25);
+        position: relative;
+        z-index: 5;
+      }
+      .grayscale:hover {
+        filter: grayscale(0%);
+      }
+
+      .sepia:hover {
+        -webkit-filter: sepia(0%);
+        filter: sepia(0%);
+      }
+      .hrotate:hover {
+        -webkit-filter: hue-rotate(0deg);
+        filter: hue-rotate(0deg);
+      }
+    </style>
   </head>
   <body>
     <main>
       <div class="container">
-        <header>
-          <nav aria-label="breadcrumb"></nav>
+        <header class="row mt-4 mb-4">
+          <div class="col-md-5"><h1>Galeria con Bootstrap</h1></div>
+          <div class="col-md-7">
+            <nav class="bg-ligth">
+              <ul class="nav justify-content-end">
+                <li class="nav-item mr-1">
+                  <a class="btn btn-dark active" href="#">Menu 1</a>
+                </li>
+                <li class="nav-item mr-1">
+                  <a class="btn btn-dark" href="#">Menu 2</a>
+                </li>
+                <li class="nav-item mr-1">
+                  <a class="btn btn-dark" href="#">Menu 3</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </header>
-        <section></section>
+        <section class="row ml-auto mr-auto">
+          <div class="card polaroids m-4 rotateright hrotate">
+            <img
+              class="card-img-top"
+              src="../../img/galeria_de_fotos_paisajes/bird-1045954_1920.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+          <div class="card polaroids m-4 rotateleft hrotate">
+            <img
+              class="card-img-top"
+              src="../../img/galeria_de_fotos_paisajes/bird-4498326_1920.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+          <div class="card polaroids m-4 hrotate">
+            <img
+              class="card-img-top"
+              src="../../img/galeria_de_fotos_paisajes/bench-560435_1920.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+          <div class="card polaroids m-4 rotateright-4g hrotate">
+            <img
+              class="card-img-top"
+              src="../../img/galeria_de_fotos_paisajes/birds-5035164_1920.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+          <div class="card polaroids m-4 grayscale">
+            <img
+              class="card-img-top"
+              src="../../img/galeria_de_fotos_paisajes/butterfly-4884620_1920.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+          <div class="card polaroids m-4 rotateleft-4g grayscale">
+            <img
+              class="card-img-top"
+              src="../../img/galeria_de_fotos_paisajes/kingfisher-1905255_1920.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+          <div class="card polaroids m-4 grayscale">
+            <img
+              class="card-img-top"
+              src="../../img/galeria_de_fotos_paisajes/nature-5176637_1920.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+          <div class="card polaroids m-4 rotateright-6g grayscale">
+            <img
+              class="card-img-top"
+              src="../../img/galeria_de_fotos_paisajes/pic-wood-5295949_1920.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+          <div class="card polaroids m-4 rotateleft sepia">
+            <img
+              class="card-img-top"
+              src="../../img/galeria_de_fotos_paisajes/sun-3713835_1920.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+          <div class="card polaroids m-4 sepia">
+            <img
+              class="card-img-top"
+              src="../../img/galeria_de_fotos_paisajes/wing-5316289_1920.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+          <div class="card polaroids m-4 rotateleft-6g sepia">
+            <img
+              class="card-img-top"
+              src="../../img/galeria_de_fotos_paisajes/winter-5027855_1920.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+          <div class="card polaroids m-4 sepia">
+            <img
+              class="card-img-top"
+              src="../../img/galeria_de_fotos_paisajes/bench-560435_1920.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
     <script
