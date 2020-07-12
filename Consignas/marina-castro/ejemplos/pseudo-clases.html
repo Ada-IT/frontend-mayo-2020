@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Formulario Login</title><br>
+        <style>
+
+            h1 {
+                font-size: 25px;
+                color: rgb(18, 47, 110);
+                font-weight: 700;
+                font-family:Arial, Helvetica, sans-serif;
+                text-align:justify;
+            }
+
+            div {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 18px;
+                font-weight: 500;
+                color: black;
+            }
+            .menu {
+                background-image: linear-gradient(105deg, rgb(49, 32, 145) 25%, rgb(36, 129, 148) 70%);
+                color: white;
+                font-size: 20px;
+                font-weight: 300;
+                border-width:0.5rem ;
+                border-style: solid;
+                border-color: rgb(50, 49, 54) rgb(162, 161, 168) rgb(50, 49, 54) rgb(162, 161, 168);
+                margin: 0.5rem;
+                padding: 0.5rem;
+                border-radius: 10px;
+                border-style: groove 2px;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+
+            .button:hover {
+                background-image: linear-gradient(105deg, rgb(30, 90, 121) 39%, rgb(52, 63, 70) 96%);
+                color: rgb(237, 235, 245);
+                font-size: 20px;
+                border-color: rgb(50, 49, 54) rgb(162, 161, 168) rgb(50, 49, 54) rgb(162, 161, 168);
+                border-width: 0.3rem;
+            }
+
+            input {
+                border-color:rgb(63, 62, 65) rgb(214, 210, 228) rgb(63, 62, 65);
+                border-radius: 30px;
+                border-style: groove 10px;
+                background-color: rgb(224, 244, 247);
+                border-width: 0.2rem;
+                
+            }
+
+            input:focus {
+                border-radius: 30px;
+            }
+
+            a:hover {
+                background-image: linear-gradient(105deg, rgb(11, 183, 226) 39%, rgb(204, 233, 245) 96%);
+                margin: 0.5rem;
+                padding: 0.5rem; 
+                color: black; 
+                border-width: 0.5rem; 
+                border-style: solid;
+                border-radius: 10px;
+                border-style: groove 2px;
+                border-color: rgb(214, 210, 228) rgb(63, 62, 65) rgb(214, 210, 228) rgb(63, 62, 65);
+            }  
+
+            .login-validation input:focus:invalid { /*validación invalida*/
+                background: rgb(243, 180, 180);
+                box-shadow: 0 0 5px #d45252;
+                border-color: #b03535
+            }
+            .login-validation input:required:valid { /* validación válida*/
+                background: rgb(184, 250, 206);
+                box-shadow: 0 0 5px #5cd053;
+                border-color: #28921f;
+            }
+
+            .button {
+                background-image: linear-gradient(105deg, rgb(212, 216, 218) 39%, rgb(87, 90, 92) 96%);
+                border: 3px solid white;
+                color: rgb(14, 12, 12);
+                font-size: 20px;
+                border-color: rgb(50, 49, 54) rgb(162, 161, 168) rgb(50, 49, 54) rgb(162, 161, 168);
+                border-width: 0.3rem;
+            }
+ 
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <nav>
+                    <a class="menu" href=""> Menu 1</a>
+                    <a class="menu" href=""> Menu 2</a><br><br>
+                </nav>
+            </header>
+            <article>
+                <section id="Formulario-login">
+                    <h1><strong>LOGIN</strong></h1>
+                    <div>
+                        <!--Formulario de Login -->
+                        <form class="login-validation" id="login" action="login-validation.html" method="POST">
+                            <label for="usuario"><strong>Usuario:</strong></label>
+                            <input 
+                                id="usuario"
+                                type="email"
+                                minlength="4"
+                                maxlength="20"
+                                name="usuario"
+                                placeholder="usuario@suusuario.com"
+                                required
+                            >
+                            <br>
+                            <br>
+                            <label for="password"><strong>Password:</strong></label>
+                            <input 
+                                id="password" 
+                                type="password" 
+                                min="4" 
+                                max="10" 
+                                name="password"
+                                placeholder="Ingrese su contraseña"
+                                required
+                            >
+                            <br>
+                            <br>
+                            <input class="button" type="submit" value="Ingresar"><br>
+                        </form>
+                    </div>
+                </section>
+            </article>
+            <footer>
+                <div></div>
+            </footer>
+        </main>
+    </body>
+</html>
