@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <title>Galeria de Fotos - Grids CSS</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        html {
+            box-sizing: border-box;
+            font-size: 62.5%;
+        }
+
+        body {
+            font-family: "Nunito", sans-serif;
+            color: #333;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        .container {
+            width: 60%;
+            margin: 2rem auto;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 5vw);
+            grid-gap: 1.5rem;
+        }
+
+        .gallery__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery__item--1 {
+            grid-area: 1/1/3/3;
+        }
+
+        .gallery__item--2 {
+            grid-area: 1/3/3/5;
+        }
+
+        .gallery__item--3 {
+            grid-area: 1/5/6/9;
+        }
+
+        .gallery__item--4 {
+            grid-area: 3/1/6/5;
+        }
+
+        .gallery__item--5 {
+            grid-area: 6/1/9/5;
+        }
+
+        .gallery__item--6 {
+            grid-area: 6/5/9/9;
+        }
+
+        .img1 {
+            filter: grayscale(70%) contrast(100%);
+        }
+
+        .img2 {
+            filter: blur(2px) brightness(0.9);
+        }
+
+        .img3 {
+            filter: contrast(200%);
+        }
+
+        .img4 {
+            filter: saturate(150%);
+        }
+
+        .img5 {
+            filter: opacity(70%);
+        }
+
+        .img6 {
+            filter: sepia(75%) saturate(150%);
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .gallery {
+                display: grid;
+                grid-template-rows: repeat(10, 5vw);
+            }
+
+            .gallery__item--1 {
+                grid-area: 1/1/3/5;
+            }
+
+            .gallery__item--2 {
+                grid-area: 1/5/3/9;
+            }
+
+            .gallery__item--3 {
+                grid-area: 3/1/6/9;
+            }
+
+            .gallery__item--4 {
+                grid-area: 6/1/8/5;
+            }
+
+            .gallery__item--5 {
+                grid-area: 6/5/8/9;
+            }
+
+            .gallery__item--6 {
+                grid-area: 8/1/11/9;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+            .container {
+                width: 90%;
+                margin: 2rem auto;
+            }
+
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(17, 2fr);
+                grid-template-rows: repeat(10, 5vw);
+            }
+
+            .gallery__item--1 {
+                grid-area: 1/1/4/6;
+            }
+
+            .gallery__item--2 {
+                grid-area: 1/6/4/11;
+            }
+
+            .gallery__item--3 {
+                grid-area: 4/1/8/11;
+            }
+
+            .gallery__item--4 {
+                grid-area: 8/1/11/6;
+            }
+
+            .gallery__item--5 {
+                grid-area: 8/6/11/11;
+            }
+
+            .gallery__item--6 {
+                grid-area: 1/11/11/18;
+            }
+        }
+
+        @media (min-width: 320px) and (max-width: 767px) {
+            h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .container {
+                width: 60%;
+                margin: 2rem auto;
+            }
+
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(18, 5vw);
+                grid-gap: 1.5rem;
+            }
+
+            .gallery__item--1 {
+                grid-area: 1/1/4/5;
+            }
+
+            .gallery__item--2 {
+                grid-area: 4/1/7/5;
+            }
+
+            .gallery__item--3 {
+                grid-area: 7/1/10/5;
+            }
+
+            .gallery__item--4 {
+                grid-area: 10/1/13/5;
+            }
+
+            .gallery__item--5 {
+                grid-area: 13/1/16/5;
+            }
+
+            .gallery__item--6 {
+                grid-area: 16/1/19/5;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <h1>Galeria de Fotos</h1>
+        </header>
+        <div class="gallery">
+            <figure class="gallery__item gallery__item--1">
+                <img src="../img/galeria_de_fotos/arandanos.jpeg" alt="Gallery image 1" class="gallery__img img1" />
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+                <img src="../img/galeria_de_fotos/auto.jpeg" alt="Gallery image 2" class="gallery__img img2" />
+            </figure>
+            <figure class="gallery__item gallery__item--3">
+                <img src="../img/galeria_de_fotos/camarafotos.jpeg" alt="Gallery image 3" class="gallery__img img3" />
+            </figure>
+            <figure class="gallery__item gallery__item--4">
+                <img src="../img/galeria_de_fotos/bici.jpeg" alt="Gallery image 4" class="gallery__img img4" />
+            </figure>
+            <figure class="gallery__item gallery__item--5">
+                <img src="../img/galeria_de_fotos/flores.jpeg" alt="Gallery image 5" class="gallery__img img5" />
+            </figure>
+            <figure class="gallery__item gallery__item--6">
+                <img src="../img/galeria_de_fotos/mujer.jpeg" alt="Gallery image 6" class="gallery__img img6" />
+            </figure>
+        </div>
+        </div>
+</body>
+
+</html>
