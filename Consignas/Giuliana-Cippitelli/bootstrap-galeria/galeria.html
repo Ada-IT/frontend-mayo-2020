@@ -30,227 +30,267 @@
 
     <link
       rel="stylesheet"
-      href="../../assets/bootstrap/css/bootstrap.min.css"
+      href="../../../assets/bootstrap/css/bootstrap.min.css"
     />
     <style>
+      h1{
+        padding-top: 15px;
+      }
+      ul { 
+        padding-top: 10px;      
+            }
       body {
-        background-image: url("../../img/fondos/madera-bg.jpg");
-      }
-
+        background-image: url("../../../img/fondos/madera-bg.jpg");
+            }
       .polaroids {
-        -webkit-transition: -webkit-transform 0.15s linear;
-        -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-        -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-      }
-
-      /*Efectos de rotacion*/
-      .rotateleft {
-        -webkit-transform: rotate(-2deg);
-        -moz-transform: rotate(-2deg);
-      }
-      .rotateright {
-        -webkit-transform: rotate(2deg);
-        -moz-transform: rotate(2deg);
-      }
-      .rotateleft-4g {
-        -webkit-transform: rotate(-4deg);
-        -moz-transform: rotate(-4deg);
-      }
-      .rotateright-4g {
-        -webkit-transform: rotate(4deg);
-        -moz-transform: rotate(4deg);
-      }
-      .rotateleft-6g {
-        -webkit-transform: rotate(-6deg);
-        -moz-transform: rotate(-6deg);
-      }
-      .rotateright-6g {
-        -webkit-transform: rotate(6deg);
-        -moz-transform: rotate(6deg);
-      }
-      /*Efectos de color*/
-      .grayscale {
-        -webkit-filter: grayscale(80%);
-        filter: grayscale(80%);
-      }
-
-      .sepia {
-        -webkit-filter: sepia(80%);
-        filter: sepia(80%);
-      }
-
-      .hrotate {
-        -webkit-filter: hue-rotate(120deg);
-        filter: hue-rotate(120deg);
-      }
-      /*Correccion a card*/
-      .card {
-        width: 18rem !important;
-      }
-      /* On hover, darken the shadows a bit */
-      .polaroids:hover {
-        -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-        -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-        -webkit-transform: scale(1.25);
-        -moz-transform: scale(1.25);
         position: relative;
-        z-index: 5;
-      }
-      .grayscale:hover {
-        filter: grayscale(0%);
+        margin: 15px;
+        padding: 0px;
+        -webkit-box-shadow: 10px 15px 20px #272626
+            }
+      .nav-item {
+        padding: 5px;
       }
 
-      .sepia:hover {
-        -webkit-filter: sepia(0%);
-        filter: sepia(0%);
+
+      /*rotacion y color*/
+      .card1:hover {
+                -webkit-transform: rotate(-7deg);
+                -moz-transform: rotate(-7deg);
+                -webkit-filter: brightness(154%);
+                filter: brightness(154%);
+          }
+      .card2:hover {
+                -webkit-transform: rotate(7deg);
+                -moz-transform: rotate(7deg);
+                -webkit-filter: saturate(200%);
+                filter: saturate(200%);
       }
-      .hrotate:hover {
-        -webkit-filter: hue-rotate(0deg);
-        filter: hue-rotate(0deg);
+      .card3:hover {
+                -webkit-transform: rotate(-7deg);
+                -moz-transform: rotate(-7deg);
+                -webkit-filter: grayscale(73%);
+                filter: grayscale(73%)
       }
+      .card4:hover {
+                -webkit-transform: rotate(7deg);
+                -moz-transform: rotate(7deg);
+                -webkit-filter: saturate(150%) opacity(80%);
+                filter: saturate(150%) opacity(80%);                   
+                   }
+      .card5:hover {
+                -webkit-transform: rotate(-7deg);
+                -moz-transform: rotate(-7deg);
+                -webkit-filter: hue-rotate(252deg);
+                filter: hue-rotate(252deg);
+                   }
+      .card6:hover {
+                -webkit-transform: rotate(7deg);
+                -moz-transform: rotate(7deg);
+                -webkit-filter: blur(3px) brightness(150%);
+                filter: blur(3px) brightness(150%);
+                }
+      .card7:hover {
+                -webkit-transform: rotate(-7deg);
+                -moz-transform: rotate(-7deg);
+                -webkit-filter: sepia(85%);
+                filter: sepia(85%) }
+      .card8:hover {
+                -webkit-transform: rotate(7deg);
+                -moz-transform: rotate(7deg);
+                -webkit-filter: opacity(50%);
+                filter: opacity(50%)                
+                }
+      .card9:hover {
+                -webkit-transform: rotate(-7deg);
+                -moz-transform: rotate(-7deg);
+                -webkit-filter: blur(3px) saturate(50%);
+                filter: blur(3px) saturate(50%);
+               }
+      
+               @media screen and (min-width: 768px) and (max-width: 1024px){
+                 h1{ font-size: 30px;
+                 }
+                 .nav-item {padding: 1px;
+                 padding-top: 10px;
+                 }
+                 .btn { font-size: 10px;}
+                 }
+             
+               @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+                  h1{ 
+                    font-size: 20px;
+                    text-align: center;                    
+                  } 
+                  h5{
+                    font-size: 12px;
+                  }         
+                  .col-md-5{
+                    padding-left: 160px;
+                 }
+                 .btn{
+                   font-size: 10px;
+                   padding-left: 8px;
+                   padding-right: 8px;
+                 }
+                 .nav-item {
+                   padding: 2px;
+                  }
+                  .mb-5, .my-5 {
+                 margin-bottom: 10px !important;
+                  }        
+               }
+               @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait){
+                   h1{ font-size: 25px;
+                  text-align: center;
+                 }
+                 .col-md-5{
+                    padding-left: 40px;
+                 }
+                 .nav-item {padding: 1px;
+                 padding-top: 10px;
+                 }
+                 .btn { 
+                  font-size: 13px;
+                  }
+                 .mb-5, .my-5 {
+                 margin-bottom: 10px !important;
+                  }
+               }
     </style>
   </head>
   <body>
     <main>
       <div class="container">
-        <header class="row mt-4 mb-4">
-          <div class="col-md-5"><h1>Galeria con Bootstrap</h1></div>
-          <div class="col-md-7">
-            <nav class="bg-ligth">
-              <ul class="nav justify-content-end">
-                <li class="nav-item mr-1">
-                  <a class="btn btn-dark active" href="#">Menu 1</a>
+        <header class="row mb-5 rt-4 ">
+          <div class="col-md-7"><h1>Galeria con Bootstrap</h1></div>
+          <nav class="col-md-5">  
+              <ul class="nav justify-content-right;" >
+                <li class="nav-item">
+                  <a class="btn btn-dark" href="#">Menu 1</a>
                 </li>
-                <li class="nav-item mr-1">
+                <li class="nav-item">
                   <a class="btn btn-dark" href="#">Menu 2</a>
                 </li>
-                <li class="nav-item mr-1">
+                <li class="nav-item">
                   <a class="btn btn-dark" href="#">Menu 3</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-dark" href="#">Menu 4</a>
                 </li>
               </ul>
             </nav>
           </div>
         </header>
         <section class="row ml-auto mr-auto">
-          <div class="card polaroids m-4 rotateright hrotate">
-            <img
-              class="card-img-top"
-              src="../../img/galeria_de_fotos_paisajes/bird-1045954_1920.jpg"
-              alt="Card image cap"
+          <div class="card1 col-sm-4 ">
+          <div class="card polaroids  ">
+            <img  
+              class="card-img"
+              src="../../../img/galeria_de_fotos_paisajes/bird-1045954_1920.jpg"
+              alt="Card image"
             />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+            <div class="card-body text-center">
+              <h5 class="card-title">Naturaleza 1...</h5>
             </div>
           </div>
-          <div class="card polaroids m-4 rotateleft hrotate">
+          </div>
+          <div class="card2 col-sm-4 ">
+          <div class="card polaroids" >
             <img
-              class="card-img-top"
-              src="../../img/galeria_de_fotos_paisajes/bird-4498326_1920.jpg"
-              alt="Card image cap"
+              class="card-img"
+              src="../../../img/galeria_de_fotos_paisajes/bird-4498326_1920.jpg"
+              alt="Card image"
             />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+            <div class="card-body text-center" >
+              <h5 class="card-title">Naturaleza 2...</h5>
             </div>
           </div>
-          <div class="card polaroids m-4 hrotate">
+        </div>
+          <div class="card3 col-sm-4 ">
+          <div class="card polaroids">
             <img
-              class="card-img-top"
-              src="../../img/galeria_de_fotos_paisajes/bench-560435_1920.jpg"
-              alt="Card image cap"
+              class="card-img"
+              src="../../../img/galeria_de_fotos_paisajes/bench-560435_1920.jpg"
+              alt="Card image"
             />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+            <div class="card-body text-center">
+              <h5 class="card-title">Naturaleza 3...</h5>
             </div>
           </div>
-          <div class="card polaroids m-4 rotateright-4g hrotate">
+          </div>
+          <div class="card4 col-sm-4 ">
+          <div class="card polaroids">
             <img
-              class="card-img-top"
-              src="../../img/galeria_de_fotos_paisajes/birds-5035164_1920.jpg"
-              alt="Card image cap"
+              class="card-img"
+              src="../../../img/galeria_de_fotos_paisajes/birds-5035164_1920.jpg"
+              alt="Card image"
             />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+            <div class="card-body text-center">
+              <h5 class="card-title">Naturaleza 4...</h5>
             </div>
           </div>
-          <div class="card polaroids m-4 grayscale">
+          </div>
+          <div class="card5 col-sm-4 ">
+          <div class="card polaroids">
             <img
-              class="card-img-top"
-              src="../../img/galeria_de_fotos_paisajes/butterfly-4884620_1920.jpg"
-              alt="Card image cap"
+              class="card-img"
+              src="../../../img/galeria_de_fotos_paisajes/butterfly-4884620_1920.jpg"
+              alt="Card image"
             />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+            <div class="card-body text-center" >
+              <h5 class="card-title">Naturaleza 5...</h5>
             </div>
           </div>
-          <div class="card polaroids m-4 rotateleft-4g grayscale">
+        </div>
+          <div class="card6 col-sm-4 ">
+          <div class="card polaroids">
             <img
-              class="card-img-top"
-              src="../../img/galeria_de_fotos_paisajes/kingfisher-1905255_1920.jpg"
-              alt="Card image cap"
+              class="card-img"
+              src="../../../img/galeria_de_fotos_paisajes/kingfisher-1905255_1920.jpg"
+              alt="Card image"
             />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+            <div class="card-body text-center">
+              <h5 class="card-title">Naturaleza 6...</h5>
             </div>
           </div>
-          <div class="card polaroids m-4 grayscale">
+          </div>
+          <div class="card7 col-sm-4 ">
+          <div class="card polaroids">
             <img
-              class="card-img-top"
-              src="../../img/galeria_de_fotos_paisajes/nature-5176637_1920.jpg"
-              alt="Card image cap"
+              class="card-img"
+              src="../../../img/galeria_de_fotos_paisajes/nature-5176637_1920.jpg"
+              alt="Card image"
             />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+            <div class="card-body text-center">
+              <h5 class="card-title">Naturaleza 7... </h5>
             </div>
           </div>
-          <div class="card polaroids m-4 rotateright-6g grayscale">
+          </div>
+          <div class="card8 col-sm-4 ">
+          <div class="card polaroids">
             <img
-              class="card-img-top"
-              src="../../img/galeria_de_fotos_paisajes/pic-wood-5295949_1920.jpg"
-              alt="Card image cap"
+              class="card-img"
+              src="../../../img/galeria_de_fotos_paisajes/pic-wood-5295949_1920.jpg"
+              alt="Card image"
             />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+            <div class="card-body text-center">
+              <h5 class="card-title">Naturaleza 8...</h5>
             </div>
           </div>
-          <div class="card polaroids m-4 rotateleft sepia">
+          </div>
+          <div class="card9 col-sm-4 ">
+          <div class="card polaroids">
             <img
-              class="card-img-top"
-              src="../../img/galeria_de_fotos_paisajes/sun-3713835_1920.jpg"
-              alt="Card image cap"
+              class="card-img "
+              src="../../../img/galeria_de_fotos_paisajes/wing-5316289_1920.jpg"
+              alt="Card image"
             />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+            <div class="card-body text-center">
+              <h5 class="card-title">Naturaleza 9...</h5>
+            </div>
             </div>
           </div>
-          <div class="card polaroids m-4 sepia">
-            <img
-              class="card-img-top"
-              src="../../img/galeria_de_fotos_paisajes/wing-5316289_1920.jpg"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-            </div>
-          </div>
-          <div class="card polaroids m-4 rotateleft-6g sepia">
-            <img
-              class="card-img-top"
-              src="../../img/galeria_de_fotos_paisajes/winter-5027855_1920.jpg"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-            </div>
-          </div>
-          <div class="card polaroids m-4 sepia">
-            <img
-              class="card-img-top"
-              src="../../img/galeria_de_fotos_paisajes/bench-560435_1920.jpg"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-            </div>
           </div>
         </section>
       </div>
