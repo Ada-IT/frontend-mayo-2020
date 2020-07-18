@@ -36,18 +36,21 @@
     background-image: url("../../../img/fondos/madera-bg.jpg"); 
     }
     .card-img-top {
-      width: 241px;
-      height: 200px;
+      width: 241px auto;
+      height: 200px auto;
     }
     .card{
       background: rgb(215,215,215);
       background: linear-gradient(304deg, rgba(215,215,215,1) 1%, rgba(254,254,254,1) 100%);
+      -webkit-box-shadow: 13px 11px 20px -6px rgba(26,26,26,1);
+      -moz-box-shadow: 13px 11px 20px -6px rgba(26,26,26,1);
+      box-shadow: 13px 11px 20px -6px rgba(26,26,26,1);
       overflow:hidden;
     }
     .card:hover {
       background: rgb(59,59,59);
       background: linear-gradient(353deg, rgba(59,59,59,1) 1%, rgb(39, 6, 88) 100%);
-      color: whitesmoke;
+      color: white;
     }
     h1 {
       color: rgb(39, 6, 88);
@@ -95,13 +98,111 @@
       -o-transform:scale(1.25);
       transform:scale(1.25);
       }
+      .transform {
+        transform: rotate(45deg);
+      }
+      .transform-2 {
+        transform: rotate(330deg);
+      }
+
+      /* Tablets, Ipad (Landscape)  */
+
+      @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+            .card-img-top {
+              width:99%;
+              height:190 ;
+            }
+            .transform {
+              transform: rotate(25deg);
+            }
+          }
+
+            /* Tablets, Ipad (portrait)  */
+            @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+              .card-img-top {
+              width:99%;
+              height:190 ;
+            }
+            .transform {
+              transform: rotate(15deg);
+            }
+            .transform-2 {
+              transform: rotate(350deg);
+            }
+            .card-polaroid{
+              display: flex;
+              justify-content: center;
+            }
+          }
+               
+             /* baja Resolution Tablets, Mobiles (Landscape)*/
+
+            @media (min-width: 481px) and (max-width: 767px) and (orientation: landscape){
+             .card:hover {
+              -webkit-transform:scale(1.20);
+              -moz-transform:scale(1.20);
+              -ms-transform:scale(1.20);
+              -o-transform:scale(1.20);
+              transform:scale(1.20);
+             }
+              h1{
+                text-align: center;
+              }  
+              header {
+               width: 95%;
+              }
+              .transform {
+                transform:rotate(10deg)
+              }
+              .transform-2 {
+              transform: rotate(353deg);
+              }
+            }
+            
+             /* Smartphones Mobiles (Portrait) */
+
+            @media (min-width: 481px) and (max-width: 767px) and (orientation:portrait){ 
+             .container {
+               width: auto;
+             }
+             header {
+               text-align: center;
+             }
+             .transform {
+                transform:rotate(10deg)
+              }
+              .transform-2 {
+              transform: rotate(353deg);
+              }
+            }               
+            @media  (min-width: 414px) and (max-width: 736px) and (orientation:portrait){
+              .container {
+               width: auto;
+             }
+             header {
+               text-align: end;
+               width: 98%;
+             }
+             nav {
+               width: 85%;
+             }
+              a {
+                margin-top: 4%
+              }
+             .transform {
+                transform:rotate(10deg)
+              }
+              .transform-2 {
+              transform: rotate(353deg);
+              }  
+            }
     </style>
   </head>
   <body>
     <main>
       <div class="container">
         <header class="row">
-          <div class="col-md-4 justify-content-start mt-5">
+          <div class="col-md-4 justify-content-start mt-5 titulo">
             <h1 >Galeria de fotos</h1>
           </div>
           <div class="col-md-8 mt-5">    
@@ -116,6 +217,9 @@
                 <li class="nav-item d-inline ml-3">
                   <a class="nav-link btn btn-dark" href="#">Menu 3</a>
                 </li>
+                <li class="nav-item d-inline ml-3">
+                  <a class="nav-link btn btn-dark" href="#">Menu 4</a>
+                </li>
               </ul>
             </nav>
           </div>    
@@ -129,7 +233,7 @@
                     <h5 class="card-title">Foto 1</h5>
                   </div>
                 </div>
-                <div class="card col-lg-3 col-md-4 col-xs-6 thumb m-4 ">
+                <div class="card col-lg-3 col-md-4 col-xs-6 thumb m-4 transform-2">
                   <img class="card-img-top mt-3 sepia" src="../../../img/galeria_de_fotos_paisajes/wing-5316289_1920.jpg" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">Foto 2</h5>
@@ -141,7 +245,7 @@
                     <h5 class="card-title">Foto 3</h5>
                   </div>
                 </div>
-                <div class="card col-lg-3 col-md-4 col-xs-6 thumb m-4 ">
+                <div class="card col-lg-3 col-md-4 col-xs-6 thumb m-4 transform">
                   <img class="card-img-top mt-3 blur" src="../../../img/galeria_de_fotos_paisajes/kingfisher-1905255_1920.jpg" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">Foto 4</h5>
@@ -171,7 +275,7 @@
                   <h5 class="card-title">Foto 8</h5>
                 </div>
               </div>
-              <div class="card col-lg-3 col-md-4 col-xs-6 thumb m-4 ">
+              <div class="card col-lg-3 col-md-4 col-xs-6 thumb m-4 transform">
                 <img class="card-img-top mt-3 grayscale" src="../../../img/galeria_de_fotos_paisajes/bench-560435_1920.jpg" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Foto 9</h5>
@@ -179,7 +283,7 @@
               </div>
             </div>
           </div>  
-          </section> 
+        </section> 
       </div>
     </main>
     <script
@@ -199,15 +303,4 @@
     ></script>
   </body>
 </html>
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+© 2020 Macarena, Inc.
