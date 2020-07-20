@@ -22,17 +22,101 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style></style>
+    <style>
+        body {
+          background: url("../img/estacion.jpg");
+          background-attachment: fixed;
+          background-size: 120em;
+        }
+        h1 {
+          text-align: center;
+          font-family: verdana;
+          font-size:75px;
+          padding-bottom: 1%;
+          padding-top: 1%;
+          color:rgb(0, 0, 0);
+          border-color: black;
+          border-width: 7px;
+          border-style:double;
+          width: 100%;
+          
+        }
+        caption {
+          background-color: rgba(211, 222, 243, 0.6) ;
+          border-width: 2px;
+          margin-bottom: 4%;
+          padding-top: 2%;
+          padding-bottom: 2%;
+          font-family: verdana;
+          font-size: large;
+          font-weight: 550;
+          font-style: italic;
+          width: 100%; 
+          border-radius: 10px; 
+          color: rgb(0, 0, 0);
+        }
+        .section-1 {
+          text-align: center;
+          margin-left: 30% ;
+          margin-right: 35%;
+          margin-top: 4%;
+        }
+        table {
+          width: 800px ;
+          height: 300px ;
+          font-family: verdana;
+          border-style:groove;
+          border: none;
+        }
+        th {
+          border-color: rgb(44, 44, 180, 0.9);
+          border-style: solid;
+          background-color:rgb(44, 44, 180, 0.9);
+          color: whitesmoke;   
+          border-radius: 5px;     
+        }
+        td {
+          border-style: solid;
+          background-color: rgb(85, 139, 240, 0.6);
+          border: none;
+          font-weight: 550;
+          border-radius: 5px; 
+          
+        }
+        .ciudades {
+          background-color: rgb(85, 139, 240, 0.8);
+          border-style: solid;
+          width:70%;
+          margin-bottom: 4%;
+          border-color: rgb(44, 44, 180, 0.3);
+          border-width: 2px; 
+          border-radius: 5px;  
+        }
+        .section-2 {
+          text-align: center;
+          display:block;
+          margin-left: 25%; 
+          margin-top: 4%; 
+          font-family:verdana;
+          font-size: small;
+        }
+        h3 {
+          font-size: large;
+          color: whitesmoke;
+        }
+
+    </style>
   </head>
   <body>
     <header>
       <h1>Tabla de viaje</h1>
     </header>
-    <section>
+    <section class="section-1">
       <table>
         <caption>
           Conozca el tiempo necesario para viajar desde Philadelphia
         </caption>
+        <div>
         <thead>
           <tr>
             <th scope="col">Destino</th>
@@ -69,11 +153,12 @@
             <td><time>8:36</time>min</td>
           </tr>
         </tfoot>
+      </div>
       </table>
     </section>
     <br />
-    <section>
-      <div>
+    <section class="section-2">
+      <div class="ciudades">
         <h3>Nueva York</h3>
         <p>
           Situado sobre la costa este de Estados Unidos de América, encontramos
@@ -86,7 +171,7 @@
           nunca duerme.
         </p>
       </div>
-      <div>
+      <div class="ciudades">
         <h3>Washington D.C.</h3>
         <p>
           Es una ciudad de categoría mundial con estatuas y monumentos
@@ -99,7 +184,7 @@
           de todo el mundo.
         </p>
       </div>
-      <div>
+      <div class="ciudades" >
         <h3>New Jersey</h3>
         <p>
           Situado en el noreste de Estados Unidos, Nueva Jersey es uno de los
