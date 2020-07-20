@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+    <meta name="description" content="formulario en html5">
+    <meta name="keywords" content="html, css, formulario">
+        <title>Consigna3-Formulario</title>
+        <style>
+
+            html {
+                background-image: linear-gradient(to top right, #08aeea, #b721ff);
+                background-repeat: no-repeat;
+                }
+           * {
+              margin: 0;
+              padding: 0; 
+             }
+           
+           main { 
+                display: table; 
+                margin: 0px auto;}
+
+           body {
+                width: 89%;
+                vertical-align: middle;
+                padding: 0px 0px 200px;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+                margin-top: 10px;
+                margin-left: 20px;
+                border-top-right-radius: 8px;
+                border-top-left-radius: 8px;
+                }
+
+            .container {
+                       width: 100%;
+                       vertical-align: middle;
+                       margin-bottom: 200px;
+                       border-bottom-left-radius: 8px;
+                       border-bottom-right-radius: 8px;
+                       }
+
+            .contenido {
+                       font-size: 1rem;
+                       }
+               
+            article {
+                    margin-top: -5%;
+                    }
+
+            h1 {
+                font-size: 1.4rem;
+                color: #ffffff;
+                background-color: #1a1a1a;
+                text-align: center;
+                border-top-right-radius: 8px;
+                border-top-left-radius: 8px;
+               }
+                
+            div {
+                background-color: #ffffff;
+                border-top-right-radius: 8px;
+                border-top-left-radius: 8px;
+                }
+
+            input {
+                  background-color: #e1dbd0;
+                  border: none;
+                  border-radius: 5px;
+                  padding: 8px;
+                  width: 80%;
+                  margin-left: 7%;
+                  text-align: center;
+                  }
+
+            label {
+                  padding-left: 5px;
+                  }
+                
+            span {
+                 padding-left: 18px;
+                 color: #e1dbd0;
+                 font-size: 1rem; 
+                 }
+
+            input[type=email]:valid {
+                                    content: '✓';
+                                    color: #269900;
+                                    }
+
+            input[type=email]:invalid {
+                                      content: '✖';
+                                      color: #ff0000;
+                                      border: 2px solid #ff0000;       
+                                      }
+
+            input[type=tel]:valid {            
+                                  content: '✓';
+                                  color: #269900;
+                                  }
+
+            input[type=tel]:invalid {
+                                    content: '✖';
+                                    color: #ff0000;
+                                    border: 2px solid #ff0000;       
+                                    }
+
+            .subject {
+                    background-color: #e1dbd0;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 8px;
+                    width:85%;
+                    margin-left: 7%;
+                    text-align: center;
+                    }
+
+            p {
+              padding-left: 5px;
+              }
+
+            .usuario {
+                     width: 5%;
+                     margin-left: 1%;
+                     }
+
+            .register {
+                      background-color: #ff4b5a;
+                      margin-left: 0%;
+                      width: 100%;
+                      color: #ffffff;
+                      text-transform: uppercase;
+                      font-weight: bold;
+                      padding: 15px;
+                      }
+
+            input[type=submit]:hover {
+                                     background-color: #eb3746;
+                                     }
+
+            @media screen and (min-width: 375px) {
+                .contenido {
+                       font-size: 1.5rem;
+                       }
+                                                 }
+                                                
+             @media screen and (min-width: 481px) {
+                
+                .contenido {
+                           font-size: 1.8rem;
+                           margin-top: 10%;
+                           }
+                span {
+                     font-size: 1.5rem;
+                    }
+                                                  }
+
+                @media screen and (min-width: 768px) {
+
+                    main {
+                        margin-bottom: -29%;
+                        margin-top: 10%;
+                        }
+                    
+                    body {
+                         margin-left: 5.5%;
+                         }
+
+                    .container {
+                               margin-bottom: 325px;
+                               }
+                               
+                    .contenido {
+                               font-size: 2rem;
+                               margin-top: 10%;
+                               margin-bottom: 50%;
+                               }
+                    article {   
+                            margin-left: 5%;
+                            margin-top: 0%;
+                            }
+
+                    h1 {
+                       font-size: 3rem;
+                       }
+
+                    span {
+                         padding-left: 45px;
+                         }
+
+                    input {
+                          padding: 25px;
+                          }
+
+                    .subject {
+                             padding: 25px;
+                             font-size: 2rem;
+                             }
+
+                    option {
+                           font-size: 2rem;
+                            }
+
+                    input[type=radio] {
+                                      border: 0px;
+                                      width: 100%;
+                                      height: 2em;
+                                      margin-left: -47%;
+                                      }                      
+
+                    .register {
+                              padding: 35px;
+                              width: 95%;
+                              font-size: 1.5rem;
+                              margin-bottom: 10%;
+                              }
+                              
+                    .usuario {
+                             width: 5%;
+                             margin-left: 1%;
+                             }
+
+                     .si, .no {
+                              margin-left: -308px;
+                              margin-left: -308px;
+                              }
+                                                        }
+
+                @media screen and (min-width: 1025px) {
+
+                    body {
+                        margin-bottom: 78px;
+                        margin-left: 50px;
+                        margin-top: -40px;
+                        }
+
+                    .container {
+                               width: 900px;
+                               }
+
+                    .contenido {
+                               font-size: 2.5rem;
+                               margin-bottom: 150px;
+                               }
+
+                               article {
+                                margin-top: 3%;
+                               }
+
+                    h1 {
+                       font-size: 3rem;
+                       padding-top: 20px;
+                       padding-bottom: 20px;
+                       }
+
+                    form {
+                         padding-bottom: 100px;
+                         }
+
+                    label { 
+                        font-size: 1.8rem;
+                        margin-top: 2%;
+                      
+                          }
+            
+                    input {
+                          padding: 35px;
+                          width: 63%;
+                          }
+
+                    #first-name, #last-name, #area-code, #phone-number {                                            
+                                                                       width: 25%;
+                                                                       margin-top: -6%;
+                                                                       }
+
+                    .first-name {
+                                margin-top: 7%;
+                                margin-left: 20%;
+                                }
+                    span {
+                         margin-left: 15%;
+                         }
+
+                    .last-name {
+                               margin-left: 37%;
+                               margin-top: -16.25%;
+                               }
+
+                    #last-name {
+                               margin-left: 495px;
+                               margin-top: -16%;
+                               
+                               }
+
+                    #last-name, #first-name {
+                                            margin-right: 10%;
+                                            height: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            width:25%;
+                                           
+                                            }
+                    #company {
+                             margin-left: 4%;
+                             width: 63%;
+                             margin-top: 5%;
+                             }
+                             
+                    #email {
+                           width: 63%;
+                           margin-top: 6%;
+                           margin-left: 10%;
+                           } 
+
+                           .phone {
+                            vertical-align: bottom;
+                           }
+                   
+                    #area-code, #phone-number {
+                                              margin-right: 10%;
+                                              height: 100%;
+                                              display: flex;
+                                              align-items: center;
+                                              justify-content: center;
+                                              width:25%;
+                                              }
+                  
+                    #area-code {
+                               margin-left: 20%;
+                               margin-top: 0%;
+                               }
+
+                    .area-code {
+                               margin-top: -6%;
+                               margin-left: -1%;}
+
+                    #phone-number {
+                                  margin-left:58%;
+                                  margin-top: -16.5%;
+                                  }
+
+                    .phone-number {
+                                  margin-left: 37%;
+                                  }
+
+                    .subject {
+                             font-size: 1.5rem;
+                             width: 72%;
+                             margin-top: 5%;
+                             }
+
+                    .si, .no {
+                             margin-left: -48%;
+                             }
+
+                    .register {
+                              width: 25%;
+                              margin-left: 1%;
+                              padding: 3%;
+                              }
+    
+                                                       }
+        </style>
+    </head>
+    <body>
+        <main>
+        <div class="container">
+            <section class="contenido">
+            <header>
+                <h1>EVENT REGISTRATION FORM</h1>
+            </header>
+                <article>
+                        <form action="formulario.html" id="registration" method="post">
+                            <br>
+                                <label for="name" class="name">Name </label>
+                                <input class="first-name" type="text" maxlength="20" name="nombre" id="first-name">
+                                <span>First name</span>
+                                <br>
+                                <input class="last-name" type="text" name="apellido" id="last-name">
+                                <label for="last-name" class="last-name"><span>Last Name</span> </label> 
+                                <br>
+                                    <label for="company" class="company">Company</label>
+                                    <input class="company" type="text" maxlength="20" name="compañía" id="company"> 
+                                <br>
+                                <label for="email" class="email">Email</label>
+                                <input class="email" type="email" name="correo-electrónico" id="email" > 
+                                <br>
+                                <label for="phone" class="phone">Phone</label>
+                                    <input name="código-de-área" type="tel" class="código-de-área" id="area-code" pattern="[0-9]{4}"title="Format: 4 digits max without hyphens or spaces">
+                                    <label for="area-code" class="area-code"><span>Area Code</span></label>
+                                    <input name="número-de-teléfono" type="tel" class="phone-number" id="phone-number" pattern="[0-9]{10}" title="Format: 10 digits max without hyphens or spaces">
+                                    <label for="phone-number" class="phone-number"><span>Phone Number</span></label>
+                                <br>
+                                    <label for="asunto" class="asunto">Subject</label>
+                                    <select name="subject" class="subject">
+                                        <option>Choose option</option>
+                                        <option value="support">Support Department</option>
+                                        <option value="sales">Sales Department</option>
+                                        <option value="claim">Claims Department</option>
+                                    </select>
+                                <br>
+                                <label for="customer"><p>Are you an existing customer?</p></label>
+                                <br>
+                                <input name="usuario" class="usuario" type="radio" value="Y" id="yes">
+                                <label class="si">Yes</label>
+                                <input name="usuario" class="usuario" type="radio" value="N" id="no">
+                                <label class="no">No</label>
+                                <br>
+                                <br>
+                                <input class="register" name="registrar" type="submit" value="register" id="">
+                            </section>
+                            </form>
+                    </article>  
+              </div>
+            </main>
+    </body>
+</html>
