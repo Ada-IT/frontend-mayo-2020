@@ -1,24 +1,32 @@
-<meta charset="utf-8" />
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
     <title></title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type="text/css">
         body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             color: black;
             background-color:rgb(196, 198, 201) ;
             text-align: center;
-            border-radius: 20px;
             font-weight: bolder;
         }
+        /*---Primer titulo---*/
+        h1{
+            text-decoration: underline;
+            color:gray;
+        }
+        /*---Subtitulo---*/
         caption {
             text-transform: capitalize;
             padding: 2%;
             text-decoration: underline;
             font-size: x-large;
-
         }
-
+        /*---Estilo tabla de viaje---*/
         table {
             width: 100%;
             text-align: center;
@@ -37,35 +45,32 @@
         td:hover{
             background-color: tomato;
         }
-
-        }
         thead {
             background-color: rgb(97, 128, 120);
             color: black;
-            border-style: solid
+            border-style: solid;
         }
-
+        /*---Informacion en bloque de manera horizontal---*/
         h3{
-            text-align: justify;
+            text-align: center;
             background-color: rgb(241, 139, 121);
             border-radius: 2%;
             border-style: dashed;
             font-size: large;
-            width: auto;
-            margin: auto;
             padding: 20px 20px;
-            display: inline-table;
         }
        p {
-
-           width: auto;
-           margin: auto;
            padding: 20px 20px;
-           display: table;
        }
        .container {
-           width: 33%;
-           flex: 1;
+           width: 32%;
+           float: left;
+           border-style: dashed;
+           border-radius: 10%;
+           border-color: rgb(63,117,104);
+       }
+       .container:hover{
+           background-color: rgb(248, 191, 185);
        }
 
     </style>
@@ -118,6 +123,8 @@
       </table>
     </section>
     <br />
+    <br>
+    <br>
     <section>
         <footer>
       <div class="container">
