@@ -1,0 +1,132 @@
+.carousel-item {
+    height: 650Px;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
+
+#mainNavbar {
+    padding-left: 50px;
+    padding-top: 20px
+}
+.logo{
+    width: 15%;
+    border: #1B1C1B solid 1px; 
+}
+img{
+    height: 100%;
+}
+/*Form Serch*/
+form{
+    padding:30px;
+}
+.margin{
+   margin-left: 30px;
+   margin-top: 10px;
+}
+/*quien somos*/
+.aligne{
+    margin-top: 20px;
+    font-style: italic;
+}
+.center{
+    margin: 0px 200px;
+    font-size: 20px;
+}
+.aligne1{
+    margin-top: 50px;
+}
+/*Destinos*/
+.destino{
+    margin-left: 150px;
+}
+.Iam {
+    padding: 2em 5em;
+    font: normal 40px/50px Montserrat, sans-serif;
+    color: #999;
+  }
+  .Iam p {
+    height: 50px;
+    float: left;
+    margin-right: 0.3em;
+  }
+  .Iam b {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    top: 40px;
+  }
+  .Iam .innerIam {
+    display: inline-block;
+    color: #0CCB6C;
+    position: relative;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+
+  /*animation*/
+    animation:move 3s;  
+  /*animation-iteration-count*/
+    animation-iteration-count:infinite;
+  /*animation-delay*/
+          animation-delay:1s;
+  }
+  @keyframes move{
+  0%  { top: 0px; }
+  20% { top: -50px; }
+  40% { top: -100px; }
+  60% { top: -150px; }
+  80% { top: -200px; }
+  }
+  
+  @-webkit-keyframes move {
+      0%  { top: 0px; }
+      20% { top: -50px; }
+      40% { top: -100px; }
+      60% { top: -150px; }
+      80% { top: -200px; }
+  }
+  @-moz-keyframes move {
+      0%  { top: 0px; }
+      20% { top: -50px; }
+      40% { top: -100px; }
+      60% { top: -150px; }
+      80% { top: -200px; }
+  }
+  @-o-keyframes move {
+      0%  { top: 0px; }
+      20% { top: -50px; }
+      40% { top: -100px; }
+      60% { top: -150px; }
+      80% { top: -200px; }
+  }
+  @keyframes move {
+      0%  { top: 0px; }
+      20% { top: -50px; }
+      40% { top: -100px; }
+      60% { top: -150px; }
+      80% { top: -200px; }
+  }
+  /*Cards paquetes*/
+  .margincards{
+      margin-top: 60px;
+  }
+  .more{
+      margin: 30px;
+    text-align: center;
+  }
+  .icon{
+      color:#0CCB6C ;
+  }
+/*cards blog*/
+.cardblog{
+    margin-top: 50px;
+}
+.bgimagen{
+    background: url(../img/hot-air-ballons-828967_640.jpg);
+    background-size: cover;
+}
