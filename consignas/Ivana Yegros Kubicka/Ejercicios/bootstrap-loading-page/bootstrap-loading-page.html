@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>loading page</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="C:\Users\ivana.yegros.kubicka\Documents\ADAprojects\frontend-mayo-2020\consignas\Ivana Yegros Kubicka\Ejercicios\bootstrap-galeria\css\bootstrap.css" />
+
+    <style>
+        body {
+            background-color: #17706c
+        }
+
+        h2 {
+            color: rgb(5, 5, 5);
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .mt-100 {
+            margin-top: 20%
+        }
+
+        .progress {
+            background-color: #e5e9eb;
+            height: 1rem;
+            position: relative;
+            margin-left: 10px;
+            margin-right: 10px
+        }
+
+        .progress-bar {
+            animation-iteration-count: infinite;
+            background: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
+            background-size: 24em 0.25em;
+            height: 100%;
+            position: relative
+        }
+
+        .progress-shadow {
+            background-image: linear-gradient(to bottom, #eaecee, transparent);
+            height: 4em;
+            position: absolute;
+            top: 100%;
+            transform: skew(45deg);
+            transform-origin: 0 0;
+            width: 100%
+        }
+
+        @keyframes width {
+
+            0%,
+            100% {
+                transition-timing-function: cubic-bezier(1, 0, 0.65, 0.85)
+            }
+
+            0% {
+                width: 0
+            }
+
+            100% {
+                width: 100%
+            }
+        }
+
+        @-webkit-keyframes width {
+
+            0%,
+            100% {
+                transition-timing-function: cubic-bezier(1, 0, 0.65, 0.85)
+            }
+
+            0% {
+                width: 0
+            }
+
+            100% {
+                width: 100%
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class="row d-flex justify-content-center mt-100">
+                <div class="col-md-6">
+                    <h2 class="text-center">Loading...</h2>
+                    <div class="progress">
+                        <div class="progress-bar">
+                            <div class="progress-shadow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+</body>
+
+</html>
