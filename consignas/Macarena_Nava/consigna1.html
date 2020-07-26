@@ -6,22 +6,19 @@
     <body>
         <main>
             <header>
-                <nav></nav>
+                
             </header>
             <article>
                 <section id=formulario>
-                    <h1 style= background-color:lightblue;padding-left:2%;width:fit-content;padding-right:8%>Ingresa tus datos</h1>
-                    <div style= background-color:lightblue;width:fit-content;padding-left:2%;padding-right:2%>
-                        <!-- Formulario para recoleccion de informacion -->
-                        <form action=consigna1.html method=POST>
-                              <!-- Input tipo texto, identidad -->
-                            <br>
+                    <h1 style= background-color:lightblue;padding-left:3%;width:fit-content;padding-right:7%;>Ingresa tus datos </h1>
+                    <div style= background-color:lightblue;width:fit-content;padding-left:2%;padding-right:2%;padding-top:2% >
+                        <form action="consigna1.html" method=POST>
                             <label for="nombre">Nombre:</label>
                             <input
                              id="nombre"
                              type="text" 
                              minlegth="4" 
-                             maxlelength="15" 
+                             maxlength="15" 
                              name="nombre"> 
                             <br>
                             <br>
@@ -40,19 +37,20 @@
                              id="direccion"
                              type="text" 
                              minlegth="4" 
-                             maxlelength="20" 
+                             maxlength="20" 
                              name="direccion"> 
                             <br>
                             <br>
-                              <!-- Input tipo numerico,contacto -->
-                            <label for="telefono">Teléfono:</label>
+                              <!-- Input tipo texto, contacto -->
+                            <label for="telefono">Telefono:</label>
                             <input
                              id="telefono"
                              type="number" 
+                             min="8" 
+                             max="" 
                              name="telefono">
                             <br>
                             <br>
-                              <!-- Input tipo texto, contacto -->
                             <label for="direccionemail">E-mail:</label>
                             <input id="direccionemail" type="email" name="direccionemail">
                             <style>
@@ -89,19 +87,21 @@
                             <input 
                                 name="trabajo" 
                                 type="radio" 
-                                value="si"
+                                value="s"
                             >
                             <label>Si</label>
                             <br>                           
                             <input 
                                name="trabajo" 
                                type="radio" 
-                               value="no"
+                               value="n"
                             >
                             <label>No</label>                           
                         </div>
                         <hr>
                         <input type="submit" value="guardar">
+                            </style>
+                    
                         </form>
                     </div>
 
