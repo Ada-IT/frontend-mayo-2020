@@ -1,282 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-   <meta charset="utf-8" />
-   <title>photo gallery</title>
-   <meta name="description" content="" />
-   <meta name="keywords" content="" />
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <link rel="stylesheet" href="../../../../assets/bootstrap/css/bootstrap.min.css" />
-   <style>
+  <head>
+    <meta charset="utf-8" />
+    <title>photo gallery</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="../../../assets/bootstrap/css/bootstrap.min.css"
+    />
+    <style>
       /*structure*/
       body {
-         background-image: url("../img/wood.jpg");
+        background-image: url("../img/wood.jpg");
       }
 
       .title {
-         text-transform: uppercase;
-         color: rgb(179, 182, 177);
-         font-family: fantasy;
-         text-shadow: 1.5rem 0.5rem rgb(109, 108, 108, 0.5);
+        text-transform: uppercase;
+        color: rgb(179, 182, 177);
+        font-family: fantasy;
+        text-shadow: 1.5rem 0.5rem rgb(109, 108, 108, 0.5);
       }
 
       /*cards*/
       .card {
-         padding: 3% 3% 0% 3%;
-         box-shadow: 1rem 1rem 0.5rem rgb(82, 80, 80);
-         border-radius: 0.5rem;
+        padding: 3% 3% 0% 3%;
+        box-shadow: 1rem 1rem 0.5rem rgb(82, 80, 80);
+        border-radius: 0.5rem;
       }
 
       .card-img-top {
-         height: 60%;
+        height: 60%;
       }
 
       h5 {
-         text-align: center;
-         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-         font-style: italic;
-         font-weight: bold;
-         text-transform: capitalize;
+        text-align: center;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-style: italic;
+        font-weight: bold;
+        text-transform: capitalize;
       }
 
       /*filters*/
       .invert {
-         -webkit-filter: invert(95%);
-         filter: invert(95%);
+        -webkit-filter: invert(95%);
+        filter: invert(95%);
       }
 
       .contrast {
-         -webkit-filter: contrast(70%);
-         filter: contrast(70%);
+        -webkit-filter: contrast(70%);
+        filter: contrast(70%);
       }
 
       .opacity {
-         -webkit-filter: 45%;
-         filter: 45%;
+        -webkit-filter: 45%;
+        filter: 45%;
       }
 
       .hue_rotate {
-         -webkit-filter: hue-rotate(300deg);
-         filter: hue-rotate(300deg);
+        -webkit-filter: hue-rotate(300deg);
+        filter: hue-rotate(300deg);
       }
 
       .sepia {
-         -webkit-filter: sepia(90%);
-         filter: sepia(90%);
+        -webkit-filter: sepia(90%);
+        filter: sepia(90%);
       }
 
       .saturated {
-         -webkit-filter: saturate(70%);
-         filter: saturate(70%);
+        -webkit-filter: saturate(70%);
+        filter: saturate(70%);
       }
 
       .grayscale {
-         -webkit-filter: grayscale(60%);
-         filter: grayscale(60%);
+        -webkit-filter: grayscale(60%);
+        filter: grayscale(60%);
       }
 
       .blur {
-         -webkit-filter: blur(2px);
-         filter: blur(2px);
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
       }
 
       .brightness {
-         -webkit-filter: brightness(50%);
-         filter: brightness(50%);
+        -webkit-filter: brightness(50%);
+        filter: brightness(50%);
       }
 
       /*mov effect*/
       .card:hover {
-         -webkit-transform: scale(1.1);
-         transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
       }
 
       .movement {
-         -webkit-transform: rotate(5deg);
-         transform: rotate(5deg);
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
       }
 
       .movement2 {
-         -webkit-transform: rotate(-5deg);
-         transform: rotate(-5deg);
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg);
       }
 
       /*mediaquery tablet portrait*/
       @media (min-width: 768px) and (max-width: 1024px) {
-         .card-img-top {
-            height: 70%;
-         }
+        .card-img-top {
+          height: 70%;
+        }
       }
 
       /*mediaquery tablet landscape*/
       @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-         .card-img-top {
-            height: 80%;
-         }
+        .card-img-top {
+          height: 80%;
+        }
       }
 
       /*mediaquary mobile*/
       @media (min-width: 320px) and (max-width: 767px) {
-         .card-img-top {
-            height: 100%;
-         }
+        .card-img-top {
+          height: 100%;
+        }
 
-         .card {
-            margin-bottom: 8%;
-         }
-
+        .card {
+          margin-bottom: 8%;
+        }
       }
-   </style>
-</head>
+    </style>
+  </head>
 
-<body>
-   <header>
+  <body>
+    <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-         <div class="container">
-            <a href="#" class="navbar-brand title">galeria de fotos</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
-               aria-controls="navbar" aria-expanded="false" aria-label="Menu de Navegacion">
-               <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar">
-               <ul class="navbar-nav ml-auto">
-                  <li class="nav-item active">
-                     <a href="#" class="nav-link">Home</a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="#" class="nav-link disabled">Today</a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="#" class="nav-link">Contact</a>
-                  </li>
-               </ul>
-            </div>
-         </div>
+        <div class="container">
+          <a href="#" class="navbar-brand title">galeria de fotos</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbar"
+            aria-controls="navbar"
+            aria-expanded="false"
+            aria-label="Menu de Navegacion"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a href="#" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link disabled">Today</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
-   </header>
+    </header>
 
-   <main>
+    <main>
       <div class="container mt-5 mb-4">
-         <div class="row mt-5">
-            <div class="col-lg-3 col-sm-6">
-               <div class="card movement">
-                  <img class="card-img-top contrast"
-                     src="../../../../img/galeria_de_fotos_paisajes/bench-560435_1920.jpg" alt="Card image cap">
-                  <div class="card-body">
-                     <h5 class="card-title">bench</h5>
-                  </div>
-               </div>
+        <div class="row mt-5">
+          <div class="col-lg-3 col-sm-6">
+            <div class="card movement">
+              <img
+                class="card-img-top contrast"
+                src="../../../img/galeria_de_fotos_paisajes/bench-560435_1920.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">bench</h5>
+              </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
-               <div class="card movement2">
-                  <img class="card-img-top opacity"
-                     src="../../../../img/galeria_de_fotos_paisajes/bird-1045954_1920.jpg" alt="Card image cap">
-                  <div class="card-body">
-                     <h5 class="card-title">bird</h5>
-                  </div>
-               </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card movement2">
+              <img
+                class="card-img-top opacity"
+                src="../../../img/galeria_de_fotos_paisajes/bird-1045954_1920.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">bird</h5>
+              </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
-               <div class="card movement">
-                  <img class="card-img-top invert"
-                     src="../../../../img/galeria_de_fotos_paisajes/butterfly-4884620_1920.jpg" alt="Card image cap">
-                  <div class="card-body">
-                     <h5 class="card-title">butterfly</h5>
-                  </div>
-               </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card movement">
+              <img
+                class="card-img-top invert"
+                src="../../../img/galeria_de_fotos_paisajes/butterfly-4884620_1920.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">butterfly</h5>
+              </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
-               <div class="card movement2">
-                  <img class="card-img-top hue_rotate"
-                     src="../../../../img/galeria_de_fotos_paisajes/kingfisher-1905255_1920.jpg" alt="Card image cap">
-                  <div class="card-body">
-                     <h5 class="card-title">kingfisher</h5>
-                  </div>
-               </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card movement2">
+              <img
+                class="card-img-top hue_rotate"
+                src="../../../img/galeria_de_fotos_paisajes/kingfisher-1905255_1920.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">kingfisher</h5>
+              </div>
             </div>
-         </div>
-         <div class="row mt-5">
-            <div class="col-lg-3 col-sm-6">
-               <div class="card movement">
-                  <img class="card-img-top sepia" src="../../../../img/galeria_de_fotos_paisajes/sun-3713835_1920.jpg"
-                     alt="Card image cap">
-                  <div class="card-body">
-                     <h5 class="card-title">sun</h5>
-                  </div>
-               </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-lg-3 col-sm-6">
+            <div class="card movement">
+              <img
+                class="card-img-top sepia"
+                src="../../../img/galeria_de_fotos_paisajes/sun-3713835_1920.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">sun</h5>
+              </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
-               <div class="card movement2">
-                  <img class="card-img-top saturated"
-                     src="../../../../img/galeria_de_fotos_paisajes/winter-5027855_1920.jpg" alt="Card image cap">
-                  <div class="card-body">
-                     <h5 class="card-title">winter</h5>
-                  </div>
-               </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card movement2">
+              <img
+                class="card-img-top saturated"
+                src="../../../img/galeria_de_fotos_paisajes/winter-5027855_1920.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">winter</h5>
+              </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
-               <div class="card movement">
-                  <img class="card-img-top grayscale"
-                     src="../../../../img/galeria_de_fotos_paisajes/butterfly-4884620_1920.jpg" alt="Card image cap">
-                  <div class="card-body">
-                     <h5 class="card-title">butterfly</h5>
-                  </div>
-               </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card movement">
+              <img
+                class="card-img-top grayscale"
+                src="../../../img/galeria_de_fotos_paisajes/butterfly-4884620_1920.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">butterfly</h5>
+              </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
-               <div class="card movement2">
-                  <img class="card-img-top blur" src="../../../../img/galeria_de_fotos_paisajes/wing-5316289_1920.jpg"
-                     alt="Card image cap">
-                  <div class="card-body">
-                     <h5 class="card-title">wing</h5>
-                  </div>
-               </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card movement2">
+              <img
+                class="card-img-top blur"
+                src="../../../img/galeria_de_fotos_paisajes/wing-5316289_1920.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">wing</h5>
+              </div>
             </div>
-         </div>
-         <div class="row mt-5">
-            <div class="col-lg-3 col-sm-6">
-               <div class="card movement">
-                  <img class="card-img-top satured blur"
-                     src="../../../../img/galeria_de_fotos_paisajes/kingfisher-1905255_1920.jpg" alt="Card image cap">
-                  <div class="card-body">
-                     <h5 class="card-title">kingfisher</h5>
-                  </div>
-               </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-lg-3 col-sm-6">
+            <div class="card movement">
+              <img
+                class="card-img-top satured blur"
+                src="../../../img/galeria_de_fotos_paisajes/kingfisher-1905255_1920.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">kingfisher</h5>
+              </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
-               <div class="card movement2">
-                  <img class="card-img-top grayscale opacity"
-                     src="../../../../img/galeria_de_fotos_paisajes/nature-5176637_1920.jpg" alt="Card image cap">
-                  <div class="card-body">
-                     <h5 class="card-title">nature</h5>
-                  </div>
-               </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card movement2">
+              <img
+                class="card-img-top grayscale opacity"
+                src="../../../img/galeria_de_fotos_paisajes/nature-5176637_1920.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">nature</h5>
+              </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
-               <div class="card movement">
-                  <img class="card-img-top sepia contrast"
-                     src="../../../../img/galeria_de_fotos_paisajes/bird-4498326_1920.jpg" alt="Card image cap">
-                  <div class="card-body">
-                     <h5 class="card-title">bird</h5>
-                  </div>
-               </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card movement">
+              <img
+                class="card-img-top sepia contrast"
+                src="../../../img/galeria_de_fotos_paisajes/bird-4498326_1920.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">bird</h5>
+              </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
-               <div class="card movement2">
-                  <img class="card-img-top invert brightness" src="../../../../img/galeria_de_fotos/telefono.jpeg"
-                     alt="Card image cap">
-                  <div class="card-body">
-                     <h5 class="card-title">telefono</h5>
-                  </div>
-               </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card movement2">
+              <img
+                class="card-img-top invert brightness"
+                src="../../../img/galeria_de_fotos/telefono.jpeg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">telefono</h5>
+              </div>
             </div>
-         </div>
+          </div>
+        </div>
       </div>
-   </main>
-   <footer>
-
-   </footer>
-</body>
-
+    </main>
+    <footer></footer>
+  </body>
 </html>
