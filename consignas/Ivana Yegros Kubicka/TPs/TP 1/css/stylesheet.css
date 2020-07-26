@@ -1,0 +1,99 @@
+body {
+    background-color: #fafafa;
+}
+
+.navbar {
+    background-color: #f85f06;
+    margin: 1px 1px -1px 1px;
+    padding: 1px 1px -1px 1px;
+}
+
+.logo {
+    width: 80px;
+    margin: 1px 4px -1px 11px;
+    padding: 1px 4px -1px 4px;
+}
+
+.nav-item {
+    font-weight: bold;
+    padding: 2px 1px 2px 1px;
+    font-size: 1.150rem;
+}
+
+.navbar-text {
+    padding: 2px 11px 2px 1px;
+    font-size: 1.100rem;
+}
+
+.home-form {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 80px 10px 130px 10px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+    color: #eeeeee;
+    text-shadow: 5px 5px #2c2a2ac2;
+} 
+
+.home-btn {
+    background-color: #ffa41b;
+    width: 160px;
+    font-size: 1.35rem;
+    height: 60px;    
+}
+
+.text-center {
+    font-size: 2.65rem;
+    padding: 30px;
+    color: #ffffff;
+}
+
+.logo-suscribir {
+     width: 1580px;
+     height: 170px;
+     margin-top: 110px;
+}
+
+.form-control {
+    background-color:#faf0f0 ;
+    font-size: 1.2rem;
+    color: #5e5d5d;
+}
+
+.home-cards {
+    background-color: #f3f1f1;
+}
+
+.nav-card   {
+    color: #353535;    
+}
+
+.card {
+    filter: drop-shadow(11px 9px 4px #31313198);
+}
+
+.destino {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+    color: #cd4545;
+    font-weight: bold;
+}
+
+.card-text {
+    color:#706f6f;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.font-italic {
+    color: #a3a2a2;
+    font-weight: normal;
+}
+
+.home-carousel {
+    margin-top: 140px;
+    margin-bottom: 110px;
+}
+
+.footer2 {
+    background-color: black;
+}
