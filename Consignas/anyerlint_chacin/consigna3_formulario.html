@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Registration form</title>
+    <style>
+    
+    body {
+        width: 900px;
+        font-family: Helvetica Neue;
+        text-align:left;
+        padding: 20px;
+        position:relative;
+        margin: 0 auto;
+        background: linear-gradient( rgba(87,145,224,1), rgba(137,57,248,1));
+        background-repeat:none;
+        font-size: 1rem;
+    }
+    @media (min-width: 768px) {
+    article {
+        text-align: left;
+        background: #ffffff;
+        width: 900px;
+        border-radius: 30px;
+    }}
+    h1 {
+        background: #1a1a1a;
+        color:#ffff;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 30px 30px;
+    }
+    input {
+        display: inline;
+        padding: 15px 10px;
+        border-radius: 5px;
+        background-color: #e5e5e5;
+        border: none;
+        padding-right: 455px;
+
+        }
+    .inputname {
+        display: inline;
+        padding: 15px 10px;
+        border-radius: 5px;
+        background-color: #e5e5e5;
+        border: none;
+        padding-right: 200px;
+        }
+    .inputname1 {
+        display: inline;
+        padding: 15px 10px;
+        border-radius: 5px;
+        background-color: #e5e5e5;
+        border: none;
+        padding-right: 100px;
+        }
+        .acode {
+        display: inline;
+        padding: 15px 10px;
+        border-radius: 5px;
+        background-color: #e5e5e5;
+        border: none;
+        padding-right: 10px;
+        }
+        .inputnumber {
+        display: inline;
+        padding: 15px 10px;
+        border-radius: 5px;
+        background-color: #e5e5e5;
+        border: none;
+        padding-right: 270px;
+        }
+    .options {
+        padding: 15px 230px;
+        border-radius: 5px;
+        background-color: #e5e5e5;
+        border: none;
+        }
+    option {
+        display: inline-flex;
+        padding: 10px 10px;
+        border-radius: 5px;
+        background-color: #e5e5e5;
+        border: none;
+         }
+    .boton{
+        padding: 30px 0px;
+        text-align: justify;
+        width: 900px;
+    }
+    .phone, .name-col, .company, .email, .subject {
+     display: flex;
+     flex-wrap: wrap;
+     margin-right: -15px;
+     margin-left: -15px;
+    }
+    .col-phone, .names, .email-col {
+        flex: 0 0 10px;
+        max-width: 30%;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 20px;
+        font-size: 15px;
+        margin-bottom: 2rem;
+    }
+    .subject-col {
+        flex: 0 0 10px;
+        max-width: 30%;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 10px;
+        width: 100%;
+        font-size: 15px;
+        margin-bottom: 2rem;
+    }
+    .co {
+        flex: 0 0 10px;
+        max-width: 30%;
+        position: relative;
+        padding-right: 15px;
+        padding-left: -5px;
+        width: 100%;
+        font-size: 15px;
+        margin-bottom: 2rem;
+    }
+    .col-area {
+        flex: 0 0 10px;
+        max-width: 30%;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px;
+        font-size: 15px;
+        margin-bottom: 1rem;
+    }
+    .text{
+        font-size: 15px;
+        padding-right: 40px;
+        padding-top: 15px;
+    }
+    .text2 {
+        font-size: 15px;
+        padding-right: 34px;
+        padding-top: 15px;
+    }
+    .botton:hover {
+        text-align: left;
+        padding: 15px 40px;
+        background-color: #eb3746;
+        color:#ffff;
+        text-transform: uppercase;
+    }
+    .botton {
+        text-align: left;
+        padding: 15px 40px;
+        background-color: #ff4b5a;
+        color:#ffff;
+        text-transform: uppercase;
+    }
+    section {
+        padding: 20px 100px;
+    }
+    .customer {
+        position: relative;
+        width: 100%;
+        font-size: 15px;
+        margin-bottom: 1rem;
+        display: flex;
+     margin-right: -15px;
+     margin-left: -15px;
+    }
+    label {
+        padding-right: 20px;
+    }
+
+    
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+           
+        </header>
+    <article>
+            <h1>Event registration form</h1>
+    <section class="section">   
+        <div class="name-col">
+            <div class="text">
+                <label for="name">Name</label>
+            </div>
+            <div class="names">     
+                <input class="inputname1" id="firstname" type="text" minlength="3" maxlength="20" name="firstname">
+                <label for="firstname">First Name</label> 
+            </div> 
+            <div class="names">     
+                <input class="inputname" id="lastname" type="text" minlength="3" maxlength="20" name="lastname">
+                <label for="lastname">Last Name</label>
+            </div> 
+        </div>
+
+        <div class="company">
+                <div class="text2">
+                    <label for="company">Company</label>
+                </div>
+                <div class="co">
+                    <input id="company" type="text" minlength="3" maxlength="20" name="company">
+                </div>               
+        </div>
+
+        <div class="email">
+                <div class="text">
+                    <label for="email">Email</label>
+                </div>
+               <div class="email-col">
+                <input id="email" type="email" name="email">
+               </div> 
+        </div>
+            <div class="phone">
+                <div class="text">
+                    <label for="phone">Phone</label> 
+                </div>
+                <div class="col-area">
+                <input class="acode" id="area code" type="number" name="areacode">
+                <label for="area code">Area code</label> 
+                </div>
+                <div class="col-phone">
+                <input class="inputnumber" id="phone number" type="number" name="phonenumber">
+                <label for="phone">Phone</label>
+                </div>                
+            </div>
+        <div class="subject">
+                <div class="text2">
+                    <label for="subject">Subject</label>
+                </div>
+                <div class="subject-col">
+                <select class="options" name="Chooise option" id="Chooise option">
+                    <option>Chooise option</option>
+                    <option value="support">Support department</option>
+                    <option value="sales">Sales department</option>
+                    <option value="claims">Slaims department</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <div class="customer">
+            <h3>Are you an existing customer?</h3>
+            </div>
+            <div class="customer">
+                <input name="yes" type="radio" value="y">
+                <label>Yes</label>
+                <input name="no" type="radio" value="n">
+                <label>No</label>
+            </div>
+        </div> 
+                <br>
+            <div class="boton">
+                    <input class="botton" type="submit" value="Register">
+            </div>
+             
+            </section>
+        </article>
+    </main>
+</body>
+</html>

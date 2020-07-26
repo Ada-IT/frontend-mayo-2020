@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Mi Formulario de Login</title> 
+        <style>
+            .menu a {
+                background:lightcoral;
+                border-radius: 30px;
+                padding: 10px;
+                font-family: helvetica;
+                font-weight: bold;
+                color:#333;
+                }
+            .menu a:hover {            
+                border-radius: 30px;
+                padding: 10px;
+                font-family: helvetica;
+                font-weight: bold;
+                color:#333;
+                background-color: teal;
+                }
+            input {
+                background-color:darkgray;
+                font-family:helvetica;
+                font-weight: bold;
+                color:white;
+                border-radius: 10px;
+                border:none;
+                padding: 10px 10px;
+                }
+            input:focus {
+                background-color: rgb(243, 212, 109);
+
+                }            
+            input:invalid {
+                background-color:coral;
+                }        
+        </style>                      
+    </head>
+    <body>
+        <main>
+            <header>
+                <nav class="menu a">
+                    <a class="" href="">Menu 1</a>
+                    <a class="" href="">Menu 2</a>
+                </nav>
+            </header>                        
+            <article>
+                <section id="formulario-login">                
+                    <h1>Login</h1>
+                    <div>
+                        <!-- Formulario de Login -->
+
+                        <form class="login-validacion" id="login" action="formulario-login.html" method="POST">
+                            <label for="usuario">Usuario:</label>
+                            <input 
+                                id="usuario" 
+                                type="email" 
+                                name="usuario"
+                            >
+                            <br>
+                            <label for="password">Password:</label>
+                            <input 
+                                id="password" 
+                                type="password" 
+                                minlength="4" 
+                                maxlength="10" 
+                                name="password"
+                            >
+                            <br>
+                            <input type="submit" value="Ingresar">
+                        </form>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>  

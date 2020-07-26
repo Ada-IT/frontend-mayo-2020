@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Mi Formulario de Login</title> 
+        <style>
+            /*---cambio de estilo en menu 1 y menu 2---*/
+            .menu {
+                background-color: pink;
+                font-style: italic;
+                font-weight: bolder;
+                text-transform: capitalize;
+                text-align: center;
+                border-radius: 30px;
+                border-style: double;
+                color: black;
+                padding: 10px;
+            }
+            /*---cambio de estilo de menu 1 y menu 2 cuando posicionas el mouse o al hacer click---*/
+            .menu:hover {
+                background-color: powderblue;
+                color: red;
+                border-radius: 10px;
+                border-style: double;
+                font-size: medium;
+
+            }
+            /*---color y estilo para ingresar---*/
+            input {
+                color: black;
+                background-color: rgb(88, 88, 88);
+                border-style: groove;
+                border-radius: 30px;
+
+            }
+            /*---color al clickear para ingresar usuario y password---*/
+            input:focus {
+                background-color:rgb(27, 150, 231);
+
+            }
+            /*---estilo de la palabra usuario y password---*/
+            label {
+                font-size: x-large;
+                font-weight: bolder;
+                color: rgb(8, 39, 39);
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 20px;
+            }
+            .login-validation {
+                color:coral;
+                font-size: 30px;
+
+            }
+            .login-validation :invalid {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <nav>
+                    <a class="menu" href="">Menu 1</a>
+                    <a class="menu" href="">Menu 2</a>
+                </nav>
+            </header>                        
+            <article>
+                <section id="formulario-login">                
+                    <h1>Login</h1>
+                    <div>
+                        <!-- Formulario de Login -->
+                        <form class="login-validation" id="login" action="formulario-login.html" method="POST">
+                            <label for="usuario">Usuario:</label>
+                            <input 
+                                id="usuario" 
+                                type="email" 
+                                name="usuario"                                
+                            >
+                            <br>
+                            <label for="password">Password:</label>
+                            <input 
+                                id="password" 
+                                type="password" 
+                                minlength="4" 
+                                maxlength="10" 
+                                name="password"
+                            >
+                            <br>
+                            <input type="submit" value="Ingresar">
+                        </form>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>                

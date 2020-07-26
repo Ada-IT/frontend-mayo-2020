@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <!-- 
+            Rama bootstrap_galeria
+            En su carpeta de consignas crear carpeta bootstrap-galeria
+            En la carpeta crear archivo galeria.html
+            El archivo debe contener la libreria de bootstrap css incluida
+            La galeria debe contener 9 imagenes:
+            - Cada imagen debe estar dentro de un card.
+            - Las fotografias se encuentran en /img/galeria_de_fotos_paisajes  
+            - Cada card va a contener un titulo corto. 
+            - El titulo de cada foto puede ser demo, ej. : foto 1, foto 2.. etc
+
+            Los cards van a tener un efecto de movimiento en el evento hover.
+            La web debera tener:
+            - El menu debe estar en la cabecera del sitio y debe contener con 4 botones.
+            - El titulo que este al costado izquierdo del menu  y alineado verticalmente.
+            - El contenido debera esta centrado en el medio. Queda a criterio la alineación respecto del menu.
+            - El sitio debe tener las media queries para mobile, tablets  y desktop.        
+            - La galeria se debe adaptar en su forma según tipo de dispositivo.
+            - Fondo de madera        
+    -->
+
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+     crossorigin="anonymous">
+
+     <style>
+       body{
+         background-image: url(../bootstrap-galeria/galeria_de_fotos_paisajes/fondomadera.jpg);
+       }
+       .container{margin-top: 8%;}
+       .inner{ overflow: hidden;
+       border-collapse: collapse;}
+       .inner img{transition: all 1.5s ease;}
+       .inner:hover img{ transform: scale(1.5);}
+       .encabezado, .container, .pie-pagina{ padding: 1em 2em;}
+       .container, .pie-pagina{ box-sizing: border-box;}
+       .encabezado{background-color: black;
+       padding: 3em;}
+       .container{text-align: center; }
+       .pie-pagina{background-color: black;
+       padding: 3em;}
+       @media (min-width: 768px) and (max-width: 1024px) {}
+
+      @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+    
+      @media (min-width: 320px) and (max-width: 767px)  {}
+       
+      
+     </style>
+  </head>
+  <body>
+    <header class="encabezado"></header>
+   <div class="container">
+    <div class="row row-cols-1 row-cols-md-3">
+      <div class="col mb-4">
+        <div class="card shadow" style="width: 20rem;">
+          <div class="inner">
+            <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/bench-560435_1920.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card" style="width: 20rem;">
+          <div class="inner">
+            <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/wing-5316289_1920.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card" style="width: 20rem;">
+          <div class="inner">
+            <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/kingfisher-1905255_1920.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card" style="width: 20rem;">
+          <div class="inner">
+            <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/sun-3713835_1920.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+          </div>
+        </div>
+      </div>
+        <div class="col mb-4">
+          <div class="card" style="width: 20rem;">
+            <div class="inner">
+              <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/bench-560435_1920.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card" style="width: 20rem;">
+            <div class="inner">
+              <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/sun-3713835_1920.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card" style="width: 20rem;">
+            <div class="inner">
+              <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/bench-560435_1920.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card" style="width: 20rem;">
+            <div class="inner">
+              <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/winter-5027855_1920.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card" style="width: 20rem;">
+            <div class="inner">
+              <img class="card-img-top" src="../bootstrap-galeria/galeria_de_fotos_paisajes/winter-5027855_1920.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="pie-pagina"></footer>
+         
+  </body>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+  
+      

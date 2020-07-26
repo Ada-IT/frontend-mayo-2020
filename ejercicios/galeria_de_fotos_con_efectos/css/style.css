@@ -84,6 +84,33 @@ h1 {
   grid-row-end: 9;
 }
 
+.sepia {
+  -webkit-filter: sepia(90%);
+  filter: sepia(90%);
+}
+
+.blur {
+  -webkit-filter: blur(5px) sepia(90%);
+  filter: blur(5px) sepia(90%);
+}
+
+.grayscale {
+  filter: grayscale(70%);
+}
+
+.brillo {
+  -webkit-filter: brightness(43%);
+  filter: brightness(43%);
+}
+
+.opacidad {
+  -webkit-filter: opacity(68%);
+  filter: opacity(68%);
+}
+.hrotate {
+  -webkit-filter: hue-rotate(107deg);
+  filter: hue-rotate(107deg);
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   h1 {
     font-size: 3rem;
