@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+  
+    <meta charset="utf-8" />
+    <title>Galería de Fotos de Bootstrap</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.min.css"/>
+    <style>
+        body{
+            background-image: url("../../../img/fondos/madera-bg.jpg")
+        }
+        .ri-3{
+            transform: rotate(3deg);
+        }
+        .rd-3{
+            transform: rotate(-3deg);
+        }
+        .ri-5{
+            transform: rotate(5deg);
+        }
+        .rd-5{
+            transform: rotate(-5deg);
+        }
+        .sombra {
+            filter: drop-shadow(10px 10px 5px rgb(128, 128, 128));
+        }
+        .borroso{
+            filter: blur(2px);
+        }
+        .brillo{
+            filter: brightness(0.4);
+        }
+        .contraste{
+            filter: contrast(200%);
+        }
+        .gris{
+            filter: grayscale(50%);
+        }
+        .rotar-hue{
+            filter: hue-rotate(90deg);
+        }
+        .invertir{
+            filter: invert(75%);
+        }
+        .opacidad{
+            filter: opacity(25%);
+        }
+        .saturacion{
+            filter: saturate(30%);
+        }
+        .sepia{
+            filter: sepia(60%);
+        }
+        .card:hover{
+            transform: rotate(0deg);    
+            width: 105%;
+        }
+        .navbar-brand {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-style:initial;
+            font-size:x-large;
+        }
+
+    </style>
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+            <a href="#" class="navbar-brand">Galería de Imágenes</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                    data-target="#opciones" aria-controls="navbar" 
+                    aria-expanded="false" aria-label="Menu de Navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="opciones">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Ubicación</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Contacto</a>
+                  </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                    <div class="card p-2 mb-2 sombra ri-3">
+                        <img class="card-img-top borroso" src="../../../img/galeria_de_fotos_paisajes/bird-1045954_1920.jpg" alt="Ave 1">
+                        <div class="card-body">
+                            <p class="card-text">Foto 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                    <div class="card p-2 mb-2 sombra rd-5">
+                        <img class="card-img-top brillo" src="../../../img/galeria_de_fotos_paisajes/bird-4498326_1920.jpg" alt="Ave 2">
+                        <div class="card-body">
+                            <p class="card-text">Foto 2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                    <div class="card p-2 mb-2 sombra ri-5">
+                        <img class="card-img-top contraste" src="../../../img/galeria_de_fotos_paisajes/kingfisher-1905255_1920.jpg" alt="Ave 3">
+                        <div class="card-body">
+                            <p class="card-text">Foto 3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                    <div class="card p-2 mb-2 sombra rd-3">
+                        <img class="card-img-top gris" src="../../../img/galeria_de_fotos_paisajes/wing-5316289_1920.jpg" alt="Ave 4">
+                        <div class="card-body">
+                            <p class="card-text">Foto 4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                    <div class="card p-2 mb-2 sombra ri-5">
+                        <img class="card-img-top rotar-hue" src="../../../img/galeria_de_fotos_paisajes/sun-3713835_1920.jpg"alt="Sol">
+                        <div class="card-body">
+                            <p class="card-text">Foto 5</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                    <div class="card p-2 mb-2 sombra rd-5">
+                        <img class="card-img-top invertir" src="../../../img/galeria_de_fotos_paisajes/winter-5027855_1920.jpg" alt="Invierno">
+                        <div class="card-body">
+                            <p class="card-text">Foto 6</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                    <div class="card p-2 mb-2 sombra ri-3">
+                        <img class="card-img-top opacidad" src="../../../img/galeria_de_fotos_paisajes/wing-5316289_1920.jpg" alt="Ala">
+                        <div class="card-body"> Foto 7</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                    <div class="card p-2 mb-2 sombra rd-5">
+                        <img class="card-img-top saturacion" src="../../../img/galeria_de_fotos_paisajes/bench-560435_1920.jpg" alt="Banca">
+                        <div class="card-body">
+                            <p class="card-text">Foto 8</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                    <div class="card p-2 mb-2 sombra rd-3">
+                        <img class="card-img-top sepia" src="../../../img/galeria_de_fotos_paisajes/butterfly-4884620_1920.jpg" alt="Mariposa">
+                        <div class="card-body">
+                            <p class="card-text">Foto 9</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                    <div class="card p-2 mb-2 sombra ri-5">
+                        <img class="card-img-top sepia invertir" src="../../../img/galeria_de_fotos_paisajes/pic-wood-5295949_1920.jpg" alt="Ave 5">
+                        <div class="card-body">
+                            <p class="card-text">Foto 10</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                    <div class="card p-2 mb-2 sombra rd-3">
+                        <img class="card-img-top brillo contraste" src="../../../img/galeria_de_fotos_paisajes/nature-5176637_1920.jpg" alt="Ala">
+                        <div class="card-body">
+                            <p class="card-text">Foto 11</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                    <div class="card p-2 mb-2 sombra ri-3">
+                        <img class="card-img-top borroso gris" src="../../../img/galeria_de_fotos_paisajes/winter-5027855_1920.jpg" alt="Banca">
+                        <div class="card-body">
+                            <p class="card-text">Foto 12</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="page-footer font-small blue">
+            <div class="footer-copyright text-center py-3">© 2020 Derechos Reservados:
+                <a href="https://mdbootstrap.com/"> Melichase.com</a>
+            </div>
+        </footer>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
