@@ -54,7 +54,7 @@
         h3{
             text-align: center;
             background-color: rgb(241, 139, 121);
-            border-radius: 2%;
+            border-radius: 15%;
             border-style: dashed;
             font-size: large;
             padding: 20px 20px;
@@ -63,7 +63,7 @@
            padding: 20px 20px;
        }
        .container {
-           width: 32%;
+           width: 100%;
            float: left;
            border-style: dashed;
            border-radius: 10%;
@@ -71,6 +71,16 @@
        }
        .container:hover{
            background-color: rgb(248, 191, 185);
+       }
+
+       @media screen and (min-width: 481px) and (max-width: 767px){
+          .container
+          .p
+          h3{
+            display: inline;
+            min-width: 100%;
+          }
+
        }
 
     </style>
