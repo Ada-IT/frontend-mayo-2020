@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+<<<<<<< HEAD
         <title>Formulario Consigna3</title>
         <link href="https://allfont.es/allfont.css?fonts=open-sans" rel="stylesheet" type="text/css" />
         <style>
@@ -170,20 +171,65 @@
                         <div class="div-comun">
                         <label for="empresa">Company:</label>
                         <input
+=======
+        <link rel="stylesheet" href="consigna3.css">
+        <title>Formulario Consigna3</title>                     
+    </head>
+    <body>
+        <main>
+            <header>
+                <nav>
+                </nav>
+            </header>                        
+                <form action="" method="post">  
+                        <h1>EVENT REGISTRATION FORM</h1>     
+                    <div class="contendor-formulario">                        
+                        <h3>Name:</h3>
+                        <input 
+                            class="input-mitad"
+                            id="nombre" 
+                            type="text" 
+                            maxlength="20" 
+                            name="nombre"
+                            required>
+                        <label for="nombre" class="etiqueta-nombre">
+                            <span class="name">First Name</span></label>
+                        <input 
+                            class="input-mitad"
+                            id="apellido"
+                            type="text"
+                            maxlength="20"
+                            name="apellido"
+                            required>
+                        <label for="apellido" class="etiqueta-apellido">
+                            <span class="apellido">Last name</span></label>                            
+                            <br>
+                        <label for="empresa">Empresa:</label>
+                        <input 
+                            class="input-100"
+>>>>>>> 23ddb75... Agregue consigna 3 y bootstrap
                             id="empresa" 
                             type="text" 
                             maxlength="20" 
                             name="empresa"
                             required>
+<<<<<<< HEAD
                         </div>
                         <br>
                         <div class="div-comun">
                         <label for="email">Email:</label>
                         <input
+=======
+                            <br>
+                        <label for="email">Email:</label>
+                        <input 
+                            class="input-100"
+>>>>>>> 23ddb75... Agregue consigna 3 y bootstrap
                             id="email" 
                             type="email" 
                             name="email"
                             required>
+<<<<<<< HEAD
                         </div>
                         <br>
                         <div class="form-telefono">  
@@ -239,6 +285,41 @@
             </form>
                 <!--</section>-->
             <!--</div>-->
+=======
+                            <br>                            
+                        <label for="telefono">Phone:</label>
+                        <input 
+                            class="input-40-60"
+                            id="telefono" 
+                            type="number"  
+                            name="telefono"
+                            required>
+                            <br>  
+                        <label for="subject">Subject</label>
+                        <select name="subject" id="subject" class="input-100">
+                                <option value="" disabled selected>Choose option</option>
+                                <option value="support">Support department</option>
+                                <option value="sales">Sales department</option>
+                                <option value="claim">Claims department</option>
+                        </select>          
+                            <br>
+                            <h3>Are you costumer?</h3>
+                            <input 
+                                name="costumer" 
+                                type="radio" 
+                                value="y">
+                            <label>Yes</label>                         
+                            <input 
+                                name="costumer" 
+                                type="radio" 
+                                value="N">
+                            <label>No</label> 
+                            <br>
+                            <br>
+                            <input type="submit" class="boton" value="REGISTER">
+                        </form>
+                    </div>
+>>>>>>> 23ddb75... Agregue consigna 3 y bootstrap
         </main>
     </body>
 </html>  

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <!-- 
+    Crear una rama con el nombre tabla_con_estilo desde su rama de desarrollo
+    y trabajar sobre ella.
+    COPIAR este archivo a su carpeta de usuario.
+    Este es un ejercicio de css.
+    Requerimientos:
+    1) Cada tipo elemento de la tabla debe contener al menos 1 estilo css,
+     se debe lograr diferenciar los espacios de cada celda, fila y columna como asi
+     resaltar la información cuando se pasa con el cursor por arriba.
+    2) Cada elemento de h1 a h6 que esten definidos deben contener al menos 2 propiedades css.
+    3) Cada elemento contenedor tipo section o div debe contener almenos 3 propiedades de css.
+    4) Los divs con informacion de las ciudades deben poder visualizar uno al lado de otro en bloques del mismo tamaño.    
+    5) El cuerpo del  documento debe tener un color de fondo y fuente definida.
+    6) Se deben agregar clases y utilizar selectores que se consideren necesarios.
+    7) todo el estilo de escribirá dentro de la etiqueta <style>
+    -->
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            background-image: url(https://www.buurtplein.nl/resources/uploads/bestanden/_1165x450_fit_center-center/Locatie.jpg);
+            background-position: center;
+            border-radius: 6rem;            
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        header {
+            
+        }
+        h1 {
+            width: 100%;
+            align-content: center;
+            font-size: 4rem;
+            font-family: fantasy;
+            text-align: center;
+            text-decoration: underline;
+            text-shadow: black;
+        }
+        h3 {
+            text-align: center;
+            text-decoration: underline;
+            font-style: oblique;
+        }
+        caption {
+            font-size: 1.2rem;
+            padding: 1rem;
+            background-color: rgb(14, 13, 13, 0.9);
+            color: antiquewhite;
+            text-align: center;
+        }
+        .contenedor-tabla {
+            margin: auto;
+            width: 40rem;
+        }
+        table {
+            background-color: rgb(85, 107, 47, 0.8);
+            text-align: center;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: solid 0.1rem rgb(49, 48, 48);
+            padding: 1rem;
+        }
+        .promedio {
+            background-color: rgb(90, 89, 89, 0.9);
+        }
+        thead {
+            background-color: rgb(90, 89, 89, 0.9);
+            border-bottom: solid 0.2rem black;
+            color: black;
+        }
+        tr:hover td{
+            background-color: rgb(98, 116, 67);
+            color: beige;
+        }
+        @media (min-width: 100px) and (max-width: 700px) {
+            h1 { 
+                font-size: 2rem;
+            }    
+            p {
+                font-size: 0.5rem;
+            } 
+            .pie {
+                display: block;
+            }  
+            .ciudad {
+                width: 100%;
+            }     
+        }
+        .pie {
+            display: inline-flex;
+            width: auto;
+        }
+        .ciudad {
+            margin: 0.5rem;
+            width: 33%;
+            border-radius: 1rem;            
+            background-color: rgb(250, 250, 232, 0.5);
+            text-align: justify;
+            padding: 1rem;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <header>
+    <br>
+      <h1>Tabla de viaje</h1>
+    </header>
+    <section class="contenedor-tabla">
+      <table>
+        <caption>
+          Conozca el tiempo necesario para viajar desde Philadelphia
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Destino</th>
+            <th scope="col">En auto</th>
+            <th scope="col">En tren</th>
+            <th scope="col">En bicicleta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nueva York</td>
+            <td><time>1:51</time>min</td>
+            <td><time>1:22</time>min</td>
+            <td><time>8:53</time>min</td>
+          </tr>
+          <tr>
+            <td>Washington</td>
+            <td><time>2:25</time>min</td>
+            <td><time>2:51</time>min</td>
+            <td><time>12:46</time>min</td>
+          </tr>
+          <tr>
+            <td>Nueva Jersey</td>
+            <td><time>1:20</time>min</td>
+            <td><time>1:05</time>min</td>
+            <td><time>3:56</time>min</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th class="promedio">Promedio</th>
+            <td><time>1:45</time>min</td>
+            <td><time>1:55</time>min</td>
+            <td><time>8:36</time>min</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+    <br />
+    <section class="pie">
+      <div class="ciudad">
+        <h3>Nueva York</h3>
+        <p>
+          Situado sobre la costa este de Estados Unidos de América, encontramos
+          a la ciudad de Nueva York. Esta, además esta bañada por el océano
+          Atlántico y en el que desemboca el río Hudson, el cual atraviesa todo
+          el estado.
+          <br />
+          Esta ciudad se caracteriza por ser la más poblada del estado de Nueva
+          York y del país. Tan diversa como versátil, es llamada la ciudad que
+          nunca duerme.
+        </p>
+      </div>
+      <div class="ciudad">
+        <h3>Washington D.C.</h3>
+        <p>
+          Es una ciudad de categoría mundial con estatuas y monumentos
+          conmemorativos icónicos, museos increíbles (y gratuitos), pasión por
+          la política, embajadas extranjeras, barrios históricos y veneradas
+          universidades y escuelas universitarias.
+          <br />
+          Con conexiones de vuelo directo a más de 30 destinos internacionales,
+          Washington, DC es un destino imprescindible en EE. UU. para viajeros
+          de todo el mundo.
+        </p>
+      </div>
+      <div class="ciudad">
+        <h3>New Jersey</h3>
+        <p>
+          Situado en el noreste de Estados Unidos, Nueva Jersey es uno de los
+          estados más pequeños del país. Sin embargo, su naturaleza es sumamente
+          diversa: pintorescas montañas en el norte, el océano Atlántico en las
+          costas del este y el sur, y una mezcla de colinas, granjas y una
+          inmensa reserva interior cubierta de pinos en el oeste.
+          <br />
+          A lo largo de toda la costa, verás paseos marítimos atractivos y
+          coloridos. Más hacia el interior, los bosques y senderos de río te
+          mostrarán los secretos de las montañas, como miradores, cascadas y
+          aves exóticas. Aquí, encontrarás interesantes museos, instituciones
+          culturales e históricas, y vistas panorámicas de íconos
+          estadounidenses, como la Statue of Liberty (Estatua de la Libertad).
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
