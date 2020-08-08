@@ -1,0 +1,48 @@
+//rama sass
+// archivo style.scss
+//carpeta ejercicio-1
+
+$card-font-type: Helvetica;
+$card-title-font-size: 1rem;
+$card-description-font-size: 0.7rem;
+$card-font-color: #ccc;
+$card-padding: 4px;
+$card-bg-color: #3c3c3c;
+$card-width: 100%;
+$card-use-alternative-color: false;
+$card-bg-alt-color: #ccc;
+$card-font-alt-color: #3c3c3c;
+$card-with-padding: true;
+$card-with-hover: true;
+$cards-enable: true;
+
+@if $cards-enable {
+  .card {
+    font-family: $card-font-type;
+    width: $card-width;
+
+    @if $card-use-alternative-color {
+      background-color: $card-bg-alt-color;
+      color: $card-font-alt-color;
+    } @else {
+      background-color: $card-bg-color;
+      color: $card-font-color;
+    }
+
+    @if $card-with-padding {
+      padding: $card-padding;
+    }
+
+    @if $card-with-hover {
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+  .card .title {
+    font-size: $card-title-font-size;
+  }
+  .card .description {
+    font-size: $card-description-font-size;
+  }
+}
