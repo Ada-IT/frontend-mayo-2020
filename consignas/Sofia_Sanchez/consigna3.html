@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link href="https://allfont.es/allfont.css?fonts=open-sans" rel="stylesheet" type="text/css" />
+
+    <title>Event Registration Form</title>
+    <style>
+
+       
+    
+         html {
+            background-image: linear-gradient(200deg, #b721ff, #08aeea);
+        }
+
+        body {
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            color: darkslategrey;
+            
+        }
+
+        h1 {
+            background-color: #1a1a1a;
+            color: #f5f5f5;
+            font-size: 1.8rem;
+            font-family: 'Open Sans', arial;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            text-align: center;
+            padding: 2%;
+            margin-top: 10%;
+        }
+
+        .registration-form {
+            background-color: #ffffff;
+            border-radius: 10px;
+            margin-left: 8%;
+            margin-right: 5%;
+            height: 150%;
+        }
+
+        .data-registry {
+            padding: 5%;
+            line-height: 50px;
+        }
+
+        .item-form {
+            display: flex;
+            margin-bottom: 5%;
+        }
+
+        label {
+            display: flex;
+            justify-content: flex-start;
+            min-width: 10%;
+
+        }
+
+        input {
+            display: flex;
+            justify-content: flex-center;
+            align-items: center;
+            margin-left: 25px;
+            background-color: #e5e5e5;
+            border-radius: 5px;
+            border-color: transparent;
+
+        }
+
+        .formfield {
+            width: 100%;
+        }
+
+        .areacode {
+            width: 30%;
+        }
+
+        select {
+            display: flex;
+            justify-content: flex-end;
+            margin-left: 25px;
+            background-color: #e5e5e5;
+            border-radius: 5px;
+            border-color: transparent;
+            font-weight: 700;
+            color: slategrey;
+            width: 100%;
+            padding-left: 2%;
+        }
+
+        .radio-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: baseline;
+            flex-direction: row-reverse;
+
+
+        }
+
+        .button {
+            background-color: #ff4b5a;
+            padding: 2%;
+            padding-left: 6%;
+            padding-right: 6%;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        #email:valid {
+            background-color: #e5e5e5;
+        }
+
+        #email:invalid {
+            background-color: #ff4b5a;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .item-form {
+                flex-direction: column;
+            }
+            input {
+                height: 30px;
+                margin-left: 0px;
+                margin-bottom: 10px;
+            }
+
+            select {
+                margin-left: 0px;
+            }
+
+            h1 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header></header>
+
+        <article>
+            <section id="registration-form" class="registration-form">
+                <h1>EVENT REGISTRATION FORM</h1>
+                <div class="data-registry">
+                    <!-- Formulario de registro -->
+                    <form action="consigna3.html" method="POST">
+                        <div class="item-form">
+                            <label for="name">Name</label>
+                            <input class="formfield" id="name" type="text" minlength="3" maxlength="20" name="Name" />
+                            <input class="formfield" id="lastname" type="text" minlength="3" maxlength="20"
+                                name="Lastname" />
+                        </div>
+                        
+                        <div class="item-form">
+                            <label for="company">Company</label>
+                            <input class="formfield" id="company" type="text" minlength="5" maxlength="25"
+                                name="company" />
+                        </div>
+                        
+                        <div class="item-form">
+                            <label for="email">Email</label>
+                            <input class="formfield" id="email" type="email" name="email" />
+                        </div>
+                        
+                        <div class="item-form">
+                            <label for="phone">Phone</label>
+                            <input class="formfield areacode" id="areacode" type="text" name="areacode" />
+                            <input class="formfield" id="phone" type="text" name="phone" />
+                        </div>
+                        
+                        <div class="item-form">
+                            <label for="subject">Subject</label>
+                            <select name=subject id=subject>
+                                <option value="0" disabled selected>Choose Option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+
+                            </select>
+                        </div>
+
+                        <div class="item-form">
+                            <label for="existing-customer">Are you an existing customer?</label>
+                        </div>
+                        <div class="radio-container">
+
+                            <label>No</label>
+                            <input id="no" type="radio" value="no" name="customer">
+                            <label>Yes</label>
+                            <input id="Yes" type="radio" value="Yes" name="customer" />
+                        </div>
+                        <input class=button type="submit" value="REGISTER">
+
+                    </form>
+
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>

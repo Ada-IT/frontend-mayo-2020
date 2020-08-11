@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <style>
+        body {
+            background-image: radial-gradient(circle, #fd50008f , #ff5100);
+        }
+        .clase {
+            background-color: rgb(255, 200, 174);
+        }
+        .clase:hover {
+            filter: drop-shadow(5px 5px 10px #fff4f4 );
+        }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">  
+        <section >
+            <p>
+                <a class="btn btn-secondary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+                <a class="btn btn-secondary" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">Toggle first element</a>
+                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+              </p>
+              <div class="row">
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card card-body">
+                        <div class="media">
+                            <img src="../img/flores.jpeg" width="100px" class="mr-3" alt="...">
+                            <div class="media-body">
+                              <h5 class="mt-0">Media heading</h5>
+                              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapseExample2">
+                    <div class="card card-body">
+                      <h3>Hola a todos</h3>
+                      <p>Hola a todos mi nombre es Aylen y me gusta esta accion de bootstrap</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample3">
+                      <div class="card card-body">
+                          <div class="media">
+                            <div class="card">
+                                <div class="card-header">
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <span>CREDIT/DEBIT CARD PAYMENT</span>
+                                    </div>
+                                    <div
+                                      class="col-md-6 text-right"
+                                      style="margin-top: -5px;"
+                                    >
+                                      <img
+                                        src="https://img.icons8.com/color/36/000000/visa.png"
+                                      />
+                                      <img
+                                        src="https://img.icons8.com/color/36/000000/mastercard.png"
+                                      />
+                                      <img
+                                        src="https://img.icons8.com/color/36/000000/amex.png"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-body" style="height: 350px;">
+                                  <div class="form-group">
+                                    <label for="cc-number" class="control-label"
+                                      >CARD NUMBER</label
+                                    >
+                                    <input
+                                      id="cc-number"
+                                      type="tel"
+                                      class="input-lg form-control cc-number"
+                                      autocomplete="cc-number"
+                                      placeholder="•••• •••• •••• ••••"
+                                      required
+                                    />
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label for="cc-exp" class="control-label"
+                                          >CARD EXPIRY</label
+                                        >
+                                        <input
+                                          id="cc-exp"
+                                          type="tel"
+                                          class="input-lg form-control cc-exp"
+                                          autocomplete="cc-exp"
+                                          placeholder="•• / ••"
+                                          required
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label for="cc-cvc" class="control-label"
+                                          >CARD CVC</label
+                                        >
+                                        <input
+                                          id="cc-cvc"
+                                          type="tel"
+                                          class="input-lg form-control cc-cvc"
+                                          autocomplete="off"
+                                          placeholder="••••"
+                                          required
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="numeric" class="control-label"
+                                      >CARD HOLDER NAME</label
+                                    >
+                                    <input type="text" class="input-lg form-control" />
+                                  </div>
+                                  <div class="form-group">
+                                    <input
+                                      value="MAKE PAYMENT"
+                                      type="button"
+                                      class="btn btn-success btn-lg form-control"
+                                      style="font-size: 0.8rem;"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+              </div>
+        </section>
+      </div>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

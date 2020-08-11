@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+      <title>
+          consigna5
+       </title>
+          <style>
+             .button {background-color: brown;
+             padding:20px 40px;}
+            body{background-color: #b721ff;}
+            .form-register {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                background:#08aeea  ;
+                padding: 30px;
+                margin: 380px;
+                border-radius: 1px;
+                margin-top: 100px;
+                font-family: helvetica  ;
+                color: white;
+                text-align: left; }
+            .form-register .controls {
+                width: 50%;
+                background: white;
+                padding: 5px;
+                margin-bottom: 20px;
+                font-family: open-sans;
+                font-size: 18px;
+                text-align: left;
+            }
+            h4{ color: darkblue;}
+          </style>
+      
+  </head>
+<body>
+    <section class="form-register">
+        <h4>EVEN REGISTRATION </h4>
+        <label for="Nombre"> Nombre</label> <input class="controls" type="text" name="nombres" id="nombres" maxlength="15">
+        <br>
+        <label for="Apellido">Apellido</label> <input class="controls" type="text" name="Apellido" id="Apellido" maxlength="15">
+        <br>
+        <label for="Direccion">Direccion</label> <input class="controls" type="direction" name="Direccion" id="Direccion" maxlength="20">
+        <br>
+        <label for="Telefono">Telefono</label> <input class="controls" type="number" name="number" id="number" pattern="{0-9}">
+        <br>
+        <label for="Empresa">Empresa</label> <input class="controls" type="text" maxlength="20">
+        <br>
+        <label for="Email">Email</label> <input class="controls" type="email" name="email" id="Email">
+        <br>
+        <label>Genero</label>
+        <input type="checkbox" name="Masculino" id="Masculino">Masculino
+        <input type="checkbox" name="Femenino" id="Femenino">Femenino
+        <input type="checkbox" name="Otro" id="Otro">Otro
+        <br> 
+        <div>
+        <label for="Educacion">Educacion</label> 
+        <select name="Educacion" id="Educacion">
+            <option value="Primaria">Primaria</option>
+            <option value="Secundaria">Secundaria</option>
+            <option value="Universitaria">Universitaria</option>
+        </select>
+        </div>
+        <br>
+        <label>Trabajo</label>
+        <input type="checkbox" name="Si" id="Si">Si 
+        <input type="checkbox" name="No" id="No">No
+        <br>
+        <input type="button" value="Enviar">
+    </section>
+    </table>
+</body>
+</html>
