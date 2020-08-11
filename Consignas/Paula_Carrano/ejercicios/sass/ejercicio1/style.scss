@@ -1,0 +1,50 @@
+$card-font-title-size: 1rem;
+$card-font-description-size: 0.7rem;
+$card-font-type: Helvetica;
+$card-font-color: #ccc;
+$card-padding:4px;
+$card-bg-color: #3c3c3c;
+$card-width: 100%;
+//colore alternativos
+$card-use-alternative-color:true;
+$card-font-alt-color: #3c3c3c;
+$card-bg-alt-color: #ccc;
+$card-without-padding:false;
+$card-without-hover: true;
+
+.card {
+font-family: $card-font-type;
+width: $card-width;
+//condiciones
+@if  $card-use-alternative-color{
+   background-color: $card-bg-alt-color;
+   color: $card-font-alt-color;
+} @else{
+background-color: $card-bg-color;
+color: $card-font-color;
+}
+
+//condicion solo con 1 variable
+@if $card-without-padding == true {
+   padding: $card-padding;
+}
+
+//condicion con pseudo clases
+@if $card-without-hover ==true{
+&:hover{
+   font-weight: bold;
+}
+}
+}
+
+.card .title{
+   font-size: $card-font-title-size;
+}
+
+.card .description{
+   font-size: $card-font-description-size;
+}
+
+//btn
+
+
