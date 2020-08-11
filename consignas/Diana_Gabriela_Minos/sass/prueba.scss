@@ -1,0 +1,24 @@
+// variables de css
+$font-family: Helvetica, sans-serif;
+$primary-color: #333;
+$btn-padding: 4px;
+$btn-text-color: #000;
+$btn-bg-color: #ccc;
+$btn-radius: 6px;
+$card-bg-color: #444;
+
+body {
+    font: 100% $font-family;
+    color: $primary-color;
+}
+.btn {
+    color: $btn-text-color;
+    background-color: $btn-bg-color;
+    padding: $btn-padding;
+    border-radius: $btn-radius;
+}
+.card {
+    color: $btn-text-color;
+    background-color: $card-bg-color;
+}
+
