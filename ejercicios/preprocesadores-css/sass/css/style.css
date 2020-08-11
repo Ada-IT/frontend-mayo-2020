@@ -1,3 +1,4 @@
+/*! Este es el cuerpo   */
 body {
   font: 100% Helvetica, sans-serif;
   color: #333;
@@ -11,7 +12,7 @@ body {
 }
 
 .card {
-  color: #000;
+  color: #333;
   background-color: #444;
 }
 
