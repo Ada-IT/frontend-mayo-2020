@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estiloCons3.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="contenedor">
+    <!--CONTENEDOR sería el espacio que contiene al titulo y al formulario
+      siendo el titulo un bloque y el formulario otro p, por lo que lo organice en columna-->
+        <div class="box"><p>EVENT REGISTRATION FORM</p></div>
+        <div class="box1">
+     <!--El formulario tiene como division una serie items que serian cada dato a completar a los que llame subBox
+          Ojo! que hay bloques que tienen subdivisiones. A esta division la organice en columna tambien-->
+          <form action="">
+             <div class="subBox">
+              <label class="Op1"for="Nombre">Name</label>
+
+     <!-- En el caso del name hice dos subdivisiones para poder poner las frases debajo de cada input, 
+      el name tiene su contenido organizado en fila -->
+
+              <div class=box2><input type="text" maxlength="20"><label for="">First Name</label></div>
+              <div class=box2><input type="text" maxlength="20"><label for="">Last Name</label></div>
+             </div><br><br>
+             <div class="subBox">
+              <label class="Op1" for="Empresa">Company</label>
+              <input class="Op2"type="text" maxlength="20">
+             </div><br><br>
+             <div class="subBox">
+              <label class="Op1" for="Email">Email</label>
+              <input class="Op2"type="email"id="email">
+             </div><br><br>
+            <div class="subBox">
+             <label class="Op1" for="Telefono">Phone</label>
+              <div class="box3"><input type="number"><label for="">Area Code</label></div>
+              <div class="box4"><input type="tel"><label for="">Phone Number</label></div>
+            </div><br><br>
+            <div class="subBox">
+             <label class="Op1" for="">Subjet</label>
+             <select class="select"name="" id="">
+                <option value="1">Support department</option>
+                <option value="support sales">Sales department</option>
+                <option value="claim">Claims department</option>
+             </select>
+            </div><br><br>
+            <label for="">Are you an existing customer?</label><br>
+            <div class="radio">
+            <input type="radio" name="opciones" id="Yes"value="Y">
+            <label for="Yes"class="subRadio">Yes</label>
+            <input type="radio" name="opciones" id="No"value="N">
+            <label for="No"class="subRadio">No</label>
+            </div><br><br>
+            <input type="submit" class="btn"value="REGISTER">
+          </form>
+        </div>
+    </section>
+</body>
+</html>

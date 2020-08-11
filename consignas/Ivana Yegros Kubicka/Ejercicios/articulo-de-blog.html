@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mi Articulo de Blog</title>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital@1&family=Montserrat&family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
+        <style>
+            /* 
+            Crear nueva rama articulo_de_blog.
+            Copiar archivo a su carpeta de ejercicios.
+            Nombre de archivo articulo_de_blog.html.
+            En este ejercicio deberan agregar el código que crean util para lograr un articulo colorido.
+            Cada elemento h1 a h6 debe tener una clase css con al menos 2 propiedades y 1 propiedad que las diferencie.
+            Para los elementos section y article, cada uno debe contener 2 propiedades que separen el contenido 
+            a una distancia clara de de entre 20 y 40 px. 
+            Cada elemento que tenga contenido en parrafos debe contener almenos 2 propiedades de css*/
+            /* Agregar color de fondo por seccion y de documento*/
+            /* Aqui tienen unos ejemplos de otras clases  de referencia.*/
+            /* Estructura */
+            article {
+                float: left;
+                width: 50%;
+                border-radius: 1rem;
+                background-color: rgba(241, 223, 200, 0.877); 
+                margin: 20px;
+                    }
+
+            aside {
+                float: right;
+                width: 30%;
+                background-color: rgba(241, 223, 200, 0.877); 
+                text-align: center;
+                border-radius: 1rem;
+                margin: 20px;
+                }
+
+            section {
+                margin: 25px; 
+                padding-bottom: 20px;
+                    }
+
+            /* ----fin Estructura  --- */
+
+            /* contenidoy tipografias */
+            h1 {
+                border: 1px solid rgb(87, 52, 20);
+                font-family: Montserrat;
+                font-size: 40px;
+                letter-spacing: 3px;
+                color: rgb(255, 238, 226);
+                text-align: center;
+                background-image: url(https://i.pinimg.com/236x/2b/d0/80/2bd0803ef33fad7840fb7fc6875651de.jpg);
+                padding: 8px;                
+                }
+
+            h2 {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-shadow: 0.5rem 0.3rem rgba(233, 186, 133, 0.719);
+                color: rgb(92, 62, 28);
+                font-size: 33px;
+                margin: 25px;
+                }
+
+             h3 {
+                 font-size: 22px;
+                 font-family: Georgia, 'Times New Roman', Times, serif;
+                 line-height: 20px;
+                 color: rgb(92, 62, 28); 
+                 padding-top: 4px;                               
+                }
+
+             h4 {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-shadow: 0.5rem 0.3rem rgba(233, 186, 133, 0.719);
+                color: rgb(92, 62, 28);
+                font-size: 32px;
+                margin: 25px;
+                text-align: left;
+                }
+
+             h5{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: rgb(92, 62, 28);
+                font-size: 1.1rem;
+                margin: 25px;
+                text-align: center;
+                text-decoration: underline rgb(230, 170, 81);
+                }
+
+            .title {
+                font-size: 25px; 
+                margin: 22px; 
+                padding-bottom: 20px;
+                    }
+
+            p {
+                font-family: Karla;
+                font-size: 20px;
+                 }
+
+            i   {font-size: 16px;
+                }
+                 
+
+            img { 
+                 width: 100%; height: auto;
+                 border: 2px solid rgb(230, 170, 81);
+                }
+            
+            /* ----fin contenidoy tipografias --- */
+
+            /* pie de pagina - footer */
+            .footer {
+                display: inline-flex;
+                width: fit-content;
+                background-color: rgba(241, 223, 200, 0.877);
+                margin: 20px;
+                padding: 8px;
+                border-radius: 1rem;
+                font-family: Noto Serif JP;
+                text-align: left;
+                 }
+    
+            .footer .links {
+                font-weight: bold;
+                font-size: 1em;
+                color: rgb(95, 73, 17);
+                }
+
+            a {
+                color: rgb(182, 63, 8);
+                }        
+           
+            a:hover {
+                font-style: italic;
+                display: initial;
+                color: rgb(207, 166, 78);
+                }
+              
+            .footer .container {
+                width: 33.3%;
+                border-style: outset;
+                border-color: rgba(252, 223, 199, 0.39);
+                }  
+
+            /* ----fin pie de pagina --- */
+
+        </style>
+    </head>
+    <body style="background-image: url(https://i.pinimg.com/564x/1b/17/03/1b1703c2d9a51372e2954f9f75c25fc9.jpg);">
+        <main>
+            <h1>Un artículo con secciones</h1>
+            <article>
+                <h2> Las variedades de manzanas</h2>
+                <p class="title"> La manzana es la fruta de la semilla de la manzana del árbol … </p>
+                <section>
+                <h3> &#10049; Red Delicious </h3>
+                <p>Estas manzanas rojas brillantes son los más comunes se encuentran en muchos supermercados … </p>
+                </section>
+                <section>
+                <h3> &#10049; Granny Smith </h3>
+                <p> Estos, manzanas verdes jugosas hacen un gran relleno para tartas de manzana … </p>
+                </section>              
+            </article >
+            <aside>
+                <h4> Granny Smith </h4>
+                <figure style="float: right">
+                    <img src="img-blog/file_example_JPG_100kB.jpg">
+                    <figcaption>Esta imagen...</figcaption>        
+                  </figure>                    
+            </aside>  
+            <footer class="footer">
+                <div class="container">
+                    <h5>Mapa del sitio</h5>
+                    <ul class="links">
+                        <li><a href="https://www.google.com/search?q=apples&rlz=1C1GCEA_enAR847AR847&sxsrf=ALeKk03sRmDJXHeeA8qGUXBixlIoy2nJjQ:1591843864774&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjB2ePA4PjpAhUzHbkGHQRtAEAQ_AUoAXoECB4QAw&biw=1600&bih=734" target="_blank" class="link1">Gallery</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Apple#History" target="blank" class="link2">History</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Apple#Nutrition" target="blank" class="link3">Nutrition</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Apple#Production" target="blank" class="link4">Production</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Apple#Further_reading" target="blank" class="link5">More Information</a></li>                        
+                    </ul>
+                </div>                
+                <div class="container">
+                    <h5>
+                        Nuestra Misión
+                    </h5>
+                    <p><i>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>          
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </i></p>                    
+                </div>
+                <div class="container">
+                    <h5>Visitanos</h5>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1673.5604294085454!2d-60.647548641807454!3d-32.97421304522823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7aba497cefcb3%3A0x2360fada20f0529c!2sFruter%C3%ADa%20y%20Verduler%C3%ADa%20Miguel!5e0!3m2!1ses-419!2sar!4v1591577767984!5m2!1ses-419!2sar"
+                        style="margin-left: 150px; padding-bottom: 10px;"
+                        width="300" 
+                        height="300" 
+                        frameborder="0" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        aria-hidden="false" 
+                        tabindex="0"
+                        >
+                    </iframe>    
+                </div>
+            </footer>            
+        </main>
+    </body>
+</html>

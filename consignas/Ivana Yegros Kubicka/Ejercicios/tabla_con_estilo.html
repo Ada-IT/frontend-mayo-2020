@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <!-- 
+    Crear una rama con el nombre tabla_con_estilo desde su rama de desarrollo
+    y trabajar sobre ella.
+    COPIAR este archivo a su carpeta de usuario.
+    Este es un ejercicio de css.
+    Requerimientos:
+    1) Cada tipo elemento de la tabla debe contener al menos 1 estilo css,
+     se debe lograr diferenciar los espacios de cada celda, fila y columna como asi
+     resaltar la información cuando se pasa con el cursor por arriba.
+    2) Cada elemento de h1 a h6 que esten definidos deben contener al menos 2 propiedades css.
+    3) Cada elemento contenedor tipo section o div debe contener almenos 3 propiedades de css.
+    4) Los divs con informacion de las ciudades deben poder visualizar uno al lado de otro en bloques del mismo tamaño.    
+    5) El cuerpo del  documento debe tener un color de fondo y fuente definida.
+    6) Se deben agregar clases y utilizar selectores que se consideren necesarios.
+    7) todo el estilo de escribirá dentro de la etiqueta <style>
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:ital,wght@0,700;1,500&display=swap" rel="stylesheet">
+    <title>Ejercicio 3</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+
+@media only screen and (max-width: 600px) and (min-width: 200px) {
+  body {
+    width: 50%;
+    height: auto;
+    font-size: 0.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}  
+      h1 { 
+        margin-bottom: 25px;
+        padding: 7px;
+        font-family: 'Cinzel', serif;
+        text-shadow: 0.2rem 0.5rem rgba(177, 172, 165, 0.699);
+        font-size: 2.5rem;
+        color: rgb(74, 78, 82);
+              }
+
+      body {
+        text-align: center;
+        padding: 30px; 
+        background-image: url(https://vistapointe.net/images/travel-wallpaper-18.jpg);
+        max-width:100%;
+        height:auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;   
+      }
+
+      .ciudades {
+          padding: 30px;
+          font-size: 1rem;
+          display: inline-flex;
+          margin-top: 20px;
+            }
+
+      div {
+        background-color: #ffffffe8;
+        margin-left: 10px;  
+        margin-right: 10px;  
+        padding: 20px;  
+        width: 70%;
+        height: auto;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+                 
+      .tabla {
+          vertical-align: middle;
+          border: 1px solid rgba(105, 105, 105, 0.623);
+          padding: 30px;
+          width: 50%;
+          font-size: 1.3rem;
+          background-color: #ffffffe8;
+          margin-right: auto;
+          margin-left: auto;         
+           }   
+
+      h3 {
+        font-family: Playfair Display, serif;
+        text-decoration: double underline #ee8572;
+        color: rgb(74, 78, 82);
+       }
+
+      tr{
+        border-color: rgb(222, 252, 252);
+        padding: 9px;
+      }
+
+      th {
+        background-color: #63b7af;
+        font-family: Playfair Display, serif;
+        color: rgb(75, 73, 73)      
+      }
+
+      td {
+        font-size: 1rem;
+        padding: 10px;
+        border: 1px solid rgba(105, 105, 105, 0.623);
+      }
+
+      td:hover{
+        background: rgba(0, 0, 0, 0);
+	      color: #3a7999;
+	      box-shadow: inset 0 0 0 1px #3a7999;
+      }
+
+      .promedio {
+            background-color: #abf0e9;
+      }
+
+      caption {
+        text-align: center;
+        background-color: #a6e0d9f1;
+        border-radius: 10px;
+        color: rgb(27, 25, 25);
+        padding: 15px;
+        margin-bottom: 20px;
+        font-family: serif;
+      }
+
+      p {
+        padding: 10px;
+        margin-top: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Tabla de viaje</h1>
+    </header>
+    <section>        
+      <table class="tabla">
+        <caption>
+          Conozca el tiempo necesario para viajar desde Philadelphia
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col"> &#128742; Destino</th>
+            <th scope="col"> &#127986; En auto</th>
+            <th scope="col"> &#127986; En tren</th>
+            <th scope="col"> &#127986; En bicicleta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nueva York</td>
+            <td><time>1:51</time>min</td>
+            <td><time>1:22</time>min</td>
+            <td><time>8:53</time>min</td>
+          </tr>
+          <tr>
+            <td>Washington</td>
+            <td><time>2:25</time>min</td>
+            <td><time>2:51</time>min</td>
+            <td><time>12:46</time>min</td>
+          </tr>
+          <tr>
+            <td>Nueva Jersey</td>
+            <td><time>1:20</time>min</td>
+            <td><time>1:05</time>min</td>
+            <td><time>3:56</time>min</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th class="promedio">Promedio</th>
+            <td><time>1:45</time>min</td>
+            <td><time>1:55</time>min</td>
+            <td><time>8:36</time>min</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+    <br />
+    <section class="ciudades">
+      <div> 
+        <h3>Nueva York</h3>
+        <p>
+          Situado sobre la costa este de Estados Unidos de América, encontramos
+          a la ciudad de Nueva York. Esta, además esta bañada por el océano
+          Atlántico y en el que desemboca el río Hudson, el cual atraviesa todo
+          el estado.
+          <br />
+          Esta ciudad se caracteriza por ser la más poblada del estado de Nueva
+          York y del país. Tan diversa como versátil, es llamada la ciudad que
+          nunca duerme.
+        </p>
+      </div>
+      <div>
+        <h3>Washington D.C.</h3>
+        <p>
+          Es una ciudad de categoría mundial con estatuas y monumentos
+          conmemorativos icónicos, museos increíbles (y gratuitos), pasión por
+          la política, embajadas extranjeras, barrios históricos y veneradas
+          universidades y escuelas universitarias.
+          <br />
+          Con conexiones de vuelo directo a más de 30 destinos internacionales,
+          Washington, DC es un destino imprescindible en EE. UU. para viajeros
+          de todo el mundo.
+        </p>
+      </div>
+      <div>
+        <h3>New Jersey</h3>
+        <p>
+          Situado en el noreste de Estados Unidos, Nueva Jersey es uno de los
+          estados más pequeños del país. Sin embargo, su naturaleza es sumamente
+          diversa: pintorescas montañas en el norte, el océano Atlántico en las
+          costas del este y el sur, y una mezcla de colinas, granjas y una
+          inmensa reserva interior cubierta de pinos en el oeste.
+          <br />
+          A lo largo de toda la costa, verás paseos marítimos atractivos y
+          coloridos. Más hacia el interior, los bosques y senderos de río te
+          mostrarán los secretos de las montañas, como miradores, cascadas y
+          aves exóticas. Aquí, encontrarás interesantes museos, instituciones
+          culturales e históricas, y vistas panorámicas de íconos
+          estadounidenses, como la Statue of Liberty (Estatua de la Libertad).
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

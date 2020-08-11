@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <!-- 
+            Rama bootstrap_galeria
+            En su carpeta de consignas crear carpeta bootstrap-galeria
+            En la carpeta crear archivo galeria.html
+            El archivo debe contener la libreria de bootstrap css incluida
+            La galeria debe contener 9 imagenes:
+            - Cada imagen debe estar dentro de un card.
+            - Las fotografias se encuentran en /img/galeria_de_fotos_paisajes  
+            - Cada card va a contener un titulo corto. 
+            - El titulo de cada foto puede ser demo, ej. : foto 1, foto 2.. etc
+
+            Los cards van a tener un efecto de movimiento en el evento hover.
+            La web debera tener:
+            - El menu debe estar en la cabecera del sitio y debe contener con 4 botones.
+            - El titulo que este al costado izquierdo del menu  y alineado verticalmente.
+            - El contenido debera esta centrado en el medio. Queda a criterio la alineación respecto del menu.
+            - El sitio debe tener las media queries para mobile, tablets  y desktop.        
+            - La galeria se debe adaptar en su forma según tipo de dispositivo.
+            - Fondo de madera        
+    -->
+
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css" />
+
+    <style>
+        body {
+            background-image: url("../flor_azul_gallino/img/e83e362c7dc643f09e633008e60c41e7.jpg");
+            background-repeat: no-repeat;
+            background-size: 156rem 62.5rem;
+        }
+
+        .card {
+            rotate: ;
+            filter: drop-shadow(10px 10px 30px #000000cc);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- FOTOS -->
+
+    <header class="row text-light bg-dark">
+        <div class="col-lg-1 p-3"></div>
+        <div class="col-lg-2 p-3">
+            <h1>Polaroid</h1>
+        </div>
+        <div class="col-lg-8 p-4">
+            <nav>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-lg-1 p-3"></div>
+    </header>
+
+    <!-- FOTOS -->
+    <main>
+        <section class="container">
+            <div class="row card-deck m-2">
+
+                <!-- 1 -->
+                <div class="col-lg-3 p-0">
+                    <div class="card m-2 img-thumbnail">
+                        <img src="../flor_azul_gallino/img/galeria_de_fotos_paisajes/birds-5035164_1920.jpg"
+                            class="card-img-top rounded" alt="...">
+                        <div class="card-body p-3 text-center">
+                            <h5 class="card-title">Pajarito</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="col-lg-3 p-0">
+                    <div class="card m-2 img-thumbnail">
+                        <img src="../flor_azul_gallino/img/galeria_de_fotos_paisajes/birds-5035164_1920.jpg"
+                            class="card-img-top rounded" alt="...">
+                        <div class="card-body p-3 text-center">
+                            <h5 class="card-title">Pajarito</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="col-lg-3 p-0">
+                    <div class="card m-2 img-thumbnail">
+                        <img src="../flor_azul_gallino/img/galeria_de_fotos_paisajes/birds-5035164_1920.jpg"
+                            class="card-img-top rounded" alt="...">
+                        <div class="card-body p-3 text-center">
+                            <h5 class="card-title">Pajarito</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="col-lg-3 p-0">
+                    <div class="card m-2 img-thumbnail">
+                        <img src="../flor_azul_gallino/img/galeria_de_fotos_paisajes/birds-5035164_1920.jpg"
+                            class="card-img-top rounded" alt="...">
+                        <div class="card-body p-3 text-center">
+                            <h5 class="card-title">Pajarito</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="col-lg-3 p-0">
+                    <div class="card m-2 img-thumbnail">
+                        <img src="../flor_azul_gallino/img/galeria_de_fotos_paisajes/birds-5035164_1920.jpg"
+                            class="card-img-top rounded" alt="...">
+                        <div class="card-body p-3 text-center">
+                            <h5 class="card-title">Pajarito</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="col-lg-3 p-0">
+                    <div class="card m-2 img-thumbnail">
+                        <img src="../flor_azul_gallino/img/galeria_de_fotos_paisajes/birds-5035164_1920.jpg"
+                            class="card-img-top rounded" alt="...">
+                        <div class="card-body p-3 text-center">
+                            <h5 class="card-title">Pajarito</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="col-lg-3 p-0">
+                    <div class="card m-2 img-thumbnail">
+                        <img src="../flor_azul_gallino/img/galeria_de_fotos_paisajes/birds-5035164_1920.jpg"
+                            class="card-img-top rounded" alt="...">
+                        <div class="card-body p-3 text-center">
+                            <h5 class="card-title">Pajarito</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="col-lg-3 p-0">
+                    <div class="card m-2 img-thumbnail">
+                        <img src="../flor_azul_gallino/img/galeria_de_fotos_paisajes/birds-5035164_1920.jpg"
+                            class="card-img-top rounded" alt="...">
+                        <div class="card-body p-3 text-center">
+                            <h5 class="card-title">Pajarito</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9 -->
+                <div class="col-lg-3 p-0">
+                    <div class="card m-2 img-thumbnail">
+                        <img src="../flor_azul_gallino/img/galeria_de_fotos_paisajes/birds-5035164_1920.jpg"
+                            class="card-img-top rounded" alt="...">
+                        <div class="card-body p-3 text-center">
+                            <h5 class="card-title">Pajarito</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

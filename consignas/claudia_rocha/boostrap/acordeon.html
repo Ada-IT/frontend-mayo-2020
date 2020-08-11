@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <!-- 
+            Rama media-objects
+    -->
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            /* The image used */
+            background-image: url(https://images.unsplash.com/photo-1508948414348-13a52d2ec394?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80);
+            background-attachment: fixed;
+
+
+
+        }
+
+        section {
+            margin-top: 0px;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <!-- Add your site or application content here -->
+    <header class="header">
+
+    </header>
+    <section class="container mt-3">
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            General Description
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="media  shadow border bg-light align-self-center mr-3 p-3">
+                            <img src="../img/destino.jpg" alt="John Doe" class="mr-3 mt-3 rounded" style="width:120px;">
+                            <div class="media-body">
+                                <h4>John Doe <small><i>Posted on February 19, 2016</i></small></h4>
+                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson
+                                    ad squid.
+                                    3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                    nesciunt
+                                    laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                    single-origin
+                                    coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                                    labore wes
+                                    anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                                    Leggings
+                                    occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                    haven't heard
+                                    of them accusamus labore sustainable VHS.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Payment Details
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="padding">
+                            <div class="row">
+                                <div class="container-fluid mb-3 d-flex justify-content-center">
+                                    <div class="col-sm-8 col-md-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="row">
+                                                    <div class="col-md-6"> <span>CREDIT/DEBIT CARD PAYMENT</span> </div>
+                                                    <div class="col-md-6 text-right" style="margin-top: -5px;">
+                                                        <img src="https://img.icons8.com/color/36/000000/visa.png">
+                                                        <img
+                                                            src="https://img.icons8.com/color/36/000000/mastercard.png">
+                                                        <img src="https://img.icons8.com/color/36/000000/amex.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body" style="height: 350px">
+                                                <div class="form-group">
+                                                    <label for="cc-number" class="control-label">CARD NUMBER</label>
+                                                    <input id="cc-number" type="tel"
+                                                        class="input-lg form-control cc-number" autocomplete="cc-number"
+                                                        placeholder="•••• •••• •••• ••••" required>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group"> <label for="cc-exp"
+                                                                class="control-label">CARD
+                                                                EXPIRY</label> <input id="cc-exp" type="tel"
+                                                                class="input-lg form-control cc-exp"
+                                                                autocomplete="cc-exp" placeholder="•• / ••" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group"> <label for="cc-cvc"
+                                                                class="control-label">CARD
+                                                                CVC</label> <input id="cc-cvc" type="tel"
+                                                                class="input-lg form-control cc-cvc" autocomplete="off"
+                                                                placeholder="••••" required> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group"> <label for="numeric" class="control-label">CARD
+                                                        HOLDER
+                                                        NAME</label> <input type="text" class="input-lg form-control">
+                                                </div>
+                                                <div class="form-group"> <input value="MAKE PAYMENT" type="button"
+                                                        class="btn btn-warning btn-lg form-control"
+                                                        style="font-size: .8rem;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Services
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="card-group">
+                            <div class="card mr-2 ml-2">
+                                <img src="../img/camarafotos.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                            <div class="card mr-2 ml-2">
+                                <img src="../img/jugo.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This card has supporting text below as a natural lead-in to
+                                        additional content.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                            <div class="card mr-2 ml-2">
+                                <img src="../img/auto.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This card has even longer content than the first
+                                        to show that equal height action.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+Para esta tarde tengan presente estos pasos:
+Como Actualizar el repo de tu Github con el repositorio original de donde hiciste tu fork.
+
+- git remote add upstream https://github.com/Ada-IT/frontend-mayo-2020.git
+- git fetch upstream
+- git checkout desarrollo 
+- git rebase upstream/desarrollo
+- git push -—force
+
+En caso de error y no poder resolver git rebase —abort 
+
+En caso de que ya lo hayan realizado y les funciono la primera vez en la clase pasada realizarlo desde el paso 2 en adelante.
+
+Para mantener tu rama siempre actualizada , esto lo debe realizar siempre- Es decir, antes de comenzar a trabajar en su código.
+
+Con estos pasos ustedes traerán todos los cambios que hay en la rama y se mantendran al día de cambios en repo.

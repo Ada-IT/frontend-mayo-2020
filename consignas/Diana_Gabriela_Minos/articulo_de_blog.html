@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="formatos en html5">
+    <meta name="keywords" content="html, css, formato">
+    <title>Mi Articulo de Blog</title>
+        <style>
+        
+            article {
+                float: left;
+                width: 70%;     
+            }
+            aside {
+                float: right;
+                width: 30%;
+            }
+            /* ----fin Estructura  --- */
+
+            /* contenidoy tipografias */
+            body {
+                background-color: #c0a836;
+                padding-right: 10%;
+                padding-left: 10%;
+            }
+
+            h1 {
+                padding-left: 16px;
+                font-weight: bolder;
+                text-align: center;
+                padding-top: 20px;
+                text-decoration-line: underline overline;
+                color: #0000ff;
+            }
+            
+            h2 {
+                font-weight: bolder;
+                font-size: 2rem;
+                color: #ff0000;  
+            }
+            
+            
+            h3 {
+                font-size: 2rem;
+                font-family: 'Lucida Sans';
+                color: #00ff8e;
+            }
+
+            h4 {
+                font-size: 1rem;
+                text-decoration-style: wavy;
+                text-align: center;
+            }
+
+            .manzanas >h2 {
+                color: #3c3c3c;
+            }
+
+            .manzana-roja + h2 {
+                color: #ff0000 ;
+                margin-bottom: 20px;
+                padding: 20px;
+            }
+            .manzana-verde + h2 {
+                color: #00ff8e;
+                margin-top: 20px;
+                padding: 20px;
+            }
+
+            p { 
+                font-style: italic;
+                font-size: 1.1rem;
+
+            }
+
+            img {
+                width: 150%;
+                height: 200%;
+                float: right;
+                }
+            /* ----fin contenidoy tipografias --- */
+
+            /* pie de pagina - footer */
+            .footer {
+                display: inline-flex;
+                width: 100%;
+                background-color: #b4b4b4;
+                }
+            .footer .links:hover {
+                font-weight: bold;
+                text-align: justify;
+                color: springgreen;
+                font-size: 2rem;
+            }
+
+            .footer  .container {
+                margin: 10px;
+                width: 33.3%;
+                text-align: center;
+            }
+
+            .container a {
+                text-align: left;
+                font-size: 2.5rem;
+                color: salmon;
+                background-color: slateblue;
+                font-size: large;
+            }
+            /* ----fin pie de pagina --- */
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Información sobre manzanas.</h1>
+            <article class="manzanas">
+                <h2> Las variedades de manzanas:</h2>
+                <p> La manzana es la fruta de la semilla de la manzana del árbol … </p>
+                <section class="manzana-roja">
+                <ul>
+                    <li>
+                <h2> Red Delicious </h2>
+                    </li>
+                </ul>
+                <p> Estas manzanas rojas brillantes son los más comunes se encuentran en muchos supermercados … </p>
+                </section>
+                <section class="manzana-verde">
+                    <ul>
+                        <li>
+                    <h2> Granny Smith </h2>
+                </li>
+            </ul>
+                <p> Estos, manzanas verdes jugosas hacen un gran relleno para tartas de manzana … </p>
+                </section>              
+            </article >
+            <aside>
+                <h3> Granny Smith </h3>
+                <figure style="float: right">
+                    <img src="img/file_example_JPG_100kB.jpg">
+                    <figcaption>Esta imagen...</figcaption>        
+                  </figure>                    
+            </aside>
+            <br>
+            <br> 
+            <footer class="footer">
+                <div class="container">
+                    <h4>Mapa del sitio</h4>
+                    <ul>
+                        <li><a class= "links" href="">Link 1</a></li>
+                        <li><a class= "links" href="">Link 2</a></li>
+                        <li><a class= "links" href="">Link 3</a></li>
+                        <li><a class= "links" href="">Link 2</a></li>
+                        <li><a class= "links" href="">Link 3</a></li>                        
+                    </ul>
+                </div>                
+                <div class="container">
+                    <h4>
+                        Nuestra Misión
+                    </h4>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>          
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>                    
+                </div>
+                <div class="container">
+                    <h4>Visitanos</h4>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1673.5604294085454!2d-60.647548641807454!3d-32.97421304522823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7aba497cefcb3%3A0x2360fada20f0529c!2sFruter%C3%ADa%20y%20Verduler%C3%ADa%20Miguel!5e0!3m2!1ses-419!2sar!4v1591577767984!5m2!1ses-419!2sar"
+                        width="300" 
+                        height="300" 
+                        frameborder="0" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        aria-hidden="false" 
+                        tabindex="0">
+                    </iframe>    
+                </div>
+            </footer>            
+        </main>
+    </body>
+</html>

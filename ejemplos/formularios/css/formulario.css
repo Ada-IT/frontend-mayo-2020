@@ -1,0 +1,47 @@
+/* As definimos un Comentario en css*/
+
+/* Así definimos un font-size y font-family para todo el documento */
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+}
+/* Así definimos un color para todos los h1,h2,h3 */
+h1, h2, h3 {
+    color:black;
+}
+/* Así definimos un font-size y font-weight para todos los h1 */
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+/* Así definimos un font-size y font-weight para todos los h2 */
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+/* Así definimos un font-size y font-weight para todos los h3 */
+h3 {
+    font-size:16px;
+    font-weight: 300;
+}
+/* Así definimos un color de texto para todos los label */
+label {
+    color: blue;
+}
+/* Así definimos un color de fondo para un id especifico*/
+#preguntas {
+    background-color: hotpink;
+}
+/* Así definimos un color, tamaño y familia de fuente para una clase de css*/
+.milabel  {
+    font-size: 14px;
+    color: white;
+    font-family: sans-serif;
+}
+/* Así definimos como será la validación de un input con css*/
+input[type="email" i]:valid {
+    background-color: green!important;
+}
+input[type="email" i]:invalid {
+    background-color: red!important;
+} 

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <!-- 
+            Rama bootstrap moodal
+    -->
+
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <header>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+
+                        <li class="breadcrumb-item"><a href="#">Library</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                </nav>
+            </header>
+            <section>
+                <button type="button" class="btn btn-primary" data-toggle="popover" data-title="Mi popover"
+                    data-content="probando popover">
+                    Popover
+                </button>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Launch demo modal
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                    Pague con su tarjeta de Credito o Debito</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="container-fluid d-flex justify-content-center">
+                                        <div class="col-sm-12 col-md-12">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <span>Tarjetas habilitadas</span>
+                                                        </div>
+                                                        <div class="col-md-6 text-right" style="margin-top: -5px;">
+                                                            <img
+                                                                src="https://img.icons8.com/color/36/000000/visa.png" />
+                                                            <img
+                                                                src="https://img.icons8.com/color/36/000000/mastercard.png" />
+                                                            <img
+                                                                src="https://img.icons8.com/color/36/000000/amex.png" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="form-group">
+                                                        <label for="cc-number" class="control-label">CARD NUMBER</label>
+                                                        <input id="cc-number" type="tel"
+                                                            class="input-lg form-control cc-number"
+                                                            autocomplete="cc-number" placeholder="•••• •••• •••• ••••"
+                                                            required />
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="cc-exp" class="control-label">CARD
+                                                                    EXPIRY</label>
+                                                                <input id="cc-exp" type="tel"
+                                                                    class="input-lg form-control cc-exp"
+                                                                    autocomplete="cc-exp" placeholder="•• / ••"
+                                                                    required />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="cc-cvc" class="control-label">CARD
+                                                                    CVC</label>
+                                                                <input id="cc-cvc" type="tel"
+                                                                    class="input-lg form-control cc-cvc"
+                                                                    autocomplete="off" placeholder="••••" required />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="numeric" class="control-label">
+                                                            CARD HOLDER NAME</label>
+                                                        <input type="text" class="input-lg form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-success" data-toggle="tooltip"
+                                    data-placement="right" title="Tooltip on right">
+                                    Pagar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+        <section>
+            <div id="mitoast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+                data-delay="1500">
+                <div class="toast-header">
+                    <img src="../../../img/animalitos.jpg" class="rounded mr-2" alt="...">
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body">
+                    Hello, world! This is a toast message.
+                </div>
+            </div>
+            <button class="btn btn-success" type="button">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                <span class="sr-only">Procesando...</span>
+            </button>
+            <button class="btn btn-warning" type="button">
+                <span class="spinner-border spinner-grow-sm" role="status" aria-hidden="true"></span>
+                Loading...
+            </button>
+        </section>
+        <section>
+            <br>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped " role="progressbar" aria-valuenow="40" aria-valuemin="0"
+                    aria-valuemax="100" style="width: 40%"></div>
+            </div>
+            <br>
+            <button type="button" class="btn btn-secondary bd-toogle-animated-progress active" data-toogle="button"
+                aria-pressed="true" onclick="$('.progress').toggleClass('progress-progress-bar-animated')">
+                Toogle Animation
+            </button>
+            <br>
+            <br>
+            <div id="with-label" class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 25%"></div>
+            </div>
+            <br>
+            <button type="button" class="btn btn-secondary bd-toogle-animated-progress active" data-toogle="button"
+                aria-pressed="true" onclick="$('.progress').toggleClass('progress-progress-bar-animated')">
+                Toogle Animation
+            </button>
+            <br>
+            <br>
+            <div id="coloreada" class="progress">
+                <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0"
+                    aria-valuemax="50" style="width: 30%"></div>
+            </div>
+            <br>
+            <button type="button" class="btn btn-secondary bd-toogle-animated-progress active" data-toogle="button"
+                aria-pressed="true" onclick="$('.progress').toggleClass('progress-progress-bar-animated')">
+                Toogle Animation
+            </button>
+        </section>
+        </div>
+    </main>
+    <script type="text/javascript">
+        window.onload = function () {
+            $(function () {
+                $('[data-toggle="popover"]').popover();
+                $('[data-toggle="tooltip"]').tooltip();
+                $("#mitoast").toast("show");
+            });
+        };    
+    </script> 
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

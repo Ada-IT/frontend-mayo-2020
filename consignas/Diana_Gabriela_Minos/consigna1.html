@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Datos Personales</title>
+    <style>
+        h2 {
+            color: firebrick;
+            font-size: 16px;
+            font-weight: 100;
+        }
+        label {
+  cursor: default;
+}
+        
+        .invalid-feedback{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+            </nav>
+        </header>
+        <article>
+            <section id="formulario">
+                <h1 style="color:black; font-family: Verdana; width:unset; text-align: center;">Complete el siguiente
+                    formulario:</h1>
+                    <hr>
+                <div>
+                    <!-- Formulario de Preguntas -->
+                    <form id="preguntas" action="formulario-gracias.html" method="post">
+                        <div style="background-color:lavender;border-radius: 15px;padding: 10px;">
+
+                            <h2>Nombre:</h2>
+                            <label for="Nombre"></label>
+                            <input name="Nombre" 
+                            type="text" 
+                            placeholder="Escriba aqui su nombre" 
+                            placeholder size="50" 
+                            maxlength="15">
+                            <br>
+                            
+                            <h2>Apellido:</h2>
+                            <label for="Apellido"></label>
+                            <input name="Apellido"
+                             type="text" 
+                             placeholder="Escriba aquí su apellido" 
+                             placeholder size="50" 
+                            maxlength="15">
+                            <br>
+                            
+                            <h2>Dirección:</h2>
+                            <label for="Dirección"></label>
+                            <input name="Dirección" 
+                            type="text" 
+                            placeholder="Escriba aquí su dirección" 
+                            placeholder size="50" 
+                            maxlength="20">
+                            <br>
+                                    
+                            <h2>Teléfono:</h2>
+                            <label for="Teléfono"></label>
+                                    <input name="Teléfono" type="number" 
+                                    placeholder="Ej: 11 12345678" 
+                                    placeholder size="65" id="phone">
+                        <br>
+                        
+                        <h2>Email:</h2>
+                        <label for="Email"></label>
+                            <input id="Email" 
+                            type="email" class="form-control"
+                             placeholder="Ej: su nombre@gmail.com" 
+                             size="50" 
+                            maxlength="20" 
+                            name="Email">
+                            <div class="invalid-feedback"
+                        Por favor, ingrese un email válido.>
+                        </div>
+                            <br>
+
+                            <h2>Género:</h2>
+                            <label><input type="radio" name="gender" value="F">Femenino</label>
+                            <label><input type="radio" name="gender" value="M">Masculino</label>
+                            <label><input type="radio" name="gender" value="O">Otros</label>
+                            
+                            <br>
+                            <br>
+                            <div>
+                                <h2>Educación:</h2>
+                                <label class="eduación">Seleccione su educacion:</label>
+                                <select name="educación" id="educación">
+                                    <option value="P">Primaria</option>
+                                    <option value="S">Secundaria</option>
+                                    <option value="U">Universitaria</option>
+                                </select>
+                            </div>
+                            <br>
+
+                            <h2>Trabajo:</h2>
+                            <input name="trabajo" type="radio" value="S">
+                            <label>Sí</label>
+                            <br>
+                            <input name="trabajo" type="radio" value="N">
+                            <label>No</label>
+                        </div>
+                        <br>
+                </div>
+                <hr>
+                <input name="Guardar" type="submit" value="Guardar" style="text-align: center;">
+                </form>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>

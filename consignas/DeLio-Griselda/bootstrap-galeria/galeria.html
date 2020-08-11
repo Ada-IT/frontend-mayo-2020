@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--
+            Rama bootstrap_galeria
+        -->
+    <meta charset="utf-8">
+    <title> Galeria con Cards</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../assets/bootstrap/js/bootstrap.js">
+    <style>
+        body {
+            background-image: url(https://i.pinimg.com/736x/df/29/ab/df29abe7283dee8d54bad68445dfd560.jpg);
+        }
+
+        header {
+            width: 100%;
+            overflow: hidden;
+            background-color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            color: #f4f4f4;
+            float: left;
+            font-size: 55px;
+            font-style: italic;
+            margin: 20px;
+            padding-left: 30px;
+        }
+
+        .ajuste {
+            margin-top: 45px;
+            margin-right: 30px;
+        }
+
+        a {
+            color: #f4f4f4;
+        }
+
+        p {
+            text-align: center;
+            font-family: 'Lucida Sans';
+        }
+
+        .container {
+            width: 108%;
+            padding-right: 15px;
+            padding-left: 50px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .fila {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .card {
+            margin: 15px;
+            text-align: center;
+            font-family: "Marker Felt";
+            max-width: 20%;
+            transform: rotate(-3deg);
+        }
+
+        .efecto1 {
+            transform: rotate(2deg);
+        }
+
+        .efecto2 {
+            transform: rotate(5deg);
+        }
+
+        .efecto3 {
+            transform: none;
+        }
+
+        .card:hover {
+            transform: translateY(-20px);
+            box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.9);
+        }
+
+        .imgefect:hover,
+        .imgefect1:hover,
+        .imgefect2:hover,
+        .imgefect3:hover,
+        .imgefect4:hover,
+        .imgefect5:hover,
+        .imgefect6:hover,
+        .imgefect7:hover {
+            filter: none;
+        }
+
+        .card-tit {
+            padding: 1rem;
+        }
+
+        .img {
+            padding: 12px 12px 12px;
+            height: 200px;
+            border: 1px rgb(248, 181, 181) solid;
+        }
+
+        .imgefect {
+            filter: opacity(20%);
+        }
+
+        .imgefect1 {
+            filter: sepia(70%);
+        }
+
+        .imgefect2 {
+            filter: contrast(200%);
+        }
+
+        .imgefect3 {
+            filter: blur(4px);
+        }
+
+        .imgefect4 {
+            filter: invert(88%);
+        }
+
+        .imgefect5 {
+            filter: hue-rotate(70deg);
+        }
+
+        .imgefect6 {
+            filter: brightness(180%);
+        }
+
+        .imgefect7 {
+            filter: grayscale(100%);
+        }
+
+        @media (min-width: 300px) and (max-width: 767px)and (orientation: landscape) {
+            .card {
+                max-width: 70%;
+            }
+
+            .nav {
+                font-size: 12px;
+                display: inline-flex;
+                padding-left: 20px;
+            }
+
+            .nav-link {
+                padding: 4px;
+            }
+        }
+
+        @media (min-width: 300px) and (max-width: 767px) {
+            .card {
+                max-width: 70%;
+            }
+
+            .nav {
+                font-size: 12px;
+                display: inline-flex;
+                padding-left: 20px;
+            }
+
+            .nav-link {
+                padding: 4px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+            .container {
+                padding-right: 50px;
+            }
+
+            .nav {
+                font-size: 20px;
+                padding-right: 70px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .container {
+                padding-right: 60px;
+                padding-left: 20px;
+            }
+
+            .nav {
+                font-size: 18px;
+                padding-right: 60px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1440px) {
+            .title {
+                font-size: 55px;
+            }
+
+            .nav {
+                font-size: 19px;
+                padding-right: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- Navbar-->
+        <header>
+            <div class="title">
+                <p>Polaroids</p>
+            </div>
+            <nav class="ajuste">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <article class="container">
+            <!-- Cards-->
+            <section class="fila">
+                <div class="card">
+                    <img src="../../../img/galeria_de_fotos_paisajes/bench-560435_1920.jpg"
+                        class="card-img-top img imgefect" alt="...">
+                    <div class="card-tit">
+                        <h5>Bench</h5>
+                    </div>
+                </div>
+                <div class="card efecto1">
+                    <img src="../../../img/galeria_de_fotos_paisajes/bird-1045954_1920.jpg"
+                        class="card-img-top img imgefect1" alt="...">
+                    <div class="card-tit">
+                        <h5>Bird</h5>
+                    </div>
+                </div>
+                <div class="card efecto3">
+                    <img src="../../../img/galeria_de_fotos_paisajes/butterfly-4884620_1920.jpg"
+                        class="card-img-top img imgefect2" alt="...">
+                    <div class="card-tit">
+                        <h5>Butterfly</h5>
+                    </div>
+                </div>
+                <div class="card efecto2">
+                    <img src="../../../img/galeria_de_fotos_paisajes/birds-5035164_1920.jpg"
+                        class="card-img-top img imgefect3" alt="...">
+                    <div class="card-tit">
+                        <h5>Birds</h5>
+                    </div>
+                </div>
+                <div class="card efecto3">
+                    <img src="../../../img/galeria_de_fotos_paisajes/nature-5176637_1920.jpg" class="card-img-top img"
+                        alt="...">
+                    <div class="card-tit">
+                        <h5>Nature</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../../../img/galeria_de_fotos_paisajes/sun-3713835_1920.jpg"
+                        class="card-img-top img imgefect4" alt="...">
+                    <div class="card-tit">
+                        <h5>Sun</h5>
+                    </div>
+                </div>
+                <div class="card efecto1">
+                    <img src="../../../img/galeria_de_fotos_paisajes/pic-wood-5295949_1920.jpg" class="card-img-top img"
+                        alt="...">
+                    <div class="card-tit">
+                        <h5>Pic</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../../../img/galeria_de_fotos_paisajes/wing-5316289_1920.jpg"
+                        class="card-img-top img imgefect5" alt="...">
+                    <div class="card-tit">
+                        <h5>Wing</h5>
+                    </div>
+                </div>
+                <div class="card efecto1">
+                    <img src="../../../img/galeria_de_fotos_paisajes/winter-5027855_1920.jpg" class="card-img-top img"
+                        alt="...">
+                    <div class="card-tit">
+                        <h5>Winter</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../../../img/animalitos.jpg" class="card-img-top img imgefect6" alt="...">
+                    <div class="card-tit">
+                        <h5>Animalitos</h5>
+                    </div>
+                </div>
+                <div class="card efecto2">
+                    <img src="../../../img/galeria_de_fotos_paisajes/bird-4498326_1920.jpg" class="card-img-top img"
+                        alt="...">
+                    <div class="card-tit">
+                        <h5>Bird</h5>
+                    </div>
+                </div>
+                <div class="card efecto1">
+                    <img src="../img/avion.jpg" class="card-img-top img imgefect7" alt="...">
+                    <div class="card-tit">
+                        <h5>Plane</h5>
+                    </div>
+                </div>
+            </section>
+            <footer><br>
+                <p>Author: <b><span>De Lio Griselda</span></b></p>
+            </footer>
+        </article>
+    </main>
+</body>
+
+</html>

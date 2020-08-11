@@ -1,0 +1,19 @@
+/*! Este es el cuerpo   */
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+
+.btn {
+  color: #000;
+  background-color: #ccc;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.card {
+  color: #333;
+  background-color: #444;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,159 @@
+/* --- ESTILOS GENERALES --- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-image: url("../img/pattern.png");
+  background-repeat: repeat;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+}
+
+.important {
+  background-color: #74e34f;
+  border-radius: 3px;
+  font-weight: 700;
+  padding: 0 5px;
+}
+
+/* --- MENU DE NAVEGACION --- */
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #465cff;
+  text-align: center;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 20px 0;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: 300;
+  width: 100%;
+}
+
+.menu a:hover {
+  background-color: #7787ff;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+
+main {
+  width: 70%;
+  max-width: 770px;
+  margin-top: 20px;
+}
+
+main article {
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.descripcion {
+  font-size: 0.8em;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+.foto img {
+  width: 100%;
+}
+
+h3 {
+  margin: 20px 0;
+  padding: 10px 0;
+  font-size: 1.4em;
+  font-weight: 400;
+  border-top: 2px dotted #5fa5a0;
+}
+
+main article p {
+  line-height: 30px;
+  text-align: justify;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+/* --- SECCION VIDEO INFORMATIVO */
+
+.video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+iframe {
+  border: none;
+}
+
+/* --- LATERAL ---  */
+
+.sidebar {
+  width: 30%;
+  max-width: 330px;
+  margin-top: 20px;
+  background-color: #5fa5a0;
+  border-radius: 3px;
+  padding: 20px;
+  font-size: 1.1em;
+}
+
+h4 {
+  font-weight: 300;
+  color: #fff;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+.links a:hover {
+  margin-left: 30px;
+  transition: 2s ease;
+}
+
+/* --- PIE DE PAGINA */
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+footer p {
+  color: #000;
+  font-size: 0.8em;
+  font-weight: 700;
+}

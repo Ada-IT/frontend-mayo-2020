@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang=es>
+    <head>
+        <title>Event registration from</title>
+        <style>
+            /* -----Estructura----- */
+            body{
+                font-family: Helvetica Neue;
+                font-size: 16px;
+                background: linear-gradient(to bottom left, #b721ff, #08aeea);
+                background-repeat: no-repeat;
+                background-size: 2500px 1000px;
+                color:#4d4d4d;
+            }
+            section{
+                background-color: #ffffff;
+                border-radius: 10px;
+                display: block;
+                margin: auto;
+                width: 70%;
+            }
+            h2 {
+                background-color: #1a1a1a;
+                color: #ffffff;
+                text-align: center;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                padding: 20px;
+            }
+            form {
+                width: 80%;
+                margin: 20px;
+                display: block;
+                margin: auto;
+                padding: 10px 10px 40px 10px;
+            }
+            
+            /* -----Diseño----- */
+
+            /* Color */
+            input, select {
+                background-color: #e5e5e5;
+                padding: 15px;
+                border: 0px;
+                border-radius: 5px;
+            }
+            input.register {
+                text-align: justify;
+                background-color: #ff4b5a;
+                width: 100px;
+                color: white;
+            }
+            label {
+                font-weight: bold;
+            }
+            input.register:hover {
+                background-color: #eb3746;
+            }
+
+            /* -----Forma----- */
+            
+            label, input {
+              display: inline-flex;
+            }
+            label {
+                width: 20%;
+            }
+            input.customer {
+                width: 50px;
+            }
+            input {
+                margin-bottom: 20px;
+            }
+            #name, #lastname {
+                display: inline-flex;
+                width: 30%;
+            }
+            #email, #company {
+                display: inline-flex;
+                width: 67%;
+            }
+            #areacode {
+                display: inline-flex;
+                width: 20%;
+            }
+            #phone {
+                display: inline-flex;
+                width: 40%;
+            }
+            select {
+                display: inline-flex;
+                width: 72.5%;
+            }
+
+            /* ----validación de email---- */
+            input[type="email" ]:invalid {
+                background-color: #ff4b5a!important;
+            } 
+
+            /* -----Fin de Diseño----- */
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <article>
+                <section>
+                    <div>
+                        <h2>EVENT REGISTRATION FROM</h2>
+
+                        <form action="consigna-3.html" method="POST">
+
+                        <div class="name">
+                            <label for="name">Name</label>
+                            <input id="name" type="text" name="name" minlength="3" maxlength="20">
+                            <input id="lastname" type="text" name="lastname" minlength="3" maxlength="20">
+                        </div>
+
+                        <div class="company">
+                            <label for="company">Company</label>
+                            <input id="company" type="text" name="company" minlength="3" maxlength="20">
+                        </div>
+
+                        <div class="email">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" name="email">
+                        </div>
+
+                        <div class="phone">
+                            <label for="phone">Phone</label>
+                            <input id="areacode" type="number" name="areacode" min="3" max="6">
+                            <input id="phone" type="number" name="phone">
+                        </div>
+
+                        <div class="subjet">
+                            <label for="subjet">Subjet</label>
+                            <select name="subjet" id="subjet">
+                                <option value="none">Choose option</option>
+                                <option value="Support">Support department</option>
+                                <option value="Sales">Sales department</option>
+                                <option value="Claim">Claims department</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <h4>Are you an existing customer?</h4>
+                            <br>
+                            <input name="customer" type="radio" value="y">
+                            <label id="customer" for="customer">Yes</label>
+                            <input name="customer" type="radio" value="n">
+                            <label id="customer" for="customer">No</label>
+                        </div>
+                        <br>
+                        <div class="register">
+                            <input class="register" type="submit" value="REGISTER">
+                        </div>
+                        </form>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>

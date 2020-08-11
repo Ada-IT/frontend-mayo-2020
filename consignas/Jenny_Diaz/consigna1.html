@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Informacion basica</title>  
+        <style> 
+            div{
+                background-color: rgb(197, 206, 209); border-radius: 5px; padding:5px ;
+            }
+        </style>                     
+    </head>
+    <body style="background-size: auto;background-color: lightslategrey;font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:medium;">
+        <main>
+            <header>
+                <nav>
+                </nav>
+            </header>                        
+            <article>
+                <section id="formulario">                
+                    <h1>Formulario de informacion basica</h1>
+                    <div>
+                        <form action="consigna1.html" method="POST">
+                            <div>
+                                <label for="nombre">Ingrese su nombre:</label>
+                                <input id="nombre" type="text" minlength="3" maxlength="15" name="nombre" >
+                                <br>
+                                <br>
+                                <label for="apellido">Ingrese su apellido:</label>
+                                <input id="apellido" type="text" minlength="3" maxlength="15" name="apellido" >
+                                <br>
+                                <br>
+                                <label for="direccion">Ingrese su direccion:</label>
+                                <input id="direccion" type="text" minlength="3" maxlength="20" name="direccion" >
+                                <br>
+                                <br>
+                                <label for="telefono">Ingrese su telefono:</label>
+                                <input id="telefono" type="number" name="telefono">
+                                <br>
+                                <br>
+                                <div>
+                                    <span>
+                                        <style> input:valid {
+                                            background-color: lightgreen;
+                                            }
+                                            input:invalid {
+                                                background-color: lightsalmon;
+                                            } 
+                                        </style>
+                                        <label for="email">Ingrese su email:</label>
+                                        <input id="email" type="email" name="email">
+                                    </span>
+                                </div>
+                            </div>
+                            <br>
+                            <div>
+                                <label for="genero">Seleccione su genero:</label>
+                                <br>
+                                <input name="genero" type="radio" value="F">
+                                <label>Femenino</label>
+                                <br>                           
+                                <input name="genero" type="radio" value="M">
+                                <label>Masculino</label> 
+                                <br>                           
+                                <input name="genero" type="radio" value="O">
+                                <label>Otro</label>                               
+                            </div>
+                            <br>
+                            <div>
+                                <label for="educacion">Seleccione su educación:</label>
+                                <select name="educacion" id="educacion">
+                                  <option value="P">Primaria</option>
+                                  <option value="S">Secundaria</option>
+                                  <option value="U">Universitaria</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div>
+                                <label for="trabajo">Trabaja usted actualmente:</label>
+                                <br>
+                                <input name="trabajo" type="radio" value="S">
+                                <label>Si</label>
+                                <br>                           
+                                <input name="trabajo" type="radio" value="N">
+                                <label>No</label>                              
+                            </div>
+                            <br>
+
+                            <input type="submit" value="Guardar">
+                        </form>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html> 

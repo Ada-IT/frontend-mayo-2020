@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <!--
+    Requerimientos:
+    3) Cada elemento contenedor tipo section o div debe contener almenos 3 propiedades de css.
+    4) Los divs con informacion de las ciudades deben poder visualizar uno al lado de otro en bloques del mismo tamaño.    
+    5) El cuerpo del  documento debe tener un color de fondo y fuente definida.
+    6) Se deben agregar clases y utilizar selectores que se consideren necesarios.
+    -->
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body{
+          font-family: Helvetica;
+          font-size: 16px;
+          background-image: url(https://cdn.pixabay.com/photo/2019/05/27/14/43/pattern-4232865_960_720.png);
+          background-size: 2300px 1300px;
+          background-repeat: no-repeat;
+          background-position: top;
+        }
+        h1{
+          text-align: center;
+          font-size: 50px;
+          text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+          font-family: Arial;
+          font-weight: bold;
+        }
+        h3{
+          text-align: center;
+          font-size: 20px;
+          font-family: Verdana;
+        }
+        caption{
+          font-size: 30px;
+          text-align: center;
+          font-family: Verdana;
+        }
+
+        /* Tablas */
+        table{
+          text-align: center;
+          width: 80%;
+          border-collapse: separate;
+          border-spacing: 3px;
+          margin: auto;
+        }
+        table tr:hover {
+        background-color: rgba(224, 222, 222, 0.5);
+        cursor: pointer;
+        }
+        th, td{
+          padding: 20px;
+          width: 20%;
+          border: 1px solid rgb(0, 0, 0);
+          background-color: rgba(245, 245, 245, 0.5);
+
+        }
+        th {
+          background-color: rgb(255, 165, 176);
+          font-size: 20px;
+          color:black;
+        }
+        #promedio{
+          background-color: rgb(255, 165, 176);
+        }
+        #texto{
+          display: inline-flex;
+        }
+        div{
+          background-color: rgb(106, 25, 125, 0.5);
+          width: 30%;
+          border-radius: 10px;
+          margin: 3%;
+          padding: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Tabla de viaje</h1>
+    </header>
+    <section>
+      <table>
+        <caption>
+          Conozca el tiempo necesario para viajar desde Philadelphia
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Destino</th>
+            <th scope="col">En auto</th>
+            <th scope="col">En tren</th>
+            <th scope="col">En bicicleta</th>
+          </tr>
+        </thead>
+        <tbody class="table-color">
+          <tr>
+            <td>Nueva York</td>
+            <td><time>1:51</time>min</td>
+            <td><time>1:22</time>min</td>
+            <td><time>8:53</time>min</td>
+          </tr>
+          <tr>
+            <td>Washington</td>
+            <td><time>2:25</time>min</td>
+            <td><time>2:51</time>min</td>
+            <td><time>12:46</time>min</td>
+          </tr>
+          <tr>
+            <td>Nueva Jersey</td>
+            <td><time>1:20</time>min</td>
+            <td><time>1:05</time>min</td>
+            <td><time>3:56</time>min</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th id="promedio">Promedio</th>
+            <td><time>1:45</time>min</td>
+            <td><time>1:55</time>min</td>
+            <td><time>8:36</time>min</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+    <br />
+    <section id="texto">
+      <div id="nuevayork">
+        <h3>Nueva York</h3>
+        <p>
+          Situado sobre la costa este de Estados Unidos de América, encontramos
+          a la ciudad de Nueva York. Esta, además esta bañada por el océano
+          Atlántico y en el que desemboca el río Hudson, el cual atraviesa todo
+          el estado.
+          <br />
+          Esta ciudad se caracteriza por ser la más poblada del estado de Nueva
+          York y del país. Tan diversa como versátil, es llamada la ciudad que
+          nunca duerme.
+        </p>
+      </div>
+      <div id="washington">
+        <h3>Washington D.C.</h3>
+        <p>
+          Es una ciudad de categoría mundial con estatuas y monumentos
+          conmemorativos icónicos, museos increíbles (y gratuitos), pasión por
+          la política, embajadas extranjeras, barrios históricos y veneradas
+          universidades y escuelas universitarias.
+          <br />
+          Con conexiones de vuelo directo a más de 30 destinos internacionales,
+          Washington, DC es un destino imprescindible en EE. UU. para viajeros
+          de todo el mundo.
+        </p>
+      </div>
+      <div id="newjersey">
+        <h3>New Jersey</h3>
+        <p>
+          Situado en el noreste de Estados Unidos, Nueva Jersey es uno de los
+          estados más pequeños del país. Sin embargo, su naturaleza es sumamente
+          diversa: pintorescas montañas en el norte, el océano Atlántico en las
+          costas del este y el sur, y una mezcla de colinas, granjas y una
+          inmensa reserva interior cubierta de pinos en el oeste.
+          <br />
+          A lo largo de toda la costa, verás paseos marítimos atractivos y
+          coloridos. Más hacia el interior, los bosques y senderos de río te
+          mostrarán los secretos de las montañas, como miradores, cascadas y
+          aves exóticas. Aquí, encontrarás interesantes museos, instituciones
+          culturales e históricas, y vistas panorámicas de íconos
+          estadounidenses, como la Statue of Liberty (Estatua de la Libertad).
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

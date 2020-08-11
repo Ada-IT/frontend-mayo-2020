@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <title>Galeria de Fotos - Grids CSS</title>
+    <!-- Este tipo de galeria es aplicada en sitios como Unsplash, Pinterest y otros.
+          Aquí podremos ver las tecnicas aprendidas de grid CSS.
+    CREAR RAMA galeria_de_fotos desde desarrollo 
+    Copiar archivo html y carpeta img a su carpeta de consignas. 
+    Requerimientos: 
+    - La galeria se debe ver como en las fotos :
+    1.png (Desktop)
+    2.png(Tablets)
+    3.png(Mobile)        
+
+    - Se debe aplicar lo aprendido en Grids CSS
+    - El titulo siempre se debe visualizar en 1 sola linea.  
+    - El css contendrá al menos 2 media queries.
+    medias queries requeridas:
+    Para tablets :
+    @media (min-width: 768px) and (max-width: 1024px)  
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) 
+    Para celulares:
+    @media (min-width: 320px) and (max-width: 767px)     
+    
+    REVISAR FOTOGRAFIAS DE EJEMPLOS
+
+    -->
+    <style>
+        *,
+        *::after,
+        *::before {
+          margin: 0;
+          padding: 0;
+          box-sizing: inherit;
+        }
+
+        html {
+          box-sizing: border-box;
+          font-size: 62.5%;
+        }
+
+        body {
+          font-family: "Nunito", sans-serif;
+          color: #333;
+          font-weight: 300;
+          line-height: 1.6;
+        }
+
+        h1 {
+          font-size: 4rem;
+          text-align: center;
+        }
+
+        .container {
+          width: 60%;
+          margin: 2rem auto;
+        }
+
+        .gallery {
+          display: grid;
+          grid-template-columns: repeat( auto-fill, minmax(200px, 1fr));
+          grid-gap: 2px;
+          grid-auto-rows: 100px;
+          grid-auto-flow:row dense;
+          
+        }
+
+        .gallery__img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .gallery img:nth-child(3n) {
+          /* grid-column: 3 / span 4;
+          grid-row: 2 / span 2; */
+          /* grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end: */
+          grid-area: span 2 / span 5;
+        }
+        .gallery img:nth-child(5n) {
+          grid-area: span 3;
+        }
+
+        .gallery__img:nth-child(5n) {
+          grid-area: span 2 / span 2;
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px)  {
+          .container{background-color: rgb(red, green, blue);}
+          .contenido, .contenido-lateral{ width: 50%;}
+        }
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+          .container{background-color: rgb(red, green, blue);}
+          .contenido, .contenido-lateral{ width: 100%;}
+        }        
+        @media (min-width: 320px) and (max-width: 767px) {
+          .container{height: 80px;}
+          .contenido{background-color: rgb(red, green, blue);}
+          .contenido, .contenido-lateral{width: 100%;}
+        }     
+   </style> 
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Galeria de Fotos</h1>
+      </header>        
+      <div class="gallery">
+        <figure class="gallery__item gallery__item--1">
+          <img
+            src="../../img/galeria_de_fotos/arandanos.jpeg"
+            alt="Gallery image 1"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+          <img src="../../img/galeria_de_fotos/auto.jpeg" alt="Gallery image 2" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+          <img
+            src="../../img/galeria_de_fotos/camarafotos.jpeg"
+            alt="Gallery image 3"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--4">
+          <img src="../../img/galeria_de_fotos/casa.jpeg" alt="Gallery image 4" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--5">
+          <img
+            src="../../img/galeria_de_fotos/flores.jpeg"
+            alt="Gallery image 5"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--6">
+          <img
+            src="../../img/galeria_de_fotos/guitarra.jpeg"
+            alt="Gallery image 6"
+            class="gallery__img"
+          />
+        </figure>
+      </div>
+    </div>
+  </body>
+</html>

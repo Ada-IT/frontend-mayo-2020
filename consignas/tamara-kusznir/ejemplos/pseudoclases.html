@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Mi formulario de Login</title>
+    <style>
+      .menu {
+        display: inline-block;
+        color: grey;
+        font-size: 16px;
+        padding: 4px;
+      }
+      .menu a:hover {
+        color: grey
+        font-size: 18px;
+        font-weight: bold;
+        background-color: blue;    
+      }
+      input {
+        
+      }
+      input:focus {
+        background-color: greenyellow;
+      }
+      a:hover {
+      }
+      .login-validation input type="password" : :focus {
+        background-color:chocolate; 
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav>
+          <a class="Menu" href="">Menu 1</a>
+          <a class="Menu" href=""> Menu 2</a>
+        </nav>
+        <article>
+          <section id="formulario-login">
+            <h1>Login</h1>
+            <div>
+              <!-- Formulario de Login -->
+              <form class="login-validation" id="login" action="formulario-login.html" method="POST">
+              <label for="usuario">Usuario:</label>
+              <input
+                id="usuario"
+                type="email"
+                name="usuario"
+              >
+              <br>
+              <label for="password">Password:</label>
+              <input
+                id="password"
+                type="password"
+                name="password"
+                minlength="4"
+                maxlength="10"
+              >
+              <br>
+              <input type="submit" value="Ingresar">
+            </form>
+            </div>
+          </section>
+        </article>
+      </header>
+    </main>
+  </body>
+</html>

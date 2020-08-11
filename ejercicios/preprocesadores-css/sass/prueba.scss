@@ -1,0 +1,32 @@
+// variables de css
+$font-family: Helvetica, sans-serif;
+$primary-color: #333;
+$btn-padding: 4px;
+$btn-text-color: #000;
+$btn-bg-color: #ccc;
+$btn-radius: 6px;
+$card-bg-color: #444;
+$card-with-color: false;
+$card-color-default: #333;
+
+/*! Este es el cuerpo   */
+body {
+  font: 100% $font-family;
+  color: $primary-color;
+}
+// Este son botones
+
+.btn {
+  color: $btn-text-color;
+  background-color: $btn-bg-color;
+  padding: $btn-padding;
+  border-radius: $btn-radius;
+}
+.card {
+  @if $card-with-color {
+    color: $btn-text-color;
+  } @else {
+    color: $card-color-default;
+  }
+  background-color: $card-bg-color;
+}

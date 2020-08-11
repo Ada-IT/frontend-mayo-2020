@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: black;
+            background-color:rgb(196, 198, 201) ;
+            text-align: center;
+            font-weight: bolder;
+        }
+        /*---Primer titulo---*/
+        h1{
+            text-decoration: underline;
+            color:gray;
+        }
+        /*---Subtitulo---*/
+        caption {
+            text-transform: capitalize;
+            padding: 2%;
+            text-decoration: underline;
+            font-size: x-large;
+        }
+        /*---Estilo tabla de viaje---*/
+        table {
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+            background-color: thistle;
+        }
+        th,td {
+            border-style: solid;
+            border-width: thin;
+            border-color: rgb(63,117,104);
+            padding: 1%;
+        }
+        th{
+            background-color: rgb(63,117,104);
+        }
+        td:hover{
+            background-color: tomato;
+        }
+        thead {
+            background-color: rgb(97, 128, 120);
+            color: black;
+            border-style: solid;
+        }
+        /*---Informacion en bloque de manera horizontal---*/
+        h3{
+            text-align: center;
+            background-color: rgb(241, 139, 121);
+            border-radius: 15%;
+            border-style: dashed;
+            font-size: large;
+            padding: 20px 20px;
+        }
+       p {
+           padding: 20px 20px;
+       }
+       .container {
+           width: 100%;
+           float: left;
+           border-style: dashed;
+           border-radius: 10%;
+           border-color: rgb(63,117,104);
+       }
+       .container:hover{
+           background-color: rgb(248, 191, 185);
+       }
+
+       @media screen and (min-width: 481px) and (max-width: 767px){
+          .container
+          .p
+          h3{
+            display: inline;
+            min-width: 100%;
+          }
+
+       }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Tabla de viaje</h1>
+    </header>
+    <section>
+      <table>
+        <caption>
+          Conozca el tiempo necesario para viajar desde Philadelphia
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Destino</th>
+            <th scope="col">En auto</th>
+            <th scope="col">En tren</th>
+            <th scope="col">En bicicleta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nueva York</td>
+            <td><time>1:51</time>min</td>
+            <td><time>1:22</time>min</td>
+            <td><time>8:53</time>min</td>
+          </tr>
+          <tr>
+            <td>Washington</td>
+            <td><time>2:25</time>min</td>
+            <td><time>2:51</time>min</td>
+            <td><time>12:46</time>min</td>
+          </tr>
+          <tr>
+            <td>Nueva Jersey</td>
+            <td><time>1:20</time>min</td>
+            <td><time>1:05</time>min</td>
+            <td><time>3:56</time>min</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Promedio</th>
+            <td><time>1:45</time>min</td>
+            <td><time>1:55</time>min</td>
+            <td><time>8:36</time>min</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+    <br />
+    <br>
+    <br>
+    <section>
+        <footer>
+      <div class="container">
+        <h3>Nueva York</h3>
+        <p>
+          Situado sobre la costa este de Estados Unidos de América, encontramos
+          a la ciudad de Nueva York. Esta, además esta bañada por el océano
+          Atlántico y en el que desemboca el río Hudson, el cual atraviesa todo
+          el estado.
+          <br />
+          Esta ciudad se caracteriza por ser la más poblada del estado de Nueva
+          York y del país. Tan diversa como versátil, es llamada la ciudad que
+          nunca duerme.
+        </p>
+      </div>
+      <div class="container">
+        <h3>Washington D.C.</h3>
+        <p>
+          Es una ciudad de categoría mundial con estatuas y monumentos
+          conmemorativos icónicos, museos increíbles (y gratuitos), pasión por
+          la política, embajadas extranjeras, barrios históricos y veneradas
+          universidades y escuelas universitarias.
+          <br />
+          Con conexiones de vuelo directo a más de 30 destinos internacionales,
+          Washington, DC es un destino imprescindible en EE. UU. para viajeros
+          de todo el mundo.
+        </p>
+      </div>
+      <div class="container">
+        <h3>New Jersey</h3>
+        <p>
+          Situado en el noreste de Estados Unidos, Nueva Jersey es uno de los
+          estados más pequeños del país. Sin embargo, su naturaleza es sumamente
+          diversa: pintorescas montañas en el norte, el océano Atlántico en las
+          costas del este y el sur, y una mezcla de colinas, granjas y una
+          inmensa reserva interior cubierta de pinos en el oeste.
+          <br />
+          A lo largo de toda la costa, verás paseos marítimos atractivos y
+          coloridos. Más hacia el interior, los bosques y senderos de río te
+          mostrarán los secretos de las montañas, como miradores, cascadas y
+          aves exóticas. Aquí, encontrarás interesantes museos, instituciones
+          culturales e históricas, y vistas panorámicas de íconos
+          estadounidenses, como la Statue of Liberty (Estatua de la Libertad).
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

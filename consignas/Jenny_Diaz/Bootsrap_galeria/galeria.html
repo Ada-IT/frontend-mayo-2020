@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background-image: url(../../../img/madera.jpg);
+        background-attachment: fixed;
+      }
+
+      h5 {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+
+      .pie {
+        color: gray;
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 0.8rem;
+      }
+
+      .polaroid {
+        width: 100%;
+        padding: 10px 10px 0px 10px;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8);
+        font-size: 100px;
+      }
+
+      .grupo {
+        margin-top: 2rem;
+      }
+
+      .orig1 {
+        transform: scale(1);
+        transform: rotate(-2deg);
+        -ms-transform: rotate(-2deg);
+      }
+
+      .orig2 {
+        transform: rotate(3deg);
+        -ms-transform: rotate(3deg);
+      }
+
+      .orig3 {
+        transform: rotate(5deg);
+        -ms-transform: rotate(5deg);
+      }
+
+      .RotarIzq:hover {
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(5deg);
+        -ms-transform: rotate(5deg);
+        /* IE9 */
+        -webkit-transform: rotate(5deg);
+        /* Safari y Chrome */
+        -moz-transform: rotate(5deg);
+      }
+
+      .RotarDer:hover {
+        transform: scale(1.5);
+        transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+        /* IE9 */
+        -webkit-transform: rotate(-5deg);
+        /* Safari y Chrome */
+        -moz-transform: rotate(-5deg);
+      }
+
+      .hue {
+        filter: hue-rotate(90deg);
+        -webkit-filter: hue-rotate(90deg);
+      }
+
+      .saturated {
+        filter: saturate(800%);
+        -webkit-filter: saturate(800%);
+      }
+
+      .sepia {
+        filter: sepia(100%);
+        -webkit-filter: sepia(100%);
+      }
+
+      .contrast {
+        filter: contrast(200%);
+        -webkit-filter: contrast(200%);
+      }
+
+      .drop-shadow {
+        filter: drop-shadow(8px 8px 10px grey);
+        -webkit-filter: drop-shadow(8px 8px 10px grey);
+      }
+
+      .brighten {
+        filter: brightness(200%);
+        -webkit-filter: brightness(200%);
+      }
+
+      .blur {
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+      }
+
+      .bw {
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+      }
+
+      /* Tablet mobile */
+
+      @media (min-width: 320px) and (max-width: 767px) {
+        h5 {
+          font-size: 0.9rem;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <header>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">POLAROID</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarText"
+              aria-controls="navbarText"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"
+                    >Galeria <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contactos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Suscribete</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Quienes Somos</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+
+        <section>
+          <div class="row row-cols-1 row-cols-sm-3 grupo">
+            <div class="col mb-4">
+              <div class="card h-100 polaroid orig1 RotarIzq">
+                <img
+                  src="../../../img/galeria_de_fotos_paisajes/winter-5027855_1920.jpg"
+                  class="card-img-top hue"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Montañas</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100 polaroid orig2 RotarDer">
+                <img
+                  src="../../../img/galeria_de_fotos_paisajes/wing-5316289_1920.jpg"
+                  class="card-img-top saturated"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Butterfly</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100 polaroid RotarIzq">
+                <img
+                  src="../../../img/galeria_de_fotos_paisajes/bird-1045954_1920.jpg"
+                  class="card-img-top sepia"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Volando</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100 polaroid orig1 RotarDer">
+                <img
+                  src="../../../img/galeria_de_fotos_paisajes/nature-5176637_1920.jpg"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Picos</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100 polaroid RotarIzq">
+                <img
+                  src="../../../img/galeria_de_fotos_paisajes/kingfisher-1905255_1920.jpg"
+                  class="card-img-top contrast"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Carpintero</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100 polaroid orig3 RotarDer">
+                <img
+                  src="../../../img/galeria_de_fotos_paisajes/butterfly-4884620_1920.jpg"
+                  class="card-img-top drop-shadow"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Blue</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100 polaroid RotarIzq">
+                <img
+                  src="../../../img/galeria_de_fotos_paisajes/bird-4498326_1920.jpg"
+                  class="card-img-top brighten"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Pareja</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100 polaroid orig2 RotarDer">
+                <img
+                  src="../../../img/galeria_de_fotos_paisajes/bench-560435_1920.jpg"
+                  class="card-img-top blur"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Loneliness</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100 polaroid orig3 RotarIzq">
+                <img
+                  src="../../../img/galeria_de_fotos_paisajes/sun-3713835_1920.jpg"
+                  class="card-img-top bw"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Tranquilidad</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="page-footer bg-dark pie">Jenny Diaz</footer>
+      </div>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

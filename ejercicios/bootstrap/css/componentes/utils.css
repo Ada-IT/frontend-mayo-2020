@@ -1,0 +1,10 @@
+.toast-500 {
+  max-width: 500px;
+  font-size: 0.975rem;
+}
+.toast-600-green {
+  max-width: 600px;
+  font-size: 1.2rem;
+  background-color: rgba(65, 118, 41, 0.85);
+  border-radius: 20px;
+}

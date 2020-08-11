@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        #email:valid {
+            background-color:#85ffa2;
+        }
+        #email:invalid {
+            background-color:#ff8375;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+            </nav>
+        </header>
+        <article>
+            <section>
+                <div>
+                    <form action="consigna1.html" method="POST">
+                        <div>
+                            <h1><big><u>Datos Personales:</u></big></h1>
+                            <label for="nombre">Nombre:</label>
+                            <input id="nombre" type="text" maxlength="15" name="nombre">
+                            <br>
+                            <br>
+                            <label for="apellido">Apellido:</label>
+                            <input id="apellido" type="text" maxlength="15" name="apellido">
+                            <br>
+                            <br>
+                            <label for="direccion">Dirección:</label>
+                            <input id="direccion" type="text" maxlength="20" name="direccion">
+                            <br>
+                            <br>
+                            <label for="telefono">Télefono:</label>
+                            <input id="telefono" type="number" name="telefono">
+                            <br>
+                            <br>
+                            <label for="email">Email</label>
+                            <input id="email" type="email" name="email">
+                        </div>
+                        <hr>
+                        <div>
+                            <label for="genero"><h3>Género</h3></label>
+                                <label>Femenino</label>
+                                <input type="radio" value="F" name="genero">
+                                <br>
+                                <label>Masculino</label>
+                                <input type="radio" value="M" name="genero">
+                                <br>
+                                <label>Otro</label>
+                                <input type="radio" value="O" name="genero">
+                        </div>
+                        <hr>
+                        <div>                       
+                            <label for="formacion"><h3>Formacion:</h3></label>
+                            <select name="formacion" id="formacion">
+                                <option value="P">Primaria</option>
+                                <option value="S">Secundaria</option>
+                                <option value="U">Universitaria</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <div>
+                            <label for="trabajo"><h3>Trabaja:</h3></label>
+                            <select name="trabajo" id="trabajo">
+                                <option value="S">Si</option>
+                                <option value="N">No</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <br>
+                        <input type="submit" value="Enviar">
+                        <div></div>
+                    </form>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
