@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .card {
   font-family: Helvetica;
   width: 100%;
@@ -31,6 +32,90 @@
 }
 .breadcrumb:hover {
   color: #cc3399;
+}
+
+.icon-40px {
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+}
+
+.icon-50px {
+  font-size: 50px;
+  height: 50px;
+  width: 50px;
+}
+
+.icon-80px {
+  font-size: 80px;
+  height: 80px;
+  width: 80px;
+}
+
+.icon-name:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "";
+}
+
+.icon-name:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "";
+}
+
+.icon-name:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "";
+}
+
+ul:nth-child(3n+1) {
+  background-color: #004080;
+}
+
+ul:nth-child(3n+2) {
+  background-color: #004d99;
+}
+
+ul:nth-child(3n+3) {
+  background-color: #0059b3;
+}
+
+.alert-red, green, blue {
+  font-size: 1rem;
+  background-color: red;
+  padding: 1rem;
+}
+
+.alert-red, green, blue {
+  font-size: 1rem;
+  background-color: green;
+  padding: 1rem;
+}
+
+.alert-red, green, blue {
+  font-size: 1rem;
+  background-color: blue;
+  padding: 1rem;
+}
+
+.toast-header {
+  font-size: 16px;
+  background-color: "#ccc";
+  padding: 10px;
+}
+
+.toast-button {
+  font-size: 14px;
+  background-color: "#333";
+  padding: 10px;
+}
+
+.toast-body {
+  font-size: 12px;
+  background-color: "#131313";
+  padding: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

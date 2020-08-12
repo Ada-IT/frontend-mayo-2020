@@ -26,6 +26,9 @@ $breadcrum-bg-color-alt:#3c3c3c;
 $breadcrumb-alt:true;
 $breadcrumb-color:#996633;
 $breadcrumb-bg-color: #ccffcc;
+$types:4;
+$type-width:20px;
+$sizes: 40px, 50px,80px;
 
 
 
@@ -84,4 +87,54 @@ font-family: $breadcrumb-font-family;
 &:hover {
     color: #cc3399;
 }
+}
+
+@each $size in $sizes {
+    .icon-#{$size}{
+        font-size:$size;
+        height: $size;
+        width: $size;
+    }
+}
+
+$icons: (
+    "eye":"\f112",
+    "start": "\f12e",
+    "stop": "\f12f",
+);
+@each $name, $glyph in $icons {
+    .icon-#{name}:before {
+        display: inline-block;
+        font-family: "Icon Font";
+        content: $glyph;
+    }
+}
+$base-color: #036;
+@for $i from 1 through 3 {
+    ul:nth-child(3n + #{$i}){
+        background-color: lighten($base-color, $i *5);
+    }
+}
+
+$colores: red, green, blue;
+  @each $color in $colores {
+    .alert-#{$colores} {
+        font-size: 1rem;
+        background-color: $color;
+        padding: 1rem;
+    }      
+  }
+
+$toasts: 
+    "header" "#ccc" 16px,
+    "button" "#333" 14px,
+    "body" "#131313" 12px;
+
+
+@each $name, $color, $size in $toasts{
+    .toast-#{$name} {
+        font-size: $size;
+        background-color: $color;
+        padding: 10px;
+    }
 }
