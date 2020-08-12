@@ -30,3 +30,41 @@ body {
   }
   background-color: $card-bg-color;
 }
+
+//ejemplo each
+$sizes: 40px, 50px, 80px;
+@each $size in $sizes {
+  .icon-#{$size} {
+    font-size: $size/2;
+    height: $size/4;
+    width: $size/3;
+  }
+}
+
+$icons: (
+  "eye": "\f112",
+  "start": "\f12e",
+  "stop": "\f12f",
+);
+@each $name, $glyph in $icons {
+  .icon-#{$name}:before {
+    display: inline-block;
+    font-family: "Icon Font";
+    content: $glyph;
+  }
+}
+
+//ejemplo for
+$base-color: #036;
+@for $i from 1 through 2 {
+  ul:nth-child(3n + #{$i}) {
+    background-color: lighten($base-color, $i * 5%);
+  }
+}
+@for $i from 1 through 3 {
+  .mis-cards-big-#{$i} {
+    font-size: 16px;
+    background-color: blue($color: #000000);
+    padding: 2px;
+  }
+}
