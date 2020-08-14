@@ -1,0 +1,194 @@
+@media (min-width: 320px) and (max-width: 480px) {
+
+  body {
+    background-color: #eeeae7;
+  }
+
+    .titulo-en-centro {
+        font-size: 1.9rem;
+        color: #ffffff;
+    }
+  
+    .logo {
+        width: 70px;
+        position: relative;
+        bottom: 25px;
+    }
+
+    .destino {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 1.7rem;
+      color: #cd4545;
+      font-weight: bold;
+  }
+
+    .font-italic {
+      font-size: 1.3rem;
+  }
+
+    .home-carousel {
+      margin-top: 50px;
+  }
+
+    .navbar-toggler {
+        position: relative;
+        bottom: 10px;
+        margin-bottom: 15px;
+    }
+
+  .nav-tabs  {
+    font-size: 2rem;
+    margin-top: 2rem;
+    display: flex;  
+    flex-direction:column;
+  }
+
+  .footer2 {
+    background-color: transparent;
+  }
+
+  .table {
+    font-size: 0.86rem;
+  }
+
+  .ubicacion-img {
+    height: auto;
+    width: auto;
+  }
+
+  .gracias-card {
+    font-size: 0.5rem;
+}
+
+
+}
+
+  @media (min-width: 481px) and (max-width: 767px) {
+
+    body {
+      background-color: #eeeae7;
+    }
+
+    .titulo-en-centro {
+      color: #ffffff;
+  }
+  
+  .logo {
+    width: 80px;
+    position: relative;
+    bottom: 30px;
+}
+
+.navbar-toggler {
+  position: relative;
+  bottom: 10px;
+  margin-bottom: 15px;
+}
+
+  .destino {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.7rem;
+  color: #cd4545;
+  font-weight: bold;
+  }
+
+  .font-italic {
+    font-size: 1.3rem;
+}
+
+  .home-carousel {
+    margin-top: 50px;
+}
+
+.ubicacion-img {
+  height: auto;
+  width: auto;
+}
+
+  .nav-tabs  {
+      font-size: 2rem;
+      margin-top: 2rem;
+      display: flex;  
+      flex-direction:column;
+    }
+
+    .footer2 {
+      background-color: #000000;
+    }
+
+    .foot-oculto {
+      background-color: transparent;
+    }
+    
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+    body {
+      background-color: #eeeae7;
+    }
+
+    .titulo-en-centro {
+      color: #ffffff;
+  }
+  
+  .logo {
+    width: 80px;
+    position: relative;
+    bottom: 30px;
+}
+
+.navbar-toggler {
+  position: relative;
+  bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.destino {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  }
+
+  .texto-card {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .font-italic {
+    font-size: 0.9rem;
+}
+
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+  
+    .logo {
+      width: 86px;
+      position: relative;
+      bottom: 30px;
+  }
+
+  .borde-card{  
+    font-size: 0.3rem;
+    font-weight: lighter;  
+}
+
+.mapita, .suscribite, .carta-icono, .susc-titulo {
+  display: none;
+}
+
+.ubicacion-img {
+  height: auto;
+  width: auto;
+}
+
+.footer2 {
+  margin: none;
+  padding: none;
+}
+
+
+  }

@@ -1,0 +1,230 @@
+body {
+  background-color: #f8f8f8;
+}
+
+.navbar {
+  background-image: linear-gradient(90deg, #f85f06, #fc9c65);
+}
+
+.logo {
+  width: 80px;
+}
+
+.navbar-toggler {
+  position: relative;
+  bottom: 30px;
+}
+
+.items-del-nav {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.inicie-sesion {
+  font-size: 0.95rem;
+  color: #000000;
+}
+
+.home-form {
+  color: #fffdfb;
+}
+
+.buscar-btn {
+  background-color: #f5500e;
+  width: 160px;
+  font-size: 1.35rem;
+  height: 60px;
+}
+
+.titulo-en-centro {
+  font-size: 2.2rem;
+  color: #ece4e1;
+  text-shadow: 1px 1px #d8d8d88c;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-dropdowns {
+  background-color: #fffefef3;
+  font-size: 1.1rem;
+  color: #1d100d;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.home-cards {
+  background-color: #f3f3f3;
+}
+
+.tab-opciones {
+  color: #444241;
+  font-size: 0.97rem;
+}
+
+.card-medio {
+  filter: drop-shadow(9px 9px 4px #949494);
+}
+
+.destino {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.4rem;
+  color: #cd4545;
+  font-weight: bold;
+}
+
+.font-italic {
+  color: #a3a2a2;
+  font-weight: normal;
+}
+
+.home-carousel {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.footer2 {
+  list-style: none;
+  background-color: #000000;
+}
+
+.footer-item {
+  background-color: #000000;
+  height: auto;
+  width: auto;
+}
+
+.borde-card {
+  border: none;
+  color: #ee4705;
+  font-size: 1.1rem;
+}
+
+.titulo-card {
+  font-size: 1.01rem;
+}
+
+.direccion {
+  color: #c9c8c8;
+  font-size: 0.7rem;
+}
+
+a {
+  color: #c9c8c8;
+  font-size: 0.9rem;
+}
+
+.suscribite {
+  color: #222020;
+  background-color: #faf9f9;
+  font-size: 1rem;
+  height: 40px;
+  width: 250px;
+  border-radius: 5px;
+  font-style: italic;
+}
+
+.titulo-page2 {
+  font-size: 2rem;
+  font-family: "Lobster", cursive;
+  font-weight: bold;
+  color: #464444;
+}
+
+.titulo-seccion2 {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-family: "Lobster", cursive;
+  color: #464444;
+  font-size: 1.7rem;
+}
+
+.text-header-card {
+  color: #f5500e;
+}
+
+.titulo-opciones {
+  font-size: 1.6rem;
+  font-family: "Philosopher", sans-serif;
+  color: #f85f06;
+  text-shadow: #e0e0e0da 7px 7px;
+}
+
+.texto-opciones {
+  font-size: 1.1rem;
+}
+
+.text-muted {
+  font-size: 1.2rem;
+}
+
+.form-control:focus {
+  box-shadow: 10px 0px 0px 0px #ffffff !important;
+  border-color: #4ca746;
+}
+
+.boton-pago {
+  background-color: #fc5919;
+  font-weight: bold;
+  height: 45px;
+}
+
+.col-titulo {
+  background-color: transparent;
+  color: #205099;
+  font-size: 1.1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+.tarjetas-fondo {
+  background-color: transparent;
+  border: none;
+}
+
+.tarjetas-titulo {
+  color: #484e4c;
+  font-weight: bold;
+}
+
+.mi-input {
+  background-color: #f1f1f1ea;
+}
+
+.precio-final {
+  font-weight: bold;
+  text-align-last: right;
+  font-size: 1.3rem;
+  color: #0e6152;
+}
+
+.pack-list {
+  font-size: 0.89rem;
+}
+
+.titulo-detalle-compra {
+  font-size: 1.4rem;
+  margin-left: 10px;
+}
+
+.col-pago {
+  background-color: #ffffff;
+  margin-top: 14px;
+}
+
+.control-label {
+  font-size: 14px;
+}
+
+.gracias-card {
+  border-radius: 50%;
+  margin-top: 70px;
+  margin-left: 20px;
+}
+
+.quote {
+  background-color: transparent;
+  font-family: "Montserrat", sans-serif;
+}
+
+.gracias-text {
+  font-size: 1rem;
+}

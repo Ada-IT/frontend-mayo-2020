@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <!-- 
+            Rama bootstrap_galeria
+            En su carpeta de consignas crear carpeta bootstrap-galeria
+            En la carpeta crear archivo galeria.html
+            El archivo debe contener la libreria de bootstrap css incluida
+            La galeria debe contener 9 imagenes:
+            - Cada imagen debe estar dentro de un card.
+            - Las fotografias se encuentran en /img/galeria_de_fotos_paisajes  
+            - Cada card va a contener un titulo corto. 
+            - El titulo de cada foto puede ser demo, ej. : foto 1, foto 2.. etc
+
+            Los cards van a tener un efecto de movimiento en el evento hover.
+            La web debera tener:
+            - El menu debe estar en la cabecera del sitio y debe contener con 4 botones.
+            - El titulo que este al costado izquierdo del menu  y alineado verticalmente.
+            - El contenido debera esta centrado en el medio. Queda a criterio la alineación respecto del menu.
+            - El sitio debe tener las media queries para mobile, tablets  y desktop.        
+            - La galeria se debe adaptar en su forma según tipo de dispositivo.
+            - Fondo de madera        
+    -->
+
+    <meta charset="utf-8" />
+    <title>Galeria Bootstrap</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="C:\Users\ivana.yegros.kubicka\Documents\ADAprojects\frontend-mayo-2020\consignas\Ivana Yegros Kubicka\Ejercicios\bootstrap-galeria\css\bootstrap.css" />
+
+    <style>
+        body {
+            background-image: url(https://wallpaperaccess.com/full/154767.jpg);
+        }
+
+        .nav-bar {
+            background-color: black;
+            max-width: 1000rem;
+            height: auto;
+            padding: 2.5rem;
+        }
+
+        .title {
+            font-size: 3rem;
+            color: #ffffff;
+            font-family: 'Source Sans Pro', sans-serif;
+            padding-left: 4rem;
+        }
+
+        .nav-btns {
+            top: 16px;
+            left: 70px;
+        }
+
+        .btn {
+            margin: 2px;
+        }
+
+        .my-album {
+            align-items: center;
+            margin: 70px 100px 150px 130px;
+        }
+
+        .card {
+            margin: 40px 0px 40px 2px;
+            filter: drop-shadow(30px 10px 4px #11111198);
+        }
+
+        .c1:hover {
+            transform: none;
+            transform: scale(1.2)
+        }
+
+        .c2:hover {
+            transform: none;
+            filter: drop-shadow(30px 10px 4px #11111198) sepia(150%);
+            transform: scale(1.2)
+        }
+
+        .c3:hover {
+            transform: none;
+            filter: drop-shadow(30px 10px 4px #11111198) brightness(250%);
+            transform: scale(1.2)
+        }
+
+        .c4:hover {
+            transform: none;
+            filter: drop-shadow(30px 10px 4px #11111198) contrast(350%);
+            transform: scale(1.2)
+        }
+
+        .c5:hover {
+            transform: none;
+            filter: drop-shadow(30px 10px 4px #11111198) grayscale(350%);
+            transform: scale(1.2)
+        }
+
+        .c6:hover {
+            transform: none;
+            filter: drop-shadow(30px 10px 4px #11111198) saturate(550%);
+            transform: scale(1.2)
+        }
+
+        .c7:hover {
+            transform: none;
+            filter: drop-shadow(30px 10px 4px #11111198) contrast(350%);
+            transform: scale(1.2)
+        }
+
+        .c8:hover {
+            transform: none;
+            filter: drop-shadow(30px 10px 4px #11111198) brightness(150%);
+            transform: scale(1.2)
+        }
+
+        .c9:hover {
+            transform: none;
+            filter: drop-shadow(30px 10px 4px #11111198) invert(350%);
+            transform: scale(1.2)
+        }
+
+        .card-text {
+            text-align: center;
+            font-size: 1.3rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .c1,
+        .c6,
+        .c8 {
+            transform: rotate(10deg);
+        }
+
+        .c3,
+        .c5,
+        .c7 {
+            transform: rotate(-7deg);
+        }
+
+        .c2,
+        .c9 {
+            transform: rotate(-2deg);
+        }
+
+        .footer {
+            font-size: 40px;
+            padding: 0px 10px 0px 10px;
+        }
+
+        a {
+            margin: 10px;
+            color: #000000;
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+
+        @media (min-width: 320px) and (max-width: 767px) {
+
+
+            .nav-bar {
+                width: 1000px;
+            }
+
+            .title {
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 2.6rem;
+                align-items: baseline;
+            }
+
+            .btn {
+                font-family: 'Trebuchet MS';
+                padding: 13px;
+            }
+
+            .card {
+                border: solid yellow;
+                right: 70px;
+                float: left;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!--nav bar & btns-->
+        <header>
+            <div class="container nav-bar">
+                <div class="row">
+                    <div class="col-md-4 col-sm-8">
+                        <nav aria-label="breadcrumb" class="title">Galeria con Bootstrap</nav>
+                    </div>
+                    <div class="col-md-6 col-sm-8 nav-btns">
+                        <div class="d-flex justify-content-md-end">
+                            <button type="button" class="btn btn-secondary">More</button>
+                            <button type="button" class="btn btn-secondary">About Us</button>
+                            <button type="button" class="btn btn-secondary">Contact</button>
+                            <button type="button" class="btn btn-secondary disabled">In Progress</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="container my-album">
+                <!--Pics row1-->
+                <div class="row1 d-inline-flex">
+                    <div class="col-lg-6 col-md-4 col-xs-12">
+                        <div class="card c1" style="width: 18rem;">
+                            <img src="img/bench-560435_1920.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Card</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-xs-12">
+                        <div class="card c2" style="width: 18rem;">
+                            <img src="img/bird-1045954_1920.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Card II</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-xs-12">
+                        <div class="card c3" style="width: 18rem;">
+                            <img src="img/bird-4498326_1920.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Card III</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--pics row2-->
+                <div class="row2 d-inline-flex">
+                    <div class="col-md-6 col-sm-8">
+                        <div class="card c4" style="width: 18rem;">
+                            <img src="img/butterfly-4884620_1920.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Card IV</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-8">
+                        <div class="card c5" style="width: 18rem;">
+                            <img src="img/kingfisher-1905255_1920.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Card V</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-8">
+                        <div class="card c6" style="width: 18rem;">
+                            <img src="img/nature-5176637_1920.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Card VI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Pics row3-->
+                <div class="row3 d-inline-flex">
+                    <div class="col-md-6 col-sm-8">
+                        <div class="card c7" style="width: 18rem;">
+                            <img src="img/pic-wood-5295949_1920.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Card VII</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card c8" style="width: 18rem;">
+                            <img src="img/sun-3713835_1920.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Card VIII</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="card c9" style="width: 18rem;">
+                            <img src="img/bird-1045954_1920.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Card IX</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer">
+            <div class="row">
+                <div class="col col-sm-2">
+                    <div class="d-flex justify-content-md-center">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
