@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>TP 1</title>
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet"
+        href="C:\Users\ivana.yegros.kubicka\Documents\ADAprojects\frontend-mayo-2020\consignas\Ivana Yegros Kubicka\Ejercicios\bootstrap-galeria\css\bootstrap.css" />
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta&family=Philosopher:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light" style=" height: 80px;">
+            <p class="navbar-brand logo">
+                <img src="img-TP1/LOGO (1).png" class="img-fluid pt-3 ml-4" alt="Responsive image">
+            </p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse m-3" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="items-del-nav nav-link" href="#">Hoteles |</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="items-del-nav nav-link" href="#">Vuelos |</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="items-del-nav nav-link" href="#">Paquetes |</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="items-del-nav nav-link" href="#">Recomendados |</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="items-del-nav nav-link" href="#">Más</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    <a class="inicie-sesion nav-link font-weight-bold mr-2" href="#"><i style='font-size:15px'
+                            class='fas p-2'>&#xf406;</i>Iniciar
+                        Sesión</a>
+                </span>
+            </div>
+        </nav>
+    </div>
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
+                    <h4 class="titulo-page2 m-3 p-3">Facturación</h4>
+                    <div class="row">
+                        <div class="card col-lg-7 border-0">
+                            <h5 class="col-titulo card-header mt-2 text-header-card">Paso 1 - Tus Datos</h5>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-6">
+                                            <label for="inputEmail4">Nombre</label>
+                                            <input type="text" class="mi-input form-control" id="inputName">
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <label for="inputPassword4">Apellido</label>
+                                            <input type="text" class="mi-input form-control" id="inputLastname">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputAddress">Correo Electrónico</label>
+                                        <input type="email" class="mi-input form-control" id="inputEmail4"
+                                            placeholder="abc@def.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputAddress2">Número de teléfono</label>
+                                        <input type="number" class="mi-input form-control" id="inpuPhone">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputCity">Ciudad</label>
+                                            <input type="text" class="mi-input form-control" id="inputCity">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState">Provincia</label>
+                                            <select id="inputState" class="mi-input form-control">
+                                                <option selected>Elegir...</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="inputZip">C.P.</label>
+                                            <input type="text" class="mi-input form-control" id="inputZip">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                                            <label class="form-check-label" for="gridCheck">
+                                                Recordar mis Datos
+                                            </label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card col-lg-5 border-0">
+                            <h5 class="col-titulo card-header mt-4 text-header-card">Detalles de la Compra</h5>
+                            <div class="card-body col-lg-10">
+                                <div class="card">
+                                    <img src="img-TP1/ARUBA.jpg" class="card-img-top" alt="detalle-compra">
+                                    <div class="card-body">
+                                        <h5 class="titulo-detalle-compra card-title m-0">Este Paquete Contiene:</h5>
+                                    </div>
+                                    <ul class="list-group list-group-flush border-0 m-0">
+                                        <li class="pack-list list-group-item border-0">-Cras justo odio</li>
+                                        <li class="pack-list list-group-item border-0">-Dapibus ac facilisis in</li>
+                                    </ul>
+                                    <div class="precio-final card-body">
+                                        <p class="m-0">$ 132000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-pago">
+                            <h5 class="col-titulo card-header text-header-card">Paso 2 - Detalles del Pago
+                            </h5>
+                            <div class="card-body">
+                                <div class="padding">
+                                    <div class="container-fluid d-flex">
+                                        <div class="mis-tarjetas col-lg-7">
+                                            <div class="card border-0">
+                                                <div class="tarjetas-fondo card-header">
+                                                    <div class="row">
+                                                        <div class="tarjetas-titulo col-lg-7">
+                                                            <span>Pague
+                                                                con
+                                                                Tarjeta de
+                                                                Débito
+                                                                / Crédito</span>
+                                                        </div>
+                                                        <div class="tarjetas">
+                                                            <img src="https://img.icons8.com/color/36/000000/visa.png">
+                                                            <img
+                                                                src="https://img.icons8.com/color/36/000000/mastercard.png">
+                                                            <img src="https://img.icons8.com/color/36/000000/amex.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body" style="height: 350px">
+                                                    <div class="form-group"> <label for="cc-number"
+                                                            class="control-label">Número de Tarjeta</label>
+                                                        <input id="cc-number" type="tel"
+                                                            class="mi-input input-lg form-control cc-number"
+                                                            autocomplete="cc-number" placeholder="•••• •••• •••• ••••"
+                                                            required>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group"> <label for="cc-exp"
+                                                                    class="control-label">Vencimiento</label>
+                                                                <input id="cc-exp" type="tel"
+                                                                    class="mi-input input-lg form-control cc-exp"
+                                                                    autocomplete="cc-exp" placeholder="•• / ••"
+                                                                    required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group"> <label for="cc-cvc"
+                                                                    class="control-label">Código de
+                                                                    Seguridad</label>
+                                                                <input id="cc-cvc" type="tel"
+                                                                    class="mi-input input-lg form-control cc-cvc"
+                                                                    autocomplete="off" placeholder="••••" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group"> <label for="numeric"
+                                                            class="control-label">Nombre del Propietario de
+                                                            la
+                                                            Tarjeta</label>
+                                                        <input type="text" class="mi-input input-lg form-control">
+                                                    </div>
+                                                    <div class="form-group"> <input value="Realizar el Pago"
+                                                            type="button"
+                                                            class="boton-pago text-light btn btn-lg form-control"
+                                                            style="font-size: 1rem;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="container">
+                                                <div class="gracias-card card col-lg-11 border-0"
+                                                    style="background-image: url(img-TP1/fondo.jpg)">
+                                                    <div class="quote card-header border-0 mt-4">
+                                                        <h5> Gracias por elegir Volare.</h5>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <blockquote class="blockquote mb-0">
+                                                            <p class="gracias-text">Lorem ipsum dolor sit amet,
+                                                                consectetur
+                                                                adipiscing
+                                                                elit.
+                                                                Integer
+                                                                posuere
+                                                                erat a ante. Nemo enim ipsam voluptatem quia voluptas
+                                                                sit
+                                                                aspernatur aut odit aut fugit, sed quia consequuntur
+                                                                magni
+                                                                dolores eos qui ratione voluptatem</p>
+                                                            <footer class="blockquote-footer">
+                                                                <cite title="Source Title">Volare Team</cite>
+                                                            </footer>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+    </section>
+
+    <section><br>
+        <div class="footer2 col-lg-12 col-md-8 d-lg-block d-xl-block d-xs-none d-sm-none d-md-none d-none">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-4 p-0">
+                    <div class="borde-card card">
+                        <div class="footer-item card-body">
+                            <h5 class="titulo-card card-title"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-house mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                    <path fill-rule="evenodd"
+                                        d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                                </svg>Sobre Nosotros</h5>
+                            <div class="card-text">
+                                <ul">
+                                    <li>
+                                        <a href="...">La Empresa</a>
+                                    </li>
+                                    <li>
+                                        <a href="...">Trabaja con Nosotros</a>
+                                    </li>
+                                    <li>
+                                        <a href="...">Volare Mobile</a>
+                                    </li>
+                                    <li>
+                                        <a href="...">Ayuda</a>
+                                    </li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 p-0">
+                    <div class="borde-card card">
+                        <div class="footer-item card-body">
+                            <h5 class="titulo-card card-title"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-telephone mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M3.925 1.745a.636.636 0 0 0-.951-.059l-.97.97c-.453.453-.62 1.095-.421 1.658A16.47 16.47 0 0 0 5.49 10.51a16.471 16.471 0 0 0 6.196 3.907c.563.198 1.205.032 1.658-.421l.97-.97a.636.636 0 0 0-.06-.951l-2.162-1.682a.636.636 0 0 0-.544-.115l-2.052.513a1.636 1.636 0 0 1-1.554-.43L5.64 8.058a1.636 1.636 0 0 1-.43-1.554l.513-2.052a.636.636 0 0 0-.115-.544L3.925 1.745zM2.267.98a1.636 1.636 0 0 1 2.448.153l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z" />
+                                </svg>Contactanos</h5>
+                            <div class="card-text">
+                                <ul">
+                                    <li>
+                                        <a href="...">Preguntas Frecuentes</a>
+                                    </li>
+                                    <li>
+                                        <a href="...">Promociones Bancarias</a>
+                                    </li>
+                                    <li>
+                                        <a href="...">Tasas de Aerolineas</a>
+                                    </li>
+                                    <li>
+                                        <a href="...">Nuestros Telefonos</a>
+                                    </li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 p-0">
+                    <div class="borde-card card">
+                        <div class="footer-item card-body">
+                            <h5 class="titulo-card card-title"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-geo-alt mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                </svg>
+                                </svg>Nuestras Oficinas</h5>
+                            <div class="card-text">
+                                <p class="direccion">Av. Alicia Moreau de Justo 350, C1107 AAH CABA</p>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26272.297144914868!2d-58.370747954789955!3d-34.603222265071906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a335320d9ea4c5%3A0x2cb41df4e2abe065!2sGoogle%20Argentina!5e0!3m2!1sen!2sar!4v1595892488223!5m2!1sen!2sar"
+                                    width="210" height="130" frameborder="0" aria-hidden="false" class="mapita"
+                                    tabindex="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 p-0">
+                    <div class="borde-card card">
+                        <div class="footer-item card-body">
+                            <h5 class="susc-titulo titulo-card card-title"><svg width="1em" height="1em"
+                                    viewBox="0 0 16 16" class="carta-icono bi bi-envelope mr-2" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
+                                </svg>Suscribite</h5>
+                            <div class="card-text">
+                                <input type="email" placeholder="Dejanos tu e-mail" minlength="7" maxlength="20"
+                                    class="suscribite mr-2">
+                                </input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section>
+        <div class="foot-oculto d-sm-block d-xs-block d-lg-none">
+            <div class="accordion" id="accordionExample">
+                <div class="card bg-dark">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left text-light" type="button"
+                                data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                aria-controls="collapseOne"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-house-door-fill mr-2" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z" />
+                                    <path fill-rule="evenodd"
+                                        d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                </svg>
+                                Sobre Nosotros
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ul">
+                                <li>
+                                    <a href="...">La Empresa</a>
+                                </li>
+                                <li>
+                                    <a href="...">Trabaja con Nosotros</a>
+                                </li>
+                                <li>
+                                    <a href="...">Volare Mobile</a>
+                                </li>
+                                <li>
+                                    <a href="...">Ayuda</a>
+                                </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-dark">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed text-light" type="button"
+                                data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-telephone-fill mr-2" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z" />
+                                </svg>
+                                Contactanos
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ul">
+                                <li>
+                                    <a href="...">Preguntas Frecuentes</a>
+                                </li>
+                                <li>
+                                    <a href="...">Promociones Bancarias</a>
+                                </li>
+                                <li>
+                                    <a href="...">Tasas de Aerolineas</a>
+                                </li>
+                                <li>
+                                    <a href="...">Nuestros Telefonos</a>
+                                </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-dark">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left text-light collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                aria-controls="collapseThree"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-geo-alt mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                </svg>
+                                Nuestras Oficinas
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="card-text">
+                                <p class="direccion">Av. Alicia Moreau de Justo 350, C1107 AAH CABA</p>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26272.297144914868!2d-58.370747954789955!3d-34.603222265071906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a335320d9ea4c5%3A0x2cb41df4e2abe065!2sGoogle%20Argentina!5e0!3m2!1sen!2sar!4v1595892488223!5m2!1sen!2sar"
+                                    width="210" height="130" frameborder="0" aria-hidden="false" tabindex="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cuerpo card bg-dark">
+                    <div class="card-header" id="headingFour">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed text-light" type="button"
+                                data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                aria-controls="collapseFour"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-envelope-fill mr-2" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+                                </svg>
+                                Suscribite
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="card-text">
+                                <input type="email" placeholder="Dejanos tu e-mail" minlength="7" maxlength="20"
+                                    class="suscribite mr-2">
+                                </input>
+                                <button type="button" class="btn btn-secondary" method="POST" value="@">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<!-- Realizar una pagina web que contenga un formulario basado en la información de la imagen.
+
+Requerimientos: Nombre (Limite de 20 caracteres) Empresa (Limite de 20 caracteres) Email (Validacion por CSS) Telefono (que solo deje ingresar numeros) subject (support department/ sales department /claims department) - Valores(support sales,claim) Are you customer? Valores (y,n)
+
+La pagina debe tener la estructura actual de html5 que hemos practicado. Se debe lograr una apariencia lo más similiar a la imagen de ejemplo. El formulario debe ser Adaptativo. Se debe poder ver bien en Tablets y Telefonos Apple y Android.
+
+La unica referencia que se les entregará de css son los colores de fondo de pagina y el efecto de transicion de color que se desea realizar al pasar por el boton Register: Colores de Fondo: #08aeea , #b721ff Idea de mezcla de color : degrade
+
+Color de boton de registro al pasar el mouse por arriba: #eb3746;
+
+Los demas colores deben ser tomados de la imagen con las herramientas que crean utiles.Se deben escribir en hexadecimal.
+
+La fuente de la web debe ser "Open Sans" y "Helvetica Neue".-->
+
+<head>
+    <title>Cosigna III</title>
+    <style>
+        body {
+            background-color: #000000;
+            background-image: linear-gradient(90deg, #08aeea, #b721ff);
+            background-repeat: no-repeat;
+        }
+
+        /* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+        @media (min-width: 1281px) {}
+
+        /* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+        @media (min-width: 1025px) and (max-width: 1280px) {}
+
+        /* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+        @media (min-width: 768px) and (max-width: 1024px) {}
+
+        /* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+
+        /* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+        @media (min-width: 481px) and (max-width: 767px) {}
+
+        /* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+        @media (min-width: 320px) and (max-width: 480px) {}
+
+        form {
+            max-width: 800px;
+            height: 830px;
+            margin: 10px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            font-family: open sans,
+        }
+
+        h1 {
+            font-family: Helvetica;
+            background: #1a1a1a;
+            padding: 20px 20px;
+            font-size: 140%;
+            font-weight: 300;
+            text-align: center;
+            color: #ffffff;
+            margin: -20px -20px 20px -20px;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        section {
+            margin: 3rem 2rem 2rem 3rem;
+            max-width: 100rem;
+            max-height: auto;
+
+        }
+
+        div {
+            padding: 6px;
+        }
+
+        label {
+            font-family: sans-serif;
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 2rem 2rem 2rem 1rem;
+            text-align: left;
+            padding-right: 33px;
+        }
+
+        input {
+            background: #e5e5e5;
+            border-radius: 5px;
+            border: hidden;
+            height: 50px;
+            width: 33rem;
+            margin: 1rem 1rem 1rem 1rem;
+        }
+
+        input:hover {
+            background-color: #c4bdbd;
+        }
+
+        .name,
+        .phone {
+            display: inline-flex;
+        }
+
+        #email:invalid {
+            background-color: #f55959;
+        }
+
+        input#name,
+        input#lastname {
+            margin-right: -4rem;
+            width: 15.4rem;
+        }
+
+        input#company {
+            margin: 1rem 1rem 1rem -1rem;
+        }
+
+        input#areacode {
+            width: 6.5rem;
+            margin-right: -2rem;
+        }
+
+        #underinput1 {
+            position: relative;
+            top: 70px;
+            right: 205px;
+            color: #afaaaa;
+            font-size: 0.9rem;
+            width: 90px;
+            margin: 0rem 1rem 1rem 1rem;
+            padding: inherit;
+        }
+
+        #underinput2 {
+            position: relative;
+            top: 70px;
+            right: 60px;
+            color: #afaaaa;
+            font-size: 0.9rem;
+            width: 90px;
+            margin: 0rem 1rem 1rem 1rem;
+            padding: inherit;
+        }
+
+        #underinput3 {
+            position: relative;
+            top: 70px;
+            right: 95px;
+            color: #afaaaa;
+            font-size: 0.9rem;
+            width: 90px;
+            margin: 0rem 1rem 1rem 1rem;
+            padding: inherit;
+        }
+
+        #underinput4 {
+            position: relative;
+            top: 70px;
+            right: 70px;
+            color: #afaaaa;
+            font-size: 0.9rem;
+            width: 110px;
+            margin: 0rem 0rem 0rem 0rem;
+            padding: inherit;
+        }
+
+        input#lastname {
+            position: relative;
+            right: 190px;
+        }
+
+        input#phone {
+            width: 24.2rem;
+            position: relative;
+            right: 210px;
+        }
+
+        .dropdown {
+            background: #e5e5e5;
+            border-radius: 5px;
+            border: hidden;
+            position: relative;
+            right: 10px;
+            height: 50px;
+            width: 33rem;
+            margin: 1rem 1rem -2rem 1rem;
+            font-size: 1rem;
+            padding-left: 15px;
+            color: #251f1f;
+        }
+
+        select:hover {
+            background-color: #c4bdbd;
+        }
+
+        p {
+            font-family: sans-serif;
+            font-weight: bold;
+            margin-top: 80px;
+            margin-bottom: 0px;
+            margin-left: 20px;
+        }
+
+        .buttons {
+            margin-left: 13px;
+            color: #615e5e;
+
+        }
+
+        .buttons input {
+            width: 20px;
+            margin: 0px;
+            color: #7c7373;
+
+        }
+
+        .buttons label {
+            position: relative;
+            bottom: 20px;
+            margin: 3px;
+        }
+
+        label.button-y {
+            padding-right: 60px;
+        }
+
+        .submit {
+            width: 170px;
+            position: relative;
+            bottom: 30px;
+            left: 50px;
+            background-color: #ff4b5a;
+            color: #ffffff;
+            font-weight: bolder;
+        }
+
+        .submit:hover {
+            background-color: #eb3746;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="consigna3.html" id="form" method="POST">
+
+        <h1><b> EVENT REGISTRATION FORM</b></h1>
+
+        <section>
+            <div class="name">
+
+                <label for="name">Name</label>
+                <input id="name" type="text" minlength="2" maxlength="20"></input>
+
+                <label id="underinput1">First Name</label>
+
+                <label id="underinput2">Last Name</label>
+                <input id="lastname" type="text" minlength="2" maxlength="20"></input>
+            </div>
+
+            <div class="company">
+
+                <label for="name">Company</label>
+                <input id="company" type="text" minlength="2" maxlength="20"></input>
+            </div>
+
+            <div class="email">
+
+                <label for="name">Email</label>
+                <input id="email" type="email" minlength="6" maxlength="20"></input>
+            </div>
+
+            <div class="phone">
+
+                <label for="name">Phone</label>
+                <input id="areacode" type="number" minlength="2" maxlength="15"></input>
+
+                <label id="underinput3">Area Code</label>
+
+                <label id="underinput4">Phone Number</label>
+                <input id="phone" type="number" minlength="2" maxlength="15"></input>
+
+            </div>
+
+            <div>
+
+                <label for="name">Subject</label>
+
+                <select class="dropdown">
+
+                    <option class="head">Choose Option</option>
+                    <option value="support">Support Department</option>
+                    <option value="sales">Sales Department</option>
+                    <option value="claims">Claims Department</option>
+
+                </select>
+            </div>
+
+            <p> Are you an existing customer?</p>
+
+            <div class="buttons">
+
+                <input type="radio" checked="checked" name="radio" value="y">
+                <label class="button-y">Yes
+                    <span class="checkmark"></span>
+                </label>
+
+                <input type="radio" checked="checked" name="radio" value="n">
+                <label class="button-n">No
+                    <span class="checkmark"></span>
+
+                </label>
+
+            </div>
+        </section>
+
+        <input class="submit" type="submit" value="REGISTER">
+
+    </form>
+</body>
+
+</html>
