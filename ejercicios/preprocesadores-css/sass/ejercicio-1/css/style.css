@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .card {
   font-family: Helvetica;
   width: 100%;
@@ -15,6 +16,68 @@
 
 .card .description {
   font-size: 0.7rem;
+}
+
+.icon-40px {
+  font-size: 20px;
+  height: 10px;
+  width: 13.3333333333px;
+}
+
+.icon-50px {
+  font-size: 25px;
+  height: 12.5px;
+  width: 16.6666666667px;
+}
+
+.icon-80px {
+  font-size: 40px;
+  height: 20px;
+  width: 26.6666666667px;
+}
+
+.icon-eye:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "";
+}
+
+.icon-start:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "";
+}
+
+.icon-stop:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "";
+}
+
+ul:nth-child(3n+1) {
+  background-color: #004080;
+}
+
+ul:nth-child(3n+2) {
+  background-color: #004d99;
+}
+
+.mis-cards-big-1 {
+  font-size: 16px;
+  background-color: 0;
+  padding: 2px;
+}
+
+.mis-cards-big-2 {
+  font-size: 16px;
+  background-color: 0;
+  padding: 2px;
+}
+
+.mis-cards-big-3 {
+  font-size: 16px;
+  background-color: 0;
+  padding: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */
