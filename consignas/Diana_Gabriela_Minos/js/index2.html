@@ -6,10 +6,11 @@
 </head>
 
 <body>
-    <button onclick="alerta('hola')">Clickeame</button>
+    <button id='btn1' onclick="alerta('hola')">Clickeame</button>
     <button onclick="alerta('Saludos')">Clickeame</button>
-    <button onclick="alerta('Chau')">Clickeame</button>
-    <button onclick="cambiarTexto()">Cambiar Texto</button>
+    <button id='btn3' onclick="cambiarTexto('demo2', 'texto 1')">Cambiar Texto</button>
+    <button onclick="obtenerContenido('demo2')">Mostrar Contenido</button>
+    <button onclick="obtenerContenido2('demo2', 'mi texto fruta')">Mostar Contenido</button>
 
 
     <div id="demo" style="width: 30%; height: 100px;">
@@ -17,15 +18,17 @@
         <button onclick="cambiarColor('blue')">Cambiar color a azul</button>
 
     </div>
-    <div id="demo2" style="width: 30%; height:100px;">
+    <div id='demo2' style="width: 30%; height:100px;">
         Using templates <br />
         To use templates we need to tell our generator where to sabskhohoh
     </div>
-    <form>
-        <input name="a" />
-        <input name="b" />
-        <button onclick="sumar()">Clickeame</button>
-    </form>
+
+    <input type='number' id='a' name='a' />
+    <input type='number' id='b' name="b" />
+    <button onclick="sumar('resultado')">Suma</button>
+    <br>
+    <span id='resultado'>Resultado:</span>
+
 
     <script type="text/javascript" src="demo.js"></script>
 </body>
