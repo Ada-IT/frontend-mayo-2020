@@ -54,3 +54,67 @@ function sumar(elemento) {
   data = document.getElementById(elemento).innerHTML = "Resultado: " + total;
   console.log(data);
 }
+
+function obtenerContenido3(elemento, mitexto) {
+  var data;
+  if (elemento == "demo2") {
+    data = document.getElementById(elemento).innerHTML = "hola mundo";
+  } else {
+    data = document.getElementById(elemento).innerHTML = mitexto;
+  }
+}
+
+function mostrarNumeros() {
+  var n = 3;
+  while (n <= 5) {
+    console.log("contando: " + n);
+    n++;
+  }
+  return n;
+}
+
+function llenarTabla() {
+  var n = 0; //contador
+  var celdas = ""; // variable para armar la tabla
+  while (n <= 5) {
+    console.log("contando: " + n); // debug
+    celdas = celdas + "<tr><td>" + n + "</td></tr>";
+    console.log("celdas: " + celdas); //debug
+    n++;
+  }
+  mitabla = cambiarTexto("mitabla", celdas);
+  return n;
+}
+
+function llenarTabla2() {
+  var n = 0;
+  var celdas = "";
+  for (var i = 0; i <= 5; i++) {
+    console.log("contando: " + i); // debug
+    celdas = celdas + "<tr><td>" + n + "</td></tr>";
+    console.log("celdas: " + celdas); //debug
+  }
+  cambiarTexto("mitabla", celdas);
+  return n;
+}
+
+function llenarTabla3() {
+  let frutas = ["Manzana", "Banana", "Pera", "Kiwi", "Naranja", "Arandanos"]; // array de datos
+  var celdas = "";
+  for (var i = 0; i <= 5; i++) {
+    console.log("contando: " + i); // debug
+    celdas = celdas + "<tr><td>" + frutas[i] + "</td></tr>";
+    console.log("celdas: " + celdas); //debug
+  }
+  cambiarTexto("mitabla", celdas);
+  console.log("mi array: " + frutas.length); //debug
+  console.log("mi array pos 3: " + frutas[3]); //debug
+
+  return frutas;
+}
+
+function llenarTabla4() {
+  let frutas = ["Manzana", "Banana", "Pera", "Kiwi", "Naranja", "Arandanos"]; // array de datos
+  var celdas = "<tr><td>" + frutas[2] + "</td></tr>";
+  cambiarTexto("mitabla", celdas);
+}
