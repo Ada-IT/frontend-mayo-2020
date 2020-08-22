@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Consigna 3</title>
+        <link href="https://allfont.es/allfont.css?fonts=open-sans" rel="stylesheet" type="text/css" />
+        <style>
+            body {
+                background: radial-gradient(circle at 100% 0, #b721ff, #08aeea);
+                font-family: 'Open Sans', arial;
+                font-size: 1rem;
+            }
+            .formulario {
+                background-color: #ffffff;
+                width: 100%;
+                max-width: 500px;    
+                margin: 1rem auto auto auto;
+                border-radius: 1rem;
+            }
+            h1 {
+                background-color: #1a1a1a;
+                color: #ffffff;
+                font-size: 1.5rem;
+                text-align: center;  
+                padding: 1rem;
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+            }
+            .contenedor {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 1rem;
+                height: 500px;              
+            }
+            input {
+                background-color: #e5e5e5;
+                display: flex;
+                width: 60%;
+                padding: 1rem;
+                align-items: center;
+                margin-left: 1rem;
+                border-radius: 0.5rem;
+                border: none;
+            }
+            label {
+                display: flex;
+                min-width: 20%;
+                justify-content: flex-start;
+            }
+            .nombre-formulario, .div, .telefono-formulario, .cliente-formulario {
+                display: flex;
+            }
+            .cliente {
+                justify-content: start;
+                width: 30%;
+            }
+            .referencia {
+                color: #ABABAB;
+                font-size: 0.75rem;
+                margin-left: 1rem;
+            }
+            select {
+                display: flex;
+                background-color: #e5e5e5;
+                width: 70%;
+                padding: 0.75rem;
+                align-items: center;
+                margin-bottom: 0.25rem;
+                border-radius: 0.25rem;
+                border: none;
+            }
+            input[type="email"]:valid {
+            color: #38EE3E;
+            }
+            input[type="email"]:invalid {
+            color: #ff4b5a;
+            }
+            .boton {
+                background-color:#ff4b5a;
+                color: #ffffff; 
+                width: 20%;
+                padding: 0.5rem 1rem 0.5rem 1rem;
+                border-radius: 0.5rem;
+            }
+            .boton:hover {
+                background-color: #BC0505;
+            }
+            @media (max-width:660px) {
+            form {
+            width: 100%;}
+            }
+        </style>                            
+    </head>
+    <body>
+        <main>                                      
+            <form action="consigna3.html" class="formulario" method="post">
+                <h1>EVENT REGISTRATION FORM</h1>  
+                    <div class="contenedor">
+                        <div class="nombre-formulario">
+                            <label for="name">Name:</label>
+                            <div>                                                                             
+                                <input
+                                    id="nombre" 
+                                    type="text" 
+                                    maxlength="20" 
+                                    name="nombre"
+                                    required
+                                >
+                                <label for="nombre" class="referencia">First Name</label>
+                            </div>
+                            <div>
+                                <input
+                                    id="apellido"
+                                    type="text"
+                                    maxlength="20"
+                                    name="apellido"
+                                    required
+                                >
+                                <label for="apellido" class="referencia">Last Name</label>
+                            </div>
+                        </div>
+                        <br>                           
+                        <div class="div">
+                            <label for="empresa">Company:</label>
+                            <input
+                                id="empresa" 
+                                type="text" 
+                                maxlength="20" 
+                                name="empresa"
+                                required
+                            >
+                        </div>
+                        <br>
+                        <div class="div">
+                            <label for="email">Email:</label>
+                            <input
+                                id="email" 
+                                type="email" 
+                                name="email"
+                                required
+                            >
+                        </div>
+                        <br>
+                        <div class="telefono-formulario">  
+                            <label for="telefono">Phone:</label>
+                            <div>                 
+                                <input
+                                    id="codigo-area" 
+                                    type="number"  
+                                    name="codigo-area"
+                                    required
+                                >
+                                <label for="codigo-area" class="referencia">Area Code</label>
+                            </div> 
+                            <div>
+                                <input
+                                    id="telefono" 
+                                    type="number"  
+                                    name="telefono"
+                                    required
+                                >
+                                <label for="telefono" class="referencia">Phone Number</label>
+                            </div>
+                        </div>
+                        <br>    
+                        <div class="div">
+                            <label for="subject">Subject</label>
+                            <select id="subject">
+                                <option value="" disabled selected>Choose option</option>
+                                <option value="support">Support department</option>
+                                <option value="sales">Sales department</option>
+                                <option value="claim">Claims department</option>
+                            </select> 
+                        </div> 
+                        <br>       
+                        <div class="cliente">
+                            <label for="costumer">Are you costumer?</label>
+                            <br>
+                                <div class="cliente-formulario">
+                                    <input 
+                                        name="costumer" 
+                                        type="radio" 
+                                        value="y"
+                                    >
+                                    <label>Yes</label>                         
+                                    <input 
+                                        name="costumer" 
+                                        type="radio" 
+                                        value="n"
+                                    >
+                                    <label>No</label> 
+                                </div>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="submit" class="boton" value="REGISTER">
+                        </div>
+                    </div>
+            </form>
+        </main>
+    </body>
+</html>  
