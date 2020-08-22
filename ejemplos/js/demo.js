@@ -118,3 +118,96 @@ function llenarTabla4() {
   var celdas = "<tr><td>" + frutas[2] + "</td></tr>";
   cambiarTexto("mitabla", celdas);
 }
+
+function ordenarTabla() {
+  let frutas = ["Manzana", "Banana", "Pera", "Kiwi", "Naranja", "Arandanos"]; // array de datos
+  let frutasordenadas = frutas.sort();
+  var celdas = "";
+  for (var i = 0; i <= 5; i++) {
+    celdas = celdas + "<tr><td>" + frutasordenadas[i] + "</td></tr>";
+    console.log("celdas: " + celdas); //debug
+  }
+  cambiarTexto("mitabla", celdas);
+}
+let frutas = ["Manzana", "Banana", "Pera", "Kiwi", "Naranja", "Arandanos"];
+
+let objeto = {
+  1: ["Maxi", "sorribas", "38"],
+  2: ["Juan", "Perez", "37"],
+};
+
+let emp = [];
+emp[0] = "Casey Jones";
+emp[1] = "Phil Lesh";
+emp[2] = "August West";
+
+let empl = [];
+let listempleados = "";
+let listaordenadaempleados = "";
+
+function agregarEmpleado() {
+  nuevoempleado = obtenerContenidoEmpleado("empleado");
+  empl.push(nuevoempleado);
+  console.log("mi empleado:" + nuevoempleado); // debug
+  mostrarNuevoEmpleado(nuevoempleado);
+  return empl;
+}
+
+function obtenerContenidoEmpleado(elemento) {
+  var data = document.getElementById(elemento).value;
+  return data;
+}
+
+function ordenarEmpleados() {
+  empleadosordenados = empl.sort(); //ordeno  mi array
+  console.log("empleados ordenados " + empleadosordenados);
+
+  empleadosordenados.forEach((item) => {
+    listaordenadaempleados =
+      listaordenadaempleados + "<tr><td>" + item + "</td></tr>"; // lo guardo en la variable
+    console.log("lista tabla: " + listaordenadaempleados);
+  });
+  cambiarTexto("mitabla", listaordenadaempleados);
+  return empleadosordenados;
+}
+
+function mostrarNuevoEmpleado(empleado) {
+  listempleados = listempleados + "<tr><td>" + empleado + "</td></tr>";
+  console.log("celdas: " + listempleados); //debug
+  mitabla = cambiarTexto("mitabla", listempleados);
+  return empleado;
+}
+
+//let colors = ['red', 'green', 'blue'];
+// utilizando for
+//for (let i = 0; i < colors.length; i++) {
+//  console.log(colors[i]);
+//}
+
+// foreach
+//colors.forEach(function(color) {
+//  console.log(color)
+//})
+
+// foreach con arrow function
+//colors.forEach(color => console.log(color))
+
+function verificoNombre(nombre) {
+  var animal = nombre;
+  switch (animal) {
+    case "Vaca":
+      console.log("Este Vaca subirá al Arca de Noé.");
+      break;
+    case "Jirafa":
+      console.log("Este Jirafa subirá al Arca de Noé.");
+      break;
+    case "Perro":
+      console.log("Este Perro subirá al Arca de Noé.");
+      break;
+    case "Cerdo":
+      console.log("Este Cerdo subirá al Arca de Noé.");
+      break;
+    default:
+      console.log("Este animal no lo hará.");
+  }
+}
