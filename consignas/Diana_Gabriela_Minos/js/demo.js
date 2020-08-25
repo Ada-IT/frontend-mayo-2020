@@ -68,6 +68,8 @@ function obtenerContenido3(elemento, mitexto) {
     }
 }
 
+
+//while
 function mostrarNumeros() {
     var n = 3;
     while (n <= 5) {
@@ -77,6 +79,7 @@ function mostrarNumeros() {
     return n;
 }
 
+//while
 function llenarTabla() {
     var n = 0; //contador
     var celdas = ''; //variable para armar la tabla
@@ -91,6 +94,7 @@ function llenarTabla() {
     return n;
 }
 
+//for
 function llenarTabla2() {
     var n = 0;
     var celdas = '';
@@ -103,6 +107,8 @@ function llenarTabla2() {
     return n;
 }
 
+
+//arrays
 function llenarTabla3() {
     let frutas = ['Manzana', 'Banana', 'Pera', 'Kiwi', 'Naranja', 'Arandanos']; //array de datos
     var celdas = '';
@@ -123,3 +129,93 @@ function llenarTabla4() {
     cambiarTexto('mitabla', celdas);
 }
 
+function ordenarTabla() {
+    let frutas = ['Manzana', 'Pera', 'Kiwi', 'Naranja', 'Arandanos']; //Array de datos
+    let frutasordenadas = frutas.sort();
+    var celdas = '';
+    for (var i = 0 <= 5; i++;) {
+        celdas = celdas + '<tr><td>' + frutasordenadas[i] + '</tr></td>';
+        console.log('celdas: ' + celdas); //debug
+    }
+    cambiarTexto('mitabla', celdas);
+}
+let objeto = {
+    1: ['Gabi', 'Minos', '40'],
+    2: ['Juan', 'Perez', '37'],
+};
+
+let emp = [];
+emp[0] = 'Casey Jones';
+emp[1] = 'Phil Lesh';
+emp[2] = 'August West';
+
+
+let empl = [];
+let listempleados = '';
+let listaordenadaempleados = '';
+
+function agregarEmpleado() {
+    nuevoempleado = obtenerContenidoEmpleado('empleado');
+    empl.push(nuevoempleado);
+    console.log('mi empleado: ' + nuevoempleado); //debug
+    mostrarNuevoEmpleado(nuevoempleado);
+    return empl;
+}
+
+function obtenerContenidoEmpleado(elemento) {
+    var data = document.getElementById(elemento).value;
+    return data;
+}
+
+function ordenarEmpleados() {
+    empleadosordenados = empl.sort(); //ordeno mi array
+    console.log('empleados ordenados' + empleadosordenados);
+    empleadosordenados.forEach(item => {
+        listaordenadaempleados = listaordenadaempleados + '<tr><td>' + item + '</tr></td>'; //lo guardo en la variable
+        console.log('lista tabla: ' + listaordenadaempleados);
+    });
+    cambiarTexto('mitabla', listaordenadaempleados);
+    return empleadosordenados;
+}
+
+function mostrarNuevoEmpleado(empleado) {
+    listempleados = listempleados + '<tr><td>' + empleado + '</tr></td>';
+    console.log('celdas: ' + listempleados); //debug
+    mitabla = cambiarTexto('mitabla', listempleados);
+    return empleado;
+}
+
+//let colors ) ['red', 'green', 'blue'];
+//utilizando for
+//for (let i = 0; i < colors.length; i++){
+//console.log(colors[i]);
+//}
+
+//foreach
+//colors.forEach(function(color){
+//console.log(color)
+//})
+
+//forEach con arrow function
+//colors.forEach(color => console.log(color))
+
+function verificoNombre(nombre) {
+    var Animal = nombre;
+    switch (Animal) {
+        case 'Vaca':
+            console.log('Esta Vaca subirá al Arca de Noé.');
+            break;
+        case 'Jirafa':
+            console.log('Esta Jirafa subirá al Arca de Noé.');
+            break;
+        case 'Perro':
+            console.log('Este Perro subirá al Arca de Noé.');
+            break;
+        case 'Cerdo':
+            console.log('Este Cerdo subirá al Arca de Noé.');
+            break;
+        default:
+            console.log('Este animal no lo hará.');
+    }
+
+}

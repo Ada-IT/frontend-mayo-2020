@@ -22,15 +22,21 @@
         Using templates <br />
         To use templates we need to tell our generator where to sabskhohoh
     </div>
-
-    <input type='number' id='a' name='a' />
-    <input type='number' id='b' name="b" />
+    <form>
+        <input type='number' id='a' name='a' />
+        <input type='number' id='b' name="b" />
+    </form>
     <button onclick="sumar('resultado')">Suma</button>
     <br>
-    <span id='resultado'>Resultado:</span>
+    <span id='resultado'>Resultado: </span>
 
     <table id='mitabla'></table>
 
+    <form>
+        <input type='text' id='empleado' name='empleado' />
+    </form>
+    <button onclick='agregarEmpleado()'>Agregar Empleado</button>
+    <button onclick='ordenarEmpleados()'>Ordenar Empleados</button>
 
     <script type="text/javascript" src="demo.js"></script>
 </body>
