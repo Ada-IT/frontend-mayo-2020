@@ -174,14 +174,14 @@ function ordenarEmpleados() {
         listaordenadaempleados = listaordenadaempleados + '<tr><td>' + item + '</tr></td>'; //lo guardo en la variable
         console.log('lista tabla: ' + listaordenadaempleados);
     });
-    cambiarTexto('mitabla', listaordenadaempleados);
+    cambiarTexto2('mitabla', listaordenadaempleados);
     return empleadosordenados;
 }
 
 function mostrarNuevoEmpleado(empleado) {
     listempleados = listempleados + '<tr><td>' + empleado + '</tr></td>';
     console.log('celdas: ' + listempleados); //debug
-    mitabla = cambiarTexto('mitabla', listempleados);
+    mitabla = cambiarTexto2('mitabla', listempleados);
     return empleado;
 }
 
@@ -199,23 +199,40 @@ function mostrarNuevoEmpleado(empleado) {
 //forEach con arrow function
 //colors.forEach(color => console.log(color))
 
-function verificoNombre(nombre) {
-    var Animal = nombre;
-    switch (Animal) {
-        case 'Vaca':
-            console.log('Esta Vaca subirá al Arca de Noé.');
+/**
+ * validar_documento: este método sirve para...
+ * @param {object} doc 
+ * @author
+ * @copyright
+ * @return number
+ */
+
+function validar_documento(doc) {
+    var tipo_doc = doc.value;
+    switch (tipo_doc) {
+        case 'dni':
+            cambiarTexto('doc_seleccionado', 'Usted seleccionó DNI');
+            console.log('DNI de nª caracteres: ' + tipo_doc.length);
             break;
-        case 'Jirafa':
-            console.log('Esta Jirafa subirá al Arca de Noé.');
+        case 'cuit':
+            var data = (document.getElementById('doc_seleccionado').innerHTML = 'Usted seleccionó CUIT');
+            console.log('cuit en mayúsculas: ' + tipo_doc.toUpperCase());
             break;
-        case 'Perro':
-            console.log('Este Perro subirá al Arca de Noé.');
-            break;
-        case 'Cerdo':
-            console.log('Este Cerdo subirá al Arca de Noé.');
+        case 'PASAPORTE':
+            alert('Usted seleccionó Pasaporte');
+            console.log('PASAPORTE en minúsculas: ' + tipo_doc.toLowerCase());
             break;
         default:
-            console.log('Este animal no lo hará.');
+            alert('Tipo de documento no válido. Seleccione otro.');
+            console.log('Tipo de docmento no válido.');
     }
 
 }
+
+function focused() {
+    document.getElementById('foco').style = 'Color: red';
+    //document.getElementById('foco').style = 'background-color: black';
+}
+
+
+
