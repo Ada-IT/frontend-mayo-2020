@@ -26,6 +26,11 @@ function cambiarWidthFijo() {
   var data = (document.getElementById("demo2").style.width = miwith);
 }
 
+/**
+ * cambiarTexto : este metodo sirve para...
+ * @param {string} elemento : esto es un id de elemento
+ * @param {string} mitexto  :  esto es el contenido nuevo
+ */
 function cambiarTexto(elemento, mitexto) {
   var data = (document.getElementById(elemento).innerHTML = mitexto);
 }
@@ -210,4 +215,40 @@ function verificoNombre(nombre) {
     default:
       console.log("Este animal no lo hará.");
   }
+}
+
+/**
+ * validar_documento : este metodo sirve para ...
+ * @param {object} doc
+ * @author
+ * @copyright
+ * @return number
+ */
+function validar_documento(doc) {
+  var tipo_doc = doc.value;
+  switch (tipo_doc) {
+    case "dni":
+      cambiarTexto("doc_seleccionado", "Usted selecciono dni");
+      console.log("DNI de n°. caracteres : " + tipo_doc.length);
+      break;
+    case "cuit":
+      var data = (document.getElementById("doc_seleccionado").innerHTML =
+        "Usted selecciono CUIT");
+      console.log("cuit en masyusculas : " + tipo_doc.toUpperCase());
+      break;
+    case "PASAPORTE":
+      alert("Usted selecciono Pasaporte");
+      console.log("PASAPORTE EN minusculas : " + tipo_doc.toLowerCase());
+      break;
+    default:
+      alert("Tipo de Documento no valido. Seleccione otro.");
+      console.log("Tipo de Documento no valido.");
+  }
+}
+/**
+ *
+ */
+function focused() {
+  document.getElementById("foco").style = "Color: red";
+  //document.getElementById("foco").style = "background-color: black";
 }
