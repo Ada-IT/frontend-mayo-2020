@@ -1,0 +1,49 @@
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+     Escribir un programa en el cual se ingresen cuatro números, calcular e informar la 
+    suma de los dos primeros y el producto del tercero y el cuarto.
+
+    -->
+
+</head>
+
+<body>
+    <script>
+        function sumar(a, b) {
+            return parseInt(a) + parseInt(b);
+        }
+
+        function multiplicar(a, b) {
+            return parseInt(a) * parseInt(b);
+        }
+        function br() {
+            document.write('<br>');
+        }
+        let n1 = window.prompt('Ingrese un número');
+        document.write('Su n1 es: ' + n1);
+        br();
+        let n2 = window.prompt('Ingrese un número');
+        document.write('Su n2 es: ' + n2);
+        let suman1yn2 = sumar(n1, n2);
+        br();
+        document.write('La suma de sus números es: ' + suman1yn2);
+        br();
+        let n3 = window.prompt('Ingrese un número');
+        document.write('Su n3 es: ' + n3);
+        br();
+        let n4 = window.prompt('Ingrese un número');
+        document.write('Su n4 es: ' + n4);
+        let multiplicaciónn3yn4 = multiplicar(n3, n4);
+        br();
+        document.write('La multiplicación de sus números es: ' + multiplicaciónn3yn4);
+    </script>
+</body>
+
+</html>
