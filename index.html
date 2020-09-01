@@ -1,95 +1,111 @@
 <!DOCTYPE html>
-<html lang="es">
+<html class="no-js" lang="es">
     <head>
-        <title>Mi sitio web</title>  
-        <link rel="stylesheet" type="text/css" href="ejemplos/css/main.css">
+        <meta charset="UTF-8"/>
+        <title></title>
+
     </head>
     <body>
-        <main>
-            <header>
-                <nav>
-                    <a href="https://www.facebook.com">Facebook</a>
-                    <a href="https://www.twitter.com" target="_blank">Twitter</a>
-                    <a href="https://www.outlook.com" target="_blank">Outlook live</a>
-                    <a href="#contenido">Contenido</a>
-                </nav>
-            </header>                        
-            <article>
-                <section id="contenido">                
-                    <h1>Mi website</h1>
-                    <div style="width: 50%;">
-                        <p>
-                            Lorem ipsum dolor sit amet, <span class="sarasa"  style="font-size: large;">consectetur </span> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.                     
-                        </p>
-                        <p>
-                            Texto sin formato.<br>
-                            <b>Texto en negrita.</b>
-                            <br>
-                            <i>Texto en Italic o cursiva</i>
-                            <br>
-                            <u>Texto subrayado</u><br>
-                            <strong>Texto en negrita</strong><br>
-                            <big>Texto Grande</big><br>
-                            <small>Texto pequeño</small><br>
-                            <del>Texto tachado</del>
-                        </p>                  
-                        <hr> 
-                        <blockquote>
-                            Esto es una cita
-                        </blockquote>
-                        <br>
-                    </div>
-                    <div>              
-                        <ul id="numeros">
-                            <li>
-                                <a href="https://www.facebook.com">Facebook</a>
-                            </li>
-                            <li>Texto 2</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </li>
-                            <li>4</li>
-                        </ul>
-                    </div> 
-                    <div>
-                        <iframe 
-                            width="560" 
-                            height="315" 
-                            src="https://www.youtube.com/embed/uh2lzuVk2SE"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-                        >
-                        </iframe>
-                    </div>
-                    <br>
-                    <div>
-                        <video 
-                            src="ejemplos/multimedia/video/file_example_OGG_480_1_7mg.ogg"
-                            type="video/ogg"
-                            controls
-                        >
-                            Tu navegador no implementa el elemento.
-                        </video>
-                    </div> 
-                    <br>
-                    <br>                    
-                    <div>
-                        <audio 
-                            src="ejemplos/multimedia/audio/file_example_OOG_1MG.ogg"
-                            type="audio/ogg"
-                            controls
-                        >
-                        </audio>
-                    </div>
-                    <div>
-                        <img
-                            src="ejemplos/img/file_example_JPG_100kB.jpg"
-                            width="50%"
-                            alt="mi notebook">
-                    </div>
-                </section>
-            </article>
-            <footer>
-                <div></div>
-            </footer>      
-        </main>      
+        <script>
+            //operadores aritmetricos
+            var suma = 2 + 2;
+            var miedad = 26;
+            var laedaddeotro = 22;
+            var resultado_de_edades = miedad + laedaddeotro;
+            console.log("resultado: " + suma);
+            console.log("resultado suma de edad: " + resultado_de_edades);
+            console.log("resultado suma de edad: " + (miedad + laedaddeotro));
+            //
+            var resultado2 = suma >= miedad;
+            console.log("resultado2 : " + resultado2);
+    
+            var resultado3 = resultado2 == false && miedad === 26;
+            console.log("resultado3 : " + resultado3);
+
+            var resultado4 = resultado2 == false || miedad === 26;
+            console.log("resultado 4 : " + resultado4);
+
+            console.log("resultado 4 de tipo : " + typeof resultado4);
+            console.log("resultado miedad de tipo : " + typeof miedad);
+
+            var nombre = "Sofia V.";
+            console.log("resultado miedad de tipo : " + typeof nombre);
+            var apellido = "Sanchez";
+
+            var nombrecompleto = nombre + " " + apellido;
+            console.log("resultado mi nombre completo: " + nombrecompleto); 
+            //tuUpperCase()  pone todo en mayusculas
+            console.log("resultado mi nombre completo: " + nombrecompleto.toUpperCase()
+            );
+            //toLowerCase() pone todo en minisculas
+            console.log("resultado mi nombre completo: " + nombrecompleto.toLowerCase()
+            );  
+            //saber largo de mi string  
+            console.log("resultado cantidad de caractres de nombre completo: " + nombrecompleto.length);
+            //obtener caracter especifico de nuestro string
+            console.log("resultado obtener letra de nombre completo: " + nombrecompleto.charAt(2)
+            );  
+            //string replace
+            console.log("resultado reemplazar string nombre completo: " + nombrecompleto.replace("V."," ")
+            ); 
+             //string replace
+             console.log("resultado reemplazar string nombre completo: " + nombrecompleto.replace("V.","Valentina")
+            );
+             //string repeat, solo acepta numeros enteros
+             console.log("resultado mi nombre completo: " + nombrecompleto.repeat (2)
+            );  
+            //match con expresion regular
+            cadena = "para mas infrormacion, vea Capítulo 3.4.5.1";
+            expresion = /(capítulo \d+(\.\d)*)/i;
+            hallado = cadena.match(expresion);
+            console.log(hallado[0]);
+            //resultado esperado 3.4.5.1
+
+            //substr(inicio[, longitud])
+            console.log("resultado de substring de nombre: " + nombre.substr(0 , 4));
+            // S o f i a
+            // 0 1 2 3 4
+            // S o f i
+
+            //split([separador][,limite])
+            var spliteado = nombrecompleto.split(" ");
+            console.log("resultado mi nombre completo spliteado:" + spliteado);
+            var minombre = spliteado [0];
+            var sdonombre = spliteado [1];
+            var apellido = spliteado [2];
+            alert(apellido); 
+            console.log("resultado mi nombre spliteado:" + minombre);
+            console.log("resultado mi sdo nombre spliteado:" + sdonombre);
+            console.log("resultado mi apellido spliteado:" + apellido);
+            //split 2
+            //datos que "producto,$150,descripcion,stock";
+            cadena2 = "celular,$11150,moto g 5,2";
+            var spliteado2 = cadena2.split(" ");
+            console.log("resultado mi nombre completo spliteado:" + spliteado);
+            var producto = spliteado2[0];
+            var precio = spliteado2[1];
+            var descripcion = spliteado2[2];
+            var stock = spliteado2[3];
+            console.log("resultado mi producto : " + producto);
+            console.log("resultado mi precio : " + precio);
+            console.log("resultado mi descripcion : " + descripcion);
+            console.log("resultado mi stock : " + stock); 
+            //como se definen las variables
+            let calle = "calle 1234";
+            var calles = "calle 1, calle 2";
+            lascalles = "calle 1 , calle 2 , calle 3";
+            //constantes
+            const miubicaion = "mi casa";
+            //una variable puede cambiar
+            console.log("resultado mi calle : " + calle);
+            calle = " mi nueva calle 1234 "
+            console.log("resultado mi calle : " + calle);
+            //una constante no cambia
+            console.log("resultado mi constante  : " + miubicaion);
+
+
+
+        </script>
+    
     </body>
 </html>
