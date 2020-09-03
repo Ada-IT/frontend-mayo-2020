@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 8</title>
+</head>
+
+
+<!--Se ingresan tres notas de un alumno, si el promedio es mayor o igual 
+        a seis mostrar el mensaje "aprobado" en caso de no supoerarlo mostrar mensaje de
+         "No aprobado".
+         Tener en cuenta que para obtener 
+         el promedio debemos operar suma=nota1+nota2+nota3; y luego hacer promedio=suma/3;        
+        Se debe verificar que las notas ingresadas sean numero.
+        Las notas solo pueden ser numeros del 1 al 10.
+        El resultado se debe redondear para mostrar solo numeros enteros(sin decimal).
+        https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/round
+-->
+
+<body onload="onInit()">
+  <script>
+    function onInit() {
+      askNotes();
+    }
+
+    function askNotes() {
+      let nota1 = +prompt('ingrese la 1er nota');
+      let nota2 = +prompt('ingrese la 2da nota');
+      let nota3 = +prompt('ingrese la 3er nota');
+
+      if (isNotesValid(nota1, nota2, nota3)) {
+        const promedio = (nota1 + nota2 + nota3) / 3;
+        const promedioRedondeado = Math.round(promedio);
+        handleFinalNote(promedioRedondeado);
+      } else {
+        alert('los datos son inválidos');
+        askNotes();
+      }
+    }
+
+    function handleFinalNote(notaFinal) {
+      if (notaFinal >= 6) {
+        alert('Promoción');
+      } else {
+        alert('Desaprobado');
+      }
+    }
+
+    function isNotesValid(nota1, nota2, nota3) {
+      //   return (typeof nota1 === 'number' && nota1 >= 0 && nota1 <= 10) && 
+      //   (typeof nota2 === 'number' && nota2 >= 0 && nota2 <= 10) && 
+      //   (typeof nota3 === 'number' && nota3 >= 0 && nota3 <= 10)
+
+      return noteCondition(nota1) && noteCondition(nota2) && noteCondition(nota3);
+    }
+
+    function noteCondition(nota) {
+      return typeof nota === 'number' && nota >= 0 && nota <= 10;
+    }
+  </script>
+</body>
+
+</html>
