@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Se ingresan tres notas de un alumno, si el promedio es mayor o igual 
+        a seis mostrar el mensaje "aprobado" en caso de no supoerarlo mostrar mensaje de
+         "No aprobado".
+         Tener en cuenta que para obtener
+         el promedio debemos operar suma=nota1+nota2+nota3; y luego hacer promedio=suma/3;        
+        Se debe verificar que las notas ingresadas sean numero.
+        Las notas solo pueden ser numeros del 1 al 10.
+        El resultado se debe redondear para mostrar solo numeros enteros(sin decimal).
+        -->
+</head>
+
+<body>
+    <script>
+
+
+        function promedio(a, b, c) {
+            var suma = parseInt(a) + parseInt(b) + parseInt(c);
+            var resultado = suma / 3;
+            return Math.round(resultado);
+        }
+        function br() {
+            document.write('<br>');
+        }
+
+        function validarNota(a) {
+            var resultado = true;
+            if (isNaN(a)) {
+                resultado = false;
+                alert('Ingrese un número')
+            }
+
+            if (resultado == true) {
+                if (a > 10 || a < 1) {
+                    alert('El número debe ser entre 1 y 10')
+                    resultado = false;
+                }
+            }
+            return resultado;
+        }
+
+        function pedirNota() {
+            let nota = window.prompt('Ingrese nota');
+            while (validarNota(nota) == false) {
+                nota = window.prompt('Ingrese una nota válida. Debe ser un número del 1 al 10');
+            }
+            return nota;
+        }
+
+        let nota1 = pedirNota();
+        let nota2 = pedirNota();
+        let nota3 = pedirNota();
+        document.write('Primer nota: ' + nota1);
+        br();
+        document.write('Segunda nota: ' + nota2);
+        br()
+        document.write('Tercer nota: ' + nota3);
+        br();
+        let resultado = promedio(nota1, nota2, nota3);
+        document.write('Promedio: ' + resultado);
+        br();
+
+        if (resultado >= 6) {
+
+            document.write('Aprobado');
+        } else {
+
+            document.write('Desaprobado');
+        }
+
+
+
+    </script>
+</body>
+
+</html>
