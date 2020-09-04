@@ -19,35 +19,37 @@
   </head>
   <body>
     <script>
-       nota1 = parseInt(prompt(nota_1)); //8
-       nota2 = parseInt(prompt(nota_2));
-       nota3 = parseInt(prompt(nota_3));
+       let nota1 = parseInt(prompt("nota primer trimestre")); //8
+       let nota2 = parseInt(prompt("ntoa segundo trimestre"));
+       let nota3 = parseInt(prompt("nota tercertrimestre"));
 
-      function suma (nota1,nota2,nota3,nota4){
+      function suma (nota1,nota2,nota3){
         total =  parseInt(nota1)+ parseInt(nota2) + parseInt(nota3);
         return total;
        }
 
        function promedio(nota1,nota2,nota3){
-         notafinal =  (nota1+nota2+nota3)/3;
+         notafinal =  suma(nota1,nota2,nota3)/3;
          return notafinal;
        }
 
        function validarNota(nota){
-         if (nota >=1 && nota<=10){
+         if ((nota >=1) && (nota<=10)){
            return  true;
          }
          else {
            return false;
          }
        }
-
-       if validarNota(nota1) && validarNota(nota2)&& validarNota3(nota3){
-
+       function aprobado(nota){
+        if (nota>=6 && validarNota(nota)){
+          return true
+        }
+        else {
+          return false
+        }         
        }
-       else {
-
-       }
+       
     </script>
   </body>
 </html>
