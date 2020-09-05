@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+    <head><meta charset="utf-8" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <!--Un usuario debe ingresar su nombre de usuario y ademas su clave(2 veces).       
+                Mostrar un mensaje si los datos son correctos y las claves son iguales.       
+                Se debe validar el tipo de dato ingresado en su nombre.        
+                Se debe validar que el nombre de usuario no puede ser menor a 4 caracteres 
+                ni mayor a 8 caracteres.        Se debe validar que ambas claves sean iguales. -->
+            
+    </head>
+        
+    <body onload="nuevoContenido();">
+        <script>
+
+           function nuevoContenido() {
+                let nombreDeUsuario = prompt("Ingresar nombre de usuario");
+                let clave1 = prompt("Ingresa tu clave"); // O se puede usar +prompt("Ingresa tu segundo número");
+                let clave2 = prompt("Reingresa tu clave");
+                let largoDeNombre = nombreDeUsuario.length;
+
+                document.open();
+                document.write("<h3> Nombre de Usuario: "+nombreDeUsuario+"</h3>");
+                document.write("<h3> Longitud de Nombre de usuario: "+largoDeNombre+"</h3>");
+                if (largoDeNombre>=4 && largoDeNombre<=8){
+                    document.write("<h3> Longitud de nombre de usuario válida. </h3>");    
+                }
+                else{            
+                    document.write("<h3> Longitud de nombre de usuario inválida. </h3>");
+                }
+                if (clave1==clave2){
+                    document.write("<h3> Tu clave es válida. </h3>");    
+                }
+                else{            
+                    document.write("<h3> Tu clave es inválida (no coincide). </h3>");
+                }
+                document.close();
+             }
+
+        </script>
+         
+    </body>
+    
+</html> 

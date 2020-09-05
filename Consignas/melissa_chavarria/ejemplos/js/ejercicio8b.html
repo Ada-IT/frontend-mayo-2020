@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+    <head><meta charset="utf-8" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <!--Se ingresan tres notas de un alumno, si el promedio es mayor o igual 
+                a seis mostrar el mensaje "aprobado" en caso de no superarlo mostrar 
+                mensaje de "No aprobado".  Tener en cuenta que para obtener 
+                el promedio debemos operar suma=nota1+nota2+nota3; y luego hacer 
+                promedio=suma/3;               
+                Se debe verificar que las notas ingresadas sean numero.
+                Las notas solo pueden ser numeros del 1 al 10.
+                El resultado se debe redondear para mostrar solo numeros enteros(sin decimal).-->
+            
+    </head>
+        
+    <body onload="nuevoContenido();">
+        <script>
+
+           function nuevoContenido() {
+                let nota1 = Number(prompt("Ingresar nota del alumno"));
+                let nota2 = Number(prompt("Ingresar nota del alumno")); // O se puede usar +prompt("Ingresa tu segundo número");
+                let nota3 = Number(prompt("Ingresar nota del alumno"));
+   
+                if (nota1>=1 && nota1<=10 && nota2>=1 && nota2<=10 && nota3>=1 && nota3<=10){
+                    let suma = nota1 + nota2 + nota3;
+                    let promedio = suma / 3;
+                    let promedioRedondeado = Math.round(promedio);
+                    let mostrarPromedio = true;
+                } 
+                else {
+                    document.write("<h3> Datos incorrectos. </h3>");
+                    let mostrarPromedio = false;
+                }
+
+                if (promedio>=6 && mostrarPromedio){
+                        document.write("<h3> Promocionado.</h3>");
+                        document.write("<h3> Promedio: " + promedio+ "</h3>");
+                        document.write("<h3> Promedio Redondeado: " + promedioRedondeado+ "</h3>");
+                    }
+                else if (promedio<=6 && !mostrarPromedio){            
+                        document.write("<h3> No promocionado.</h3>");
+                        document.write("<h3> Promedio: " + promedio+ "</h3>");
+                        document.write("<h3> Promedio Redondeado: " + promedioRedondeado+ "</h3>");
+                }
+
+             }
+
+        </script>
+         
+    </body>
+    
+</html> 
