@@ -44,7 +44,9 @@
             <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
             <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
           </ol>
+          <!-- aca es donde integramos js para cargar los sliders-->
           <div id="micarousel" class="carousel-inner"></div>
+
           <a class="carousel-control-prev"  href="#carouselExampleCaptions"  role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -63,7 +65,7 @@
           2: [ "Producto 2",  "Detalle 2",  "$500",  "../../img/galeria_de_fotos/arandanos.jpeg"],
           3: [ "Producto 3",  "Detalle 3",  "$900",  "../../img/galeria_de_fotos/arandanos.jpeg"],
           //     col 0         col 1         col 2       col  3
-          //filas
+          //filas(key)
         };
         let carousel = "";
         /// recuerden que  key--> 1 (elemento del objeto):  y   value(nuestro array de datos) --> ["Producto 1", "Detalle 1", "$300"] 
