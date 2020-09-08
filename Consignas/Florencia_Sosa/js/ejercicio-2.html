@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2</title>
+</head>
+<!--
+    Confeccionar un programa en JavaScript que defina e inicialice 
+    una variable de tipo cadena de caracteres donde almacenemos el
+    nombre de un empleado y otra variable de tipo entera donde almacenar el sueldo.
+    Imprimir cada variable en una línea distinta en pantalla.
+    Es decir debemos usar: document.write('')
+    -->
+
+<body onload="empleado();">
+  <script>
+    function empleado() {
+      let nombreDeEmpleado = 'Maria';
+      let sueldo = 25.000;
+      document.open();
+      document.write("<h2> Nombre de empleado</h2>" + nombreDeEmpleado);
+      document.write("<h2> Sueldo:</h2>" + sueldo);
+      document.close();
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<!--Un usuario debe ingresar su nombre de usuario y ademas su clave(2 veces).
+      Mostrar un mensaje si los datos son correctos y las claves son iguales.
+      Se debe validar el tipo de dato ingresado en su nombre. 
+      Se debe validar que el nombre de usuario no puede ser menor a 4 caracteres ni mayor a 8 caracteres. 
+      Se debe validar que ambas claves sean iguales. -->
+
+<body onload="login()">
+  <script>
+    function login() {
+      let user = prompt("Ingrese usuario");
+      let pass = prompt("Ingrese su clave");
+      let pass2 = prompt("Reingrese su clave para confirmar");
+      if (typeof user === "string" && user.length >= 4 && user.length <= 8 && pass == pass2) {
+        alert('Ya puede iniciar sesion');
+      } else {
+        alert("Sus datos son incorrectos")
+      }
+    }
+    
+  </script>
+
+</body>
+
+</html>
