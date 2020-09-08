@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!--  Realizar Ejercicio 11: Diseñar un objeto que contenga un array que contenga datos personales (nombre, apellido, fecha de nacimiento, telefono, localidad, direccion)
+donde deberan estar separados en 2 arrays
+datos_personal (nombre,apellido, fecha_nacimiento, telefono) y datos_ubicacion (direccion, localidad)
+ojb = {
+1: array de datos(datos_personales[nombre,apellido,fecha_nacimiento,telefno],datos_de_ubicacion[direccion,localidad])
+}
+el objeto tendra 4 items
+dos items del objeto contienen una misma localidad
+Se deben diseñar una web con una funcion que muestre solo los items que tienen la misma localidad.(filtrar localidad) (es valido definir la localidad a filtrar como parametro o variable)
+Se deben mostrar en una tabla.
+
+        -->
+
+</head>
+
+<body>
+    <h2 class="text-center mt-5">Datos a procesar.</h2>
+    <hr>
+    <table class="table table-hover table-dark mt-5 text-center">
+        <caption class=" mx-2">Lista de usuarios</caption>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Fecha de Nacimiento</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">localidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Ana</td>
+                <td>Ramírez</td>
+                <td>20-04-92</td>
+                <td>11-2222-3333</td>
+                <td>Independencia 50</td>
+                <td>Esquel</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Juan</td>
+                <td>Pérez</td>
+                <td>13-05-78</td>
+                <td>11-4444-5555</td>
+                <td>Machado 2500</td>
+                <td>Calingasta</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Mariano</td>
+                <td>Vázquez</td>
+                <td>20-10-89</td>
+                <td>11-6666-7777</td>
+                <td>Las Heras 1250</td>
+                <td>C.A.B.A.</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Gala</td>
+                <td>Suarez</td>
+                <td>20-10-89</td>
+                <td>11-8888-9999</td>
+                <td>Uruguay 475</td>
+                <td>C.A.B.A.</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <button onclick='filtrarTabla("C.A.B.A.")' type="button" class="btn btn-info mt-5 mx-2">Filtrar tabla</button>
+    <br>
+    <br>
+
+    <script>
+
+        let data = {
+            1: [["Ana", "Ramirez", "20-04-92", "11-2222-3333"], ["Independencia 50", "Esquel"]],
+            2: [["Juan", "Pérez", "13-05-78", "11-4444-5555"], ["Machado 2500", "Calingasta"]],
+            3: [["Mariano", "Vázquez", "20-10-89", "11-6666-7777"], ["Las Heras 1250", "C.A.B.A."]],
+            4: [["Gala", "Suarez", "17-04-96", "11-8888-9999"], ["Uruguay 475", "C.A.B.A."]]
+        }
+
+
+        let dataFiltrada = {
+
+        };
+
+        function filtrarTabla(localidad) {
+            let propiedad = 1
+            Object.entries(data).forEach(([key, value]) => {
+
+                if (localidad === value[1][1]) {
+                    dataFiltrada[propiedad] = value
+
+                    propiedad = propiedad + 1
+                }
+
+            });
+
+            console.log(dataFiltrada);
+
+        }
+
+        document.body.onclick = addElement;
+
+        function addElement(dataFiltrada) {
+            var table = document.createElement("table");
+            for (var i = 1; i < 3; i++) {
+                var th = document.createElement("th");
+                var tr = document.createElement("tr");
+
+                var td1 = document.createElement("td");
+                var td2 = document.createElement("td");
+
+                var text1 = document.createTextNode("Text1");
+                var text2 = document.createTextNode("Text2");
+
+                td1.appendChild(text1);
+                td2.appendChild(text2);
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(th);
+                table.appendChild(tr);
+            }
+            document.body.appendChild(table);
+        }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Dado el objeto tendremos que crear un sitio web
+        con 6 cards con imagenes diferentes y se veran en filas de 2.
+        Cada fila de cards deberá contar con 1 efecto sombra
+        Cada fila de cards deberá tener al menos un efecto extra diferente.
+        Modificar el objeto con imagenes y textos alternativos.
+-->
+
+</head>
+<style>
+    .rotateleft-6g {
+        transform: rotate(-6deg);
+        ;
+        -webkit-transform: rotate(-6deg);
+        -moz-transform: rotate(-6deg);
+    }
+
+    .opacity {
+        -webkit-filter: opacity(80%);
+        filter: opacity(80%);
+    }
+
+
+    .rotateright-6g {
+        transform: rotate(6deg);
+        ;
+        -webkit-transform: rotate(6deg);
+        -moz-transform: rotate(6deg);
+    }
+
+    .opacity:hover {
+
+        box-shadow: 1px 1px 100px black;
+        transform: scale(1.3);
+        z-index: 10;
+    }
+</style>
+
+<body onload="mostrarCards()">
+
+    <div class="container">
+
+        <div id="miCard" class="row d-flex justify-content-center">
+        </div>
+
+    </div>
+
+    <script>
+
+        function mostrarCards() {
+            let objeto = {
+                1: ["Producto 1", "Detalle 1", "./img/bench-560435_1920.jpg"],
+                2: ["Producto 2", "Detalle 2", "./img/bird-1045954_1920.jpg"],
+                3: ["Producto 3", "Detalle 3", "./img/bird-4498326_1920.jpg"],
+                4: ["Producto 4", "Detalle 4", "./img/birds-5035164_1920.jpg"],
+                5: ["Producto 5", "Detalle 5", "./img/butterfly-4884620_1920.jpg"],
+                6: ["Producto 6", "Detalle 6", "./img/kingfisher-1905255_1920.jpg"],
+            };
+
+            let cards = "";
+
+            Object.entries(objeto).forEach(([key, value]) => {
+                let efecto;
+                if (key == "1" || key == "2") {
+                    efecto = "border-success rotateleft-6g ";
+                }
+                if (key == "3" || key == "4") {
+                    efecto = "border-primary rotateright-6g ";
+                }
+                if (key == "5" || key == "6") {
+                    efecto = "border-warning opacity";
+                }
+
+                cards = cards + `<div class="card col-md-4 col-lg-4 shadow m-4 ` + efecto + `">
+                        <img src="`+ value[2] + `" class="card-img-top pt-3" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">`+ value[0] + `</h5>
+                            <p class="card-text">`+ value[1] + `</p>                            
+                        </div>
+                    </div>`;
+                console.log(objeto);
+
+            });
+            console.log(cards); // obtengo un item  por cada vuelta  ej "Producto 1"
+            //cambiamos en contenido de las cards
+            cambiarContenido("miCard", cards);
+
+
+        }
+        function cambiarContenido(elemento, contenido) {
+            var data = (document.getElementById(elemento).innerHTML = contenido);
+        }
+
+
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
