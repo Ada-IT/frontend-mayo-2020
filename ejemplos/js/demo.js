@@ -141,10 +141,17 @@ let objeto = {
   2: ["Juan", "Perez", "37"],
 };
 
+let objeto2 = {
+  1: 'mi nombre',
+  2: '38',
+};
+
 let emp = [];
 emp[0] = "Casey Jones";
 emp[1] = "Phil Lesh";
 emp[2] = "August West";
+//emp[3] = ["Maxi", "sorribas", "38"]
+//emp[3][0]  = Maxi 
 
 let empl = [];
 let listempleados = "";
