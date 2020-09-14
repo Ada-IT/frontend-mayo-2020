@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--
+    Escribir un programa en el cual se ingresen cuatro números, calcular e informar la 
+    suma de los dos primeros y el producto del tercero y el cuarto.
+    -->
+</head>
+
+<body onload="operar();">
+
+  <script>
+    function operar() {
+      const numero1 = +prompt("ingresar un numero");
+      const numero2 = +prompt("ingresar un numero");
+      const numero3 = +prompt("ingresar un numero");
+      const numero4 = +prompt("ingresar un numero");
+      const obtenerSuma = numero1 + numero2;
+      const obtenerProducto = numero3 * numero4;
+     
+      document.open();
+      document.write("<p>La suma de los dos primeros numeros es: </p>" + obtenerSuma);
+      document.write("<p> El producto de los dos ultimos productos es:</p>" + obtenerProducto);
+      document.close();
+    }
+  </script>
+
+
+
+
+  //
+  <!-- <script>
+  //   let numeros = [];
+  //   let resultadoSuma;
+  //   let resultadoMultiplicacion;
+  //   let sumaTotal = 0;
+  //   let promedio;
+
+  //   function onInit() {
+  //     setUserPrompt();
+  //     genericOperations();
+  //     writeDocument();
+  //   }
+
+  //   function genericOperations() {
+  //     resultadoSuma = numeros[0] + numeros[1];
+  //     resultadoMultiplicacion = numeros[2] * numeros[3];
+  //     // for (let index = 0; index < 4; index++) {
+  //     //   sumaTotal += numeros[index];
+  //     // }
+  //     sumaTotal = numeros.reduce((prev, current) => prev + current);
+  //     promedio = sumaTotal / numeros.length;
+  //   }
+
+  //   function setUserPrompt() {
+  //     for (let index = 0; index < 4; index++) {
+  //       numeros.push(+prompt("Ingrese un número"));
+  //     }
+  //   }
+
+  //   function writeDocument() {
+  //     document.write("<p> La suma de los dos primeros digitos es: </p>" + resultadoSuma);
+  //     document.write("<p> El producto de los dos ultimos digitos es: </p>" + resultadoMultiplicacion);
+  //     document.write("<p> La suma total de todos los números es: </p>" + sumaTotal);
+  //     document.write("<p> El promedio es: </p>" + promedio);
+  //   }
+  // </script> -->
+
+
+</body>
+
+</html>

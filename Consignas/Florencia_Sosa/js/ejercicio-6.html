@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 6</title>
+  <!-- Se ingresan tres notas de un alumno, si el promedio es mayor o igual 
+        a siete mostrar el mensaje ‘Promocionado’. Tener en cuenta que para obtener 
+        el promedio debemos operar suma=nota1+nota2+nota3; y luego hacer promedio=suma/3; --->
+
+</head>
+
+<body onload="notas()">
+  <script>
+    function notas() {
+      let nota1 = +prompt("Ingresar la primer nota");
+      let nota2 = +prompt("Ingresar la segunda nota");
+      let nota3 = +prompt("Ingresar la tercer nota");
+      let promedio = (nota1 + nota2 + nota3)/3;
+
+      if (promedio >= 7) {
+        alert('Promocion ' + promedio);
+      } else {
+        alert('No logrado, tu promedio es: ' + promedio)
+      }
+
+    }
+  </script>
+
+</body>
+
+</html>
