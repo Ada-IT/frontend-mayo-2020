@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+    <head><meta charset="utf-8" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <!--Escribir un programa en el cual se ingresen 
+            cuatro números, calcular e informar la suma de los dos primeros y el producto 
+            del tercero y el cuarto.-->
+            
+    </head>
+        
+    <body onload="nuevoContenido();">
+        <script>
+
+           function nuevoContenido() {
+                let nota1 = Number(prompt("Ingresar nota del alumno"));
+                let nota2 = Number(prompt("Ingresar nota del alumno")); // O se puede usar +prompt("Ingresa tu segundo número");
+                let nota3 = Number(prompt("Ingresar nota del alumno"));
+                let suma = nota1 + nota2 + nota3;
+                let promedio = suma / 3;
+
+                document.open();
+                if (promedio>=7){
+                    document.write("<h3> Promocionado: " + promedio + "</h3>");
+                }
+                else{            
+                    document.write("<h3> No promocionado: " + promedio + "</h3>");
+
+                }
+                document.close();
+             }
+
+        </script>
+         
+    </body>
+    
+</html> 

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      //operadores aritmeticos
+      var suma = 2 + 2;
+      var miedad = 38;
+      var laedaddeotro = 22;
+      var resultado_de_suma_edades = miedad + laedaddeotro;
+      var resultado_de_resta_edades = miedad - laedaddeotro;
+      var resultado_de__multiplicacion_edades = miedad * laedaddeotro;
+      var resultado_de_division_edades = miedad / laedaddeotro;
+      console.log("resultado suma de edad: " + resultado_de_suma_edades);
+      console.log("resultado resta de edad: " + resultado_de_resta_edades);
+      console.log(
+        "resultado multiplicacion de edad: " +
+          resultado_de__multiplicacion_edades
+      );
+      console.log(
+        "resultado division de edad: " + resultado_de_division_edades
+      );
+      console.log("resultado: " + suma);
+      console.log("resultado suma de edad: " + (miedad + laedaddeotro));
+      //
+      var resultado2 = suma >= miedad;
+      console.log("griselda resultado2 : " + resultado2);
+
+      var resultado3 = resultado2 == false && miedad === 38;
+      console.log("resultado3 : " + resultado3);
+
+      var resultado4 = resultado2 == false || miedad === 38;
+      console.log("resultado  4 : " + resultado4);
+
+      console.log("resultado  4 de tipo: " + typeof resultado4);
+      console.log("resultado  miedad de tipo: " + typeof miedad);
+      var nombre = "Maximiliano J.";
+      console.log("resultado  mi nombre de tipo: " + typeof nombre);
+      var apellido = "Sorribas";
+
+      var nombrecompleto = nombre + " " + apellido;
+      console.log("resultado  mi nombre completo: " + nombrecompleto);
+      // toUpperCase() pone todo el string en mayusculas
+      console.log(
+        "resultado  mi nombre completo: " + nombrecompleto.toUpperCase()
+      );
+      // toLowerCase() pone todo el string en minusculas
+      console.log(
+        "resultado  mi nombre completo: " + nombrecompleto.toLowerCase()
+      );
+      // saber largo de mi string
+      console.log(
+        "resultado  cantidad de caracteres de nombre completo: " +
+          nombrecompleto.length
+      );
+      //  obtener caracter especifico de  mi string
+      console.log(
+        "resultado  obtener letra de  de nombre completo: " +
+          nombrecompleto.charAt(0)
+      );
+      // string replace
+      console.log(
+        "resultado reemplazar string nombre completo: " +
+          nombrecompleto.replace("J.", "")
+      );
+      console.log(
+        "resultado  reemplazar string nombre completo: " +
+          nombrecompleto.replace("J.", "José")
+      );
+      // string repeat, solo acepta numeros enteros
+      console.log("resultado  repeat  de nombre: " + nombre.repeat(2));
+
+      // match con expresion regular
+      cadena = "Para más información, vea Capítulo 3.4.5.1";
+      expresion = /(capítulo \d+(\.\d)*)/i;
+      hallado = cadena.match(expresion);
+      console.log(hallado[0]);
+      // resultado esperado  : Capítulo 3.4.5.1
+
+      //substr(inicio[, longitud])
+      console.log("resultado  de substring  de nombre: " + nombre.substr(0, 3));
+      // M a x i m i l i a n o
+      // 0 1 2 3 4 5 6 7 8 9 10
+      // M a x (0,3)
+
+      //split([separador][,limite])
+      var spliteado = nombrecompleto.split(" ");
+      console.log("resultado  mi nombre completo spliteado: " + spliteado);
+      var minombre = spliteado[0];
+      var sdonombre = spliteado[1];
+      var apellido = spliteado[1] + " " + spliteado[2];
+      console.log("resultado  mi nombre spliteado: " + minombre);
+      console.log("resultado  mi segundo  nombre spliteado: " + sdonombre);
+      console.log("resultado  mi apellido spliteado: " + apellido);
+      // split 2
+      // datos que  viene producto,precio,descripcion,stock";
+      cadena2 = "celular,$11150,moto g 5,2";
+      var spliteado2 = cadena2.split(",");
+      var producto = spliteado2[0];
+      var precio = spliteado2[1];
+      var descripcion = spliteado2[2];
+      var stock = spliteado2[3];
+      console.log("resultado  mi producto : " + producto);
+      console.log("resultado  mi precio  : " + precio);
+      console.log("resultado  mi descripcion : " + descripcion);
+      console.log("resultado  mi stock : " + stock);
+      // como se definen las variables
+      let calle = "calle 1234";
+      var calles = "calle 1, calle 2";
+      lascalles = "calle 1, calle 2, calle 3";
+      // constantes
+      const miubicacion = "mi casa";
+      // una variable puede cambiar
+      console.log("resultado  mi calle : " + calle);
+      calle = "mi nueva calle 1234";
+      console.log("resultado  mi calle : " + calle);
+      // una constante no cambia
+      console.log("resultado  mi constante : " + miubicacion);
+    </script>
+  </body>
+</html>

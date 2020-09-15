@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+        crossorigin="anonymous"
+      />
+      <!-- 
+          Dado el objeto tendremos que crear un sitio web 
+          con 6 cards con imagenes diferentes y se veran en filas de 2. 
+          Cada fila de cards deberá contar con 1 efecto de sombra
+          Cada fila de cards deberá tener al menos un efecto extra diferente.
+          Modificar el objeto con imagenes y textos alternativos.
+        -->
+    </head>
+    <body>
+    <!-- Add your site or application content here -->
+    <div class="container">
+        <!-- Content here -->
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>        
+      </div>
+
+    <!-- -->
+    <script>
+         let objeto = {
+          1: [ "Producto 1",  "Detalle 1",  "../../img/galeria_de_fotos/arandanos.jpeg"],
+          2: [ "Producto 2",  "Detalle 2",  "../../img/galeria_de_fotos/arandanos.jpeg"],
+          3: [ "Producto 3",  "Detalle 3",  "../../img/galeria_de_fotos/arandanos.jpeg"],
+          4: [ "Producto 3",  "Detalle 3",  "../../img/galeria_de_fotos/arandanos.jpeg"],
+          5: [ "Producto 3",  "Detalle 3",  "../../img/galeria_de_fotos/arandanos.jpeg"],
+        };
+        function mostrarCards(){
+            productos.forEach((producto) => {
+                cards =
+                cards +
+                `<div class="card" style="width: 18rem">
+                    <div class="card-body">
+                        <p class="card-text">` + producto + `</p>
+                    </div>
+                </div>`;
+                console.log(producto);
+            });
+        console.log(cards); // mostramos en la consola nuestra variable para ver si esta bien lo que hicimos.
+        cambiarContenido("productos", cards);    
+         }        
+    </script>
+            <!-- Esto es de bootstrap 4.x-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>            
+    </body>
+</html>

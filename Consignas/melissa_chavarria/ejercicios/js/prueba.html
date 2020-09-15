@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+            var i = 0;
+            var max = 0;
+            var a = 0;
+
+            var n = Number(prompt("Inserta la cantidad de números a comparar:"));
+            
+            for (i = 0; i < n; i++) {
+                a = Number(prompt("Inserta un número:"));
+                if (a > max){
+                    max = a;
+                }
+            }
+
+            console.log(max);
+
+        </script>
+    
+    </body>
+</html>
