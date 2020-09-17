@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- 
+       Realizar Ejercicio 11: Diseñar  un objeto que contenga un array que contenga datos personales 
+       (nombre, apellido, fecha de nacimiento, telefono, localidad, direccion)
+        donde deberan estar separados en 2 arrays
+        datos_personal (nombre,apellido, fecha_nacimiento, telefono) 
+        y datos_ubicacion (direccion, localidad)
+        ojb = {
+            1: array de datos(datos_personales[nombre,apellido,fecha_nacimiento,telefno],datos_de_ubicacion[direccion,localidad])
+        }
+        el objeto tendra 4 items  SI
+        dos items del objeto contienen una misma localidad  SI
+        Se deben diseñar una web con una funcion que muestre  
+        solo los items que tienen la misma localidad.(filtrar localidad)
+         (es valido definir la localidad a filtrar como parametro o variable) SI
+        Se deben mostrar en una tabla. 
+    -->
+
+
+</head>
+
+<body>
+    <form action="">
+        <label for="">Bucador</label>
+        <input type="text" id="x">
+        <button onclick="mostrarDatos()">Buscar</button>
+    </form>
+    <table id="datos">
+    </table>
+
+    <script>
+
+
+        function mostrarDatos() {
+            let datosPersonales = {
+                //value                       0                                        1
+                //           0        1           2              3             0           1
+                1: [['maria', 'lopez', '12/02/1997', '1178345656'], ['santa fe 3479', 'palermo']],
+                2: [['daniel', 'arens', '28/11/1989', '1138948756'], ['montevideo 456', 'tribunales']],
+                3: [['javier', 'centeno', '12/04/1990', '114567893'], ['sarmiento 1518', 'san nicolas']],
+                4: [['luna', 'sanchez', '31/01/1998', '1173847632'], ['elcano 3256', 'palermo']],
+            };
+
+            let busqueda = obtenerDatosForm('x');
+            
+            borrado = document.getElementById('datos').innerHTML = '';
+            
+            cabecera = '<tr><td>nombre</td><td>apellido</td><td>fecha de nacimiento</td><td>telefono</td><td>direccion</td><td>localidad</td></tr>'
+            
+            agregarContenido('datos',cabecera);
+
+            Object.entries(datosPersonales).forEach(([key, value]) => {
+                //console.log('objeto  '+ value);
+                if (busqueda == value[0][0] || busqueda == value[0][1] || busqueda == value[0][2] || busqueda == value[0][3] || busqueda == value[1][0] || busqueda == value[1][1]) {
+                    tabla = '<tr><td>' + value[0][0] + '</td><td>' + value[0][1] + '</td><td>' + value[0][2] + '</td><td>' + value[0][3] + '</td><td>' + value[1][0] + '</td><td>' + value[1][1] + '</td></tr>';
+                    console.log('entre al if y agrego contenido de  '+ value[1][1]);
+                    agregarContenido('datos', tabla);
+                } else{
+                    console.log('no entre al if');
+                }
+            });
+        }
+        function agregarContenido(elemento, contenido){
+            update_content= document.getElementById(elemento).insertAdjacentHTML('beforeend',contenido);
+        }
+
+        function obtenerDatosForm(elemento) {
+            var data = document.getElementById(elemento).value;
+            return data;
+        }
+
+        function filtrar_localidad(data, localidad){
+            if( data  == localidad) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }   
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

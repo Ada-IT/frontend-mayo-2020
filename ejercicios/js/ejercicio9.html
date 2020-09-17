@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="mostrarProductos()"
+        >
+          Obtener Información
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="mostrarSliderProductoDetalle()"
+        >
+          Obtener Información
+        </button>
+
+        <div id="productos"></div>
+
+        <!-- Content here -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div id="carouselExampleCaptions"  class="carousel slide"  data-ride="carousel" >
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions"   data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          </ol>
+          <!-- aca es donde integramos js para cargar los sliders-->
+          <div id="micarousel" class="carousel-inner"></div>
+
+          <a class="carousel-control-prev"  href="#carouselExampleCaptions"  role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a  class="carousel-control-next"   href="#carouselExampleCaptions"  role="button"  data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      function mostrarSliderProductoDetalle() {
+        let objeto = {
+          1: [ "Producto 1",  "Detalle 1",  "$300",  "../../img/galeria_de_fotos/arandanos.jpeg"],
+          2: [ "Producto 2",  "Detalle 2",  "$500",  "../../img/galeria_de_fotos/arandanos.jpeg"],
+          3: [ "Producto 3",  "Detalle 3",  "$900",  "../../img/galeria_de_fotos/arandanos.jpeg"],
+          //     col 0         col 1         col 2       col  3
+          //filas(key)
+        };
+        let carousel = "";
+        /// recuerden que  key--> 1 (elemento del objeto):  y   value(nuestro array de datos) --> ["Producto 1", "Detalle 1", "$300"] 
+        Object.entries(objeto).forEach(([key, value]) => {
+          //console.log(key + " " + value); // 1 ....["Producto 1", "Detalle 1", "$300"]
+                                           // value  //    0           1           2  //
+          
+          //como es un slider deberemos definir en que elemento (carousel-item )aparecerá la clase active
+          let active;
+          if (key == "1") {
+            console.log("entre en key");
+            active = "active";
+          }
+          //actualizamos nuestra variable carousel cada vez que ingrese al bucle
+          carousel = carousel + `<div class="carousel-item ` +  active + ` ">
+                                  <img src="` + value[3] + `" class="d-block w-100" alt="..." />
+                                  <div class="carousel-caption d-none d-md-block">
+                                    <h5>` + value[0] + `</h5>
+                                    <p>` + value[1] + `</p>
+                                    <p>` + value[2] + `</p>
+                                  </div>
+                                </div>`;
+          // com value es un array accederemos directamente a la posición de los elementos
+        });
+        //console.log(carousel); // obtengo un item  por cada vuelta  ej "Producto 1"
+        //cambiamos en contenido del carousel
+        cambiarContenido("micarousel", carousel);
+      }
+
+      function mostrarProductos() {
+        let productos = ["Producto 1", "Producto 2", "Producto 3"]; //array de datos
+        let cards = ""; // variable de html generado
+        productos.forEach((producto) => {
+          cards =
+            cards +
+            `<div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <p class="card-text">` + producto + `</p>
+                </div>
+            </div>`;
+          console.log(producto);
+        });
+        console.log(cards); // mostramos en la consola nuestra variable para ver si esta bien lo que hicimos.
+        cambiarContenido("productos", cards); //aca llamo a otra funcion
+      }
+      /**
+       * funcion para Cambiar contenido
+       */
+      function cambiarContenido(elemento, contenido) {
+        var data = (document.getElementById(elemento).innerHTML = contenido);
+      }
+    </script>
+    <!-- Esto es de bootstrap 4.x-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

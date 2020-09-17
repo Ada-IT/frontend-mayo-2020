@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="demo.js"></script>
+  </head>
+  <body>
+    <button id="btn1" onclick="alerta('hola')">Clickeame</button>
+    <button onclick="alerta('chau')">Clickeame</button>
+    <button id="btn3" onclick="cambiarTexto('demo2','texto 1')">
+      Cambiar Texto
+    </button>
+    <button onclick="obtenerContenido('demo2')">Mostrar Contenido</button>
+    <button onclick="obtenerContenido2('demo2','mi texto fruta')">
+      Mostrar Contenido Condicional
+    </button>
+
+    <div id="demo" style="width: 30%; height: 100px">
+      <button onclick="cambiarColor('red')">Cambiar Color a Rojo</button>
+      <button onclick="cambiarColor('blue')">Cambiar Color a Azul</button>
+    </div>
+    <div id="demo2" style="width: 30%; height: 100px">
+      Using templates<br />
+      To use templates we need to tell our generator where to look for them.
+    </div>
+    <form>
+      <input type="number" id="a" name="a" />
+      <input type="number" id="b" name="b" />
+    </form>
+    <button onclick="sumar('resultado')">Suma</button>
+    <br />
+    <span id="resultado">Resultado: </span>
+
+    <table id="mitabla"></table>
+
+    <form>
+      <input type="text" id="empleado" name="empleado" />
+    </form>
+    <button onclick="agregarEmpleado()">Agregar Empleado</button>
+    <button onclick="ordenarEmpleados()">Ordenar Empleado</button>
+    <br />
+    <select id="documento" onchange="validar_documento(this)">
+      <option otracosa="dsdsdsdsd" value="dni">dni</option>
+      <option value="cuit">cuit</option>
+      <option value="PASAPORTE">pasaporte</option>
+      <option value="ci">ci</option>
+    </select>
+    <span id="doc_seleccionado"></span>
+    <form>
+      <input type="text" id="foco" name="foco" onfocus="focused()" />
+    </form>
+  </body>
+</html>

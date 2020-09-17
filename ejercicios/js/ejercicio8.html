@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Se ingresan tres notas de un alumno, si el promedio es mayor o igual 
+        a seis mostrar el mensaje "aprobado" en caso de no supoerarlo mostrar mensaje de
+         "No aprobado".
+         Tener en cuenta que para obtener 
+         el promedio debemos operar suma=nota1+nota2+nota3; y luego hacer promedio=suma/3;        
+        Se debe verificar que las notas ingresadas sean numeros.
+        Las notas solo pueden ser numeros del 1 al 10.
+        El resultado del promedio se debe redondear para mostrar solo numeros enteros(sin decimal).
+        https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/round           
+      -->
+  </head>
+  <body>
+    <script>
+       let nota1 = parseInt(prompt("nota primer trimestre")); //8
+       let nota2 = parseInt(prompt("ntoa segundo trimestre"));
+       let nota3 = parseInt(prompt("nota tercertrimestre"));
+
+      function suma (nota1,nota2,nota3){
+        total =  parseInt(nota1)+ parseInt(nota2) + parseInt(nota3);
+        return total;
+       }
+
+       function promedio(nota1,nota2,nota3){
+         notafinal =  suma(nota1,nota2,nota3)/3;
+         return notafinal;
+       }
+
+       function validarNota(nota){
+         if ((nota >=1) && (nota<=10)){
+           return  true;
+         }
+         else {
+           return false;
+         }
+       }
+       function aprobado(nota){
+        if (nota>=6 && validarNota(nota)){
+          return true
+        }
+        else {
+          return false
+        }         
+       }
+       
+    </script>
+  </body>
+</html>
