@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicio 6</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="viewport" content="" />
+</head>
+
+    <!--
+      Se ingresan tres notas de un alumno, si el promedio es mayor o iguala siete mostrar el mensaje ‘Promocionado’. 
+      Tener en cuenta que para obtenerel promedio debemos operar suma=nota1+nota2+nota3; 
+      y luego hacer promedio=suma/3;
+    -->
+<body>
+    <main>
+        <script>
+            var nota1 = Number (prompt('ingrese la primera nota:'));
+            var nota2 = Number (prompt('ingrese la segunda nota:'));
+            var nota3 = Number (prompt('ingrese la tercera nota:'));
+
+            var suma = nota1 +  nota2 + nota3;
+            var promedio = suma/3;
+
+            if (promedio>=7){
+                document.write('Promocionado');
+            } else{
+                document.write('No promocionado');
+            }
+        
+            
+        </script>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicio 7</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="viewport" content="" />
+</head>
+
+    <!--
+      Un usuario debe ingresar su nombre de usuario y ademas su clave(2 veces).
+      Mostrar un mensaje si los datos son correctos y las claves son iguales.
+      Se debe validar el tipo de dato ingresado en su nombre.
+      Se debe validar que el nombre de usuario no puede ser menor a 4 caracteres ni mayor a 8 caracteres.
+      Se debe validar que ambas claves sean iguales.
+    -->
+<body>
+    <main>
+        <button onclick="login()">Ingresar</button>
+    
+        <script>
+            function login(){
+            var usuario = prompt('Ingrese usuario:');
+            var clave = prompt('Ingrese clave de 5 a 10 caracteres:');
+            var claveVerificacion = prompt('Verifique clave:');
+
+            if(typeof usuario == 'string' && clave.length>=5 || clave.length<=10 && clave == claveVerificacion){
+                document.write('¡Bienvenido!');
+            } else {
+                alert('Alguno de tus datos son inválidos');
+                var usuario = prompt('Ingrese usuario:');
+                var clave = prompt('Ingrese clave de 5 a 10 caracteres:');
+                var claveVerificacion = prompt('Verifique clave:');
+                }
+            }
+        
+        </script>
+    </main>
+</body>
+
+</html>
