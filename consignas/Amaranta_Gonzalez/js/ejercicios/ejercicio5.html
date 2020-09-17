@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicio 5</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="viewport" content="" />
+</head>
+
+    <!--
+        Escribir un programa en el cual se ingresen cuatro números, 
+       calcular e informar la suma de los dos primeros y el producto del tercero y el cuarto.
+    -->
+<body onload="write()">
+    <main>
+        <script>
+            var num1 = Number ( prompt('ingrese el primer número:'));
+            var num2 = Number ( prompt('ingrese el segundo número:'));
+            var num3 = Number ( prompt('ingrese el tercer número:'));
+            var num4 = Number ( prompt('ingrese el cuarto número:'));
+
+            var suma = num1 + num2;
+            var producto = num3 * num4;
+           function write(){
+               document.write('El resultado de la suma es: ' + suma);
+               document.write('<br>');
+               document.write('El resultado de la multiplicacion e: ' + producto);
+           }
+            
+        </script>
+    </main>
+</body>
+
+</html>
