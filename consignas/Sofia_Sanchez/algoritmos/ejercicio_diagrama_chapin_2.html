@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 
+        Escribir un programa que almacene en un arreglo de registros los nombres de los alumnos, 
+        sus notas parciales y finales. Calcular la nota promedio y mostrar un mensaje de APTO
+        si el alumno supera o iguala la calificación de 5 o NO APTO si no lo alcanza.
+        Hacerlo para un número de 5 alumnos.
+    -->
+</head>
+
+<body>
+    <label> Nombre alumno</label>
+    <input type="text" id=nombre>
+    <br>
+    <label> Nota parcial </label>
+    <input type="text" id=n1>
+    <br>
+    <label> Nota final </label>
+    <input type="text" id=n2>
+    <br>
+    <button id="boton" onclick="datosAlumnos()">Calcular</button>
+
+
+
+    <script>
+        var arrayAlumnos = [];
+       
+
+        function datosAlumnos() {
+            let alumno =[];
+            nombre = document.getElementById("nombre").value;
+            n1 =parseInt( document.getElementById("n1").value);
+            n2 =parseInt( document.getElementById("n2").value);
+            alumno.push(nombre, n1, n2)
+            arrayAlumnos.push(alumno)
+            console.log(arrayAlumnos)
+            promedio = resultado(n1, n2)
+            promocion(promedio)
+        }
+
+
+        function resultado(n1,n2) {
+            
+
+            var promedio = (n1 + n2) / 2;
+            console.log(promedio)
+            return Math.round(promedio)
+        }
+
+        function promocion(promedio) {
+            console.log("promedio"+ promedio)
+            
+            if (promedio >= 5) {
+                alert("APTO: ");
+            } else {
+                alert("NO APTO ");
+            }
+            }
+            
+            
+    </script>
+
+</body>
+
+</html>
