@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../../../assets/bootstrap/css/bootstrap.min.css">
+    </head>
+    <body>
+       <div class="container">
+           <h1>Agregar Persona</h1>
+           <div class="row">
+            <form>
+                <div class="form-group">
+                  <label >Nombre</label>
+                  <input type="text" class="form-control" id="nombre">
+                </div>
+
+                <div class="form-group">
+                    <label >Edad</label>
+                    <input type="text" class="form-control" id="edad">
+                </div>
+
+                <button type="button" class="btn btn-success" onclick="agregar();">Agregar</button>
+              </form>
+           </div>
+           <br><br>
+            <table class="table" id="tabla">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                    </tr>
+                </thead>
+            </table>
+       </div>
+
+
+        <script>
+            function Persona(nombre,edad){
+            this.nombre=nombre;
+            this.edad=edad;
+          }
+
+          function capturar(){
+            var nombreCapturar = document.getElementById('nombre').value;
+            var edadCapturar = document.getElementById('edad').value;
+
+            return new Persona(nombreCapturar, edadCapturar);
+          }
+            var baseDatos = [];
+            function agregar(){
+                var nuevoSujeto = capturar();
+                //console.log({nuevoSujeto})
+                baseDatos.push(nuevoSujeto);
+                document.getElementById('tabla').innerHTML += '<tbody><td>'+nuevoSujeto.nombre+'</td><td>'+nuevoSujeto.edad+'</td></tbody>';
+            }
+
+
+
+
+            /**
+            function capturar(){
+                //console.log('capturado');
+                //constuctor de objetos:
+                function Persona(nombre,edad){
+                    this.nombre=nombre;
+                    this.edad=edad;
+                }
+                var nombreCapturar = document.getElementById('nombre').value;
+                //console.log('nombreCapturar');
+                var edadCapturar = document.getElementById('edad').value;
+                //console.log(edadCapturar);
+
+                nuevoSujeto = new Persona(nombreCapturar, edadCapturar);
+                console.log(nuevoSujeto);
+            }
+            var baseDatos = [];
+            function agregar(){
+                baseDatos.push(nuevoSujeto);
+                document.getElementById('tabla').innerHTML += '<tbody><td>'+nuevoSujeto.nombre+'</td><td>'+nuevoSujeto.edad+'</td></tbody>';
+            }
+            */
+        </script>
+    </body>
+</html>
