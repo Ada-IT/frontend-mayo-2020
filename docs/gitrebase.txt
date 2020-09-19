@@ -1,11 +1,11 @@
 Para esta tarde tengan presente estos pasos:
 Como Actualizar el repo de tu Github con el repositorio original de donde hiciste tu fork.
 
-- git remote add upstream https://github.com/Ada-IT/frontend-mayo-2020.git
-- git fetch upstream
-- git checkout desarrollo 
-- git rebase upstream/desarrollo
-- git push -—force
+- git remote add upstream https://github.com/Ada-IT/frontend-mayo-2020.git //se hace una sola vez
+- git fetch upstream   ///con esto bajamos lo ultimo 
+- git checkout TU-RAMA-DE-TRABAJO /// si estas en la rama no es necesario
+- git rebase upstream/TU-RAMA-DE-TRABAJO  // rebaseamos y nos traemos todo a nuestra rama.
+- git push -—force-with-lease //sunimos a nuestro repo personal los cambios
 
 En caso de error y no poder resolver git rebase —abort 
 
