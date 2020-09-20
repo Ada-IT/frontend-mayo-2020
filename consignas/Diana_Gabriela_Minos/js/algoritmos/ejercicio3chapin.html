@@ -14,17 +14,37 @@
 
 </head>
 
-<body onload="guardarDatosPersonales()">
+<body onload="guardarDatosPersona()">
 
     <script>
 
-        function guardarDatosPersonales() {
+        function validarGenero(genero) {
+            let resultado = false;
+            if ((genero == 'M') || (genero == 'F') || (genero == 'NB')) {
+                resultado = true;
+            }
+            console.log("resultado validación de género: " + resultado);
+            return resultado;
+        }
+
+        function validarColorDeOjos(colorDeOjos) {
+            let ojos = false;
+            if ((colorDeOjos == 'A') || (colorDeOjos == 'V') || (colorDeOjos == 'M')) {
+                ojos = true;
+            }
+            console.log("resultado validación de color de ojos: " + ojos);
+            return ojos;
+        }
+
+
+
+        function guardarDatosPersona() {
             let personas = [];
 
             for (var i = 1; i <= 2; i++) {
                 let nuevaPersona = [];
 
-                window.alert('A continuación, introduzca los datos de la persona número' + ':' + i);
+                window.alert('A continuación, introduzca los datos de la persona número: ' + i);
 
                 let nombre = window.prompt('Ingrese el nombre de la persona');
 
@@ -33,39 +53,27 @@
                 let nacionalidad = window.prompt('Ingrese la nacionalidad de la persona');
 
                 let genero = window.prompt('Ingrese el género de la persona. "M":Masculino, "F":Femenino o "NB":No Binario');
-                while (genero != 'M' && genero != 'F' && genero != 'NB') {
+                while (validarGenero(genero) == false) {
                     genero = window.prompt('Ingrese un dato válido en mayúscula. "M" si el género es masculino, "F" si el género es femenino o "NB" si el género es No Binario');
                 }
 
                 let telefono = window.prompt('Ingrese el número de teléfono de la persona sin guiones, puntos ni espacios');
 
                 let colorDeOjos = window.prompt('Ingrese el color de ojos de la persona. "A":Azul, "V":Verde o "M":marrón');
-                while (colorDeOjos !== 'A' && colorDeOjos !== 'V' && colorDeOjos !== 'M') {
+                while (validarColorDeOjos(colorDeOjos) == false) {
                     colorDeOjos = window.prompt('Ingrese un dato válido en mayúscula. "A" si el color de ojos es azul, "V" si el color de ojos es verde o "M" si el color de ojos es marrón');
                 }
-
-                nuevaPersona.push('Nombre' + ':' + nombre, 'Edad' + ':' + edad, 'Género' + ':' + genero, 'Nacionalidad' + ':' + nacionalidad, 'Teléfono' + ':' + telefono, 'Color de ojos' + ':' + colorDeOjos);
+                nuevaPersona.push(nombre, edad, genero, nacionalidad, telefono, colorDeOjos);
                 personas.push(nuevaPersona);
-                console.log('datos persona ' + i + ' : ' + nuevaPersona);
+                console.log(personas);
+
             }
-
-
-            console.log('Lista de personas : ' + personas);
 
         }
 
 
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

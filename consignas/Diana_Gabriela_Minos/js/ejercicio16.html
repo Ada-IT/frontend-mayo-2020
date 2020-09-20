@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+        1) Definir un array participantes que contendra los siguientes nombres:
+                Ana, Osvaldo, Raúl, Celia, María, Antonio
+                2) Definir una funcion que permita agregar nuevos particpantes
+                3) Definir una funcion que nos permita saber si un partipante ya se ha agregado.
+                4) No se pueden duplicar (repetir) los particpantes.
+                5) Se debe poder cargar en un formulario de html Nombre 
+                6) El formulario debe tener un boton Agregar Participante  
+                 7) Mostrar el listado de participantes en un elemento <ul> ordenados alfabeticamente.
+                8) La lista debe actualizarse cada vez que se agrega un participante.
+            
+            -->
+</head>
+
+<body>
+
+    <h3>Lista de participantes</h3>
+
+    <label for='nombre'>Nombre Participante</label>
+    <input type='text' id='nombre'>
+
+    <button onclick="agregarParticipante()">Agregar Participante</button>
+
+    <script>
+        var participantes = ['Ana', 'Osvaldo', 'Raul', 'Celia', 'Maria', 'Antonio'];
+
+        function crearElementoUl() {
+            participantes.sort();
+            participantesHtml = [];
+            participantes.forEach(item => {
+                participantesHtml = participantesHtml + '<ul><li>' + item + '</li></ul>';
+            })
+            document.write(participantesHtml)
+        }
+
+        function agregarParticipante() {
+
+            var nombreParticipante = document.getElementById('nombre').value;
+
+            if (!existeParticipante(participantes, nombreParticipante)) {
+                participantes.push(nombreParticipante)
+                console.log("participante agregado: " + nombreParticipante)
+                crearElementoUl();
+            }
+            else {
+                alert('Nombre ya existente en la lista. Por favor, ingrese uno diferente')
+            }
+        }
+
+        function existeParticipante(participantes, nombreParticipante) {
+            var resultado = false
+            if (participantes.includes(nombreParticipante)) {
+                resultado = true
+            }
+            return resultado;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
