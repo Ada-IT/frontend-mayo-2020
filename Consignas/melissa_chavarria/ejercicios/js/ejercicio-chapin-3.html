@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 
+        Escribe un programa  que almacene en un arreglo de registros las características de 150 personas: 
+        nombre, sexo, edad, peso, color de pelo, color de piel, color de ojos, nacionalidad y teléfono.
+    -->        
+    </head>
+    <body onload="capturarDatos();">
+            <!-- Add your site or application content here -->
+        <script>
+            function validarSexo(mensaje){
+                do{
+                    variable = prompt(mensaje);
+                    if (variable!="H" && variable!="M" && variable!="NB"){
+                        alert("Por favor digite H, M, o NB.")
+                    }
+                } while (variable!="H" && variable!="M" && variable!="NB");
+                return variable; 
+            }
+            function validarNumero(mensaje){
+                do{
+                    variable = prompt(mensaje);
+                    if (isNaN(variable)==true || variable<=0){
+                        alert("Por favor digite un número mayor a cero.")
+                    }
+                } while (isNaN(variable)==true || variable<=0);
+                return variable; 
+            }
+            function validarColorOjos(mensaje){
+                do{
+                    variable = prompt(mensaje);
+                    if (variable!="A" && variable!="V" && variable!="M"){
+                        alert("Por favor digite A, V, o M.")
+                    }
+                } while (variable!="A" && variable!="V" && variable!="M");
+                return variable; 
+            }
+            function capturarDatos(){
+                for(i=0; i<150; i++){
+                    nombre = prompt("Ingrese su nombre");
+                    sexo = validarSexo("Por favor ingrese su sexo (H, M o NB):");
+                    edad = validarNumero("Por favor ingrese su edad:");
+                    peso = validarNumero("Por favor ingrese su peso:");
+                    colorDePelo = prompt("Por favor ingrese su color de pelo");
+                    colorDePelo = prompt("Por favor ingrese su color de piel");
+                    colorDeOjos = validarColorOjos("Por favor ingrese su color de ojos (A, V, o M):");
+                    nacionalidad = prompt("Por favor digite su nacionalidad:");
+                    telefono = prompt ("Por favor digite su teléfono:")
+                }
+                
+            }
+    
+        </script>
+    </body>
+</html>

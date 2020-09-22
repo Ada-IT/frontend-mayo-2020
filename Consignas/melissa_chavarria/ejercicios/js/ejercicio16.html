@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+            <!-- 
+                1) Definir un array participantes que contendra los siguientes nombres:
+                Ana, Osvaldo, Raúl, Celia, María, Antonio
+                2) Definir una funcion que permita agregar nuevos particpantes
+                3) Definir una funcion que nos permita saber si un partipante ya se ha agregado.
+                4) No se pueden duplicar (repetir) los particpantes.
+                5) Se debe poder cargar en un formulario de html Nombre 
+                6) El formulario debe tener un boton Agregar Participante              
+                Tarea:    
+                7) Mostrar el listado de participantes en un elemento <ul> ordenados alfabeticamente.
+                8) La lista debe actualizarse cada vez que se agrega un participante.   
+
+            -->
+            <form onsubmit="return false">
+                <label for="idNombre">Ingrese el Nombbre del participante</label>
+                <input id="idNombre" type="text">
+                <button onclick="capturarDatos();">Agregar Participante</button>
+            </form>
+        
+            <h1>Lista de Participantes</h1>
+            <ul id="idLista">
+            </ul>
+
+            <script>
+                var participantes = ["ANA","OSVALDO","RAUL","CELIA","MARIA","ANTONIO"];
+
+                function agregarParticipante(nombre){
+                    participantes.push(nombre);
+                }
+
+                function verificarParticipante(nombre){
+                    if (participantes.includes(nombre)){
+                        return true; // Si el nombre existe retorno true
+                    }
+                    else{
+                        return false; // Si el nombre no existe retorno false 
+                    }
+                }
+
+                function imprimirLista(){
+                    let lista = "";
+                    // Ordena el array alfabéticamete
+                    participantes.sort();
+                    // Arma la variable lista 
+                    participantes.forEach(participante =>{
+                        lista = lista + "<li>" + participante + "</li>";
+                    });
+                    // Imprimo la variable y limpio el input
+                    document.getElementById("idLista").innerHTML = lista;
+                    document.getElementById("idNombre").value = "";
+                }
+
+                function capturarDatos(){
+                    // Inicializo variables
+                    let nombreDigitado = "";
+                    let nombreMayuscula = "";
+                    let validacion = true;
+                    // Obtengo el nombre digitado y lo pongo en mayúscula
+                    nombreDigitado = document.getElementById("idNombre").value;
+                    nombreMayuscula = nombreDigitado.toUpperCase();
+                    validacion = verificarParticipante(nombreMayuscula);
+                    //Si la validación es true ya existe, sino lo agrego
+                    if (validacion == true){
+                        alert("El nombre ya existe en la lista.");
+                    }
+                    else {
+                        agregarParticipante(nombreMayuscula);
+                        imprimirLista();
+                    }
+                }
+
+
+            </script>
+    </body>
+</html>
