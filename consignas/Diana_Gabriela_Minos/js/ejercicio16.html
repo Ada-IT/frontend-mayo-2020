@@ -22,13 +22,15 @@
 </head>
 
 <body>
+    <div class='datos'>
+        <h3>Ingrese nombre</h3>
 
-    <h3>Lista de participantes</h3>
+        <label for='nombre'>Nombre Participante</label>
+        <input type='text' id='nombre'>
 
-    <label for='nombre'>Nombre Participante</label>
-    <input type='text' id='nombre'>
+        <button onclick="agregarParticipante()">Agregar Participante</button>
+    </div>
 
-    <button onclick="agregarParticipante()">Agregar Participante</button>
 
     <script>
         var participantes = ['Ana', 'Osvaldo', 'Raul', 'Celia', 'Maria', 'Antonio'];
@@ -39,7 +41,8 @@
             participantes.forEach(item => {
                 participantesHtml = participantesHtml + '<ul><li>' + item + '</li></ul>';
             })
-            document.write(participantesHtml)
+
+            document.write('Lista de participantes ordenados' + participantesHtml)
         }
 
         function agregarParticipante() {
