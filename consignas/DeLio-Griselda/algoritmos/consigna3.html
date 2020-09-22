@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 
+        Escribe un programa  que almacene en un arreglo de registros las características de 150 personas: 
+        nombre, sexo, edad, peso, color de pelo, color de piel, color de ojos, nacionalidad y teléfono.
+    -->
+</head>
+
+<body>
+    <!-- Add your site or application content here -->
+</body>
+<script>
+    var personas = [];
+    function init() {
+        while (personas.leght <= 2) {
+            addPerson();
+        }
+        console.log('Mi array completo: ');
+        console.log(personas);
+    }
+    const newPerson = () => {
+        let persona = [];
+        let nombre = prompt('Nombre: ');
+        let genero_status = false;
+        let genero;
+        while (!genero_status) {
+            genero = prompt('Genero: (Escriba M para masculino, F para femenino, NB no binario)');
+            console.log('entro al while y mi genero es: ' + genero);
+            if ((genero == 'M') || (genero == 'F') || (genero == 'NB')) {
+                genero_status = true;
+                console.log('actualice mi genero correcto: ' + genero + ' -estado: ' + genero_status);
+            }
+        }
+        let edad = Number(prompt('Edad: '));
+        let peso = Number(prompt('Peso: '));
+        let ojos_status = false;
+        let ojos;
+        while (!ojos_status) {
+            ojos = prompt('Color de ojos: (Escriba V para verdes, A para azules, M marrones)');
+            console.log('entro al while y mi color de ojos es: ' + ojos);
+            if ((ojos == 'V') || (ojos == 'A') || (ojos == 'M')) {
+                ojos_status = true;
+                console.log('actualice mi estado de ojos correcto: ' + ojos + ' -estado: ' + ojos_status);
+            }
+        }
+        let nacionalidad = prompt('Nacionalidad: ');
+        let telefono = Number(prompt('Teléfono: '));
+        persona.push(nombre, genero, edad, peso, ojos, nacionalidad, telefono);
+        document.write('Datos' + persona);
+    };
+    function addPersona() {
+        add_persona = newPerson();
+        persona.push(add_persona);
+        console.log('Agregue a ' + add_persona[0]);
+        console.log(add_persona);
+    };
+</script>
+
+</html>
