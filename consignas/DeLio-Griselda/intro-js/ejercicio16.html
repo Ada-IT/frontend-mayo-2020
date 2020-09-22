@@ -36,27 +36,39 @@
         </div>
     </div>
     <script>
-        var participantes = ['Ana', 'Osvaldo', 'Raul', 'Celia', 'Maria', 'Antonio'];
-        function agregarParticipante(participante) {
-            participantes.push(participante);
-        }
-        function validar() {
-            var participante = document.getElementById('ingreso').value;
-            if (!participantes.includes(participante)) {
-                agregarParticipante(participante);
-                ordenarListado();
-            } else {
-                alert('participante ya existente');
-            }
+
+        //se junta todos los nombres
+        var participantes = ['Ana', 'Osvaldo', 'Raul', 'Celia', 'Antonio'].sort();
+
+        //input del participante (viejo y nuevo)
+        function agregar_participante(nueva_persona) {
+            participantes.push(nueva_persona);
+            //document.write('Los Participantes son: <br><br>');
+            //document.write(participantes.join('<ul>' + '</ul>'));
         }
 
+        //lo valido con el boton
+        function validar() {
+            let nueva_persona = document.getElementById('ingreso').value;
+            if (!participantes.includes(nueva_persona)) {
+                p = capitalizar(nueva_persona);
+                agregar_participante(p);
+                ordenarListado();
+            } else {
+                document.write('El participante ya fue ingresado.')
+            }
+        };
         function ordenarListado() {
-            var listaOrdenada = "";
+            var listaOrdenada = '';
             var ordenar = participantes.sort();
             ordenar.forEach((item) => {
-                listaOrdenada = listaOrdenada + "<li>" + item + "</li>";
+                listaOrdenada = listaOrdenada + '<li>' + item + '</li>';
             });
-            var data = (document.getElementById("listado").innerHTML = listaOrdenada)
+            var orden = (document.getElementById("listado").innerHTML = ('<br>' + '<b> Lista ordanada de participantes </b>' + '<br>' + listaOrdenada));
+        }
+
+        function capitalizar(data) {
+            return `${data.substring(0, 1).toUpperCase()}${data.substring(1).toLowerCase()}`;
         }
     </script>
 </body>
