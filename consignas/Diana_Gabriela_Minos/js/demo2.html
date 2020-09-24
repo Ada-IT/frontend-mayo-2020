@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+    <script>
+        function eliminarDato() {
+            let frutas = ['Manzana', 'Banana', 'Pera', 'Kiwi', 'Naranja', 'Arandanos']; // array de datos
+            console.log(frutas); //debug
+
+            let fruta = frutas.indexOf('Pera');
+            //     6           2
+            if (frutas.length > fruta) {
+                console.log('entro al if: ');
+            }
+            frutas.splice(fruta, 1); // elimino 1 elemento de un array por su posición
+            console.log('Mi array pos : '); //debug
+            return frutas;
+        }
+    </script>
+
+    </body>
+
+</html>

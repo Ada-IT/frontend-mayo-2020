@@ -14,14 +14,31 @@
 
 </head>
 
-<body onload="obtenerCantidadDiasDelMes()">
+<body>
+
+    <h3>Ingrese el número correspondiente al mes que desee saber cuántos días tiene</h3>
+
+    <label for='numero'>Número</label>
+    <input type='number' id='numero'>
+
+    <button onclick="obtenerCantidadDiasDelMes()">Ver cantidad de días</button>
+
     <script>
-        let mes = pedirMes();
+
+        document.getElementById('numero').value = '';
 
 
-        function obtenerCantidadDiasDelMes(pedirMes) {
-            let numDias = '';//DEFINIR ESTA VARIABLE, SINO ES NAN
-            console.log("mes: " + mes);
+
+        function obtenerCantidadDiasDelMes(mes) {
+
+            mes = parseInt(document.getElementById('numero').value);
+
+            var ano = new Date().getFullYear();
+
+            console.log('mes: ' + mes);
+            console.log('año: ' + ano);
+
+            validarMes();
 
             switch (mes) {
                 case 1:
@@ -32,34 +49,31 @@
                 case 8:
                 case 10:
                 case 12:
-                    numDias = 31;
+                    alert('El mes seleccionado tiene 31 días');
                     break;
                 case 4:
                 case 6:
                 case 9:
                 case 11:
-                    numDias = 30;
+                    alert('El mes seleccionado tiene 30 días');
                     break;
                 case 2:
                     if (((ano % 4 == 0) &&
                         !(ano % 100 == 0))
                         || (ano % 400 == 0))
-                        numDias = 29;
+                        alert('El mes seleccionado tiene 29 días');
                     else
-                        numDias = 28;
+                        alert('El mes seleccionado tiene 28 días');
                     break;
                 default:
-                    window.prompt("Mes inválido.");
-
+                    alert("Mes inválido.");
 
             }
-            window.prompt("Cantidad de días = "
-                + numDias);
         }
 
         function validarMes(mes) {
             var resultado = true;
-            if (isNaN(mes)) {
+            if (parseInt(mes)) {
                 resultado = false;
                 alert('El dato debe ser un número')
             }
@@ -73,22 +87,7 @@
             return resultado;
         }
 
-        function pedirMes() {
-            let mes = window.prompt('Ingrese mes');
-            while (validarMes(mes) == false) {
-                window.prompt('Ingrese un mes válido. Debe ser un número del 1 al 12');
-            }
-            return mes;
-        }
-
-
-
-
-
-
-
     </script>
-
 
 </body>
 

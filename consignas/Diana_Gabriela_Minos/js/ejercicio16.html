@@ -22,47 +22,65 @@
 </head>
 
 <body>
-    <div class='datos'>
-        <h3>Ingrese nombre</h3>
 
-        <label for='nombre'>Nombre Participante</label>
-        <input type='text' id='nombre'>
+    <h3>Ingrese nombre</h3>
 
-        <button onclick="agregarParticipante()">Agregar Participante</button>
-    </div>
+    <label for='nombre'>Nombre Participante</label>
+    <input type='text' id='nombre'>
 
+    <button onclick="agregarParticipante()">Agregar Participante</button>
+
+    <br>
+
+    <ul id='lista'></ul>
 
     <script>
-        var participantes = ['Ana', 'Osvaldo', 'Raul', 'Celia', 'Maria', 'Antonio'];
 
-        function crearElementoUl() {
-            participantes.sort();
-            participantesHtml = [];
+        let participantes = ['Ana', 'Osvaldo', 'Raul', 'Celia', 'Maria', 'Antonio'];
+
+        function crearElementoUl() { // creo la lista de participantes ordenados
+            participantes.sort(); // ordeno participantes
+            participantesHtml = ''; // creo una variable vacía para ir llenando con los nombres
             participantes.forEach(item => {
-                participantesHtml = participantesHtml + '<ul><li>' + item + '</li></ul>';
+                participantesHtml = participantesHtml + '<li>' + item + '</li>'; // creo la lista en sí
             })
-
-            document.write('Lista de participantes ordenados' + participantesHtml)
+            document.getElementById('lista').innerHTML = 'Lista de participantes ordenados alfabéticamente: ' + participantesHtml; //muestro la lista de participantes en el html
+            document.getElementById('nombre').value = '';
         }
 
         function agregarParticipante() {
 
             var nombreParticipante = document.getElementById('nombre').value;
 
-            if (!existeParticipante(participantes, nombreParticipante)) {
-                participantes.push(nombreParticipante)
+
+            if (!existeParticipante(participantes, nombreParticipante)) { // valido si el nombre ya fue ingresado
+                // si no empieza en mayùscula, modificamos la primera letra para que sea mayùscula
+                if (!empiezaConMayus(nombreParticipante)) {
+                    nombreParticipante = mayus(nombreParticipante);
+                }
+                participantes.push(nombreParticipante) // pusheo ese nombre a participantes
                 console.log("participante agregado: " + nombreParticipante)
                 crearElementoUl();
             }
             else {
                 alert('Nombre ya existente en la lista. Por favor, ingrese uno diferente')
             }
+
         }
 
-        function existeParticipante(participantes, nombreParticipante) {
+        function mayus(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+        function empiezaConMayus(string) {
+            return string.charAt(0) === string.charAt(0).toUpperCase;
+        }
+
+
+        function existeParticipante(participantes, nombreParticipante) {  // función para validar que el participante no se repita
             var resultado = false
             if (participantes.includes(nombreParticipante)) {
-                resultado = true
+                resultado = true  // le asigno un valor verdadero a la variable resultado
             }
             return resultado;
 
