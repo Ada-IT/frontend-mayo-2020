@@ -1,0 +1,74 @@
+<script>
+function eliminarDato() {
+    //                0          1        2     3        4            5
+    let frutas = ["Manzana", "Banana", "Pera", "Kiwi", "Naranja", "Arandanos"]; 
+    console.log(frutas); //debug
+    let fruta = frutas.indexOf( 'Pera' );
+      //   6              2        
+    if( frutas.length > fruta  ){
+        console.log("entro al if : "); //debug
+        //eliminamos 1 elemento de un array por su posicion.
+        frutas.splice( fruta, 1 );
+    }    
+    console.log("mi array nuevo : "); //debug
+    return frutas;
+    }
+
+    function strings_concat(cadena1, cadena2, cadena3){      
+      
+      return cadena1.concat(cadena2,cadena3) 
+      //cadena4 = cadena1 + cadena2 + cadena3;
+    }
+
+    function cualquiera(){
+      cadena1 = "Oh "
+      cadena2 = "qué maravillosa "
+      cadena3 = "mañana'."
+      data  = strings_concat(cadena1, cadena2, cadena3)
+    }
+
+    function array_concat(array1, array2, orden){
+      if(orden == 1){
+        data_resultante  = array1.concat(array2)
+      }
+      else{
+        data_resultante  = array2.concat(array1)
+      }
+      return data_resultante
+    }
+
+    function arrays_d(){
+      const array1 = ['a', 'b', 'c'];
+      const array2 = ['d', 'e', 'f'];
+      array3 = array_concat(array1, array2, 1)
+      // expected output: Array ["a", "b", "c", "d", "e", "f"]      
+    }
+
+    function arrays_joined(){
+      const array1 = ['a', 'b', 'c'];
+      const array2 = ['d', 'e', 'f'];
+      mi_array  = array1.join() //por defecto lo devuelve separado por coma
+      // expected output Array procesado devuelve un string = "a,b,c"
+      mi_array  = array1.join(';')
+      // expected output Array procesado devuelve un string = "a;b;c"     
+      mi_array  = array1.join('-')
+      // expected output Array procesado devuelve un string = "a-b-c" 
+      mi_array  = array1.join('') //
+      // expected output Array procesado devuelve un string = "abc"             
+    }
+
+
+    function array_filtro(){
+      words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+      result = words.filter(lechuga => lechuga.length > 6);
+      // expected output: Array ["exuberant", "destruction", "present"]      
+    }
+
+    function array_find(){
+      const array1 = [5, 12, 8, 130, 44,23, 6, 12];
+            //pos     0   1  2   3   4  5   6   7
+      const found = array1.find(element => element >=20);  
+      // expected output: 130    
+    }
+
+</script>    
