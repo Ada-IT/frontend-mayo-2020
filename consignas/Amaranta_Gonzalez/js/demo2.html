@@ -1,0 +1,98 @@
+<script>
+
+    function eliminarDato(){
+        let frutas = ["Manzana", "Banana", "Pera", "Kiwi", "Naranja", "Arandanos"]; // array de datos
+        console.log(frutas); //debug
+        let fruta = frutas.indexOf('Pera');
+        if(frutas.length > fruta){
+            console.log('entro al if:');
+            frutas.splice(fruta, 1);
+        }
+
+        //Eliminar elemento de un array por su posición
+        console.log('Mi arrar pos : '); //debug
+        return frutas;
+    }
+
+
+    
+    //CONCATENACION EN JAVASCRIPT
+    function string_concat(cadena1, cadena2, cadena3){
+        return cadena1.concat(cadena2, cadena3)
+        //cadena 4 = cadena1 + cadena2 + cadena3;
+    }
+
+    function cualquiera(){
+        cadena1 = 'Oh'
+        cadena2 = 'que maravillosa'
+        cadena3 = 'mañana'
+        data = string_concat(cadena1, cadena2, cadena3)
+    }
+
+    function array_concat(array1, array2, orden){
+        if (orden == 1){
+            data_resultante = array.concat(array2)
+             } 
+            else{
+                data_resultante = array2.concat(array1)
+            }
+            return data_resultante
+    }
+    
+
+    function arrays_d(){
+        const array1 = ['a', 'b', 'c'];
+        const array2 = ['d', 'e', 'f'];
+        array3 = array1.concat(array2)
+        //expected output: array ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+    }
+
+    function array_joined(){
+        const array1 = ['a', 'b', 'c'];
+        const array2 = ['d', 'e', 'f'];
+        mi_array = array1.join()
+        //expected output: Array procesado = "abc" los vuelve un solo elemento como cadena de string
+        mi_array = array1.join(';');
+        mi_array = array1.join(',');
+        mi_array = array1.join('-');
+        mi_array = array1.join(' ');
+    }
+
+    function filtro(array_data){
+        words = ['spray', 'limit', 'elite', 'exhuberante', 'destruction', 'present'];
+        result = words.filter(word => word.length > 6);
+        //expected output: Array['exuberant', 'destruction', 'present']
+        word.forEach(item => {
+            if (word.lengh > 6){
+                words_tmp.push(item)
+            }
+           return words_tmp
+        });
+    }
+    
+    function array_find(){
+        const array1 = [5, 12, 8, 130, 44, 23, 6, 12]
+                  //    0   1   2   3  4    5   6  7
+
+        const found = array1.find(element => element => 20);
+        //expected output: 130----> siempre va a devolver el valor de 
+        //la primera casilla del array que cumpla la 
+        //condición sin recorrerla completa 
+    }
+
+    function array_flat(){
+        var arr1 = [1, 2 [3, 4]];
+        //pos       0   1   2
+        new_array = arr1.flat();
+        //new_array = [1, 2, 3 , 4]
+        //pos           1, 1, 2, 3
+
+        var arr2 = [1, 2 [3, 4 [5, 6]]];
+        //resultado new_array = [1, 2, 3, 4, 5 6]
+                        //pos   0  1    2 3  4 5
+        new_array = arr2.flat();
+
+        var arr3 = [1, 2 [3, 4 [5, 6]]];
+        new_array = arr3.flat(2);
+    }
+</scrip>
