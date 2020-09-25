@@ -27,7 +27,7 @@
 <body>
     <div class="container">
         <h1>Agregar Persona</h1>
-            <form>
+            <form >
            
                 <div class="row">
                 
@@ -48,7 +48,6 @@
             </div>
     
     <script>
-
         function Persona(nombre) {
             this.nombre=nombre;
         }
@@ -58,6 +57,7 @@
         }
 
         var participantes = ['Ana', 'Osvaldo', 'Raúl', 'Celia', 'María', 'Antonio'];
+        
         function agregar(){
             var nuevoParticipante = capturar();
             participantes.push(nuevoParticipante);
