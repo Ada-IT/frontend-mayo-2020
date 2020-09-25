@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+    array1 = [5, 12, 8, 130, 44, 70, 85];
+     1) armar funcion que permita eliminar  todos los numeros impares del array
+     2) armar funcion para mostrar en pantalla la lista en un elemento ul
+    -->
+</head>
+<button onclick="mostrarLista(numeros);">Mostrar</button>
+<div>
+    <ul id="listado">
+
+    </ul>
+</div>
+
+<body>
+
+    <script>
+        var numeros = [5, 12, 8, 130, 44, 70, 85];
+        var valor;
+        function numerosImpares(valor) {
+            numeros.forEach(valor => {
+                if (valor % 2 != 0) {
+                    posicion = numeros.indexOf(valor);
+                    numeros.splice(posicion, 1);
+                }
+                console.log(numeros);
+            });
+        }
+
+        function mostrarLista(numeros) {
+            numerosImpares();
+            lista = "";
+            numeros.forEach(numero => {
+                lista = lista + '<li>' + numero + '</li>';
+            })
+            document.getElementById('listado').innerHTML = lista;
+        }
+    </script>
+</body>
+
+</html>
