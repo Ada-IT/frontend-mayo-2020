@@ -71,4 +71,54 @@ function eliminarDato() {
       // expected output: 130    
     }
 
+
+    function array_flat(){
+      var arr1 = [1, 2, [3, 4]];
+      //pos       0  1     2
+      new_array = arr1.flat(); 
+      //new_array =  [1, 2, 3, 4]
+     //pos            0  1  2  3
+
+     var arr2 = [1, 2, [3, 4, [5, 6]]];
+            //   0  1        2  (3)
+      new_array  = arr2.flat();
+      //resultado new_array =  [1, 2, 3, 4, [5, 6]]
+                        //pos   0   1  2  3    4  
+       new_array  = arr2.flat();
+      //resultado new_array =  [1, 2, 3, 4, 5, 6]
+      
+      var arr3 = [1, 2, [3, 4, [5, 6]]];
+      new_array  = arr3.flat(2);
+      //resultado new_array =  [1, 2, 3, 4, 5, 6]   
+
+    }
+
+    function array_map_prices(){
+      // ejemplo de calcu de price + iva
+      //precio venta sin iva
+      var arr1 = [150, 220, 115, 450]; 
+     //venta con iva
+      var arr_vta_iva= arr_venta.map(function(x) {
+            return ((x * 0.21)+x); 
+          }
+        );
+     console.log(arr_vta_iva);   
+    }
+
+    function array_map_text(){
+      var arr_blog_articles = ['titular 1','titlular 2','titluar 3 ','titular 4']
+      //devuelve array nuevo con  primer letra en mayuscula de cada elemento
+      var titulares= arr_blog_articles.map(function(titular){
+          titular_primer_letra_mayus = poner_mayus(titular)
+          return (titular_primer_letra_mayus)
+        }        
+      );
+      console.log(titulares);   
+    }
+
+    function poner_mayus(texto){
+      return texto.charAt(0).toUpperCase() + texto.slice(1)
+    }
+
+
 </script>    
