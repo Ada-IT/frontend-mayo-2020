@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <!--
+                var verduras_pedidas = ["cebolla", "papa", "calabaza"];
+                var frutas_pedidas = ["banana", "frutilla", "limón", "manzana"];
+                var frutas_disponibles = ["pera", "durazno", "damasco", "cereza", "frutilla", "coco", "uvas",  "manzana"];
+                var verduras_disponibles = ["cebolla", "choclo", "calabaza","aji","berenjena","lechuga","tomate","perejil"];
+
+                1) armar un array con todo el pedido de verduleria
+                2) armar un array con todo que consegui de la verduleria
+                3) mostrar en pantalla mi lista de pedido en un elemento ul
+                4) mostrar en pantalla mi lista de conseguido en un elemento ul 
+                5) mostrar una lista de lo que no consegui.
+
+            -->
+        
+        <h3>Lista de productos pedidos</h3>
+        <ul id="pedido">
+
+        </ul>
+        
+        <h3>Lista de productos encontrados</h3>
+        <ul id="encontrados">
+
+        </ul>
+
+        <h3>Lista de productos no encontrados</h3>
+        <ul id="no-encontrados">
+            
+        </ul>
+
+   <script>
+        var verduras_pedidas = ["cebolla", "papa", "calabaza"];
+        var frutas_pedidas = ["banana", "frutilla", "limón", "manzana"];
+        var frutas_disponibles = ["pera", "durazno", "damasco", "cereza", "frutilla", "coco", "uvas",  "manzana"];
+        var verduras_disponibles = ["cebolla", "choclo", "calabaza","aji","berenjena","lechuga","tomate","perejil"];
+
+        function pedidos (arr1, arr2) {
+            var prodPedidos = arr1.concat(arr2);
+            return prodPedidos
+        }
+
+        function disponibles (arr1, arr2) {
+            var prodDisponibles = arr1.concat(arr2);
+            return prodDisponibles
+        }
+
+        //Para lista pedido
+        var miPedido = pedidos(verduras_pedidas, frutas_pedidas);
+
+        //Para lista disponibles
+        var prodVerduleria = disponibles(frutas_disponibles, verduras_disponibles);
+
+        //Para lista encontrados
+        function encontrados (prodVerduleria, miPedido) {
+            var prodEncontrados = miPedido.filter(pedido => prodVerduleria.includes(pedido));
+            return prodEncontrados
+        }
+
+        //Para lista no encontrados
+        function noEncontrados (prodVerduleria, miPedido) {
+            var prodNoEncontrados = miPedido.filter(pedido => !prodVerduleria.includes(pedido));
+            return prodNoEncontrados
+        }
+
+        //Listar
+
+        function listarPorProductos (listar, funcionPorLista) {
+            var lista = "";
+            listar.forEach(element => {
+                lista = lista + "<li>" + element + "</li>";
+            });
+            document.getElementById(funcionPorLista).innerHTML = lista;
+        }
+
+        listarPorProductos(pedidos(verduras_pedidas, frutas_pedidas), "pedido");
+        listarPorProductos(encontrados(prodVerduleria, miPedido), "encontrados");   
+        listarPorProductos(noEncontrados(prodVerduleria, miPedido), "no-encontrados");
+
+   </script> 
+</body>
+</html>
