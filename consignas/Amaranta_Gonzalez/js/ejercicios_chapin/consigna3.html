@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../../../assets/bootstrap/css/bootstrap.min.css">
+    </head>
+    <body>
+       <div class="container">
+           <h1>Agregar Persona</h1>
+            <form>
+           
+                <div class="row">
+                
+                    <div class="form-group col-lg-4">
+                        <label >Nombre</label>
+                        <input type="text" class="form-control" id="nombre">
+                    </div>
+                    
+                    <div class="form-group col-lg-4">
+                        <label>Sexo</label>
+                        <input type="text" class="form-control" id="sexo">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label >Edad</label>
+                        <input type="text" class="form-control" id="edad">
+                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label>Peso</label>
+                            <input type="text" class="form-control" id="peso">
+                        </div>
+
+                        <div class="form-group col-lg-4">
+                            <label>Color de Cabello</label>
+                            <input type="text" class="form-control" id="c_pelo">
+                        </div>
+
+                        <div class="form-group col-lg-4">
+                            <label>Color de Piel</label>
+                            <input type="text" class="form-control" id="c_piel">
+                        </div>
+                    </div>
+                        <div class="row"></div>
+                            <div class="form-group col-lg-4">
+                                <label>Color de Ojos</label>
+                                <input type="text" class="form-control" id="c_ojos">
+                            </div>
+
+                            <div class="form-group col-lg-4">
+                                <label>Nacionalidad</label>
+                                <input type="text" class="form-control" id="nacionalidad">
+                            </div>
+
+                            <div class="form-group col-lg-4">
+                                <label>Teléfono</label>
+                                <input type="text" class="form-control" id="telefono">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-success" onclick="agregar();">Agregar</button>
+              </form>
+           </div>
+           <br><br>
+            <table class="table" id="tabla">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Sexo</th>
+                        <th>Edad</th>
+                        <th>Peso</th>
+                        <th>Color de Cabello</th>
+                        <th>Color de Piel</th>
+                        <th>Color de Ojos</th>
+                        <th>Nacionalidad</th>
+                        <th>Telefono</th>
+                    </tr>
+                </thead>
+            </table>
+       </div>
+
+
+        <script>
+            function Persona(nombre,sexo,edad,peso,c_pelo,c_piel,c_ojos,nacionalidad,telefono){
+            this.nombre=nombre;
+            this.sexo=sexo;
+            this.edad=edad;
+            this.peso=peso;
+            this.c_pelo=c_pelo;
+            this.c_piel=c_piel;
+            this.c_ojos=c_ojos;
+            this.nacionalidad=nacionalidad;
+            this.telefono=telefono;
+          }
+
+          function capturar(){
+            var nombreCapturar = document.getElementById('nombre').value;
+            var sexoCapturar = document.getElementById('sexo').value;
+            var edadCapturar = document.getElementById('edad').value;
+            var pesoCapturar = document.getElementById('peso').value;
+            var c_peloCapturar = document.getElementById('c_pelo').value;
+            var c_pielCapturar = document.getElementById('c_piel').value;
+            var c_ojosCapturar = document.getElementById('c_ojos').value;
+            var nacionalidadCapturar = document.getElementById('nacionalidad').value;
+            var telefonoCapturar = document.getElementById('telefono').value;
+            
+
+            return new Persona(nombreCapturar, sexoCapturar, edadCapturar, pesoCapturar, c_peloCapturar, c_pielCapturar, c_ojosCapturar, nacionalidadCapturar, telefonoCapturar);
+          }
+            var baseDatos = [];
+            function agregar(){
+                var nuevoSujeto = capturar();
+                //console.log({nuevoSujeto})
+                baseDatos.push(nuevoSujeto);
+                document.getElementById('tabla').innerHTML += '<tbody><td>'+nuevoSujeto.nombre+'</td><td>'+nuevoSujeto.sexo+'</td><td>'+nuevoSujeto.edad+'</td><td>'+nuevoSujeto.peso+'</td><td>'+nuevoSujeto.c_pelo+'</td><td>'+nuevoSujeto.c_piel+'</td><td>'+nuevoSujeto.c_ojos+'</td><td>'+nuevoSujeto.nacionalidad+'</td><td>'+nuevoSujeto.telefono+'</td></tbody>';
+            }
+
+
+
+
+            /**
+            function capturar(){
+                //console.log('capturado');
+                //constuctor de objetos:
+                function Persona(nombre,edad){
+                    this.nombre=nombre;
+                    this.edad=edad;
+                }
+                var nombreCapturar = document.getElementById('nombre').value;
+                //console.log('nombreCapturar');
+                var edadCapturar = document.getElementById('edad').value;
+                //console.log(edadCapturar);
+
+                nuevoSujeto = new Persona(nombreCapturar, edadCapturar);
+                console.log(nuevoSujeto);
+            }
+            var baseDatos = [];
+            function agregar(){
+                baseDatos.push(nuevoSujeto);
+                document.getElementById('tabla').innerHTML += '<tbody><td>'+nuevoSujeto.nombre+'</td><td>'+nuevoSujeto.edad+'</td></tbody>';
+            }
+            */
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="">
+</head>
+ <!--
+            Escribir un programa e que reciba un numero del 1 al 12desde el 
+            teclado y muestre el número de dias correspondiente al mes 
+            que correspondacon ese día.
+        -->
+<body onload="mesConsulta(mes)">
+  
+    <script>
+        let mes = Number(prompt('Ingrese el numero de referencia del mes (ej: Enero = 1)'));
+
+        function mesConsulta(mes){
+            switch(mes){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    document.write('El mes ingresado tiene 31 días');
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11: 
+                    document.write('El mes ingresado tiene 30 días')
+                    break;
+                case 2:
+                    document.write('Este mes tiene 28 días y cada 4 años, tiene 29 (consulte un calendario)');
+                    break;
+                default: document.write('Este número no hace referencia a ningún mes del calendario');
+            }
+        }
+    </script>
+</script>
+    </script>
+</body>
+
+</html>
