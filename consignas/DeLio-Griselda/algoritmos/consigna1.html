@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 
+    Escribir un programa que reciba un numero del 1 al 12
+    desde el teclado y muestre el número de dias correspondiente al mes que corresponda
+    con ese numero.
+    -->
+</head>
+
+<body>
+    <button onclick="mesesDias(mes);">Consulte</button>
+</body>
+<script>
+    var mes = parseInt(prompt("Ingrese el Número del mes de referencia."))
+
+    /* function diaMes(mes) {
+         if (mes >= 0 && mes <= 12) {
+ 
+             if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+                 document.write("El mes ingresado tiene 30 dias ");
+             }
+             if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) {
+                 document.write("El mes ingresado tiene 31 dias ");
+             }
+             if (mes == 2) {
+                 document.write("El mes ingresado tiene 28 dias ");
+             }
+         } else {
+             document.write("El valor ingresado no corresponde a ningún mes, intente nuevamente.")
+         }
+     }
+ */
+    function mesesDias(mes) {
+        switch (mes) {
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.write("El mes ingresado tiene 30 dias ");
+                break;
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.write("El mes ingresado tiene 31 dias ");
+                break;
+            case 2:
+                document.write("El mes ingresado tiene 28 dias ");
+                break;
+            default: document.write("El valor ingresado no corresponde a ningún mes, intente nuevamente.");
+        }
+    }
+
+</script>
+
+</html>
