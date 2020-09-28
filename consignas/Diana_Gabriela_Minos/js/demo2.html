@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+    <script>
+
+        //PARA ELIMINAR DATOS
+        function eliminarDato() {
+            let frutas = ['Manzana', 'Banana', 'Pera', 'Kiwi', 'Naranja', 'Arandanos']; // array de datos
+            console.log(frutas); //debug
+
+            let fruta = frutas.indexOf('Pera');
+            //     6           2
+            if (frutas.length > fruta) {
+                console.log('entro al if: ');
+            }
+            frutas.splice(fruta, 1); // elimino 1 elemento de un array por su posición
+            console.log('Mi array pos : '); //debug
+            return frutas;
+        }
+
+        //PARA CONCATENAR STRINGS Y ARRAYS
+        function strings_concat(cadena1, cadena2, cadena3) {
+            return cadena1.concat(cadena2, cadena3)
+            //cadena4 = cadena1 + cadena2 + cadena3;
+        }
+
+        function cualquiera() {
+            cadena1 = 'Oh'
+            cadena2 = 'qué maravillosa'
+            cadena3 = 'mañana'
+            data = strings_concat(cadena1, cadena2, cadena3)
+        }
+
+        function array_concat(array1, array2) {
+            data_resultante = array1.concat(array2)
+            return data_resultante
+        }
+
+        function arrays_d() {
+            const array1 = ['a', 'b', 'c'];
+            const array2 = ['d', 'e', 'f'];
+            array3 = array_concat(array1, array2, 1)
+            // expected output: Array ['a', 'b', 'c', 'd','e','f']
+        }
+
+        //PARA UNIR ARRAYS
+        function arrays_joined() {
+            const array1 = ['a', 'b', 'c'];
+            const array2 = ['d', 'e', 'f'];
+
+            mi_array = array1.join() //Por defecto lo devuelve separado por coma
+            //expected output: Array procesado devuelve un string = 'a,b,c'
+
+            mi_array = array1.join(';')
+            //expected output: Array procesado devuelve un string = 'a;b;c'
+
+            mi_array = array1.join('-')
+            //expected output: Array procesado devuelve un string = 'a-b-c'
+
+            mi_array = array1.join('')
+            //expected output: Array procesado devuelve un string = 'abc'
+        }
+
+        //PARA FILTRAR ARRAYS
+        function filtro() {
+            words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+            result = words.filter(word => word.length > 6);
+            //expected output: Array ['exuberant', 'destruction', 'present']
+        }
+
+        //PARA ENCONTRAR SOLAMENTE EL PRIMER ELEMENTO QUE CUMPLA LA CONDICIÓN
+        function array_find() {
+            const array1 = [5, 12, 8, 130, 44, 23, 6, 12];
+            //pos  0   1  2   3    4  5   6   7
+            const found = array1.find(element => element >= 20);
+            //expected output: 130
+        }
+
+
+        //PARA HACER QUE LOS ARRAYS PASEN A FORMAR PARTE DEL ARRAY PADRE(CUANDO HAY ARRAYS ADENTRO DE ARRAYS)
+        function array_flat() {
+            var array1 = [1.2[3, 4]];
+            // pos    0 1   2
+            array1.flat();
+            //expected output: new_array = [1, 2, 3, 4]
+            //pos   0  1  2  3 
+
+            var array2 = [1, 2, [3, 4, [5, 6]]];
+            //pos         0  1        2    3
+            new_array = arr2.flat();
+            //resultado new_array = [1, 2, 3, 4,[5, 6]]
+            //pos                    0  1  2  3    4
+            new_array = arr2.flat();
+            //resultado new_array = [1, 2, 3, 4, 5, 6]
+
+            //manera simplificada de hacer lo hecho anteriormente(arroja el mismo resultado)
+            var array3 = [1, 2, [3, 4, [5, 6]]];
+            new_array = arr2.flat(2);
+            //resultado new_array = [1, 2, 3, 4, 5, 6]
+
+        }
+
+    </script>
+
+    </body>
+
+</html>

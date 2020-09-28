@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 
+        
+        array1 = [5, 12, 8, 130, 44, 70,85];
+                1) armar funcion que permita eliminar  todos los numeros impares del array
+                2) armar funcion para mostrar en pantalla la lista en un elemento ul
+
+        -->
+
+</head>
+
+<body>
+    <script>
+
+
+        /* array1 = [5, 12, 8, 130, 44, 70,85];
+                1) armar funcion que permita eliminar  todos los numeros impares del array
+                2) armar funcion para mostrar en pantalla la lista en un elemento ul
+                    */
+        let numeros = [5, 12, 8, 130, 44, 70, 85];
+        function borrarImpares() {
+            for (numero of numeros) { // recorro el array
+                console.log(numero);
+                if (numero % 2 != 0) { // verifico que el numero sea impar
+                    var impar = numeros.indexOf(numero); // guardo el indice del numero
+                    numeros.splice(impar, 1); // elimino el impar segun el indice
+                }
+            }
+            console.log(numeros);
+        }
+
+        function mostrarNumeros() {
+            var lista = document.getElementById("lista"); // guardo mi lista
+            borrarImpares(); // llamo la funcion para limpiar los impares
+            for (numero of numeros) {
+                lista.innerHTML += "<li>" + numero + "</li>"; // bucle para armar la lista con el array limpio
+            }
+        }
+
+    </script>
+</body>
+
+</html>

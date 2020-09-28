@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+    Un usuario debe ingresar su nombre de usuario y ademas su clave(2 veces).
+      Mostrar un mensaje si los datos son correctos y las claves son iguales.
+      Se debe validar el tipo de dato ingresado en su nombre. 
+      Se debe validar que el nombre de usuario no puede ser menor a 4 caracteres ni mayor a 8 caracteres. 
+      Se debe validar que ambas claves sean iguales.
+
+    -->
+
+</head>
+
+<body>
+    <form action="" id="formulario">
+        <label for="usuario" class="usuario_label">Usuario:</label>
+        <input type="text" class="usuario_nombre" id="usuario_nombre" name="usuario" minlength="4" maxlength="8"
+            placeholder="Ingrese su nombre de usuario">
+        <br>
+        <label for="clave" class="clave_label">Password:</label>
+        <input type="password" class="usuario_clave" id="usuario_clave1" name="password"
+            placeholder="Ingrese su password">
+        <br>
+        <label for="clave2" class="clave_label2">Repita su Password:</label>
+        <input type="password" class="usuario_clave2" id="usuario_clave2" name="password2"
+            placeholder="Ingrese nuevamente su password">
+        <br>
+
+        <button onclick="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById("formulario").addEventListener("submit", validar);
+
+        function validar(onclick) {
+            var clave1 = document.getElementById("usuario_clave1").value;
+            var clave2 = document.getElementById("usuario_clave2").value;
+
+            if (clave1 !== clave2) {
+                alert("Las contraseñas deben coincidir")
+            } else {
+                alert("Formulario enviado exitosamente")
+            }
+        }
+    </script>
+</body>
+
+</html>

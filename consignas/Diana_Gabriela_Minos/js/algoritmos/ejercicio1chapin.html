@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Escribir un programa que reciba un numero del 1 al 12 desde el teclado y muestre el número de dias correspondiente al mes que corresponda
+        a ese mes.
+        -->
+
+</head>
+
+<body>
+
+    <h3>Ingrese el número correspondiente al mes que desee saber cuántos días tiene</h3>
+
+    <label for='numero'>Número</label>
+    <input type='number' id='numero'>
+
+    <button onclick="obtenerCantidadDiasDelMes()">Ver cantidad de días</button>
+
+    <script>
+
+        document.getElementById('numero').value = '';
+
+
+
+        function obtenerCantidadDiasDelMes(mes) {
+
+            mes = parseInt(document.getElementById('numero').value);
+
+            var ano = new Date().getFullYear();
+
+            console.log('mes: ' + mes);
+            console.log('año: ' + ano);
+
+            validarMes();
+
+            switch (mes) {
+                case 1:
+
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    alert('El mes seleccionado tiene 31 días');
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    alert('El mes seleccionado tiene 30 días');
+                    break;
+                case 2:
+                    if (((ano % 4 == 0) &&
+                        !(ano % 100 == 0))
+                        || (ano % 400 == 0))
+                        alert('El mes seleccionado tiene 29 días');
+                    else
+                        alert('El mes seleccionado tiene 28 días');
+                    break;
+                default:
+                    alert("Mes inválido.");
+
+            }
+        }
+
+        function validarMes(mes) {
+            var resultado = true;
+            if (parseInt(mes)) {
+                resultado = false;
+                alert('El dato debe ser un número')
+            }
+
+            if (resultado == true) {
+                if (mes > 13 || mes < 1) {
+                    alert('El número debe ser entre 1 y 12')
+                    resultado = false;
+                }
+            }
+            return resultado;
+        }
+
+    </script>
+
+</body>
+
+</html>
