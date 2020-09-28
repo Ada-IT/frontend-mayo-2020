@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 
+      Se ingresan tres notas de un alumno, si el promedio es mayor o igual 
+        a seis mostrar el mensaje "aprobado" en caso de no supoerarlo mostrar mensaje de
+         "No aprobado".
+         Tener en cuenta que para obtener 
+         el promedio debemos operar suma=nota1+nota2+nota3; y luego hacer promedio=suma/3;        
+        Se debe verificar que las notas ingresadas sean numero.
+        Las notas solo pueden ser numeros del 1 al 10.
+        El resultado se debe redondear para mostrar solo numeros enteros(sin decimal).
+     -->
+</head>
+<script>
+    function promedio(nota1, nota2, nota3) {
+        return (nota1 + nota2 + nota3) / 3
+    }
+
+    function devolucion(promedio) {
+        if (promedio >= 6) {
+            return "Aprobado"
+        } else {
+            return "No Aprobado"
+        }
+    }
+
+    function rangoValido(nota1, nota2, nota3) {
+        return nota1 > 0 && nota1 <= 10 && nota2 > 0 && nota2 <= 10 && nota3 > 0 && nota3 <= 10
+
+    }
+
+
+
+    var nota1 = parseInt(prompt("ingrese nota 1"))
+    var nota2 = parseInt(prompt("ingrese nota 2"))
+    var nota3 = parseInt(prompt("ingrese nota 2"))
+
+    if (rangoValido(nota1, nota2, nota3)) {
+        var mipromedio = promedio(nota1, nota2, nota3)
+
+
+        document.write("Promedio : " + Math.round(mipromedio))
+        document.write("<br>")
+        document.write(devolucion(mipromedio))
+    } else {
+        document.write("Rango invalido")
+    }
+</script>
+
+<body></body>
+
+</html>

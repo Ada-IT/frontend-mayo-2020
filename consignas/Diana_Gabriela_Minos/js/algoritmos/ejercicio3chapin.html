@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Realizar un programa que almacene en un arreglo de registros las características de 150 personas: 
+        nombre, edad, nacionalidad, género, teléfono y color de ojos.
+        -->
+
+</head>
+
+<body onload="guardarDatosPersona()">
+
+    <script>
+
+        function validarGenero(genero) {
+            let resultado = false;
+            if ((genero == 'M') || (genero == 'F') || (genero == 'NB')) {
+                resultado = true;
+            }
+            console.log("resultado validación de género: " + resultado);
+            return resultado;
+        }
+
+        function validarColorDeOjos(colorDeOjos) {
+            let ojos = false;
+            if ((colorDeOjos == 'A') || (colorDeOjos == 'V') || (colorDeOjos == 'M')) {
+                ojos = true;
+            }
+            console.log("resultado validación de color de ojos: " + ojos);
+            return ojos;
+        }
+
+
+
+        function guardarDatosPersona() {
+            let personas = [];
+
+            for (var i = 1; i <= 2; i++) {
+                let nuevaPersona = [];
+
+                window.alert('A continuación, introduzca los datos de la persona número: ' + i);
+
+                let nombre = window.prompt('Ingrese el nombre de la persona');
+
+                let edad = window.prompt('Ingrese la edad de la persona');
+
+                let nacionalidad = window.prompt('Ingrese la nacionalidad de la persona');
+
+                let genero = window.prompt('Ingrese el género de la persona. "M":Masculino, "F":Femenino o "NB":No Binario');
+                while (validarGenero(genero) == false) {
+                    genero = window.prompt('Ingrese un dato válido en mayúscula. "M" si el género es masculino, "F" si el género es femenino o "NB" si el género es No Binario');
+                }
+
+                let telefono = window.prompt('Ingrese el número de teléfono de la persona sin guiones, puntos ni espacios');
+
+                let colorDeOjos = window.prompt('Ingrese el color de ojos de la persona. "A":Azul, "V":Verde o "M":marrón');
+                while (validarColorDeOjos(colorDeOjos) == false) {
+                    colorDeOjos = window.prompt('Ingrese un dato válido en mayúscula. "A" si el color de ojos es azul, "V" si el color de ojos es verde o "M" si el color de ojos es marrón');
+                }
+                nuevaPersona.push(nombre, edad, genero, nacionalidad, telefono, colorDeOjos);
+                personas.push(nuevaPersona);
+                console.log(personas);
+
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

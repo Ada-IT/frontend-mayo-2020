@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+                var verduras_pedidas = ["cebolla", "papa", "calabaza"];
+                var frutas_pedidas = ["banana", "frutilla", "limón", "manzana"];
+                var frutas_disponibles = ["pera", "durazno", "damasco", "cereza", "frutilla", "coco", "uvas",  "manzana"];
+                var verduras_disponibles = ["cebolla", "choclo", "calabaza","aji","berenjena","lechuga","tomate","perejil"];
+                 1) armar un array con todo el pedido de verduleria
+                2) armar un array con todo que consegui de la verduleria
+                3) mostrar en pantalla mi lista de pedido en un elemento ul
+                4) mostrar en pantalla mi lista de conseguido en un elemento ul 
+                5) mostrar una lista de lo que no consegui.
+
+    -->
+
+</head>
+
+<body>
+    mi pedido
+    <ul id="mi_pedido"></ul>
+    disponible
+    <ul id="disponible"></ul>
+    faltante
+    <ul id="faltante"></ul>
+
+    <script>
+        var verduras_pedidas = ["cebolla", "papa", "calabaza"];
+        var frutas_pedidas = ["banana", "frutilla", "limón", "manzana"];
+        var frutas_disponibles = ["pera", "durazno", "damasco", "cereza", "frutilla", "coco", "uvas", "manzana"];
+        var verduras_disponibles = ["cebolla", "choclo", "calabaza", "aji", "berenjena", "lechuga", "tomate",
+        "perejil"];
+
+        var pedido_completo = verduras_pedidas.concat(frutas_pedidas);//concatenamos los dos pedidos        
+        var verduleria = verduras_disponibles.concat(frutas_disponibles);//concatenamos lo disponible
+        
+       /*esta funcion imprime el array que se le pasa por parametro e 
+       itera sobre cada elemento del mismo para
+       colocarlo en la lista correspondiente (tambien pasada por parametro)*/
+        function imprimirArray(array,lista){
+            var elemento = ""; //varibale vacia donde armamos la lista 
+            array.forEach((item) => { 
+                elemento = elemento + "<li>" + item + "</li>";
+            });
+            lista.innerHTML = elemento;
+            
+        }
+        /*aca determinamos 
+        1)si la verduleria tiene lo que se pide
+        2)lo que no tiene del pedido realizado, negando el includes
+        y posteriormente llama a la funcion encargada de imprimir las listas requeridas*/
+         
+            var compra = verduleria.filter(verdura => pedido_completo.includes(verdura));
+            var no_disponible = pedido_completo.filter(producto => !verduleria.includes(producto));
+
+            imprimirArray(compra,disponible)
+            imprimirArray(pedido_completo,mi_pedido)
+            imprimirArray(no_disponible,faltante)
+        
+    </script>
+    
+
+
+
+
+</body>
+
+</html>

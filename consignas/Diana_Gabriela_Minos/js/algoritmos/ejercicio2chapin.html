@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Escribir un programa que almacene en un arreglo de registros los nombres de los alumnos, sus notas parciales y finales. 
+        Calcular la nota promedio y mostrar un mensaje de APTO si el alumno supera o iguala la calificación de 5 o NO APTO si no lo alcanza. 
+        Hacerlo para un número de 5 alumnos.
+        -->
+
+</head>
+
+<body onload="guardarDatosAlumnos()">
+
+    <script>
+
+        function guardarDatosAlumnos() {
+            let alumnos = [];
+
+            for (var i = 1; i <= 5; i++) {
+                let nuevoAlumno = [];
+
+                window.alert('A continuación, introduzca los datos del alumno número' + ':' + i);
+
+                let nombre = window.prompt('Ingrese el nombre del alumno');
+
+                let nota1 = window.prompt('Ingrese la primer nota del alumno');
+
+                let nota2 = window.prompt('Ingrese la segunda nota del alumno');
+
+                let promedio = (parseInt(nota1) + parseInt(nota2)) / 2;
+
+                if (promedio <= 5) {
+                    alert('No apto')
+                } else {
+                    alert('Apto')
+                }
+
+                nuevoAlumno.push(nombre, nota1, nota2, promedio);
+                alumnos.push(nuevoAlumno);
+                console.log(alumnos);
+
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

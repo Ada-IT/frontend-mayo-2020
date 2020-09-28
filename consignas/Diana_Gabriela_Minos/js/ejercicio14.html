@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 
+        Realizar Ejercicio 11: Diseñar  un objeto que contenga un array que contenga datos personales (nombre, apellido, fecha de nacimiento, telefono, localidad, direccion)
+donde deberan estar separados en 2 arrays
+ datos_personal (nombre,apellido, fecha_nacimiento, telefono) y datos_ubicacion (direccion, localidad)
+        ojb = {
+            1: array de datos(datos_personales[nombre,apellido,fecha_nacimiento,telefno],datos_de_ubicacion[direccion,localidad])
+        }
+        el objeto tendra 4 items  SI
+        dos items del objeto contienen una misma localidad  SI
+        Se deben diseñar una web con una funcion que muestre  
+        solo los items que tienen la misma localidad.(filtrar localidad)
+         (es valido definir la localidad a filtrar como parametro o variable) SI
+        Se deben mostrar en una tabla. 
+    -->
+</head>
+
+<body>
+    <!-- Add your site or application content here -->
+    <form>
+        <label>Buscador</label>
+        <input id="x" type="text">
+        <button onclick="mostrarDatos()">Buscar</button>
+    </form>
+    <table id="datos">
+    </table>
+
+    <script>
+        function mostrarDatos() {
+            let midata = {
+                //1:['nombre']                 0                                         1
+                //     0         1          2              3               0                   1            
+                1: [["Oliver", "Hardin", "31-12-69", "1-913-600-7345"], ["579 Et Rd.", "Lombeek"]],
+                2: [["Chaney", "Richardson", "31-12-69", "1-712-683-2958"], ["P.O. Box 517, 7480 Dolor. Street", "Jaranwala"]],
+                3: [["Eagan", "Alvarado", "31-12-69", "1-727-734-2239"], ["Ap #286-1331 Aenean Rd.", "Jaranwala"]],
+                4: [["Malik", "Foster", "31-12-69", "1-633-138-6533"], ["3286 Adipiscing. Street", "Kinross"]]
+            };
+            let busqueda = obtenerDatosForm('x');
+
+            borrado = document.getElementById('datos').innerHTML = '';
+
+            cabecera = '<tr><td>nombre</td><td>apellido</td><td>fecha de nacimiento</td><td>telefono</td><td>direccion</td><td>localidad</td></tr>'
+
+            agregarContenido('datos', cabecera);
+
+            Object.entries(midata).forEach(([key, value]) => {
+                //console.log('objeto '+ value); 
+                //variable = value[1][1]
+                if (busqueda == value[0][0] || busqueda == value[0][1] || busqueda == value[0][2] || busqueda == value[0][3] || busqueda == value[1][0] || busqueda == value[1][1]) {
+                    tabla = '<tr><td>' + value[0][0] + '</td><td>' + value[0][1] + '</td><td>' + value[0][2] + '</td><td>' + value[0][3] + '</td><td>' + value[1][0] + '</td><td>' + value[1][1] + '</td></tr>';
+                    console.log('entre al if y agrego contenido de  ' + value[1][1]);
+                    agregarContenido('datos', tabla);
+                } else {
+                    console.log('no entre al if');
+                }
+            });
+        }
+        /**
+        * 
+        */
+        function agregarContenido(elemento, contenido) {
+            update_content = document.getElementById(elemento).insertAdjacentHTML('beforeend', contenido);
+        }
+        /**
+         *  
+         */
+        function obtenerDatosForm(elemento) {
+            var data = document.getElementById(elemento).value;
+            return data;
+        }
+
+
+
+        function filtrar_localidad(data, localidad) {
+            if (data == localidad) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }                
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 10</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- 
+          Dado el objeto tendremos que crear un sitio web 
+          con 6 cards con imagenes diferentes y se veran en filas de 2. 
+          Cada fila de cards deberá contar con 1 efecto de sombra
+          Cada fila de cards deberá tener al menos un efecto extra diferente.
+          Modificar el objeto con imagenes y textos alternativos.
+        -->
+
+    <style>
+        .blur {
+            filter: blur(3px);
+        }
+
+        .sepia {
+            filter: sepia(100%);
+        }
+
+        .grayscale {
+            filter: grayscale(100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button type="button" class="btn btn-primary" onclick="mostrarCards()">Obtener
+            detalles</button>
+        <br>
+        <div id="cardDetalle" class="row">
+        </div>
+    </div>
+    <script>
+        function mostrarCards() {
+            let objeto = {
+                1: ["Card 1", "Detalle 1", "../../../img/galeria_de_fotos/casa.jpeg", "blur"],
+                2: ["Card 2", "Detalle 2", "../../../img/galeria_de_fotos/telefono.jpeg", "blur"],
+                3: ["Card 3", "Detalle 3", "../../../img/galeria_de_fotos/guitarra.jpeg", "sepia"],
+                4: ["Card 4", "Detalle 4", "../../../img/galeria_de_fotos/zapatos.jpeg", "sepia"],
+                5: ["Card 5", "Detalle 5", "../../../img/galeria_de_fotos/laptop.jpeg", "grayscale"],
+                6: ["Card 6", "Detalle 6", "../../../img/galeria_de_fotos/jugo.jpeg", "grayscale"],
+            };
+            let cards = "";
+
+            Object.entries(objeto).forEach(([key, value]) => {
+                cards = cards +
+                    `<div class="col-md-6">
+                    <div class="card shadow p-3 m-3 `+ value[3] + `" style="width: 18rem;">
+                        <img src="`+ value[2] + `" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">`+ value[0] + `</p>
+                                <p class="card-text">`+ value[1] + `</p>
+                     </div>
+                 </div>
+              </div>`;
+            });
+            cambiarContenido("cardDetalle", cards);
+        }
+
+        function cambiarContenido(elemento, contenido) {
+            var data = (document.getElementById(elemento).innerHTML = contenido);
+        }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

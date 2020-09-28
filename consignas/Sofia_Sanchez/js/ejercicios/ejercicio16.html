@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+<!-- 
+                1) Definir un array participantes que contendra los siguientes nombres:
+                Ana, Osvaldo, Raúl, Celia, María, Antonio
+                2) Definir una funcion que permita agregar nuevos particpantes
+                3) Definir una funcion que nos permita saber sun partipante ya se ha agregado.
+                4) No se pueden duplicar (repetir) los particpantes.
+                5) Se poder cargar en un formulario de html Nombre 
+                6) El formulario debe tener un boton Agregar Participante     
+                7) Mostrar el listado de participantes en un elemento <ul> ordenados alfabeticamente.
+                8) La lista debe actualizarse cada vez que se agrega un participante.           
+            -->
+
+<body>
+
+
+    <label>Nombre del Participante</label>
+    <input id="x" type="text">
+    <button onclick="validar()">Agregar Participante</button>
+
+    <p id="listado"></p>
+
+    <div>
+
+    </div>
+
+    <script>
+        //se junta todos los nombres
+        var participantes = ['Ana', 'Osvaldo', 'Raul', 'Celia', 'Antonio'].sort();
+
+        //input del participante (viejo y nuevo)
+        function agregar_participante(nueva_persona) {
+            participantes.push(nueva_persona);
+            //document.write('Los Participantes son: <br><br>');
+            //document.write(participantes.join('<ul>' + '</ul>'));
+        }
+
+        //lo valido con el boton
+        function validar() {
+            let nueva_persona = document.getElementById('x').value;
+            if (!participantes.includes(nueva_persona)) {
+                p = capitalizar(nueva_persona);
+                agregar_participante(p);
+                ordenarListado();
+            }
+
+        };
+
+        function ordenarListado() {
+            var listaOrdenada = '';
+            var ordenar = participantes.sort();
+            ordenar.forEach((item) => {
+                listaOrdenada = listaOrdenada + '<li>' + item + '</li>';
+            });
+            var orden = (document.getElementById("listado").innerHTML = listaOrdenada)
+        }
+
+        function capitalizar(data) {
+            return `${data.substring(0, 1).toUpperCase()}${data.substring(1).toLowerCase()}`;
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

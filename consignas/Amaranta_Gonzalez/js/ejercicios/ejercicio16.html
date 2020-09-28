@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 16</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel=" stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<!--1) Definir un array participantes que contendra los siguientes nombres:
+        Ana, Osvaldo, Raúl, Celia, María, Antonio
+        2) Definir una funcion que permita agregar nuevos particpantes
+        3) Definir una funcion que nos permita saber sun partipante ya se ha agregado.
+        4) No se pueden duplicar (repetir) los particpantes.
+        5) Se poder cargar en un formulario de html Nombre
+        6) El formulario debe tener un boton Agregar Participante-->
+
+<body>
+    <div class="container">
+        <h1>Agregar Persona</h1>
+            <form>
+           
+                <div class="row">
+                
+                    <div class="form-group col-lg-4">
+                        <label >Nombre</label>
+                        <input type="text" class="form-control" id="nombre">
+                    </div>
+
+                </div>
+                <div>
+                    <button type="button" class="btn btn-success" onclick="agregar();">Agregar</button>
+
+                </div>
+            </form>
+            <br><br>
+            <div>
+               <ul id="lista">Listado</ul> 
+            </div>
+    
+    <script>
+        function Persona(nombre) {
+            this.nombre=nombre;
+        }
+        function capturar(){
+            var nombreCapturar = document.getElementById('nombre').value;
+            return new Persona (nombreCapturar);
+        }
+
+        var participantes = ['Ana', 'Osvaldo', 'Raúl', 'Celia', 'María', 'Antonio'];
+        
+        function agregar(){
+            var nuevoParticipante = capturar();
+            participantes.push(nuevoParticipante);
+            document.getElementById('lista').innerHTML += '<li>'+nuevoParticipante.nombre+'</li>';
+            participantes.sort();
+        }
+    </script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    </script>
+</body>
+
+</html>
