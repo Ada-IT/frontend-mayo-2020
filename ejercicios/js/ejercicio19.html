@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+            <!--
+                // precio de lista de proveedor
+                producto        precio
+                vino_x_unidad = 100 
+                azucar_x_kg = 60
+                cafe_x_kg = 230
+                leche_x_unidad = 45
+                pan_lactal_x_unidad = 95
+                leche_x_unidad = 45
+                queso_x_kg  = 120
+                paleta_x_kg  = 150  
+                 ej : [[producto,precio],[producto,precio]]
+                1) armar un array con todos los productos y sus precios
+                2) armar una lista de precios de venta con el 40% de ganancia  
+                3) armar una lista de venta  con los precios con iva (21%) para consumidor final
+                4) tener un boton que simule cargar de productos de proveedor(esto es para procesar la lista de precios) 
+                5) el boton de carga luego de ejecutarse debera mostrar un cartel/o texto en pantalla que afirme la carga
+                6) mostrar lista de precios con iva en pantalla y permitir que se seleccionen productos individualmente con un boton de carrito
+                7) guardar la lista de productos seleccionados  en un array
+                8) tener una lista visible de productos seleccionados en tiempo real .(es decir cada vez que apreto un carrito actualizar esta lista)
+                9) calcular precio de total y mostrar precio en pantalla 
+
+                Tiempo estimado de ejercicio en grupo 1.30hs.
+            -->  
+          <div class="container">
+            <button onclick="init()">Mostrar listado de precios</button>  
+           </div>
+           <div id="listado_productos_iva">
+            <h3>Productos disponibles</h3>
+            <table id="productos_disponibles"></table>
+           </div>    
+           <br>
+           <div id="listado_productos_seleccionados">
+               <h3>Carrito</h3>
+            <table id="mis_productos"></table>
+           </div>   
+           <br> 
+           <div>
+            <h3>Total</h3>
+            <h4 id="total">$0.0</h4>
+           </div>                                         
+         <script>
+            // inizializando variables globales
+            lista_precios_prov = []
+            lista_productos_venta = []
+            lista_productos_iva = []
+            lista_productos_seleccionados = []        
+            total = 0.0
+
+            function init(){
+                lista_precios_prov = [['vino_x_unidad',100],['azucar_x_kg',60]];
+                lista_productos_venta =  calc_precio(lista_precios_prov,0.40);
+                lista_productos_iva = calc_precio(lista_productos_venta,0.21);
+                lista_productos_seleccionados = [];
+                listar_productos('productos_disponibles',lista_productos_iva,true);               
+            } 
+           
+            function calc_precio(lista, porcentaje){
+                lista_precio = lista.map(function(producto) {
+                                            producto_venta = (producto[1]* porcentaje )+producto[1]
+                                            producto  = [producto[0],producto_venta]
+                                            return producto; 
+                                        }
+                                    );
+                return lista_precio
+             }
+
+             function  listar_productos(tabla,lista_data, btn_comprar_activo){
+                lista ='<tr><td>Producto</td><td>Precio</td>'
+                if(btn_comprar_activo){
+                       lista = lista + '<td>Accion</td>'
+                }
+                lista_data.forEach(producto => {
+                    lista = lista+ '<tr><td>'+ producto[0] + '</td><td>'+ producto[1] + '</td>'
+                    if(btn_comprar_activo){
+                        lista = lista + '<td><button onclick="comprar(\''+producto[0]+'\',\''+ producto[1]+ '\')">Comprar</button></td>' ;                       
+                    }
+                    lista = lista +  '</tr>';
+                });
+                a  = document.getElementById(tabla).innerHTML  = lista;
+             }   
+
+             function comprar(producto, precio){
+                console.log(producto);
+                prod  = [producto,precio]
+                lista_productos_seleccionados.push(prod);
+                calc_total(precio);
+                listar_productos('mis_productos',lista_productos_seleccionados, false);
+
+             }     
+            
+             function calc_total(precio){                                 
+                total  = total + parseFloat(precio);
+                console.log('total : ' + total + ' sub : ' + precio);
+                a  = document.getElementById('total').innerHTML  = '$' + total ;                
+             }                            
+         </script>   
+    </body>
+
+</html>

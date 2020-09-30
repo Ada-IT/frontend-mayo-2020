@@ -116,6 +116,46 @@ function eliminarDato() {
       console.log(titulares);   
     }
 
+    function  array_to_string(){
+      var arr_blog_articles = ['titular 1','titlular 2','titluar 3 ','titular 4',1]
+      a  = arr_blog_articles.toString
+      //output  a  = 'titular 1,titlular 2,titluar 3 ,titular 4, 1'
+    }
+
+    function array_lastIndexOf(){
+      var arr_blog_articles = ['titular 1','titlular 2','titluar 3 ','titular 4']
+      a  = arr_blog_articles.lastIndexOf();
+      /// output => 3   == 'titular 4' 
+    }
+
+    function array_keys(){
+      const array1 = ['a', 'b', 'c'];
+      const iterator = array1.keys();
+
+      for (const key of iterator) {
+        console.log(key);
+      }
+      // 0        ==  0:'a'
+      // 1        ==  1:'b' 
+      // 2        ==  2:'c'
+      a = iterator.next()   // {value:0}
+      a = iiterator.next()   // {value:1}
+      a = iiterator.next()   // {value:2}
+    }  
+
+    function array_reverse(){
+      var arr_blog_articles = ['titular 1','titlular 2','titluar 3 ','titular 4']
+      a =  arr_blog_articles.reverse() 
+      //output  ['titular4', 'titular 3',  'titular 2' , 'titular 1']
+    } 
+
+    functio array_sort(){
+      var frutas = ['guindas', 'manzanas', 'bananas'];
+      frutas.sort(); // ['bananas', 'guindas', 'manzanas']
+      frutas.reverse();['manzanas', 'guindas', 'bananas']
+    }
+
+
     function poner_mayus(texto){
       return texto.charAt(0).toUpperCase() + texto.slice(1)
     }

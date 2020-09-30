@@ -6,7 +6,50 @@
 
     <script>
         var personas = [];
+        var personas_local; //  undefined
+        var Personas_local;
+        
+        function piripi(){
+            a = 2+2
+            return data
+        } /// ReferenceError:
 
+
+
+        var input; //undefined 
+        if (input === undefined) { //false
+        doThis();
+        } else {
+        doThat();
+        }
+
+
+        //nos aparece un NaN
+        var a; //undefined
+        c = a + 2;  // Evalúa a NaN
+        //c = NaN
+
+        var n = null;
+        console.log(n * 32); // N se va a comportar como  0 en la consola
+
+
+        if (true) {
+             var x = 5;
+        }
+        console.log(x);  // x es 5        
+
+        if (true) {
+             let x = 5;
+        }
+        console.log(x);  // ReferenceError: x no está definida
+
+
+        const sarasa = "HOLA"
+        // un comentario de una línea
+
+        /* este es un comentario 
+        * más largo, de varias líneas
+        */
         function init(){
             while (personas.length <= 2){
                 addPerson();
@@ -15,7 +58,7 @@
             console.log(personas);           
         }
         const newPerson = () => {
-                let persona = [];
+                let persona = []; ///agrego un nuevo array 
                 let nombre = prompt("Nombre:");
                 let genero_status =false;
                 let genero;
@@ -42,13 +85,13 @@
                 }
                 let nacionalidad = prompt("Nacionalidad:");
                 let telefono = Number(prompt("Teléfono:"));
-                persona.push(nombre, genero, edad, peso, ojos, nacionalidad, telefono);
-                return persona;
+                persona.push(nombre, genero, edad, peso, ojos, nacionalidad, telefono); //cargue los datos en el  array Persona
+                return persona; //los devuelvo 
         };
 
        function addPerson() {                      
-            add_persona = newPerson();        
-            personas.push(add_persona);
+            add_persona = newPerson();  // vienen los datos del return de persona       
+            personas.push(add_persona); ///guardo datos en el array personas
             console.log('Agregue a ' + add_persona[0]);           
             console.log(add_persona);
         };        
