@@ -1,0 +1,43 @@
+Json-server es un simulador de Api's que nos va  a permitir 
+diseñar sistemas y webs sin necesidad de tener acceso a una api real.
+Más info en : https://github.com/typicode/json-server
+
+Podremos listar, agregar, eliminar, actualizar información como si estuvieramos comunicandonos
+con una api real.
+
+Como instalar Joson-server en Windows
+Abrir la consola Cmd y/o PowerShell
+
+Ejecutar : npm install -g json-server
+
+Si usas Mac o Linux
+Abrir Terminal
+Ejecutar: sudo npm install -g json-server
+
+Para poder ejecutar json-server debemos tener un archivo json armado para usarlo.
+
+Ejemplo archivo db.json
+contenido :
+{
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "ADA IT" }
+}
+
+Para poder levantar nuestro servidor de api local en nuestra pc debemos ejecutar dentro de esta carpeta:
+
+json-server --watch db.json 
+
+el nombre del .json debe ser el que querramos usar de todos los que tengamos disponibles.
+
+Ej en caso de tener el ejemplo del json de arriba tenedremos acceso a los siguientes endpoints:
+
+ http://localhost:3000/posts/
+ http://localhost:3000/comments/
+ http://localhost:3000/profile/
+
+
