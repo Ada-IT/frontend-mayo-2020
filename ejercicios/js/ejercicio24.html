@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>            
+        <script>
+            function obtener_posts(){
+                //metodo básico de obtener datos de api.
+                fetch("http://localhost:3000/posts/", {
+                    method: "get"
+                })
+                .then(response => response.json())
+                .then(
+                    //aca podriamos tener una funcion que nos permita recorrer el json 
+                    json => console.log(json)
+                    )                
+                .catch(function(err) {
+                        // Error :(
+                });
+            }
+
+            function obtener_post(id){
+                //metodo básico de obtener datos de api.
+                let url = "http://localhost:3000/posts/" + id;
+                fetch(url , {
+                    method: "get"
+                })
+                .then(response => response.json())
+                .then(
+                    //aca podriamos tener una funcion que nos permita recorrer el json 
+                    json => console.log(json)
+
+                    )                
+                .catch(function(err) {
+                        // Error :(
+                });
+            }
+            function agregar_post(title,author,article){
+                data  = {
+                            "title":title,
+                            "author":author,
+                            "article": article
+                        }
+                fetch('http://localhost:3000/posts/', {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers:{
+                    'Content-Type': 'application/json'
+                }
+                })
+                .then(function(response) {
+                    if(response.ok) {
+                        return response.text()
+                    } else {
+                        throw "Error al guardar";
+                    }
+                })
+                .then(function(texto) {
+                    console.log(texto);
+                })
+                .catch(function(err) {
+                    console.log(err);
+                });                
+            }
+
+            function mostrarDatos(data){
+                data.forEach(element => {
+                    
+                });
+            }
+        </script>
+    </body>
+
+</html>

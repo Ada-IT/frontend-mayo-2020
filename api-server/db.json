@@ -1,9 +1,40 @@
 {
-    "posts": [
-    { "id": 1, "title": "json-server", "author": "Ada IT", "article":" Mi article..."}
-    ],
-    "comments": [
-    { "id": 1, "message": "some comment", "postId": 1 }
-    ],
-    "profile": { "id": 1, "author":"Ada IT" }
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "Ada IT",
+      "article": " Mi article..."
+    },
+    {
+      "id": 2,
+      "title": "Curso Ada",
+      "author": "Ada IT",
+      "article": " Mi article. 2.."
+    },
+    {
+      "id": 3,
+      "title": "Curso JS",
+      "author": "Ada IT",
+      "article": " Mi article. 3.."
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "message": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "id": 1,
+    "author": "Ada IT"
+  },
+  
+  "usuarios": {
+    "id": 1,
+    "name": "Ada",
+    "lastname": "IT",
+    "email": "sarasa@email.com"
+  }
 }
