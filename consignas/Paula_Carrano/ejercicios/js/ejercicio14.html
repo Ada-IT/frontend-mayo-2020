@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heladeria</title>
+</head>
+<body>
+    <!--
+        1) Realizar un array que contenga 8 sabores de helado.
+        2) El usuario debe poder agregar los sabores individualmente
+        3) Los sabores se deben validar con el array de los existentes
+        4) El usuario solo puede seleccionar un max de 3 sabores.
+        5) Se debe presentar la lista de sabores seleccionados en pantalla.
+    -->
+
+    
+    <script>
+        //main
+        var sabores =["dulce de leche", "frutilla", "chocolate", "vainilla", "crema", "mantecol", "oreo","bariloche"]
+        var gustoCliente =[];
+
+       while(gustoCliente.length ==3){
+                 validar();
+            }
+
+        function validar(){
+        var seleccion = prompt("Ingrese el sabor que quiere comprar: ");
+        var existeSabor = false;
+        for (i=0; i<8;i++){ // itera para ver si el valor es mismo que el array
+            if (seleccion.toLocaleLowerCase() == sabores[i]){
+                existeSabor=true;
+                break; //salgo del bucle
+             }
+        }
+        if (existeSabor == true){
+            document.write("Su sabor es: " + seleccion + "<br>");
+            gustoCliente.push(seleccion);
+            console.log(gustoCliente);
+        }else{
+            alert("Su sabor no está disponible");
+        }
+    }
+
+/* sabores =[8 sabores]
+sabores_seleccionados = []
+
+while(sabores_Seleccionados ==3){
+    seleccionado = prompt()
+    if ((sabores.includes(seleccionado)) && (!sabores_seleccionados.includes(seleccionado))){
+        sabores_seleccionados.push(seleccionado);
+    }
+}
+*/
+    </script>
+</body>
+</html>
