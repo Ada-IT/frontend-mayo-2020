@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Java Script</title>
+</head>
+
+<body>
+   <script>
+      //operadores aritmeticos
+      var suma = 80;
+      var miEdad = 68;
+      var laDeOtro = 20;
+      var resultadoDeEdades = miEdad + laDeOtro;
+
+      console.log("resutado:" + suma);
+      console.log("resutado de edad:" + resultadoDeEdades);
+      console.log("resutado de edad:" + (miEdad + laDeOtro));
+      //and
+      var resultado2 = suma >= miEdad;
+      console.log("resultado2: " + resultado2);
+      var resultado3 = resultado2 == true && miEdad === 68;
+      console.log("resultado3: " + resultado3);
+      //or
+      var resultado4 = resultado2 == false || miEdad === 58;
+      console.log("resultado4:" + resultado4);
+      //tipo de variable
+      console.log("resultado4 de tipo:" + typeof resultado4);
+      console.log("resultado miEdad de tipo:" + typeof miEdad);
+
+      var nombre = "Paula A.";
+      var apellido = "Carrano";
+
+      var nombreCompleto = nombre + " " + apellido;
+      console.log("resultado mi nombre completo: " + nombreCompleto);
+      //UpperCase mayus
+      console.log("resultado mi nombre completo: " + nombreCompleto.toUpperCase());
+      //LowerCase min
+      console.log("resultado mi nombre completo: " + nombreCompleto.toLowerCase());
+      //length cant. de caracteres
+      console.log("resultado cantidad de caracters: " + nombreCompleto.length);
+      //obtener caracter especifico del string 
+      console.log("obtener letra de mi string: " + nombreCompleto.charAt(0));
+      //reemplazar un caracter en el string
+      console.log("obtener reemplazo de mi string: " + nombreCompleto.replace("A.", "Agustina"));
+      //repetir el string_ nros enteros
+      console.log("repetir mi string: " + nombre.repeat(2));
+      //match
+      cadena = "Para más información, vea Capitulo 3.4.5.1";
+      expresion = /(capitulo \d+(\.\d)*)/i;
+      hallado = cadena.match(expresion);
+      console.log(hallado[0]);
+      //substr_porción de tu string [usamos las posiciones]
+      console.log("resultado de substring de nombre: " + nombre.substr(0, 3));
+      //split ([separador coma-blank-guion][limite])
+      var spliteado = nombreCompleto.split(" ");
+      console.log("resultado de split de nombre completo: " + spliteado);
+      var minombre = spliteado[0];
+      var sdonombre = spliteado[1];
+      var apellido = spliteado[2];
+      console.log("resultado de mi nombre spliteado: " + minombre);
+      console.log("resultado de mi segundo nombre spliteado: " + sdonombre);
+      console.log("resultado de mi apellido spliteado: " + apellido);
+      //split2 ([separador coma-blank-guion][limite])
+      cadena2 = "celular,$1155, moto g 5, 2";
+      var spliteado2 = cadena2.split(",");
+      var producto = spliteado2[0];
+      var precio = spliteado2[1];
+      var descripcion = spliteado2[2];
+      var stock = spliteado2[3];
+      console.log("resultado de mi producto: " + producto);
+      console.log("resultado de mi precio: " + precio);
+      console.log("resultado de mi descripción: " + descripcion);
+      console.log("resultado de mi stock: " + stock);
+      //variables
+      let calles = "calle 1234";
+      var calles = "calle 12, calle 34";
+      lascalles = "calle1, calle2, calle3";
+      //constantes
+      const miubicacion = "mi casa";
+      //variables cambian
+      calle = "mi nueva calle 2345";
+      console.log("resultado mi calle: " + calle);
+      //constante no cambia
+      console.log("resultado mi constante:" + miubicacion);
+
+   </script>
+</body>
+
+</html>

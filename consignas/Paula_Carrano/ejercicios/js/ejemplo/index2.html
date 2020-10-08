@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Ejemplo</title>
+</head>
+
+<body>
+   <button onclick="alerta('hola')">Clickeame</button>
+   <button onclick="cambiarTexto('texto 1','demo2')">Cambiar texto</button>
+   <div id="demo" style="width: 30%; height: 100px;">
+      <button onclick="cambiarColor('red')">Cambiar color</button>
+      <button onclick="cambiarColor('green')">Cambiar color</button>
+   </div>
+   <button onclick="obtenerContenido('demo2')">Contenido</button>
+   <button onclick="obtenerContenido2('demo2', 'mi texto sarasa')">Contenido2</button>
+   <div id="demo2" style="width: 30%; height: 100px;">
+      Using templates <br>
+      To use templates we need to tell our generator where to ...
+   </div>   
+      <input type="number" id="a" name="a">
+      <input type="number" id="b" name="b">
+      <button onclick="sumar('resultado')">Suma</button>
+      <span id="resultado">Resultado: </span>
+
+      <table id="mitabla"></table>
+
+      <input type="text" id="empleado" name="empleado">
+      <button onclick="agregarEmpleado()">Agregar empleado</button>
+      <button onclick="ordenarEmpleados()">Ordenar empleado</button>
+      <br>
+      <select id="documento" onchange="validar_documento(this)">
+         <option value="dni">dni</option>
+         <option value="cuit">cuit</option>
+         <option value="pasaporte">pasaporte</option>
+         <option value="ci">CEDULA DE INDENTIDAD</option>
+      </select>
+      <span id="doc_seleccionado"></span>
+      <form>
+      <input type="text" id="foco" name="foco" onfocus="focused()">
+      </form>
+      <script type="text/javascript" src="./demo.js"></script>
+</body>
+
+</html>
