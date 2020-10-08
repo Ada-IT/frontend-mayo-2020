@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de participantes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+    <body>
+    <!-- 
+        1) Definir un array participantes que contendra los siguientes nombres:
+        Ana, Osvaldo, Raúl, Celia, María, Antonio
+        2) Definir una función que permita agregar nuevos participantes
+        3) Definir una función que nos permita saber si un particpante ya se ha agregado.
+        4) No se pueden duplicar (repetir) los participantes.
+        5) Se debe poder cargar en un formulario de html Nombre
+        6) El formulario debe tener un boton de agregar participantes
+    -->
+    <div class="container">
+        <div class="input-group mb-3">
+            <input id="formulario" type="text" class="form-control" placeholder="Nombre de participante"
+                aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button onclick="verificar()" class="btn btn-outline-secondary" type="button" id="button-addon2">Agregar
+                    participante</button>
+            </div>
+        </div>
+        <div>
+            <ul id="lista"></ul>
+        </div>
+    </div>
+
+    <script>
+        var participantes = ['Ana', 'Osvaldo', 'Raul', 'Celia', 'Maria', 'Antonio'];
+
+        function agregar_participante(participante) {
+            participantes.push(participante);
+        }
+
+        function verificar() {
+            var participante = document.getElementById('formulario').value;
+            if (!participantes.includes(participante)) {
+                agregar_participante(participante);
+                ordenar();
+            } else {
+                alert('participante ya existente');
+            }
+        }
+
+        function ordenar() {
+            var lista_ordenada = "";
+            var ordenado = participantes.sort();
+            ordenado.forEach((item) => {
+                lista_ordenada = lista_ordenada + "<li>" + item + "</li>";
+            });
+            var data = (document.getElementById("lista").innerHTML = lista_ordenada)
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </body>
+</html>
