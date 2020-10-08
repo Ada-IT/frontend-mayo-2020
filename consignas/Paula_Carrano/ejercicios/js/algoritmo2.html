@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapin_2</title>
+    <!--
+        Escribir un programa que almacene en un arreglo de registros los nombres de los alumnos, sus notas parciales y finales. 
+        Calcular la nota promedio y mostrar un mensaje de APTO si el alumno supera o iguala la calificación de 
+        5 o NO APTO si no lo alcanza. Hacerlo para un número de 5 alumnos.
+    -->
+</head>
+<body> 
+ <button onclick="alumnos()">Información del alumno</button>
+
+    <script>
+    var students = [];
+
+    function alumnos(){
+        for (i=0; i<5; i++) {
+            var firstName= prompt("Ingrese su nombre");
+            var notParcial= Number(prompt("Ingrese nota parcial"));
+            var notFinal= Number(prompt("Ingrese nota final"));
+            var notProm= (notParcial + notFinal)/2;
+
+            var student = {
+                    firstName: firstName,
+                    parcialNote: notParcial,
+                    finalNote:notFinal,
+                    promNote: notProm
+            };
+            students.push(student); 
+        }
+        estadoAlumno();
+    }
+
+    function estadoAlumno(){
+        for (i=0; i<5; i++){
+            if (students[i].promNote >=5){
+                document.write(students[i].firstName + " Aprobado" + "<br>");
+            }else {
+                document.write(students[i].firstName + " Desaprobado"  + "<br>");
+            }   
+         }
+         console.log(students);
+        }
+    </script>
+</body>
+</html>
