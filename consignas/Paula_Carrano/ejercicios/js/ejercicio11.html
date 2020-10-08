@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <!-- 
+        array que contenga datos personales (nombre, apellido, fecha de nacimiento, telefono, localidad, direccion)
+        datos_personal(nombre,apellido, fecha_nacimiento, telefono) y datos_ubicacion(direccion, localidad)
+        ojb = {
+            1: array de datos(datos_personales[nombre,apellido,fecha_nacimiento,telefno],datos_de_ubicacion[direccion,localidad])
+            2:
+        }
+        el objeto tendra 4 items 
+        dos items del objeto contienen una misma localidad 
+        se deben mostrar solo los items que tienen la misma localidad(filtrar: localidad)
+    -->
+</head>
+<body>
+    <input type="text" id=searching>
+    <button type="button" class="btn btn-primary" onclick="filter()">Buscar</button>
+  <script>
+
+    
+        let infoPersonal= {
+        1: [["Franco", "Morales","04Jun1990", "123434"], ["deff126", "Varela"]],
+        2: [["Federico", "Gomez","029Nov1999", "123434"], ["mien124", "Berazategui"]],
+        3: [["Maria", "Lopez","29Jan1995", "123434"], ["vfnk356", "Varela"]],
+        4: [["Juana", "Saenz","05Sep1989", "123434"], ["lkmk098", "CABA"]],
+        };
+
+    function filterLocalidad(localidad){
+      Object.entries(infoPersonal).forEach(([key, value]) => {
+          //console.log("localidad: " + value [1][1]); muestra el valor de la localidad
+        if ( localidad.toLowerCase() == value [1][1].toLowerCase()) { // convierte en min
+            document.write('<p>'+ value + '</p>'); // se ve en pantalla
+        }
+        });
+    }
+ 
+    function filter() {
+        var localidad = document.getElementById("searching").value;//devuelve el contenido del input (select, text)
+        if (localidad == "" || localidad.trim() == "") {  //trim = delete espacios vacios
+            alert ("Datos invalidos");
+            return;  // vuelve a filter
+        }
+        filterLocalidad(localidad);
+    }
+
+  </script>  
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <!-- 
+        array que contenga datos personales (nombre, apellido, fecha de nacimiento, telefono, localidad, direccion)
+        datos_personal(nombre,apellido, fecha_nacimiento, telefono) y datos_ubicacion(direccion, localidad)
+        ojb = {
+            1: array de datos(datos_personales[nombre,apellido,fecha_nacimiento,telefno],datos_de_ubicacion[direccion,localidad])
+            2:
+        }
+        el objeto tendra 4 items 
+        dos items del objeto contienen una misma localidad 
+        se deben mostrar solo los items que tienen la misma localidad(filtrar: localidad) en una tabla.
+    -->
+</head>
+<body>
+    <table id="datos">
+        <tr><td>Nombre</td><td>Apellido</td><td>Fecha de nacimiento</td><td>Telefono</td>
+            <td>Direccion</td><td>Localidad</td>
+        </tr>
+    </table>
+    <button type="button" class="btn btn-primary" onclick="mostrarDatos()">Mostrar Datos</button>
+
+    <script>
+
+    function mostrarDatos(){
+        let midata= {
+        1: [["Franco", "Morales","04Jun1990", "123434"], ["deff126", "Varela"]],
+        2: [["Federico", "Gomez","029Nov1999", "123434"], ["mien124", "Berazategui"]],
+        3: [["Maria", "Lopez","29Jan1995", "123434"], ["vfnk356", "Varela"]],
+        4: [["Juana", "Saenz","05Sep1989", "123434"], ["lkmk098", "CABA"]],
+        };
+        let localidad= "Varela";
+
+        Object.entries(midata).forEach(([key, value]) => {
+            if (localidad == value[1][1]){
+                tabla =`<tr><td>`+  value[0][0] +`</td><td>`+  value[0][1] +`</td><td>`+  value[0][2] +`</td><td>`+  value[0][3] +`</td><td>`+  value[1][0] +`</td><td>`+  value[1][1] +`</td></tr>`;
+                agregarContenido('datos',tabla);
+            }
+        });
+    }
+
+    function agregarContenido(elemento, contenido){
+       update_content = document.getElementById(elemento).insertAdjacentHTML('beforeend',contenido);
+    }
+    </script>  
+</body>
+</html>
