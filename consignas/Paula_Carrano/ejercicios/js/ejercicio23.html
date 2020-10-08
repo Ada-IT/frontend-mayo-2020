@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON ejemplo</title>
+</head>
+<body>
+    <button onclick="obtener_posts()">Mostrar Json</button>
+
+ <script>
+
+function obtener_names(){
+    fetch("http://localhost:3000/name", {
+        method:"get"
+    }) 
+    .then(response => response.json())
+    .then(
+        json =>console.log(json)
+    )
+    .catch(function(err){
+    });
+}
+
+function obtener_comments(){
+    fetch("http://localhost:3000/comments", {
+        method:"get"
+    }) 
+    .then(response => response.json())
+    .then(
+        json =>console.log(json)
+    )
+    .catch(function(err){
+    });
+}
+
+function obtener_comment(id){
+    let urllocal= "http://localhost:3000/comments/" + id;
+         fetch(urllocal, {
+             method: "get"
+         })
+         .then(response => response.json())
+         .then(
+             json =>console.log(json)
+         )
+         .catch(function(err){
+         });
+}
+
+function obtener_profiles(){
+         fetch("http://localhost:3000/profile", {
+         method: "get"    
+         })
+         .then(response => response.json())
+         .then(
+             json =>console.log(json)
+         )
+         .catch(function(err){
+         });
+     }
+
+     function obtener_profile(id){
+    let urllocal= "http://localhost:3000/profile/" + id;
+         fetch(urllocal, {
+             method: "get"
+         })
+         .then(response => response.json())
+         .then(
+             json =>console.log(json)
+         )
+         .catch(function(err){
+         });
+}
+
+function obtener_posts(){
+         fetch("http://localhost:3000/posts", { //obtenemos el dato
+         })
+         .then(response => response.json()) // 
+         .then(
+             json =>console.log(json)
+         )
+         .catch(function(err){
+
+         });
+     }
+
+
+     function obtener_post(id){
+        let urllocal= "http://localhost:3000/posts/" + id;
+         fetch(urllocal, {
+             method: "get"
+         })
+         .then(response => response.json())
+         .then(
+             json =>console.log(json)
+         )
+         .catch(function(err){
+         });
+     }
+
+ </script>   
+</body>
+</html>
