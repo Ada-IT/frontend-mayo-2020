@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapin_3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--
+        Escribe un programa que almacene en un arreglo de registros las características de 150 personas:
+         nombre, sexo, edad, peso, color de pelo, color de piel, color de ojos, nacionalidad y teléfono.
+    -->
+</head>
+<body>
+<div class="container mt-3">
+    <form>
+      <h3>Datos de aplicantes</h3>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
+              </div>
+            <input id="nombreID" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Genero</span>
+              </div>
+            <input id="sexoID" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Edad</span>
+              </div>
+            <input id="edadID" type="number" class="form-control" maxlength="3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Peso</span>
+              </div>
+            <input id="pesoID" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Color de pelo</span>
+              </div>
+            <input id="peloID" type="text" class="form-control" maxlength="3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Color de piel</span>
+            </div>
+            <input id="pielID" type="text" class="form-control" maxlength="3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Color de ojos</span>
+              </div>
+            <input id="ojosID" type="text" class="form-control" maxlength="3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm" >Nacionalidad</span>
+              </div>
+            <input id="nacID" type="text" class="form-control" aria-label="Sizing example input" maxlength="3" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm" maxlength="10" >Teléfono</span>
+              </div>
+            <input id="telID" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <button onclick="addPerson()" type="button" class="btn btn-primary">Guardar</button>
+    </form>
+</div>
+
+<script>
+  var people =[];
+
+  function Person(nombre,sexo,edad,peso,pelo,piel,ojos,nacionalidad,telefono){
+    this.nombre=nombre;
+    this.sexo=sexo;
+    this.edad=edad;
+    this.peso=peso;
+    this.pelo=pelo;
+    this.piel=piel;
+    this.ojos=ojos;
+    this.nacionalidad=nacionalidad;
+    this.telefono=telefono;
+  }
+
+  function addPerson(){
+    var nombre1 = document.getElementById("nombreID").value;
+    var sexo1 = document.getElementById("sexoID").value;
+    var edad1 = document.getElementById("edadID").value;
+    var peso1 = document.getElementById("pesoID").value;
+    var pelo1 = document.getElementById("peloID").value;
+    var piel1 = document.getElementById("pielID").value; 
+    var ojos1 = document.getElementById("ojosID").value;
+    var nacionalidad1 = document.getElementById("nacID").value;
+    var telefono1 = document.getElementById("telID").value;
+    var isValid = validar(nombre1,sexo1,edad1,peso1,pelo1,piel1,ojos1,nacionalidad1,telefono1)
+      if(isValid == false){
+        return
+      }
+    var persona = new Person();
+      persona.nombre=nombre1;
+      persona.sexo=sexo1;
+      persona.edad=edad1;
+      persona.peso=peso1;
+      persona.pelo=pelo1;
+      persona.piel=piel1;
+      persona.ojos=ojos1;
+      persona.nacionalidad=nacionalidad1;
+      persona.telefono=telefono1;
+        if (people.length < 150){
+          people.push(persona);
+        }
+      console.log(people);
+  } 
+
+  function validar(nombre1,sexo1,edad1,peso1,pelo1,piel1,ojos1,nacionalidad1,telefono1){
+    if (nombre1 == "" || nombre1.trim == ""  ){
+      return false;
+    }else {
+      return true;
+    }
+}
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
