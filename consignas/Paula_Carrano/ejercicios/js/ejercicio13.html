@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <!-- 
+     BUSCADOR GENERAL
+    -->
+</head>
+<body>
+    <form>
+        <label>Localidad</label>
+        <input id="xx">
+    </form>
+    <table id="datos">
+        </tr>
+    </table>
+    <button onclick="mostrarDatos()">Mostrar datos</button>
+    <script>
+
+    function mostrarDatos(){
+        let midata= {
+        1: [["Franco", "Morales","04Jun1990", "123434"], ["deff126", "Varela"]],
+        2: [["Federico", "Gomez","029Nov1999", "123444"], ["mien124", "Berazategui"]],
+        3: [["Maria", "Lopez","29Jan1995", "123464"], ["vfnk356", "Varela"]],
+        4: [["Juana", "Saenz","05Sep1989", "123474"], ["lkmk098", "CABA"]],
+        };
+        let search= obtenerDatosForm('xx');
+        borrado= document.getElementById('datos').innerHTML ='';
+        cabecera = ` <tr><td>Nombre</td><td>Apellido</td><td>Fecha de nacimiento</td><td>Telefono</td>
+            <td>Direccion</td><td>Localidad</td>`;
+            agregarContenido('datos',cabecera);
+
+        Object.entries(midata).forEach(([key, value]) => {
+            if (search.toLowerCase() == value[0][0].toLowerCase() || search.toLowerCase() == value[0][1].toLowerCase() || search.toLowerCase() == value[0][2].toLowerCase() || search.toLowerCase() == value[0][3].toLowerCase() || search.toLowerCase() == value[1][0].toLowerCase()|| search.toLowerCase() == value[1][1].toLowerCase()){
+                tabla =`<tr><td>`+  value[0][0] +`</td><td>`+  value[0][1] +`</td><td>`+  value[0][2] +`</td><td>`+  value[0][3] +`</td><td>`+  value[1][0] +`</td><td>`+  value[1][1] +`</td></tr>`;
+                agregarContenido('datos',tabla);
+            }
+        });
+    }
+
+    function agregarContenido(elemento, contenido){
+       update_content = document.getElementById(elemento).insertAdjacentHTML('beforeend',contenido);
+    }
+
+    function obtenerDatosForm(elemento) {
+        var data = document.getElementById(elemento).value;
+        return data;
+    }
+    
+
+    </script>  
+</body>
+</html>
