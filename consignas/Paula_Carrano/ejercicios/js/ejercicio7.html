@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Un usuario debe ingresar su nombre de usuario y ademas su clave(2 veces).
+      Mostrar un mensaje si los datos son correctos y las claves son iguales.
+      Se debe validar el tipo de dato ingresado en su nombre. 
+      Se debe validar que el nombre de usuario no puede ser menor a 4 caracteres ni mayor a 8 caracteres. 
+      Se debe validar que ambas claves sean iguales.-->
+
+</head>
+<body>
+    <script>
+    var nameUser = prompt ("Ingrese su usuario");
+    var passUser = prompt ("Ingrese su clave");
+    var passConf = prompt ("Confirme su clave");
+    
+    if (typeof nameUser == "string" && (nameUser.length >=4) | (nameUser.length=8) && passUser == passConf){
+         document.write('<h2>Bienvenido</h2>');
+    }
+        else {
+            document.write('<h2>Verifique sus datos</h2>');
+    }
+</script>
+</body>
+</html>
