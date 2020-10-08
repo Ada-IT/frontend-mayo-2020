@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+ <html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <!--
+    Confeccionar un programa que permita cargar el nombre de un usuario y su mail por teclado. 
+    Mostrar posteriormente los datos en la página HTML. Se debe usar prompt & document.write.
+    -->
+
+    </head>
+    <body>
+        <!--mi codigo-->
+        <script>
+            var nameUser = prompt("Cuál es tu nombre?");
+            var mailUser = prompt("Cuál es tu email?");
+    
+            document.write(nameUser + "<br>" + mailUser);
+        </script>
+        
+<!--codigo profe-->
+    <script>
+        var nameUser;
+        var mailUser; 
+        nameUser = prompt("Cuál es tu nombre?","");
+        mailUser = prompt("Cuál es tu email?","");
+
+        document.write("Nombre de usuario ingresado:");
+        document.write(nameUser);
+        document.write("<br>");
+        document.write("Mail de usuario ingresado:");
+        document.write(mailUser);
+    </script>
+    </body>
+</html>
