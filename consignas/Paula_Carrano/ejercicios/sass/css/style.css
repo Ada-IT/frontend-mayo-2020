@@ -1,0 +1,18 @@
+body {
+  font: 100% helvetica, sans-serif;
+  color: #333;
+}
+
+.btn {
+  color: #000;
+  background-color: #ccc;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.card {
+  color: #000;
+  background-color: #ccc;
+}
+
+/*# sourceMappingURL=style.css.map */

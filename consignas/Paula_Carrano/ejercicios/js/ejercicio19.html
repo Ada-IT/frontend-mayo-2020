@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Provincias</title>
+    <!--        x - 1) Obtener lista de provincias de la api de Argentina en formato json():
+                https://infra.datos.gob.ar/catalog/modernizacion/dataset/7/distribution/7.2/download/provincias.json
+                // se puede  descargar y pegar directamente. 
+                 
+                2) Armar un formulario que contenga: Nombre, Apellido, Provincia,Localidad, Edad.
+                3) Las provincias deben estar precargas al cargar la pagina. Las provincias deben estar en un select donde el se deben visualizar pero el valor debe ser su id.
+                4) El Formulario debe contener un boton para agregar Nuevo Cliente
+
+                5) La lista de nuevos clientes se debe mostrar en una tabla que se debe actualizar cada vez que se agregue un cliente nuevo.
+                6) La tabla debe permitir a traves de un boton ordenar los clientes por edad
+                7) La tabla debe permitir a traves de un boton ordenar los clientes por provincia
+                8) El nombre y id de la provincia se debe guardar en el array de nuevos clientes
+                9) mostrar total de clientes debajo de la tabla.
+                Nota se puede usar array unicamente para guardar los datos .-->
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-light bg-dark">
+        <a class="navbar-brand" href="#">
+            <h1 class="font-weight-bold text-white">FORMULARIO DE INSCRIPCIÓN</h1>
+        </a>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card mt-3 border-secondary shadow">
+                    <div class="card-body">
+                        <form method="POST" class="font-weight-bolder" id="form">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputName4">Nombre</label>
+                                    <input type="text" class="form-control" id="inputName4" maxlength="10">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputLastname4">Apellido</label>
+                                    <input type="text" class="form-control" id="inputLastname4" maxlength="10">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputProvincia">Provincia</label>
+                                    <select class="form-control" id="provincia" onclick="showProvinces()">
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="dni">DNI</label>
+                                    <input type="number" id="dni" class="form-control" maxlength="8">
+                                </div>
+                            </div>
+                            <div class="form-row ">
+                                <div class="form-group col-md-6">
+                                    <label for="inputLocalidad">Localidad</label>
+                                    <input type="text" class="form-control" id="inputLocalidad">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputEdad">Edad</label>
+                                    <input type="number" id="inputEdad" class="form-control" minlength="1"
+                                        maxlength="100">
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-info" onclick="addClient()">Agregar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mt-3 border-secondary shadow">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-around mb-2">
+                            <button type="button" class="btn btn-info ml-2" onclick="showListClient()">Mostrar
+                                clientes</button>
+                            <button type="button" class="btn btn-info ml-2" onclick="orderBy('edad')">Ordenar por
+                                edad</button>
+                            <button type="button" class="btn btn-info ml-2" onclick="orderBy('provincia')">Ordenar por
+                                Provincia</button>
+                        </div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellido</th>
+                                    <th scope="col">Provincia</th>
+                                    <th scope="col">Localidad</th>
+                                    <th scope="col">Edad</th>
+                                    <th scope="col">DNI</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaCliente"></tbody>
+                            <tfoot class="bg-info" id="total"></tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var data = [
+        { "nombre_completo": "Provincia de Misiones", "fuente": "IGN", "iso_id": "AR-N", "nombre": "Misiones", "id": "54", "categoria": "Provincia", "iso_nombre": "Misiones", "centroide": { "lat": -26.8753965086829, "lon": -54.6516966230371 } },
+        { "nombre_completo": "Provincia de San Luis", "fuente": "IGN", "iso_id": "AR-D", "nombre": "San Luis", "id": "74", "categoria": "Provincia", "iso_nombre": "San Luis", "centroide": { "lat": -33.7577257449137, "lon": -66.0281298195836 } },
+        { "nombre_completo": "Provincia de San Juan", "fuente": "IGN", "iso_id": "AR-J", "nombre": "San Juan", "id": "70", "categoria": "Provincia", "iso_nombre": "San Juan", "centroide": { "lat": -30.8653679979618, "lon": -68.8894908486844 } },
+        { "nombre_completo": "Provincia de Entre Ríos", "fuente": "IGN", "iso_id": "AR-E", "nombre": "Entre Ríos", "id": "30", "categoria": "Provincia", "iso_nombre": "Entre Ríos", "centroide": { "lat": -32.0588735436448, "lon": -59.2014475514635 } },
+        { "nombre_completo": "Provincia de Santa Cruz", "fuente": "IGN", "iso_id": "AR-Z", "nombre": "Santa Cruz", "id": "78", "categoria": "Provincia", "iso_nombre": "Santa Cruz", "centroide": { "lat": -48.8154851827063, "lon": -69.9557621671973 } },
+        { "nombre_completo": "Provincia de Río Negro", "fuente": "IGN", "iso_id": "AR-R", "nombre": "Río Negro", "id": "62", "categoria": "Provincia", "iso_nombre": "Río Negro", "centroide": { "lat": -40.4057957178801, "lon": -67.229329893694 } },
+        { "nombre_completo": "Provincia del Chubut", "fuente": "IGN", "iso_id": "AR-U", "nombre": "Chubut", "id": "26", "categoria": "Provincia", "iso_nombre": "Chubut", "centroide": { "lat": -43.7886233529878, "lon": -68.5267593943345 } },
+        { "nombre_completo": "Provincia de Córdoba", "fuente": "IGN", "iso_id": "AR-X", "nombre": "Córdoba", "id": "14", "categoria": "Provincia", "iso_nombre": "Córdoba", "centroide": { "lat": -32.142932663607, "lon": -63.8017532741662 } },
+        { "nombre_completo": "Provincia de Mendoza", "fuente": "IGN", "iso_id": "AR-M", "nombre": "Mendoza", "id": "50", "categoria": "Provincia", "iso_nombre": "Mendoza", "centroide": { "lat": -34.6298873058957, "lon": -68.5831228183798 } },
+        { "nombre_completo": "Provincia de La Rioja", "fuente": "IGN", "iso_id": "AR-F", "nombre": "La Rioja", "id": "46", "categoria": "Provincia", "iso_nombre": "La Rioja", "centroide": { "lat": -29.685776298315, "lon": -67.1817359694432 } },
+        { "nombre_completo": "Provincia de Catamarca", "fuente": "IGN", "iso_id": "AR-K", "nombre": "Catamarca", "id": "10", "categoria": "Provincia", "iso_nombre": "Catamarca", "centroide": { "lat": -27.3358332810217, "lon": -66.9476824299928 } },
+        { "nombre_completo": "Provincia de La Pampa", "fuente": "IGN", "iso_id": "AR-L", "nombre": "La Pampa", "id": "42", "categoria": "Provincia", "iso_nombre": "La Pampa", "centroide": { "lat": -37.1315537735949, "lon": -65.4466546606951 } },
+        { "nombre_completo": "Provincia de Santiago del Estero", "fuente": "IGN", "iso_id": "AR-G", "nombre": "Santiago del Estero", "id": "86", "categoria": "Provincia", "iso_nombre": "Santiago del Estero", "centroide": { "lat": -27.7824116550944, "lon": -63.2523866568588 } },
+        { "nombre_completo": "Provincia de Corrientes", "fuente": "IGN", "iso_id": "AR-W", "nombre": "Corrientes", "id": "18", "categoria": "Provincia", "iso_nombre": "Corrientes", "centroide": { "lat": -28.7743047046407, "lon": -57.8012191977913 } },
+        { "nombre_completo": "Provincia de Santa Fe", "fuente": "IGN", "iso_id": "AR-S", "nombre": "Santa Fe", "id": "82", "categoria": "Provincia", "iso_nombre": "Santa Fe", "centroide": { "lat": -30.7069271588117, "lon": -60.9498369430241 } },
+        { "nombre_completo": "Provincia de Tucumán", "fuente": "IGN", "iso_id": "AR-T", "nombre": "Tucumán", "id": "90", "categoria": "Provincia", "iso_nombre": "Tucumán", "centroide": { "lat": -26.9478001830786, "lon": -65.3647579441481 } },
+        { "nombre_completo": "Provincia del Neuquén", "fuente": "IGN", "iso_id": "AR-Q", "nombre": "Neuquén", "id": "58", "categoria": "Provincia", "iso_nombre": "Neuquén", "centroide": { "lat": -38.6417575824599, "lon": -70.1185705180601 } },
+        { "nombre_completo": "Provincia de Salta", "fuente": "IGN", "iso_id": "AR-A", "nombre": "Salta", "id": "66", "categoria": "Provincia", "iso_nombre": "Salta", "centroide": { "lat": -24.2991344492002, "lon": -64.8144629600627 } },
+        { "nombre_completo": "Provincia del Chaco", "fuente": "IGN", "iso_id": "AR-H", "nombre": "Chaco", "id": "22", "categoria": "Provincia", "iso_nombre": "Chaco", "centroide": { "lat": -26.3864309061226, "lon": -60.7658307438603 } },
+        { "nombre_completo": "Provincia de Formosa", "fuente": "IGN", "iso_id": "AR-P", "nombre": "Formosa", "id": "34", "categoria": "Provincia", "iso_nombre": "Formosa", "centroide": { "lat": -24.894972594871, "lon": -59.9324405800872 } },
+        { "nombre_completo": "Provincia de Jujuy", "fuente": "IGN", "iso_id": "AR-Y", "nombre": "Jujuy", "id": "38", "categoria": "Provincia", "iso_nombre": "Jujuy", "centroide": { "lat": -23.3200784211351, "lon": -65.7642522180337 } },
+        { "nombre_completo": "Ciudad Autónoma de Buenos Aires", "fuente": "IGN", "iso_id": "AR-C", "nombre": "Ciudad Autónoma de Buenos Aires", "id": "02", "categoria": "Ciudad Autónoma", "iso_nombre": "Ciudad Autónoma de Buenos Aires", "centroide": { "lat": -34.6144934119689, "lon": -58.4458563545429 } },
+        { "nombre_completo": "Provincia de Buenos Aires", "fuente": "IGN", "iso_id": "AR-B", "nombre": "Buenos Aires", "id": "06", "categoria": "Provincia", "iso_nombre": "Buenos Aires", "centroide": { "lat": -36.6769415180527, "lon": -60.5588319815719 } },
+        { "nombre_completo": "Provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur", "fuente": "IGN", "iso_id": "AR-V", "nombre": "Tierra del Fuego, Antártida e Islas del Atlántico Sur", "id": "94", "categoria": "Provincia", "iso_nombre": "Tierra del Fuego", "centroide": { "lat": -82.52151781221, "lon": -50.7427486049785 } }
+        ];
+
+        var nuevos_clientes = [];
+
+        //mostrar provincias en select
+        function showProvinces() {
+            let select = "";
+            data.forEach((p, id) => {
+                select = select +
+                    '<option value="' + p.iso_id + '">' + p.iso_nombre + '</option>';
+            });
+            document.getElementById("provincia").insertAdjacentHTML('beforeend', select);
+        }
+
+        //agregar nuevo cliente
+        function Client(nombre, apellido, provincia, provinciaId, localidad, edad, dni) { // Clase = molde para generar nuevos clientes
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.provincia = provincia;
+            this.provinciaId = provinciaId;
+            this.localidad = localidad;
+            this.edad = edad;
+            this.dni = dni;
+        }
+
+        function addClient() {
+            let nombre = document.getElementById("inputName4").value;
+            let apellido = document.getElementById("inputLastname4").value;
+            let provinciaElement = document.getElementById("provincia");
+            let provincia = provinciaElement.options[provinciaElement.selectedIndex].text; // selectedIndex:busca la posicion del elemento seleccionado
+            let provinciaId = provinciaElement.options[provinciaElement.selectedIndex].value;
+            let localidad = document.getElementById("inputLocalidad").value;
+            let edad = document.getElementById("inputEdad").value;
+            let dni = document.getElementById("dni").value;
+
+            let nCliente = new Client(nombre, apellido, provincia, provinciaId, localidad, edad, dni); // creo un nuevo objeto
+
+            let clRepeate = nuevos_clientes.filter(c => c.dni == dni); // para verificar que solo exista un cliente con esas propiedades.
+            if (clRepeate.length > 0) {
+                alert("Error al ingresar cliente");
+            } else {
+                nuevos_clientes.push(nCliente); // guarda en el nuevo array los datos del cliente
+                alert("Cliente agregado con exito");
+            }
+            document.getElementById("form").reset();
+
+        }
+
+        //mostrar clientes en tabla
+        function showListClient() {
+            let listClient = "";
+            let total = nuevos_clientes.length;
+            nuevos_clientes.forEach((p, i) => {
+                listClient = listClient +
+                    '<tr class="text-capitalize"><td>' + p.nombre + '</td><td>' + p.apellido + '</td><td>' + p.provincia + '</td><td>' + p.localidad + '</td><td>' + p.edad + '</td><td>' + p.dni + '</td></tr>';
+            });
+            document.getElementById("tablaCliente").innerHTML = listClient;
+            document.getElementById("total").innerHTML = '<tr class="font-weight-bolder"><td> Total:</td><td colspan="6">' + total + '</td></tr>'
+        }
+
+        //ordenar por Edad/Provincia
+        function orderBy(key) {
+            document.getElementById("tablaCliente").innerHTML = "";
+            nuevos_clientes = nuevos_clientes.sort((compare(key)));
+            showListClient();
+        }
+
+        //funcion para comparar dinamicamente
+        function compare(key, order = 'asc') {
+            return function ordersort(a, b) { // se crea una función 
+                if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {// hasOwnProperty = chequea si el objeto tiene la propiedad indicada y devuelve boolean
+                    return 0;
+                }
+                var varA = (typeof a[key].toUpperCase() === 'string') // compara el tipo de dato
+                    ? a[key] : a[key]; //  ? = if
+                var varB = (typeof b[key].toUpperCase() === 'string')
+                    ? b[key] : b[key];
+                let comparison = 0;
+
+                if (varA > varB) {
+                    comparison = 1;
+                } else if (varA < varB) {
+                    comparison = -1;
+                }
+                return (
+                    (order === 'desc') ? (comparison * -1) : comparison
+                );
+            };
+        }
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b58405ced3.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

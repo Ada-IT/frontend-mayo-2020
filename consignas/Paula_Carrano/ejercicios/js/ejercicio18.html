@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Tienda Online</title>
+
+    <!--// precio de lista de proveedor
+                producto        precio
+                vino_x_unidad = 100 
+                azucar_x_kg = 60
+                cafe_x_kg = 230
+                leche_x_unidad = 45
+                pan_lactal_x_unidad = 95
+                leche_x_unidad = 45
+                queso_x_kg  = 120
+                paleta_x_kg  = 150
+            
+    X - 1) armar un array con todos los productos y sus precios
+    X - 2) armar una lista de precios de venta con el 40% de ganancia  
+    X - 3) armar una lista de venta  con los precios con iva (21%) para consumidor final
+
+    x- 4) tener un boton que simule cargar de productos de proveedor(esto es para procesar la lista de precios) - recalculo del ejercicio
+    x- 5) el boton de carga luego de ejecutarse debera mostrar un cartel/o texto en pantalla que afirme la carga - alert 
+
+   x - 6) mostrar lista de precios con iva en pantalla y permitir que se seleccionen productos individualmente con un boton de carrito - muestro el último array
+   x- 7) guardar la lista de productos seleccionados  en un array
+   x- 8) tener una lista visible de productos seleccionados en tiempo real .(es decir cada vez que apreto un carrito actualizar esta lista)
+   x- 9) calcular precio de total y mostrar precio en pantalla    
+    -->
+    
+</head>
+<body>
+    
+<nav class="navbar navbar-light bg-dark">
+    <a class="navbar-brand" href="#">
+      <h1 class="font-weight-bold text-white">TIENDA ONLINE</h1>
+    </a>
+  </nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12"> 
+      <div class="card mt-4">
+        <div class="card-body">
+          <form action="POST">
+            <h4>Agregar producto</h4>
+            <div class="input-group mt-2 mb-2">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Producto</span>
+            </div>
+            <input type="text" aria-label="producto" class="form-control" id="prodprov">
+          </div>
+          <div class="input-group  mt-2 mb-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Precio</span>
+            </div>
+            <input type="number" aria-label="precio" class="form-control" id="priceprov">
+          </div>
+          <button type="button" class="btn btn-info" onclick="addProduct()">Agregar</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mt-2">
+      <div class="card">
+        <div class="card-body">
+          <button type="button" class="btn btn-info mb-2" onclick="showListProduct()">Lista de precio</button>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Añadir</th>
+              </tr>
+            </thead>
+            <tbody id="tablaProd"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  <div class="col-md-6 mt-2">
+    <div class="card">
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Producto</th>
+              <th scope="col">Precio</th>
+            </tr>
+          </thead>
+          <tbody id="tablaSelect"></tbody>
+          <tfoot class="bg-info border-bottom" id="total"></tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+    <script>
+        var lista_proveedor = [{producto: "vino", precio:100}, 
+                                {producto: "azucar", precio:60}, 
+                                {producto: "cafe", precio:230}, 
+                                {producto: "leche", precio:45}, 
+                                {producto: "pan lactal", precio:95},
+                                {producto: "queso", precio:120},
+                                {producto: "paleta", precio:150}];
+        var arr_seleccionados =[]; // array vacio
+
+
+     // PRECIO VTA GANANCIA
+    function venta_ganancia(){
+        var arr_ganancia= lista_proveedor.map(function (producto){
+            return { producto: producto.producto,  // se crea un nuevo objeto con los datos actualizados (40%)
+                     precio: ((producto.precio *0.4) + producto.precio)
+            }
+        }    
+        ); 
+        return arr_ganancia;
+      }
+
+    // PRECIO VTA IVA
+    function venta_iva(){
+        let arr_ganancia= venta_ganancia();
+        var arr_iva= arr_ganancia.map(function (producto){
+            return { producto: producto.producto, 
+                     precio: ((producto.precio*0.21) + producto.precio)
+            }
+        }    
+        );
+        return arr_iva;
+      }
+
+    // AGREGAR PRODUCTOS BOTONES
+    function Product(producto, precio){ // Clase = molde para generar nuevos productos
+       this.producto = producto;
+       this.precio = precio;
+      }
+
+    function addProduct(){
+      var product = document.getElementById("prodprov").value; 
+      var price = document.getElementById("priceprov").value;
+      var nProducto = new Product(); // creo un nuevo objeto
+        nProducto.producto = product;
+        nProducto.precio = parseInt(price);
+      var prodRepeate = lista_proveedor.filter(p => p.producto == product); // genera una lista con los repetidos
+
+      if (prodRepeate.length > 0 && product == "" || product.trim() == "" || price == "" || price.trim() == ""){ // verifica que no entren espacios vacios
+        alert("Error al ingresar producto");
+      }else{
+        lista_proveedor.push(nProducto);
+        alert("Producto agregado con exito");
+      }
+    }
+
+      //Mostrar lista de productos
+    function showListProduct(){
+      let precioIva = venta_iva();// llamo al array con IVA
+      let listProducts = "";
+      precioIva.forEach ((p,index)=> {
+            listProducts= listProducts +            
+              '<tr class="text-capitalize"><td>' + p.producto + '</td><td> $'+ p.precio + '</td><td><button type="button" class="btn btn-info" onclick="listSelect('+ index +')"><i class="fas fa-shopping-cart"></i></button></td></tr>';
+        });
+        document.getElementById("tablaProd").innerHTML= listProducts;
+    }
+
+      // producto visibles
+    function listSelect(index){
+      let precioIva = venta_iva(); // array con precio IVA
+      let productSelect = precioIva[index]; // index = value de mi objeto
+      let listseleccionados = "";
+      let suma = 0;
+
+      arr_seleccionados.push(productSelect); //pusheo al array vacio 
+      document.getElementById("tablaSelect").innerHTML = ""; // limpio la tabla para ejecutar el forEach
+
+      arr_seleccionados.forEach((p,index) => { // muestro la lista en real time
+          listseleccionados = listseleccionados + 
+            '<tr class="text-capitalize"><td>' + p.producto + '</td><td> $ '+  p.precio + '</td></tr>';
+         suma = (suma+ p.precio);
+        }); 
+        
+        document.getElementById("tablaSelect").insertAdjacentHTML('beforeend',listseleccionados);
+        document.getElementById("total").innerHTML = '<tr class="font-weight-bolder"><td > Total:</td><td> $' + suma.toFixed(2) + '</td></tr>';
+      }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b58405ced3.js" crossorigin="anonymous"></script>
+</body>
+</html>

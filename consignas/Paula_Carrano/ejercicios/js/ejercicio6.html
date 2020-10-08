@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Se ingresan tres notas de un alumno, si el promedio es mayor o igual 
+        a siete mostrar el mensaje ‘Promocionado’, sino 'No promocionado'. Tener en cuenta que para obtener 
+        el promedio debemos operar suma=nota1+nota2+nota3; y luego hacer promedio=suma/3;
+    -->
+</head>
+<body>
+    <script>
+    var nota1 = prompt ("Ingrese el primera nota");
+    var nota2 = prompt ("Ingrese el segunda nota");
+    var nota3 = prompt ("Ingrese el tercera nota");
+    var sumar = (parseInt(nota1))+(parseInt(nota2)) + (parseInt(nota3));
+    var promedio = sumar/3;
+
+    if (promedio>=7){
+    document.write ('Aprobado');
+}
+    else {
+   document.write ('Reprobado');
+}
+
+</script>
+</html>
