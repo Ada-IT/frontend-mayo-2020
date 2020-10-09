@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--
+            el archivo js este separado del html 
+            ENDPoINT https://www.themealdb.com/api/json/v1/1/random.php
+            obtener de endpoint :
+            id
+            titulo
+            categoria
+            area
+            instrucciones
+            la imagen
+            tags 
+            video
+            guardar en un objeto            
+        -->
+
+    </head>
+    <body>            
+        <script>
+            function obtener_receta(){
+                //metodo básico de obtener datos de api.
+                fetch("https://www.themealdb.com/api/json/v1/1/random.php", {
+                    method: "get"
+                })
+                .then(response => response.json())
+                .then(
+                    //aca podriamos tener una funcion que nos permita recorrer el json 
+                    json => guardarData(json)
+                    )                
+                .catch(function(err) {
+                        // Error :(
+                });
+            }
+
+            function guardarData(data){
+                datos  = {
+                    "id": data.meals[0].idMeal,
+                    "area": data.meals[0].strArea,
+                    "categoria": data.meals[0].strCategory,
+                    "instructions": data.meals[0].strInstructions,
+                    "imagen": data.meals[0].strMealThumb,
+                    "video": data.meals[0].strYoutube,
+                    "receta": data.meals[0].strMeal,
+                    "tags": data.meals[0].strTags
+                }
+                console.log(datos)
+
+            }
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+         <!--
+            el archivo js este separado del html 
+            https://www.themealdb.com/api/json/v1/1/categories.php
+            obtener lista de categorias
+            guardar en un objeto :
+            id
+            categoria
+            imagen
+            descripcion
+            ordenar alfabeticamente de manera invertida
+            mostrar en pantalla cards con informacion
+         -->
+    </head>
+    <body>            
+        <script>
+
+
+        </script>
+    </body>
+
+</html>
