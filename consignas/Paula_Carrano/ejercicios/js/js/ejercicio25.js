@@ -34,14 +34,13 @@ function getInformation(category){
 function orderByCategory(rInformation){
     rInformation.sort(function (a, b) {
         if (a.categoria < b.categoria) {
-          return -1;
-        }
-        if (a.categoria > b.categoria) {
           return 1;
         }
+        if (a.categoria > b.categoria) {
+          return -1;
+        }
         return 0; 
-      });
-      rInformation.reverse();
+      });     
 }
 
 function fillCards(rInformation){
