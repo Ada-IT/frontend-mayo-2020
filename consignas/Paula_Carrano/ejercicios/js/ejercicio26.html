@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../../../assets/bootstrap/css/bootstrap.min.css" />
+    <script src="js/ejercicio26.js"></script>
+</head>
+  <!--
+            el archivo js este separado del html             
+            https://www.thecocktaildb.com/api/json/v1/1/search.php?f=c
+            x- 1)obtener todos los tragos con la letra deseada desde la api  (parametro en api f=letra )
+            x- 2)obtener y  armar un nuevo array/objeto de datos la siguiente informacion;
+                id
+                nombre_trago
+                imagen
+                video
+                categoria
+                instrucciones
+                tipo_de_vaso
+                tags
+                ingredientes {que contenga todos los ingredientes ej : limon,helado, naranja}
+           x- 3)ordenar por nombre de trago de manera ascendente A a Z
+           x- 4)mostrar en pantalla un buscador para colocar la letra con un boton de accion Buscar, Solo debe aceptar 1 letra.
+            5)El resultado de busqueda debe mostrar cards con la informacion  
+            6)Si llegan---- buscar forma de mostrar el video de youtube en a)modal b)card c)link....
+         -->
+         <style>
+          .card {
+              padding: 1rem;
+              border: 1px solid black;
+              margin: 1rem;
+          }
+      
+          body {
+              background-color: #f3f3f3;
+              margin: 10px;
+          }
+      
+          .card {
+              filter: drop-shadow(5px 5px 8px rgb(255, 255, 255));
+          }
+      </style>
+ <header>
+    <h1 class="my-3">
+        Es hora de un coctel!
+    </h1>
+    <h5 class="mb-4">Ahora prueba nuestro buscador por letras, y te daremos buenas ideas para preparar un buen trago. </h5>
+</header>
+<body>
+         <form class="container">    
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="letter">Letra</label>
+                <input type="text" class="form-control" id="letter" maxlength="1">
+            </div>
+    </div>
+    
+    <div class="col-sm-10">
+        <button type="button" onclick="obtenerTrago()" class="btn btn-secondary">Buscar</button>
+    </div>
+    <div class="row justify-content-center" id="cards">
+    </div>
+
+</body>
+    
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
