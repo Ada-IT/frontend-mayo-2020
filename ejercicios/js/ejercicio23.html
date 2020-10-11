@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="js/ejercicio22.js"></script> 
+    </head>
+    <body>
+            <!--
+                Obteniendo datos del usuario de Spotify   
+                Endpoint: https://api.spotify.com/v1/me/playlists
+                Tiempo estimado de ejercicio en grupo 30 minutos.
+            -->  
+            
+        <script>
+            //O
+            function obtener_playlist(){
+                //metodo básico de obtener datos de api.
+                userAccessToken  = 'BQBhSjEJeihAALyPz3YLVk9phYSs2kPeLeVrYEmt3Z1U3wyhqFyvvZWp81jYpQOZkJI4xqk41Ym5OvX-Riub7ddMXZhK6qps5dzLK2CI2vQStynIVpysqHWamY6vdh-GCQl7BnVpD47IKlQvysMkBdm1SIOcwLBkHgPXb8b-MycIwzeg00kQbcGJmQrfiFinggL-dohE8cIflIVu5xfUbQAFZk5L8HvZa0tHaSK9D-5ztN3VXqk6EMMSCHg2ICdE7dBfu5clxpIHicYg'
+                fetch("https://api.spotify.com/v1/me/playlists", {
+                    method: "get",
+                    headers: {
+                    Authorization: `Bearer ${userAccessToken}`     
+                    }
+                })
+                .then(response => response.json())
+                .then(
+                    json => console.log(json)
+                    )                
+                .catch(function(err) {
+                        // Error :(
+                });
+            }
+        </script>
+    </body>
+
+</html>

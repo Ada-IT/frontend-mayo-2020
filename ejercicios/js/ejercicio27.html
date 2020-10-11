@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+         <!--
+            el archivo js este separado del html             
+            https://www.thecocktaildb.com/api/json/v1/1/search.php?f=c
+            1)obtener todos los tragos con la letra deseada desde la api  (parametro en api f=letra )
+            2)obtener y  armar un nuevo array/objeto de datos la siguiente informacion;
+                id
+                nombre_trago
+                imagen
+                video
+                categoria
+                instrucciones
+                tipo_de_vaso
+                tags
+                ingredientes {que contenga todos los ingredientes ej : limon,helado, naranja}
+            3)ordenar por nombre de trago de manera ascendente A a Z
+            4)mostrar en pantalla un buscador para colocar la letra con un boton de accion Buscar, Solo debe aceptar 1 letra.
+            5)El resultado de busqueda debe mostrar cards con la informacion  
+            6)Si llegan---- buscar forma de mostrar el video de youtube en a)modal b)card c)link....
+         -->
+    </head>
+    <body>            
+        <script>
+            function obtener_tragos(letter){
+                url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f="+ letter
+                //metodo básico de obtener datos de api.
+                fetch(url, {
+                    method: "get"
+                })
+                .then(response => response.json())
+                .then(
+                    //aca podriamos tener una funcion que nos permita recorrer el json 
+                    json => guardarData(json)
+                    )                
+                .catch(function(err) {
+                        // Error :(
+                });
+            }
+            function guardarData(data){
+                //console.log(data.drinks[0])
+                drinks  = data.drinks
+                tragos = []
+                drinks.forEach(drink => {
+                    ingredientes  = {
+                        "1": drink.strIngredient1,
+                        "2": drink.strIngredient2,
+                        "3": drink.strIngredient3,
+                        "4": drink.strIngredient4,
+                        "5": drink.strIngredient5,
+                        "6": drink.strIngredient6,
+                        "7": drink.strIngredient7,
+                        "8": drink.strIngredient8,
+                        "9": drink.strIngredient9,
+                        "10": drink.strIngredient10,
+                        "11": drink.strIngredient11,
+                        "12": drink.strIngredient12,
+                        "13": drink.strIngredient13,
+                        "14": drink.strIngredient14,
+                        "15": drink.strIngredient15
+                    }
+
+                    let mis_ingredientes = Object.fromEntries(Object.entries(ingredientes).filter(([key, value]) => value !== null));
+                    //console.log(mis_ingredientes)
+                    trago  = {
+                        "id": drink.idDrink,
+                        "nombre_trago": drink.idDrink,
+                        "imagen": drink.strDrinkThumb,
+                        "instructions": drink.strInstructions,
+                        "video": drink.strVideo,
+                        "categoria": drink.strVideo,
+                        "tags": drink.strTags,
+                        "tipo_de_vaso": drink.strGlass,
+                        "ingredientes":mis_ingredientes                
+                    }
+                    console.log(trago)
+                    tragos.push(trago)
+                });
+            }
+        </script>
+    </body>
+
+</html>
