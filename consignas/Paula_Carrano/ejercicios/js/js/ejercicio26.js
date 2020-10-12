@@ -1,4 +1,4 @@
-let drinks_filt = [];
+
 
 function obtenerTrago() {
     let letra = document.getElementById("letter").value;
@@ -13,11 +13,13 @@ function obtenerTrago() {
         })
         .catch(error => {
             console.error(error);
-        })
+       })
 }
 
 function obtenerDetalles(respuesta) {
     let drinks = respuesta.drinks;
+    let drinks_filt = [];
+
     drinks.forEach(element => {
         trago = {
             id: element.idDrink,
@@ -27,12 +29,12 @@ function obtenerDetalles(respuesta) {
             instrucciones: element.strInstructions,
             imagen: element.strDrinkThumb,
             tags: element.strTags,
-            video: element.strVideo,
+            video: obtenerEmbedVideo(element),
             ingredientes: obtenerIngredientes(element)
         }
         drinks_filt.push(trago);
     });
-    toCards(respuesta);
+    toCards(drinks_filt);   
     console.log(drinks_filt);
 }
 
@@ -44,29 +46,75 @@ function obtenerIngredientes(element) {
             ingredientes.push(element["strIngredient" + i]);
     }
     return ingredientes;
-
-    console.log(ingredientes);
 }
 
-function toCards(respuesta) {
+
+function obtenerEmbedVideo(element){ // cambio el watch por el embed para que levante la url
+    let watch = "watch?v=";
+    let urlFormateada = element.strVideo;
+
+    if (urlFormateada === null) {        
+        return null
+    }
+    urlFormateada = urlFormateada.replace(watch, "embed/"); // reemplazo el watch por el embed
+        return urlFormateada;
+}
+
+
+function mostrarIframe(url){ // Muestra el video o un txt de no disponible
+if (url === null){
+    return `<p class= "font-weight-bolder"> No disponible </p>`;
+}else {
+    return `<iframe src= "${url}" frameborder="0" class="embed-responsive-item"></iframe>`;
+}
+}
+
+
+function toCards(drinks_filt) { // relleno las cards con la información
     toPrint ="";
 
     drinks_filt.forEach(element => {
         toPrint = toPrint + 
-            `<div class="col-8 col-md-5 my-3">
-        <div class="card" style="height:100%;background-color:coral">
-        <img class="card-img-top" src="${element.imagen}" alt="Card image cap">
-        <div class="card-body text-center">
-        <h2 class="card-title titless"> ${element.drink} </h2>
-        <p class="card-text">Categoria: ${element.categoria}</p>
-        <p class="card-text">Tipo de vaso: ${element.tipoDeVaso}</p>
-        <p class="card-text">Instrucciones: ${element.instrucciones}</p>
-        <p class="card-text">Id: ${element.id}</p>
-        <p class="card-text">Ingredientes: ${element.ingredientes}</li></p>
+        `<div class="col-md-5 my-3">
+        <div class="card shadow">
+            <img class="card-img-top rounded shadow" src="${element.imagen}" alt="Card image cap">
+            <div class="card-body text-center">
+                <h2 class="card-title titless text-info"></u> ${element.drink} </h2>
+                <p class="card-text"><b>Categoria:</b> ${element.categoria}</p>
+                <p class="card-text"><u>Id:</u> ${element.id}</p>
+                <p class="card-text"><u>Tags:</u> ${element.tags === null ? "No disponible" : element.tags}</p>
+                <p class="card-text"><u>Tipo de vaso:</u> ${element.tipoDevaso}</p>
+                <p class="card-text"><u>Ingredientes:</u> ${element.ingredientes}</p>
+                <p class="card-text"><u>Instrucciones:</u> ${element.instrucciones}</p>
+                <div class="col">
+                    <a href="#" data-toggle="modal" data-target="#video_${element.id}"><button type="button"
+                            class="btn btn-secondary shadow-sm btn-lg"><i class="fas fa-video"></i> Video</button></a>
+                    <!--modal-->
+                    <div class="modal fade" id="video_${element.id}" tabindex="-1" role="dialog" aria-labelledby="video"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Instrucciones</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ${mostrarIframe(element.video)}
+                                </div>
+                                <div class="modal-footer mt-1">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-success"
+                                        data-dismiss="modal">Confirmar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>    
     </div>`
     });
-    console.log(toPrint);
     document.getElementById('cards').innerHTML = toPrint;
 }
