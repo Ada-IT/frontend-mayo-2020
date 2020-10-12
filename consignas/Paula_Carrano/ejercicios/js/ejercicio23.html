@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON ejemplo</title>
+</head>
+<body>
+    <button onclick="obtener_posts()">Mostrar Json</button>
+
+ <script>
+
+function obtener_comments(){
+    fetch("http://localhost:3000/comments", {
+        method:"get"
+    }) 
+    .then(response => response.json())
+    .then(
+        json =>console.log(json)
+    )
+    .catch(function(err){
+    });
+}
+
+function obtener_comment(id){
+    let urllocal= "http://localhost:3000/comments/" + id;
+    fetch(urllocal, {
+        method: "get"
+    })
+    .then(response => response.json())
+    .then(
+        json =>console.log(json)
+    )
+    .catch(function(err){
+    });
+}
+
+function obtener_profiles(){
+    fetch("http://localhost:3000/profile", {
+      method: "get"    
+    })
+    .then(response => response.json())
+    .then(
+        json =>console.log(json)
+    )
+    .catch(function(err){
+    });
+}
+
+function obtener_profile(id){
+    let urllocal= "http://localhost:3000/profile/" + id;
+    fetch(urllocal, {
+        method: "get"
+    })
+    .then(response => response.json())
+    .then(
+        json =>console.log(json)
+    )
+    .catch(function(err){
+    });
+}
+
+function obtener_posts(){
+    fetch("http://localhost:3000/posts", { //obtenemos el dato
+    })
+    .then(response => response.json()) // 
+    .then(
+        json =>console.log(json)
+    )
+    .catch(function(err){
+    });
+}
+
+
+function obtener_post(id){
+    let urllocal= "http://localhost:3000/posts/" + id;
+    fetch(urllocal, {
+        method: "get"
+     })
+    .then(response => response.json())
+    .then(
+         json =>console.log(json)
+    )
+    .catch(function(err){
+    });
+}
+
+// POST
+function agregar_post(title, author, article){
+    data = { // creo el objeto JSON
+        "title": title,
+        "author": author,
+        "article": article
+    }
+    fetch("http://localhost:3000/posts/", { // a donde hacer el envio
+        method: 'POST',
+        body: JSON.stringify(data), // formateamos la data 
+        headers:{
+            'Content-Type': 'application/json' // que contenido mandamos
+        }
+    })
+    .then(function(response){
+        if(response.ok){
+            return response.text()
+        }else {
+            throw "Error al guardar";
+        }
+    })
+    .then(function(texto){
+        console.log(texto);
+    })
+    .catch(function(err){
+        console.log(err);
+    });
+}
+
+ </script>   
+</body>
+</html>

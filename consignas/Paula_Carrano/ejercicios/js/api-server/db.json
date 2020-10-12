@@ -1,16 +1,59 @@
 {
-    "posts": [
-    { "id": 1, "title": "json-server", "author": "Ada IT", "article":" Mi article..."},
-    { "id": 2, "title": "json-server", "author": "Ada IT", "article":" Mi article..."},
-    { "id": 3, "title": "json-server", "author": "Ada IT", "article":" Mi article..."}
-    ],
-    "comments": [
-    { "id": 1, "message": "some comment", "postId": 1 },
-    { "id": 2, "message": "xxx", "postId": 2 },
-    { "id": 3, "message": "yyyy", "postId": 3 }
-    ],
-    "profile": [{ "id": 1, "author":"Ada IT" },
-    { "id": 2, "author":"Ada IT2" },
-    { "id": 3, "author":"Ada IT3" }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "Ada IT",
+      "article": " Mi article..."
+    },
+    {
+      "id": 2,
+      "title": "json-server",
+      "author": "Ada IT",
+      "article": " Mi article..."
+    },
+    {
+      "id": 3,
+      "title": "json-server",
+      "author": "Ada IT",
+      "article": " Mi article..."
+    },
+    {
+      "title": "xx",
+      "author": "www",
+      "article": "czxx",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "message": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "message": "xxx",
+      "postId": 2
+    },
+    {
+      "id": 3,
+      "message": "yyyy",
+      "postId": 3
+    }
+  ],
+  "profile": [
+    {
+      "id": 1,
+      "author": "Ada IT"
+    },
+    {
+      "id": 2,
+      "author": "Ada IT2"
+    },
+    {
+      "id": 3,
+      "author": "Ada IT3"
+    }
+  ]
 }
