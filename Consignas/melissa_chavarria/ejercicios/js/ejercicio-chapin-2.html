@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 
+        Escribir un programa que almacene en un arreglo de registros los nombres de los alumnos, 
+        sus notas parciales y finales. Calcular la nota promedio y mostrar un mensaje de APTO
+        si el alumno supera o iguala la calificación de 5 o NO APTO si no lo alcanza.
+        Hacerlo para un número de 5 alumnos.
+    -->        
+    </head>
+    <body onload="capturarDatos();">
+
+            <!-- Add your site or application content here -->
+        <table id="idTabla">
+            <tr>
+                <th>Nombre</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Promedio</th>
+                <th>Estado</th>
+            </tr>
+        </table>
+
+        <script>
+            function validarNota(mensaje){
+                let nota = 0;
+                do{
+                    nota = parseInt(prompt(mensaje));
+                    if (isNaN(nota)==true || nota<1 || nota >10){
+                        alert("Error: digita una nota entre 1 y 10.")
+                    }
+                } while(isNaN(nota)==true || nota<1 || nota >10);
+                return nota; 
+            }
+
+            function capturarDatos(){
+                //Incializo las variables
+                let registro = [];
+                let estado = "";
+                let linea = "";
+                //Bucle para capturar 5 alumnos
+                for (i=0; i<5; i++){
+                    //Capturo los datos
+                    let nombre = prompt("Digite el nombre del alumno:");
+                    let nota1 = validarNota("Ingrese la nota 1:");
+                    let nota2 = validarNota("Ingrese la nota 2:");
+                    //Calculo los datos promedio y estado
+                    let promedio = (nota1 + nota2)/2;
+                    if (promedio>=5){
+                        estado = "Apto";
+                    }
+                    else{
+                        estado ="No Apto";
+                    }
+                    //Almaceno los datos
+                    //               0      1       2      3         4
+                    registro[i] = [nombre, nota1, nota2, promedio, estado];
+                    //Creo la línea de la tabla
+                    linea = `<tr>
+                                <td>` + registro[i][0] + `</td> 
+                                <td>` + registro[i][1] + `</td>
+                                <td>` + registro[i][2] + `</td>
+                                <td>` + registro[i][3] + `</td>
+                                <td>` + registro[i][4] + `</td>
+                            </tr>`;
+                    //Imprimo la línea de la tabla
+                    document.getElementById("idTabla").insertAdjacentHTML("beforeend", linea);
+                }
+            }
+        </script>
+    </body>
+</html>

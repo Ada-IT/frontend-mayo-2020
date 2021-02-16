@@ -1,0 +1,181 @@
+
+//rama sass
+//archivo style.scss
+//carpeta ejercicio-1
+/*
+.card{
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container{
+    padding: 2px 16px;
+}   
+*/
+$card-font-type: helvetica;
+$card-title-font-size: 1rem;
+$card-description-font-size: 0.7rem;
+$card-font-color: #ccc; 
+$card-padding: 4px;
+$card-bg-color: #3c3c3c;
+$card-width: 100%;
+$card-use-alternative-color:true;
+$card-bg-alt-color: #ccc;
+$card-font-alt-color: #3c3c3c; 
+$card-with-padding:true;
+$card-with-hover:false;
+$button-color:#3c3c;
+$button-font-color:#fff;
+$button-font-family:helvetica;
+$button-padding:10px;
+$button-width:60px;
+$button-enable:true;
+$button-color-alt:#3e3e;
+$button-font-color-alt: red;
+$breadcrumb-font-size: 1rem;
+$breadcrumb-font-family: helvetica;
+$breadcrumb-color-alt:  #ccc;
+$breadcrumb-bg-color-alt:#3c3c3c;
+$breadcrumb-alt:true;
+$breadcrumb-color:  pink;
+$breadcrumb-bg-color:red;
+
+
+.card{
+   font-family: $card-font-type;
+   padding: $card-padding;
+   width: $card-width;
+    @if $card-use-alternative-color{
+        background-color: $card-bg-alt-color;
+        color: $card-font-alt-color;
+    } 
+    @else {
+        background-color: $card-bg-color;
+        color: $card-font-color;
+    }
+    @if $card-with-padding{
+        padding:$card-padding
+    }
+    @if $card-with-hover{
+    &:hover {
+        font-weight: bold;
+        }
+    }
+}
+.card .title{
+    font-size: $card-title-font-size;
+}
+.card .description{
+    font-size: $card-description-font-size;
+}
+
+
+/* otro ejemplo en grupo en clase */
+
+.button{
+    font-family: $button-font-family;
+    padding:$button-padding;
+    width:$button-width;
+    height: 20px;
+    @if $button-enable{
+        background-color: $button-color-alt;
+        color: $button-font-color-alt
+    }
+    @else{
+        background-color: $button-color;
+        color:$button-font-color;
+    }
+}
+
+/* 2º ejemplo en clase */
+
+.breadcrumb{
+    font-size: $breadcrumb-font-size;
+    font-family: $breadcrumb-font-family;
+    @if $breadcrumb-alt{ 
+        color: $breadcrumb-color-alt;
+        background-color:$breadcrumb-bg-color-alt;
+    } @else {
+        color: $breadcrumb-color;
+        background-color:$breadcrumb-bg-color;
+    }
+}
+
+
+/*Clase martes 11 ag */
+
+/* Ejemplo Each */
+
+/*# sourceMappingURL=style.css.map */
+$todos-tamanos: 40px, 50px, 80px, 100px, 200px;
+
+
+@each $cada-tamano in $todos-tamanos {
+  .pseudcolas-whatever-#{$cada-tamano} {
+    font-size: $cada-tamano;
+    height: $cada-tamano;
+    width: $cada-tamano;
+    color: red;
+  }
+}
+
+
+/* Ejemplo each con varias cosas*/
+
+$icons: ("eye": "\f112",
+ "start": "\f12e",
+  "stop": "\f12f");
+
+@each $name, $glyph in $icons {
+  .icon-#{$name}:before {
+    display: inline-block;
+    font-family: "Icon Font";
+    content: $glyph;
+  }
+}
+
+/* ejemplo for */
+    
+$base-color: #036;
+
+@for $i from 1 through 3 {
+  ul:nth-child(3n + #{$i}) {
+    background-color: lighten($base-color, $i * 5%);
+  }
+}
+
+@for $i from 1 through 3 {
+   .mis-cards-big-#{$i} {
+      font-size: 1rem * $i;
+    }
+  }
+
+
+/* ALERT */
+
+  $colores: red, green, blue;
+
+  @each $color in $colores {
+    .alert-#{$color} {
+        font-size: 1rem;
+        background-color: $color;
+        padding: 1rem;
+    }      
+  }
+
+  /* Toast */
+
+  $toasts:
+    "header" "#ccc" 16px,
+    "button" "#333" 14px,
+    "body" "#131313" 12px;
+
+@each $name, $color, $size in $toasts{
+    .toast-#{$name} {       
+        font-size: $size;
+        background-color: $color;      
+        padding: 10px;
+       }
+    }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 
+    Escribir un programa que reciba un numero del 1 al 12
+    desde el teclado y muestre el número de dias correspondiente al mes que corresponda
+    con ese numero.
+    -->        
+    </head>
+    <body onload="capturarNumeros();">
+            <!-- Add your site or application content here -->
+        <script>
+            function capturarNumeros(){
+                let numero = parseInt(prompt("Ingresa un número entre 1 y 12"));
+
+                switch(numero) {
+                    case 1:
+                        alert("Enero tiene 31 días.");
+                        break;
+                    case 2:
+                        alert("Febrero tiene 28/29 días.");
+                        break;
+                    case 3:
+                        alert("Marzo tiene 31 días.");
+                        break;
+                    case 4:
+                        alert("Abril tiene 30 días.");
+                         break;
+                    case 5:
+                       alert("Mayo tiene 31 días.");
+                       break;
+                    case 6:
+                        alert("Junio tiene 30 días.");
+                        break;
+                    case 7:
+                        alert("Julio tiene 31 días.");
+                        break;
+                    case 8:
+                        alert("Agosto tiene 31 días.");             
+                        break;
+                    case 9:
+                        alert("Setiembre tiene 30 días.");
+                        break;
+                    case 10:
+                        alert("Octubre tiene 31 días.");
+                        break;
+                    case 11:
+                        alert("Noviembre tiene 30 días.");
+                        break;
+                    case 12:
+                        alert("Diciembre tiene 31 días.");
+                        break;    
+                    default:
+                        alert("Error: no digitó un número entre 1 y 12.");
+                        break; 
+                }
+
+            }
+        </script>
+    </body>
+</html>
